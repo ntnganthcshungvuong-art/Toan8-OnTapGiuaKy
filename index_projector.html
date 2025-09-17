@@ -33,14 +33,19 @@
 
 <script>
 let quizData=[], currentIndex=0, timer, timeLeft=45;
+
 async function selectLesson(lesson){
   const response = await fetch('https://ntnganthcshungvuong-art.github.io/To-n-8-Ch-ng-I/questions.json?_=' + Date.now());
   const all = await response.json();
-  quizData = pick20(all[lesson]||[]);
-  currentIndex=0;
+  quizData = pick20(all[lesson] || []);   // <- sửa dòng này
+  currentIndex = 0;
   document.getElementById('menuScreen').classList.add('hidden');
   document.getElementById('quizScreen').classList.remove('hidden');
-  showQuestion(); startTimer();
+  showQuestion();
+  startTimer();
+}
+</script>
+
 }
 function pick20(all){
   const nb_th = all.filter(q=>q.level==='NB'||q.level==='TH');
