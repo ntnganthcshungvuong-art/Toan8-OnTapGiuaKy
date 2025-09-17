@@ -37,26 +37,26 @@ let quizData=[], currentIndex=0, timer, timeLeft=45;
 async function selectLesson(lesson){
   const response = await fetch('https://ntnganthcshungvuong-art.github.io/To-n-8-Ch-ng-I/questions.json?_=' + Date.now());
   const all = await response.json();
-  quizData = pick20(all[lesson] || []);   // <- sửa dòng này
+  quizData = pick20(all[lesson] || []);
   currentIndex = 0;
   document.getElementById('menuScreen').classList.add('hidden');
   document.getElementById('quizScreen').classList.remove('hidden');
   showQuestion();
   startTimer();
 }
-</script>
 
-}
 function pick20(all){
   const nb_th = all.filter(q=>q.level==='NB'||q.level==='TH');
   const others = all.filter(q=>q.level==='VD'||q.level==='VC');
   function pick(arr,n){ const out=[]; for(let i=0;i<n;i++){ out.push(arr[Math.floor(Math.random()*arr.length)]); } return out; }
   return shuffleArray([...pick(nb_th,12), ...pick(others,8)]);
 }
+
 function startTimer(){
   timeLeft=45; document.getElementById('timer').innerText='⏳ '+timeLeft+'s';
   timer=setInterval(()=>{ timeLeft--; document.getElementById('timer').innerText='⏳ '+timeLeft+'s'; if(timeLeft<=0){ nextQuestion(); } },1000);
 }
+
 function showQuestion(){
   clearInterval(timer); startTimer();
   const q = quizData[currentIndex];
@@ -68,6 +68,7 @@ function showQuestion(){
   document.getElementById('optionsBox').innerHTML=html;
   document.getElementById('nextBtn').classList.add('hidden');
 }
+
 function selectAnswer(btn, correct, hint){
   const buttons=document.querySelectorAll('#optionsBox button');
   buttons.forEach(b=>b.disabled=true);
@@ -77,13 +78,22 @@ function selectAnswer(btn, correct, hint){
   else{
     btn.classList.add('bg-red-300');
     buttons.forEach(b=>{ if((b.dataset.value||'').trim()===correctTrim){ b.classList.add('ring-2','ring-green-600'); } });
-    alert("❌ SAI. Đáp án đúng: "+correctTrim+"\n👉 Gợi ý: "+hint);
+    alert("❌ SAI. Đáp án đúng: "+correctTrim+"\\n👉 Gợi ý: "+hint);
   }
   document.getElementById('nextBtn').classList.remove('hidden'); clearInterval(timer);
 }
+
 function nextQuestion(){ currentIndex++; if(currentIndex<quizData.length){ showQuestion(); } else { alert('🎉 Hết 20 câu!'); location.reload(); } }
+
 function shuffleArray(arr){ for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; } return arr; }
-function escapeJs(s){ return (s||'').replace(/\/g,'\\').replace(/'/g,"\'").replace(/"/g,"\""); }
+
+function escapeJs(s){
+  return (s||'')
+    .replace(/\\/g,'\\\\')
+    .replace(/'/g,"\\'")
+    .replace(/"/g,'\\"');
+}
+
 function escapeHtml(s){ return (s||'').replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 </script>
 
