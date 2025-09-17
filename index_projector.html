@@ -30,23 +30,31 @@ function startTimer(){
 }
 
 function showQuestion(){
-  clearInterval(timer); startTimer();
+  clearInterval(timer); 
+  startTimer();
+
   const q = quizData[currentIndex];
+
+  // Đếm câu
   document.getElementById('questionCounter').innerText=`Câu ${currentIndex+1}/20`;
-  // Hiển thị câu hỏi, bỏ mức độ nếu có
-let cleanQ = q.q.replace(/\s+(NB|TH|VD|VC)$/,''); 
-document.getElementById('questionBox').innerHTML = `<span class="text-2xl font-bold">${cleanQ}</span>`;
 
-// Hiển thị đáp án với chữ lớn hơn
-let html='';
-shuffleArray([...(q.options||[])]).forEach(opt=>{
-  html += `<button data-value="${escapeHtml(opt)}" onclick="selectAnswer(this,'${escapeJs(q.a)}','${escapeJs(q.hint||'')}')" class="bg-white border rounded-xl p-3 text-left hover:bg-blue-100 text-lg font-semibold">${opt}</button>`;
-});
-document.getElementById('optionsBox').innerHTML=html;
+  // Hiển thị câu hỏi, bỏ NB/TH/VD/VC ở cuối nếu có
+  let cleanQ = q.q.replace(/\s+(NB|TH|VD|VC)$/,''); 
+  document.getElementById('questionBox').innerHTML = `<span class="text-2xl font-bold">${cleanQ}</span>`;
 
-  document.getElementById('optionsBox').innerHTML=html;
+  // Hiển thị đáp án với chữ lớn hơn
+  let html='';
+  shuffleArray([...(q.options||[])]).forEach(opt=>{
+    html += `<button data-value="${escapeHtml(opt)}" 
+                    onclick="selectAnswer(this,'${escapeJs(q.a)}','${escapeJs(q.hint||'')}')" 
+                    class="bg-white border rounded-xl p-3 text-left hover:bg-blue-100 text-lg font-semibold">${opt}</button>`;
+  });
+  document.getElementById('optionsBox').innerHTML = html;
+
+  // Ẩn nút "Tiếp theo" ban đầu
   document.getElementById('nextBtn').classList.add('hidden');
 }
+
 
 function selectAnswer(btn, correct, hint){
   const buttons=document.querySelectorAll('#optionsBox button');
