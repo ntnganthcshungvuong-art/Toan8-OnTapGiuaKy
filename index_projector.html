@@ -34,7 +34,7 @@
 <script>
 let quizData=[], currentIndex=0, timer, timeLeft=45;
 async function selectLesson(lesson){
-  const response = await fetch('questions.json?_=' + Date.now());
+  const response = await fetch('https://ntnganthcshungvuong-art.github.io/To-n-8-Ch-ng-I/questions.json?_=' + Date.now());
   const all = await response.json();
   quizData = pick20(all[lesson]||[]);
   currentIndex=0;
