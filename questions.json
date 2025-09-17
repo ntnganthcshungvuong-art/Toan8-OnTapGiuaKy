@@ -1,15 +1,8414 @@
 {
   "Bai1": [
     {
-      "q": "x²+2x+1 bằng?",
-      "a": "(x+1)²",
+      "q": "Bài 1 NB Câu 1: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
       "options": [
+        "x²+2x+1",
+        "2",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 2: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "0"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 3: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 4: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "10",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 5: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "8",
         "x²+2x+1",
         "(x+1)²",
         "x²+1"
       ],
       "level": "NB",
-      "hint": "Hằng đẳng thức."
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 6: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "0",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 7: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 8: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "8",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 9: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 10: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "10"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 11: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "1",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 12: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "6",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 13: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 14: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "5",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 15: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "5",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 16: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "9",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 17: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "3"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 18: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "4",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 19: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "10"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 20: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "0"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 21: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "2"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 22: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "3",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 23: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "9"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 24: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 25: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 26: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 27: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "7",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 28: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "3",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 29: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "0",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 30: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "10",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 31: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "8",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 32: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "6",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 33: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "5",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 34: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "5"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 35: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 36: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "7",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 37: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "4",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 38: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "5",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 39: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 NB Câu 40: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "10",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 1 TH Câu 1: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 2: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "5"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 3: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "7",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 4: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 5: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "9",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 6: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "5",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 7: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "7",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 8: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "8",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 9: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "5"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 10: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "10"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 11: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "10",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 12: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 13: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 14: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "10",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 15: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 16: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "5"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 17: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "9",
+        "2",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 18: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "10",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 19: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 20: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "9",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 21: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "6",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 22: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "5",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 23: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "7",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 24: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "8",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 25: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 26: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "9",
+        "2",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 27: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 28: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 29: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "7",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 TH Câu 30: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "9",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 1 VD Câu 1: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "6",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 2: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "5"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 3: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "3",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 4: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "8",
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 5: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "9",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 6: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "9"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 7: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 8: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "5"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 9: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "4",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 10: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "3"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 11: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "5",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 12: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "10",
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 13: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+3x+2",
+        "9",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 14: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "4",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 15: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "10"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 16: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 17: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "2",
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 18: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "7",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 19: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "9",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VD Câu 20: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "9",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 1 VC Câu 1: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 2: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=-2",
+        "x=±2",
+        "6"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 3: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "7",
+        "x=-2",
+        "x=±2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 4: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "0",
+        "x=-2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 5: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "8",
+        "x=-2",
+        "x=±2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 6: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "2",
+        "x=2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 7: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=-2",
+        "5",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 8: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "6",
+        "x=±2",
+        "x=-2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 9: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "5",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 1 VC Câu 10: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "x=2",
+        "7",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    }
+  ],
+  "Bai2": [
+    {
+      "q": "Bài 2 NB Câu 1: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "4",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 2: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "8",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 3: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "0",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 4: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 5: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "4"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 6: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "7",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 7: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 8: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "0",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 9: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "9",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 10: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "1",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 11: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 12: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "9",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 13: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "10"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 14: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "0",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 15: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "0",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 16: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 17: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "4"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 18: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 19: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 20: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "3"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 21: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "7"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 22: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1",
+        "6"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 23: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "3",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 24: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "3",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 25: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "3",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 26: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "6"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 27: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 28: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "3",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 29: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 30: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "6",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 31: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "0",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 32: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 33: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 34: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "8",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 35: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 36: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "7",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 37: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "10",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 38: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 39: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "6"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 NB Câu 40: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 2 TH Câu 1: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "0",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 2: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "7"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 3: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 4: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "5",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 5: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "10"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 6: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "10",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 7: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "8",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 8: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "6",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 9: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 10: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "6"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 11: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "10"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 12: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "0",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 13: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "7",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 14: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 15: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 16: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "6",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 17: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "7",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 18: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 19: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 20: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "6",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 21: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 22: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 23: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "9",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 24: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "5"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 25: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "9",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 26: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 27: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 28: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "9"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 29: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "6",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 TH Câu 30: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "3",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 2 VD Câu 1: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "7"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 2: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "4"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 3: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 4: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "0",
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 5: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "8",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 6: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "8"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 7: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "0",
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 8: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "4",
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 9: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "5",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 10: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "1",
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 11: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "5",
+        "x²+2x+1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 12: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "3",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 13: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "2",
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 14: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "3",
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 15: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "0",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 16: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 17: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1",
+        "10"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 18: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "5"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 19: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "4",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VD Câu 20: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "8",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 2 VC Câu 1: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "x=-2",
+        "10"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 2: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=2",
+        "1",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 3: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "6",
+        "x=-2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 4: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "6"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 5: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "1"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 6: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "6",
+        "x=-2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 7: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "3",
+        "x=-2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 8: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=-2",
+        "x=±2",
+        "6"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 9: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "4"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 2 VC Câu 10: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "10",
+        "x=2",
+        "x=±2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    }
+  ],
+  "Bai3": [
+    {
+      "q": "Bài 3 NB Câu 1: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "4",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 2: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "0",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 3: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "9",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 4: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "3",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 5: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "10",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 6: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "4",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 7: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "10",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 8: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "8",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 9: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "6",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 10: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "6",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 11: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "6",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 12: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "7",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 13: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 14: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "7",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 15: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 16: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 17: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 18: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "5",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 19: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 20: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "8",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 21: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "5",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 22: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "10",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 23: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 24: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "6",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 25: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "4",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 26: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 27: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "1",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 28: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "10"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 29: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "3",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 30: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "4"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 31: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "4"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 32: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "7",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 33: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "2",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 34: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 35: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "1",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 36: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "10",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 37: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "2",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 38: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "5",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 39: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 NB Câu 40: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 3 TH Câu 1: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "6",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 2: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "7",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 3: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "0",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 4: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 5: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 6: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "6",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 7: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "8",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 8: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "8",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 9: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 10: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 11: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 12: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 13: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "3",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 14: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "10",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 15: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 16: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 17: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "6"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 18: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 19: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "10",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 20: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 21: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "6",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 22: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 23: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "5",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 24: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "10",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 25: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 26: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 27: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "10",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 28: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 29: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "7",
+        "2",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 TH Câu 30: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "8",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 3 VD Câu 1: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "8",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 2: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "10",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 3: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "8",
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 4: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2",
+        "1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 5: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "10",
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 6: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 7: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2",
+        "10"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 8: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 9: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 10: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "2",
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 11: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "6",
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 12: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 13: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "10",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 14: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "5",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 15: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "7",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 16: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "1",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 17: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "0",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 18: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "8",
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 19: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2",
+        "8"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VD Câu 20: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "7",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 3 VC Câu 1: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "x=-2",
+        "9"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 2: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "x=-2",
+        "1"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 3: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "9",
+        "x=-2",
+        "x=±2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 4: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=2",
+        "9",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 5: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "9",
+        "x=-2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 6: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "1",
+        "x=±2",
+        "x=2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 7: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "10"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 8: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "0",
+        "x=2",
+        "x=±2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 9: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "7",
+        "x=±2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 3 VC Câu 10: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "x=2",
+        "x=±2",
+        "5"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    }
+  ],
+  "Bai4": [
+    {
+      "q": "Bài 4 NB Câu 1: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "5",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 2: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 3: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 4: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "10",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 5: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "9",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 6: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "3",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 7: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 8: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "3",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 9: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "4"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 10: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 11: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "6",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 12: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 13: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "4"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 14: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 15: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "5",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 16: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "10"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 17: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 18: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "3"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 19: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "10",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 20: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "9",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 21: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "4",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 22: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "6",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 23: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "9"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 24: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "10",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 25: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "1",
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 26: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "10",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 27: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "6",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 28: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "5",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 29: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "8",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 30: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "3"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 31: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "0",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 32: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "5",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 33: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "9",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 34: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "4",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 35: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 36: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "7"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 37: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "4",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 38: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "7",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 39: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "4",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 NB Câu 40: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "8",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 4 TH Câu 1: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 2: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "6",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 3: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "10",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 4: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 5: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "10",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 6: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "7",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 7: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "2",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 8: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "10",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 9: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "9",
+        "2",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 10: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "6",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 11: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 12: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "9",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 13: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 14: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 15: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "7",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 16: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 17: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 18: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 19: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 20: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "6",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 21: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "8",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 22: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "2",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 23: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "7",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 24: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "5",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 25: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "8",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 26: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 27: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "5",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 28: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 29: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 TH Câu 30: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "7",
+        "2",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 4 VD Câu 1: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "10",
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 2: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "3"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 3: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "3",
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 4: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "6",
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 5: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "0"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 6: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "2",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 7: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 8: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "9",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 9: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "4",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 10: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "3",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 11: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 12: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "10",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 13: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "8",
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 14: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "6",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 15: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "3",
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 16: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "4",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 17: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "10",
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 18: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "1",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 19: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "6",
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VD Câu 20: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1",
+        "5"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 4 VC Câu 1: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "7",
+        "x=±2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 2: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "8",
+        "x=±2",
+        "x=-2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 3: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "x=2",
+        "x=±2",
+        "8"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 4: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=2",
+        "5",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 5: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "1",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 6: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=2",
+        "x=-2",
+        "7"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 7: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=-2",
+        "7",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 8: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "3",
+        "x=-2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 9: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "x=-2",
+        "2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 4 VC Câu 10: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "10",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    }
+  ],
+  "Bai5": [
+    {
+      "q": "Bài 5 NB Câu 1: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "8",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 2: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "4",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 3: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "10",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 4: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 5: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "5",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 6: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "9"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 7: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 8: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "9",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 9: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 10: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 11: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 12: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "0",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 13: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "3",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 14: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 15: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "2",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 16: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "10",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 17: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 18: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "8",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 19: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "4",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 20: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "10",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 21: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "9",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 22: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "5",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 23: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "10",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 24: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "0",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 25: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "10",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 26: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "9",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 27: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "3",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 28: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 29: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "1",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 30: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "0",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 31: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "8",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 32: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 33: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 34: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 35: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "4",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 36: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1",
+        "6"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 37: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 38: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "3",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 39: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "7"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 NB Câu 40: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "3"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Bài 5 TH Câu 1: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "0",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 2: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 3: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "6",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 4: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "7",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 5: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "5"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 6: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "7",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 7: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 8: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "6",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 9: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 10: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 11: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "9"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 12: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 13: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "7",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 14: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "7",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 15: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "7",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 16: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "8",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 17: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "10",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 18: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 19: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 20: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "9",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 21: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 22: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 23: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 24: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "6",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 25: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "6",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 26: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "0",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 27: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "8",
+        "3",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 28: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "8",
+        "3",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 29: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 TH Câu 30: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "6",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Bài 5 VD Câu 1: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "4",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 2: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "10",
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 3: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "5",
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 4: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "10",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 5: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "1",
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 6: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+3x+2",
+        "9",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 7: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "6",
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 8: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "5"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 9: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "6"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 10: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "10",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 11: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "3"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 12: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "9",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 13: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "10"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 14: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "7"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 15: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "4",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 16: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "4",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 17: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "9",
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 18: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "1",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 19: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VD Câu 20: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "x²+2",
+        "7"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Bài 5 VC Câu 1: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "7",
+        "x=±2",
+        "x=-2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 2: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "x=2",
+        "0",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 3: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "10",
+        "x=2",
+        "x=-2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 4: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "8",
+        "x=-2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 5: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "x=2",
+        "x=±2",
+        "10"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 6: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 7: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "8",
+        "x=2",
+        "x=-2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 8: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "7",
+        "x=±2",
+        "x=-2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 9: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "x=±2",
+        "9",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Bài 5 VC Câu 10: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "4"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    }
+  ],
+  "TongHop": [
+    {
+      "q": "Tổng hợp NB Câu 1: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "7",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 2: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "7",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 3: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "10",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 4: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "6",
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 5: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 6: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "6",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 7: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1",
+        "6"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 8: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "7",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 9: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "5",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 10: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²",
+        "3"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 11: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "10",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 12: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "8",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 13: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "3",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 14: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 15: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 16: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 17: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 18: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "6",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 19: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "2",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 20: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "8",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 21: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 22: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "9",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 23: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "7",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 24: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "5",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 25: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "8",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 26: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 27: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "6",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 28: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "3",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 29: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "1",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 30: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "1",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 31: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "0",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 32: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "9"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 33: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "3",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 34: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "2",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 35: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1",
+        "3"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 36: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "2",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 37: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "9",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 38: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 39: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "9",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 40: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "8",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 41: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "5"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 42: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "0",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 43: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "10",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 44: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "10",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 45: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "8",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 46: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "5",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 47: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "8",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 48: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "0",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 49: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 50: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 51: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "x²+2x+1",
+        "8",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 52: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "8",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 53: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 54: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "7",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 55: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "10",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 56: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "8",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 57: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "(x+1)²",
+        "8"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 58: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 59: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 60: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "2",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 61: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "4",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 62: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "10",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 63: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "9",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 64: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "4",
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 65: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "(x+1)²",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 66: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "3",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 67: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "10",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 68: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "x²+1",
+        "6"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 69: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "9",
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 70: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "(x+1)²",
+        "x²+2x+1",
+        "7"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 71: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "x²+2x+1",
+        "8",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 72: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "7",
+        "x²+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 73: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "2",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 74: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "(x+1)²",
+        "4",
+        "x²+2x+1",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 75: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "x²+1",
+        "1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 76: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "3",
+        "(x+1)²",
+        "x²+1",
+        "x²+2x+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 77: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "0",
+        "x²+1"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 78: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "0",
+        "x²+1",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 79: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+1",
+        "8",
+        "x²+2x+1",
+        "(x+1)²"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp NB Câu 80: Tính x²⁺²x+1",
+      "a": "x²+2x+1",
+      "options": [
+        "x²+2x+1",
+        "(x+1)²",
+        "x²+1",
+        "0"
+      ],
+      "level": "NB",
+      "hint": "Đây là hằng đẳng thức."
+    },
+    {
+      "q": "Tổng hợp TH Câu 1: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "0",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 2: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "9",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 3: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "8"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 4: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 5: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "10",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 6: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "8",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 7: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 8: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "6"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 9: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 10: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "0"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 11: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 12: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "5",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 13: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "9",
+        "1",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 14: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "10",
+        "2",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 15: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 16: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "8",
+        "2",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 17: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "9",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 18: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 19: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "9",
+        "3",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 20: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "10",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 21: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "2",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 22: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "10"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 23: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 24: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "6",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 25: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 26: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 27: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 28: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 29: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "9",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 30: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "10",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 31: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "7",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 32: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "8",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 33: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 34: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "7",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 35: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "10",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 36: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 37: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "8",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 38: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "2",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 39: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "7",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 40: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "5"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 41: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "10"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 42: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 43: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 44: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 45: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "9",
+        "2",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 46: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "0",
+        "1",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 47: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "2",
+        "10",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 48: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "9"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 49: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "5",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 50: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "5"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 51: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "1",
+        "2",
+        "10",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 52: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "10"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 53: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 54: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "3",
+        "10",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 55: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 56: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "10"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 57: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "10",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 58: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "6"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 59: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "2",
+        "1",
+        "9",
+        "3"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp TH Câu 60: Bậc của đa thức x³⁺²x",
+      "a": "3",
+      "options": [
+        "3",
+        "1",
+        "8",
+        "2"
+      ],
+      "level": "TH",
+      "hint": "Bậc là số mũ cao nhất."
+    },
+    {
+      "q": "Tổng hợp VD Câu 1: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "5",
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 2: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "9",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 3: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "4",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 4: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2",
+        "2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 5: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "1",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 6: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "5",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 7: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+3x+2",
+        "0",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 8: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "2",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 9: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+3x+2",
+        "x²+2",
+        "5"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 10: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "7",
+        "x²+2x+1",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 11: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "10"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 12: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "6",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 13: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "8",
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 14: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "0"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 15: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "8",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 16: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2x+1",
+        "4",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 17: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1",
+        "9"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 18: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 19: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "5"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 20: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "10",
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 21: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 22: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "x²+3x+2",
+        "9"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 23: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "6",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 24: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "4"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 25: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "9",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 26: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "10",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 27: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "9"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 28: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "1",
+        "x²+3x+2",
+        "x²+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 29: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "9",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 30: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "3",
+        "x²+2x+1",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 31: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1",
+        "9"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 32: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "6"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 33: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "10",
+        "x²+2",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 34: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2x+1",
+        "x²+2",
+        "x²+3x+2",
+        "0"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 35: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "6"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 36: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "2",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 37: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "x²+2",
+        "x²+2x+1",
+        "4"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 38: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+3x+2",
+        "7",
+        "x²+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 39: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "7",
+        "x²+3x+2",
+        "x²+2x+1"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VD Câu 40: Tính (x+1)(x+2)",
+      "a": "x²+3x+2",
+      "options": [
+        "x²+2",
+        "x²+2x+1",
+        "0",
+        "x²+3x+2"
+      ],
+      "level": "VD",
+      "hint": "Nhân phân phối."
+    },
+    {
+      "q": "Tổng hợp VC Câu 1: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "5"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 2: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "7",
+        "x=2",
+        "x=±2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 3: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "0",
+        "x=2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 4: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=-2",
+        "x=±2",
+        "8"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 5: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "1",
+        "x=2",
+        "x=-2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 6: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "5",
+        "x=±2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 7: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "4",
+        "x=±2",
+        "x=2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 8: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "7",
+        "x=±2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 9: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "x=-2",
+        "5"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 10: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "2",
+        "x=2",
+        "x=±2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 11: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=2",
+        "x=-2",
+        "1"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 12: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "8",
+        "x=-2",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 13: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=2",
+        "x=-2",
+        "1"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 14: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=-2",
+        "6",
+        "x=2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 15: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "6"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 16: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "8",
+        "x=±2",
+        "x=-2",
+        "x=2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 17: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "0",
+        "x=-2",
+        "x=±2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 18: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=2",
+        "x=±2",
+        "x=-2",
+        "9"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 19: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "x=±2",
+        "x=-2",
+        "x=2",
+        "8"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
+    },
+    {
+      "q": "Tổng hợp VC Câu 20: Giải phương trình x²=4",
+      "a": "x=±2",
+      "options": [
+        "2",
+        "x=2",
+        "x=±2",
+        "x=-2"
+      ],
+      "level": "VC",
+      "hint": "Nghiệm ±2."
     }
   ]
 }
