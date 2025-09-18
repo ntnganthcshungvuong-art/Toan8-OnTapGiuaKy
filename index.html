@@ -81,7 +81,7 @@ async function loadData(){
 
 async function startGame(mode){
   await loadData();
-  const allQs = [...dataAll.Bai1, ...dataAll.Bai2, ...dataAll.Bai3, ...dataAll.Bai4];
+  const allQs = [...(dataAll.Bai1||[]), ...(dataAll.Bai2||[]), ...(dataAll.Bai3||[]), ...(dataAll.Bai4||[])];
   
   document.getElementById('menuScreen').classList.add('hidden');
   document.getElementById('scoreBoard').classList.remove('hidden');
@@ -178,10 +178,11 @@ function cleanQ(text){
 }
 
 function playSound(id){
-  let audio=document.getElementById(id);
+  const audio=document.getElementById(id);
   if(audio){
     audio.currentTime=0;
-    audio.play().catch(err=>console.log("Âm thanh bị chặn:",err));
+    audio.load();
+    audio.play().catch(()=>{});
   }
 }
 
