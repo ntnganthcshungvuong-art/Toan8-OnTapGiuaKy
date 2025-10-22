@@ -1,60 +1,80 @@
 {
   "mcqs": [
     {
-      "id": "cau9_hinh_vuong",
-      "stem": "Trong các hình sau, **hình vuông** là:",
-      "img": "img/cau9.png",
-      "options": ["Hình 1", "Hình 2", "Hình 3", "Hình 4"],
-      "answer": 1,
-      "hint": "Dấu hiệu nhận biết **hình vuông**: bốn góc vuông **và** bốn cạnh bằng nhau. (SGK KNTT Toán 8 – Hình học: tứ giác đặc biệt)"
-    },
-    {
-      "id": "cau10_goc_tugiac",
-      "stem": "Cho tứ giác $ABCD$ trong **hình 1**. Biết $\\goc{ABC}=120\\do$. Số đo $\\goc{ADC}$ là:",
-      "img": "img/cau10.png",
-      "options": ["$360\\do$", "$180\\do$", "$120\\do$", "$60\\do$"],
-      "answer": 3,
-      "hint": "Trong **tứ giác**, hai góc kề một cạnh bù nhau: $\\goc{ABC}+\\goc{ADC}=180\\do$. Suy ra $\\goc{ADC}=60\\do$."
-    },
-    {
-      "id": "cau11_hinh_thang",
-      "stem": "Biết tứ giác $MNPQ$ là **hình thang** (hình 2). MNPQ là **hình thang cân** khi nào?",
-      "img": "img/cau11.png",
-      "options": ["$NQ=MP$", "$NQ=4\\,\\text{cm}$", "$NQ=2\\,\\text{cm}$", "$NQ=5\\,\\text{cm}$"],
-      "answer": 0,
-      "hint": "**Hình thang cân**: hai cạnh bên **bằng nhau**; hai góc ở cùng một đáy **bằng nhau**; hai đáy **song song**."
-    },
-    {
-      "id": "cau12_hbh_dung_sai",
-      "stem": "Cho hình bình hành $EFGH$ (hình 3). Chọn **mệnh đề đúng**:",
-      "img": "img/cau12.png",
+      "id": "m1_tugiac_loi",
+      "stem": "Trong các phát biểu sau, phát biểu nào **đúng** về tứ giác lồi?",
+      "img": null,
       "options": [
-        "$EF\\,\\ss\\,HG$ và $EH\\,\\ss\\,FG$",
+        "Có ít nhất một góc lớn hơn $180\\do$",
+        "Tổng bốn góc bằng $180\\do$",
+        "Mọi đoạn thẳng nối hai điểm bất kỳ của hình đều nằm **trong** hình",
+        "Hai đường chéo luôn bằng nhau"
+      ],
+      "answer": 2,
+      "hint": "Định nghĩa tứ giác lồi: bốn góc trong đều $<180\\do$ và mọi đoạn nối hai điểm bất kỳ đều nằm trong hình."
+    },
+    {
+      "id": "m2_tong_goc_tugiac",
+      "stem": "Tổng các góc trong **tứ giác** luôn bằng:",
+      "img": null,
+      "options": ["$90\\do$", "$180\\do$", "$270\\do$", "$360\\do$"],
+      "answer": 3,
+      "hint": "Chia tứ giác thành hai tam giác: $2\\times 180\\do = 360\\do$."
+    },
+    {
+      "id": "m3_dauhieu_hbh",
+      "stem": "Dấu hiệu nhận biết **hình bình hành** nào dưới đây là **đúng**?",
+      "img": null,
+      "options": [
+        "Có một góc vuông",
+        "Có hai cặp cạnh đối song song",
+        "Có hai cạnh kề bằng nhau",
+        "Hai đường chéo bằng nhau"
+      ],
+      "answer": 1,
+      "hint": "Dấu hiệu: nếu một tứ giác có **hai cặp cạnh đối song song** thì là hình bình hành."
+    },
+    {
+      "id": "m4_hbh_tinhchat",
+      "stem": "Trong hình bình hành $ABCD$, mệnh đề **đúng** là:",
+      "img": null,
+      "options": [
+        "$AB \\ss AD$",
         "Hai đường chéo vuông góc",
-        "Hai đường chéo bằng nhau",
+        "Hai đường chéo cắt nhau **tại trung điểm** mỗi đường",
         "Bốn cạnh bằng nhau"
       ],
-      "answer": 0,
-      "hint": "Tính chất **hình bình hành**: (1) các cặp cạnh đối **song song** và **bằng nhau**; (2) hai góc đối **bằng nhau**; (3) hai đường chéo **cắt nhau tại trung điểm** mỗi đường. Không nhất thiết vuông góc hay bằng nhau."
-    },
-    {
-      "id": "cau13_tu_giac_loi",
-      "stem": "Trong các hình sau, **tứ giác lồi** là:",
-      "img": "img/cau13.png",
-      "options": ["Hình a", "Hình b", "Hình c", "Hình d"],
-      "answer": 0,
-      "hint": "Tứ giác **lồi**: bốn góc trong đều nhỏ hơn $180\\do$ và mọi đoạn nối hai điểm bất kỳ của hình đều nằm trong hình."
-    },
-    {
-      "id": "cau14_loai_tu_giac",
-      "stem": "Tứ giác $ABCD$ trong hình sau là hình gì?",
-      "img": "img/cau14.png",
-      "options": ["Hình vuông", "Hình thoi", "Hình chữ nhật", "Hình tam giác"],
       "answer": 2,
-      "hint": "**Hình chữ nhật** có: (1) bốn góc vuông; (2) các cạnh đối **song song** và **bằng nhau**; **(3) hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường**. Dấu hiệu: hình bình hành có một góc vuông **hoặc** có hai đường chéo bằng nhau."
+      "hint": "Tính chất HBH: cặp cạnh đối **song song và bằng nhau**; **đường chéo cắt nhau tại trung điểm**."
     },
     {
-      "id": "cau17_nhan_dang",
+      "id": "m5_dauhieu_hcn_goc",
+      "stem": "Dấu hiệu để tứ giác là **hình chữ nhật**:",
+      "img": null,
+      "options": [
+        "Có một cặp cạnh đối song song",
+        "Có một góc vuông **và** là hình bình hành",
+        "Hai cạnh kề bằng nhau",
+        "Hai đường chéo vuông góc"
+      ],
+      "answer": 1,
+      "hint": "HBH có **một góc vuông** ⇒ **hình chữ nhật**."
+    },
+    {
+      "id": "m6_dauhieu_hcn_cheo",
+      "stem": "Dấu hiệu để tứ giác là **hình chữ nhật** (theo đường chéo):",
+      "img": null,
+      "options": [
+        "Hai đường chéo bằng nhau",
+        "Hai đường chéo bằng nhau và **cắt nhau**",
+        "HBH có **hai đường chéo bằng nhau**",
+        "HBH có hai đường chéo vuông góc"
+      ],
+      "answer": 2,
+      "hint": "Nếu **hình bình hành** có **hai đường chéo bằng nhau** ⇒ **hình chữ nhật**."
+    },
+    {
+      "id": "m7_hbh_hinh2",
       "stem": "Quan sát hình 2: Chọn **khẳng định đúng**.",
       "img": "img/cau17.png",
       "options": [
@@ -64,28 +84,423 @@
         "Bốn cạnh **bằng nhau**"
       ],
       "answer": 0,
-      "hint": "Dấu hiệu nhận biết **hình bình hành**: các cặp cạnh đối **song song** ($AB\\,\\ss\\,CD$, $AD\\,\\ss\\,BC$)."
+      "hint": "Dấu hiệu HBH: các cặp cạnh đối **song song** ($AB\\,\\ss\\,CD$, $AD\\,\\ss\\,BC$)."
+    },
+    {
+      "id": "m8_dauhieu_ht",
+      "stem": "Dấu hiệu để tứ giác là **hình thoi**:",
+      "img": null,
+      "options": [
+        "Có hai góc kề bằng nhau",
+        "Có bốn cạnh bằng nhau",
+        "Hai đường chéo bằng nhau",
+        "Một đường chéo là đường trung trực của cạnh"
+      ],
+      "answer": 1,
+      "hint": "Định nghĩa HT: tứ giác có **bốn cạnh bằng nhau**."
+    },
+    {
+      "id": "m9_hinh_vuong",
+      "stem": "Trong các hình sau, **hình vuông** là:",
+      "img": "img/cau9.png",
+      "options": ["Hình 1", "Hình 2", "Hình 3", "Hình 4"],
+      "answer": 1,
+      "hint": "Hình vuông: **bốn góc vuông** và **bốn cạnh bằng nhau**."
+    },
+    {
+      "id": "m10_goc_tugiac",
+      "stem": "Cho tứ giác $ABCD$ trong **hình 1**. Biết $\\goc{ABC}=120\\do$. Số đo $\\goc{ADC}$ là:",
+      "img": "img/cau10.png",
+      "options": ["$360\\do$", "$180\\do$", "$120\\do$", "$60\\do$"],
+      "answer": 3,
+      "hint": "Trong tứ giác: hai góc kề một cạnh **bù nhau** ⇒ $\\goc{ABC}+\\goc{ADC}=180\\do$."
+    },
+    {
+      "id": "m11_hthang_can",
+      "stem": "Biết tứ giác $MNPQ$ là **hình thang** (hình 2). MNPQ là **hình thang cân** khi:",
+      "img": "img/cau11.png",
+      "options": ["$MQ=NP$", "$NQ=4\\,\\text{cm}$", "$NQ=2\\,\\text{cm}$", "$NQ=5\\,\\text{cm}$"],
+      "answer": 0,
+      "hint": "HT cân: **hai cạnh bên bằng nhau**; hai góc ở cùng một đáy **bằng nhau**."
+    },
+    {
+      "id": "m12_hbh_dung_sai",
+      "stem": "Cho hình bình hành $EFGH$ (hình 3). Chọn **mệnh đề đúng**:",
+      "img": "img/cau12.png",
+      "options": [
+        "$EF\\,\\ss\\,HG$ và $EH\\,\\ss\\,FG$",
+        "Hai đường chéo vuông góc",
+        "Hai đường chéo bằng nhau",
+        "Bốn cạnh bằng nhau"
+      ],
+      "answer": 0,
+      "hint": "HBH: cặp cạnh đối **song song** và **bằng nhau**; đường chéo **cắt nhau tại trung điểm**."
+    },
+    {
+      "id": "m13_tugiac_loi_hinh",
+      "stem": "Trong các hình sau, **tứ giác lồi** là:",
+      "img": "img/cau13.png",
+      "options": ["Hình a", "Hình b", "Hình c", "Hình d"],
+      "answer": 0,
+      "hint": "Tứ giác lồi: bốn góc $<180\\do$; không có cạnh tự cắt."
+    },
+    {
+      "id": "m14_hcn_nhan_dang",
+      "stem": "Tứ giác $ABCD$ trong hình sau là hình gì?",
+      "img": "img/cau14.png",
+      "options": ["Hình vuông", "Hình thoi", "Hình chữ nhật", "Hình tam giác"],
+      "answer": 2,
+      "hint": "Có **các góc vuông** và các cạnh đối **song song**; hơn nữa **hai đường chéo bằng nhau** ⇒ **hình chữ nhật**."
+    },
+    {
+      "id": "m15_ht_cheo_vuonggoc",
+      "stem": "Trong **hình thoi**, khẳng định nào **đúng**?",
+      "img": null,
+      "options": [
+        "Hai đường chéo vuông góc",
+        "Hai đường chéo bằng nhau",
+        "Có một góc vuông",
+        "Tổng hai góc kề bằng $90\\do$"
+      ],
+      "answer": 0,
+      "hint": "Tính chất hình thoi: **đường chéo vuông góc** và **là phân giác** các góc."
+    },
+    {
+      "id": "m16_hv_tinhchat",
+      "stem": "Chọn mệnh đề **đúng** về **hình vuông**:",
+      "img": null,
+      "options": [
+        "Là hình thoi nhưng không phải hình chữ nhật",
+        "Là hình chữ nhật nhưng không phải hình thoi",
+        "Vừa là **hình chữ nhật** vừa là **hình thoi**",
+        "Hai đường chéo không vuông góc"
+      ],
+      "answer": 2,
+      "hint": "Hình vuông = **hình chữ nhật** (góc vuông, cạnh đối song song, chéo bằng nhau) **+** **hình thoi** (4 cạnh bằng nhau)."
+    },
+    {
+      "id": "m17_hbh_goc_ke_bu",
+      "stem": "Trong hình bình hành $ABCD$, mệnh đề **đúng**:",
+      "img": null,
+      "options": [
+        "$\\goc{A}+\\goc{B}=180\\do$",
+        "$\\goc{A}+\\goc{C}=180\\do$",
+        "$\\goc{A}=\\goc{B}$",
+        "$\\goc{B}=\\goc{D}$"
+      ],
+      "answer": 0,
+      "hint": "HBH: **hai góc kề** bù nhau; **hai góc đối** bằng nhau."
     }
   ],
+
   "multi10": [
     {
-      "id": "Cau11(TL)",
+      "id": "t1_hbh",
+      "title": "Chọn đúng/sai về **hình bình hành**.",
+      "img": null,
+      "items": [
+        ["Các cặp cạnh đối **song song**.", 1],
+        ["Các cặp cạnh đối **bằng nhau**.", 1],
+        ["Hai đường chéo **cắt nhau tại trung điểm** mỗi đường.", 1],
+        ["Hai đường chéo **vuông góc**.", 0],
+        ["Tổng hai góc kề **bằng** $180\\do$.", 1],
+        ["Hai góc đối **bằng nhau**.", 1],
+        ["Có ít nhất một góc vuông.", 0],
+        ["Hai đường chéo **bằng nhau**.", 0],
+        ["Một cặp cạnh kề **song song**.", 0],
+        ["Một cặp cạnh kề **bằng nhau**.", 0]
+      ],
+      "hint": "HBH: cạnh đối song song & bằng nhau; góc kề bù nhau; góc đối bằng nhau; chéo cắt nhau tại trung điểm."
+    },
+    {
+      "id": "t2_hcn",
+      "title": "Chọn 5 ý **đúng** về **hình chữ nhật**.",
+      "img": null,
+      "items": [
+        ["Có bốn **góc vuông**.", 1],
+        ["Các cạnh đối **song song**.", 1],
+        ["Hai đường chéo **bằng nhau**.", 1],
+        ["Hai đường chéo **vuông góc**.", 0],
+        ["HBH có **một góc vuông** là hình chữ nhật.", 1],
+        ["HBH có hai đường chéo bằng nhau là hình chữ nhật.", 1],
+        ["Bốn cạnh luôn bằng nhau.", 0],
+        ["Hai góc kề bằng nhau.", 0],
+        ["Một đường chéo là phân giác góc.", 0],
+        ["Một cạnh kề song song.", 0]
+      ],
+      "hint": "Đặc trưng HCN: HBH + bốn góc vuông; chéo bằng nhau."
+    },
+    {
+      "id": "t3_hthoi",
+      "title": "Chọn 5 ý **đúng** về **hình thoi**.",
+      "img": null,
+      "items": [
+        ["Bốn cạnh **bằng nhau**.", 1],
+        ["Các cặp cạnh đối **song song**.", 1],
+        ["Hai đường chéo **vuông góc**.", 1],
+        ["Hai đường chéo là **phân giác** các góc.", 1],
+        ["Hai đường chéo **bằng nhau**.", 0],
+        ["Có bốn góc vuông.", 0],
+        ["Hai góc kề bằng nhau.", 0],
+        ["Hai góc đối bằng nhau.", 1],
+        ["Một cạnh kề song song.", 0],
+        ["Một góc vuông.", 0]
+      ],
+      "hint": "HT: 4 cạnh bằng nhau; chéo vuông góc & là phân giác; góc đối bằng nhau; là HBH."
+    },
+    {
+      "id": "t4_hvuong",
+      "title": "Chọn 5 ý **đúng** về **hình vuông**.",
+      "img": null,
+      "items": [
+        ["Bốn **góc vuông**.", 1],
+        ["Bốn cạnh **bằng nhau**.", 1],
+        ["Các cạnh đối **song song**.", 1],
+        ["Hai đường chéo **bằng nhau**.", 1],
+        ["Hai đường chéo **vuông góc**.", 1],
+        ["Hai đường chéo là phân giác các góc.", 1],
+        ["Hai góc kề bằng nhau.", 0],
+        ["Một cạnh kề song song.", 0],
+        ["Một góc tù.", 0],
+        ["Chỉ là hình chữ nhật, không phải hình thoi.", 0]
+      ],
+      "hint": "Hình vuông = HCN ∩ HT: vừa có chéo bằng nhau, vừa chéo vuông góc & là phân giác."
+    },
+    {
+      "id": "t5_hthang",
+      "title": "Chọn 5 ý **đúng** về **hình thang**.",
+      "img": null,
+      "items": [
+        ["Có **ít nhất một** cặp cạnh đối song song.", 1],
+        ["Hai cạnh bên luôn song song.", 0],
+        ["Tổng hai góc kề một cạnh bên bằng $180\\do$.", 1],
+        ["Hai đường chéo luôn bằng nhau.", 0],
+        ["Hai đường chéo luôn vuông góc.", 0],
+        ["Nếu hai cạnh bên bằng nhau ⇒ **hình thang cân**.", 1],
+        ["Góc ở cùng một đáy **bằng nhau** (trong hình thang cân).", 1],
+        ["Hai đáy **bằng nhau**.", 0],
+        ["Một góc vuông ở đáy ⇒ **hình thang vuông**.", 1],
+        ["Hai cạnh kề bằng nhau ⇒ hình thoi.", 0]
+      ],
+      "hint": "Hình thang: có một cặp cạnh đối **song song**; hình thang cân: hai cạnh bên bằng nhau; hình thang vuông: có một góc vuông."
+    },
+    {
+      "id": "t6_goc_tugiac",
+      "title": "Về **góc trong tứ giác**: chọn 5 ý **đúng**.",
+      "img": null,
+      "items": [
+        ["Tổng bốn góc bằng $360\\do$.", 1],
+        ["Hai góc kề một cạnh bằng $180\\do$ trong mọi tứ giác.", 0],
+        ["Trong HBH: hai góc **kề** bù nhau.", 1],
+        ["Trong HBH: hai góc **đối** bằng nhau.", 1],
+        ["Trong HCN: mọi góc đều **vuông**.", 1],
+        ["Trong HT: tổng hai góc kề bằng $90\\do$.", 0],
+        ["Trong hình thang cân: góc ở **cùng đáy** bằng nhau.", 1],
+        ["Trong hình thang cân: góc so le trong bằng nhau.", 0],
+        ["Trong tứ giác lồi: có thể có góc $>180\\do$.", 0],
+        ["Trong HCN: tổng hai góc kề bằng $180\\do$.", 1]
+      ],
+      "hint": "Ôn: tứ giác $360\\do$; HBH: kề bù, đối bằng; HCN: mọi góc $90\\do$; HT cân: góc cùng đáy bằng nhau."
+    },
+    {
+      "id": "t7_cau9_img",
+      "title": "Quan sát **hình nhận dạng** (câu 9). Chọn 5 ý **đúng** về hình **2**.",
+      "img": "img/cau9.png",
+      "items": [
+        ["Bốn góc vuông.", 1],
+        ["Bốn cạnh bằng nhau.", 1],
+        ["Hai đường chéo bằng nhau.", 1],
+        ["Hai đường chéo vuông góc.", 1],
+        ["Là hình vuông.", 1],
+        ["Là hình chữ nhật nhưng không là hình thoi.", 0],
+        ["Là hình thoi nhưng không là hình chữ nhật.", 0],
+        ["Không phải tứ giác lồi.", 0],
+        ["Một cạnh kề song song.", 0],
+        ["Một góc tù.", 0]
+      ],
+      "hint": "Hình 2 là **hình vuông** ⇒ đồng thời là HCN & HT."
+    },
+    {
+      "id": "t8_cau10_img",
+      "title": "Quan sát **hình 1** (câu 10). Chọn 5 ý **đúng**.",
+      "img": "img/cau10.png",
+      "items": [
+        ["$\\goc{ABC}+\\goc{ADC}=180\\do$.", 1],
+        ["$\\goc{ABC}=120\\do$.", 1],
+        ["$\\goc{ADC}=60\\do$.", 1],
+        ["Hai đường chéo bằng nhau.", 0],
+        ["Hai cặp cạnh đối song song.", 0],
+        ["Đây là hình bình hành.", 0],
+        ["Hai góc đối bằng nhau.", 0],
+        ["Tổng bốn góc $=360\\do$.", 1],
+        ["Hai góc kề một cạnh luôn bù trong mọi tứ giác.", 0],
+        ["Góc $\\goc{BAD}=120\\do$.", 0]
+      ],
+      "hint": "Dùng tính chất **tổng góc tứ giác** và **hai góc kề bù** theo hình vẽ."
+    },
+    {
+      "id": "t9_cau11_img",
+      "title": "Quan sát **hình 2** (câu 11 – hình thang). Chọn **5 ý đúng**.",
+      "img": "img/cau11.png",
+      "items": [
+        ["$MN\\,\\ss\\,QP$.", 1],
+        ["$MQ=NP$ ⇒ hình thang cân.", 1],
+        ["Hai góc ở cùng một đáy bằng nhau.", 1],
+        ["Hai đáy bằng nhau.", 0],
+        ["Hai đường chéo bằng nhau.", 1],
+        ["Hai cạnh bên song song.", 0],
+        ["Một góc vuông.", 0],
+        ["Tổng hai góc kề một cạnh bên bằng $180\\do$.", 1],
+        ["Tổng hai góc kề một đáy bằng $90\\do$.", 0],
+        ["Đường chéo vuông góc.", 0]
+      ],
+      "hint": "Hình thang cân: cạnh bên bằng nhau; góc cùng đáy bằng nhau; thường có chéo bằng nhau."
+    },
+    {
+      "id": "t10_cau12_img",
+      "title": "Quan sát **hình 3** (câu 12 – HBH). Chọn **5 ý đúng**.",
+      "img": "img/cau12.png",
+      "items": [
+        ["$EF\\,\\ss\\,HG$ và $EH\\,\\ss\\,FG$.", 1],
+        ["Các cạnh đối bằng nhau.", 1],
+        ["Hai đường chéo cắt nhau tại trung điểm.", 1],
+        ["Hai đường chéo vuông góc.", 0],
+        ["Hai đường chéo bằng nhau.", 0],
+        ["Hai góc kề bù nhau.", 1],
+        ["Hai góc đối bằng nhau.", 1],
+        ["Bốn cạnh bằng nhau.", 0],
+        ["Có một góc vuông.", 0],
+        ["Một cạnh kề song song.", 0]
+      ],
+      "hint": "Ôn toàn bộ tính chất **HBH**."
+    },
+    {
+      "id": "t11_cau13_img",
+      "title": "Quan sát **các hình a–d** (câu 13). Chọn 5 ý **đúng** về **hình a**.",
+      "img": "img/cau13.png",
+      "items": [
+        ["Hình a là tứ giác lồi.", 1],
+        ["Không có cạnh tự cắt.", 1],
+        ["Bốn góc $<180\\do$.", 1],
+        ["Hai đường chéo cắt nhau **trong** hình.", 1],
+        ["Tổng bốn góc $=360\\do$.", 1],
+        ["Hai cạnh kề song song.", 0],
+        ["Hai đường chéo vuông góc.", 0],
+        ["Hai đường chéo bằng nhau.", 0],
+        ["Một góc tù $>180\\do$.", 0],
+        ["Không là đa giác đơn.", 0]
+      ],
+      "hint": "Nhận dạng tứ giác lồi theo **định nghĩa**."
+    },
+    {
+      "id": "t12_cau14_img",
+      "title": "Quan sát **hình 4** (câu 14). Chọn 5 ý **đúng**.",
+      "img": "img/cau14.png",
+      "items": [
+        ["Tứ giác là **hình chữ nhật**.", 1],
+        ["Có bốn góc vuông.", 1],
+        ["Các cạnh đối song song.", 1],
+        ["Hai đường chéo bằng nhau.", 1],
+        ["Hai đường chéo vuông góc.", 0],
+        ["Bốn cạnh bằng nhau.", 0],
+        ["Là hình thoi.", 0],
+        ["Góc kề bù nhau.", 1],
+        ["Góc đối bằng nhau.", 1],
+        ["Hai cạnh bên song song.", 0]
+      ],
+      "hint": "Dấu hiệu & tính chất **HCN**."
+    },
+    {
+      "id": "t13_lt_hcn_ht_hv",
+      "title": "Liên hệ giữa **HCN, HT, HV** – chọn 5 ý **đúng**.",
+      "img": null,
+      "items": [
+        ["Hình vuông vừa là HCN vừa là HT.", 1],
+        ["HCN có 4 cạnh bằng nhau.", 0],
+        ["HT có 4 góc vuông.", 0],
+        ["HCN có chéo bằng nhau.", 1],
+        ["HT có chéo vuông góc.", 1],
+        ["Hình vuông có chéo bằng nhau và vuông góc.", 1],
+        ["HCN có chéo vuông góc.", 0],
+        ["HT có chéo bằng nhau.", 0],
+        ["HV là giao của HCN và HT.", 1],
+        ["HBH là giao của HCN và HT.", 0]
+      ],
+      "hint": "Ôn bản chất: HV = HCN ∩ HT."
+    },
+    {
+      "id": "t14_goc_song_song",
+      "title": "Góc liên quan đến **đường thẳng song song** – chọn 5 ý **đúng**.",
+      "img": null,
+      "items": [
+        ["So le trong **bằng nhau**.", 1],
+        ["Đồng vị **bằng nhau**.", 1],
+        ["Trong cùng phía **bù nhau**.", 1],
+        ["So le ngoài **bằng nhau**.", 1],
+        ["Tổng hai góc **đồng vị** bằng $90\\do$.", 0],
+        ["Hai góc kề nhau luôn bù.", 0],
+        ["Hai đường thẳng **vuông góc** cùng vuông góc với đường thứ ba thì **song song** với nhau.", 1],
+        ["Nếu một góc tù thì góc so le trong còn lại cũng tù.", 0],
+        ["Góc bù với góc nhọn có thể là góc nhọn.", 0],
+        ["Hai góc kề một cạnh bên trong hình thang cân bằng nhau.", 0]
+      ],
+      "hint": "Hệ quả đường thẳng **song song** lớp 7–8."
+    },
+    {
+      "id": "t15_goc_hbh",
+      "title": "Góc trong **hình bình hành** – chọn 5 ý **đúng**.",
+      "img": null,
+      "items": [
+        ["$\\goc{A}+\\goc{B}=180\\do$.", 1],
+        ["$\\goc{B}+\\goc{C}=180\\do$.", 1],
+        ["$\\goc{A}=\\goc{C}$.", 1],
+        ["$\\goc{B}=\\goc{D}$.", 1],
+        ["$\\goc{A}+\\goc{C}=180\\do$.", 0],
+        ["$\\goc{B}+\\goc{D}=180\\do$.", 0],
+        ["Có ít nhất một góc vuông.", 0],
+        ["Hai đường chéo là phân giác góc.", 0],
+        ["Hai đường chéo cắt nhau tại trung điểm.", 1],
+        ["Một cạnh kề song song.", 0]
+      ],
+      "hint": "Góc kề bù; góc đối bằng; chéo cắt nhau tại trung điểm."
+    },
+    {
+      "id": "t16_ht_dau_hieu",
+      "title": "Dấu hiệu để tứ giác là **hình thoi** – chọn 5 ý **đúng**.",
+      "img": null,
+      "items": [
+        ["HBH có **hai cạnh kề bằng nhau**.", 1],
+        ["HBH có **một đường chéo là phân giác** một góc.", 1],
+        ["HBH có **hai đường chéo vuông góc**.", 1],
+        ["Tứ giác có **bốn cạnh bằng nhau**.", 1],
+        ["HBH có hai đường chéo **bằng nhau**.", 0],
+        ["HBH có một góc vuông.", 0],
+        ["Tứ giác có hai góc kề bằng nhau.", 0],
+        ["HBH có một cặp cạnh kề song song.", 0],
+        ["Chỉ cần một cạnh kề bằng nhau.", 0],
+        ["Hai đường chéo là trung trực của nhau.", 1]
+      ],
+      "hint": "Các **dấu hiệu** thường dùng để nhận dạng **hình thoi**."
+    },
+    {
+      "id": "t17_htcan_bai11",
       "title": "Quan sát **hình 3** (Bài 11). Hãy chọn **5 ý đúng** để kiểm chứng $MNPQ$ là **hình thang cân**.",
       "img": "img/cau11(TL).png",
       "items": [
-        ["Hai đáy MN và QP **song song** ($MN\\,\\ss\\,QP$).", 1],
-        ["Hai cạnh bên MQ và NP **bằng nhau**.", 1],
+        ["Hai đáy $MN\\,\\ss\\,QP$.", 1],
+        ["Hai cạnh bên $MQ$ và $NP$ **bằng nhau**.", 1],
         ["Hai góc kề một đáy bằng nhau (ví dụ $\\goc{QMN}=\\goc{MNP}$).", 1],
-        ["Hai góc kề một đáy **bù nhau**.", 1],
-        ["Đường trung bình song song với hai đáy.", 1],
-        ["Hai đường chéo **bằng nhau**.", 0],
+        ["Hai đường chéo **bằng nhau**.", 1],
+        ["Tổng hai góc kề một cạnh bên bằng $180\\do$.", 1],
+        ["Hai cạnh bên **song song**.", 0],
         ["Hai đường chéo **vuông góc**.", 0],
         ["Hai đáy **bằng nhau**.", 0],
-        ["Một cạnh bên **vuông góc** với đáy.", 0],
-        ["Tổng hai góc ở một đáy **khác** $180\\do$.", 0]
+        ["Một góc vuông.", 0],
+        ["Góc ở hai đáy bằng nhau từng đôi.", 0]
       ],
-      "hint": "Theo SGK KNTT Toán 8: **hình thang cân** có hai cạnh bên bằng nhau; hai đáy **song song**; hai góc ở cùng một đáy **bằng nhau**; đường trung bình **song song** với đáy."
+      "hint": "HT cân: cạnh bên bằng nhau; góc cùng đáy bằng nhau; (thường) chéo bằng nhau; các góc kề một cạnh bên bù nhau."
     }
   ],
+
   "short": []
 }
