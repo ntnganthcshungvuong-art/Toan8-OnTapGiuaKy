@@ -1,284 +1,324 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ôn tập Giữa kì I - Toán 8</title>
 
-<!-- Font rõ nét -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- MathJax + macro ký hiệu toán học chuẩn SGK -->
-<script>
-window.MathJax = {
-  tex: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\\[','\\]']],
-    macros: {
-      goc: ["\\widehat{\\mathrm{#1}}", 1],  // \goc{ABC}
-      do:  ["^{\\circ}"],                   // \do (độ)
-      ss:  "\\parallel",                    // \ss (song song)
-      vuong: "\\perp"                       // \vuong (vuông góc)
-    }
-  },
-  svg: { fontCache: 'global' }
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
-
+<!-- UI căn bản, mobile-first -->
 <style>
   :root{
-    --brand:#2563eb; --ok:#16a34a; --bad:#dc2626; --warn:#d97706;
-    --card:#fff; --bg:#f7f8fc; --text:#0f1221; --muted:#5b6270; --border:#e5e7eb;
-  }
-  @media (prefers-color-scheme: dark){
-    :root{ --brand:#7aa2ff; --ok:#7bd68c; --bad:#ff7a7a; --warn:#ffcc7a;
-           --card:#0f1622; --bg:#0b0f14; --text:#e5e7eb; --muted:#9aa4b2; --border:#202733;}
+    --bg:#f6f8fb;
+    --card:#ffffff;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --brand:#2563eb;
+    --brand-soft:#e6f0ff;
+    --ok:#16a34a;
+    --wrong:#dc2626;
+    --hint:#eaf3ff;
+    --chip:#f1f5f9;
+    --border:#e5e7eb;
   }
   *{box-sizing:border-box}
-  body{font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:var(--bg); color:var(--text); line-height:1.6}
-  header{padding:18px 12px; text-align:center; background:var(--card); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10}
-  h1{margin:0; color:var(--brand); font-size:clamp(20px,3.4vw,30px); letter-spacing:.2px}
-  .small{color:var(--muted); font-size:13px}
-  main{max-width:1000px; margin:14px auto 90px; padding:0 14px}
-  h2{color:var(--brand); text-align:center; margin:20px 0 12px}
-  .question{background:var(--card); border:1px solid var(--border); border-radius:14px; padding:16px; margin:12px 0}
-  .qtitle{font-weight:700; margin-bottom:8px}
-  .qimg{margin:8px 0 10px; text-align:center}
-  .qimg img{max-width:100%; height:auto; border-radius:8px; border:1px solid var(--border)}
-  .options{margin-top:6px}
-  .options label{display:flex; gap:10px; align-items:center; padding:12px; margin:6px 0; border-radius:10px; cursor:pointer}
-  .options input{width:20px; height:20px; transform:scale(1.1); accent-color:var(--brand)}
-  .meta{color:var(--muted); font-size:13px}
-  .actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin:22px 0}
-  button{padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:var(--card); color:var(--text); cursor:pointer; font-weight:700; min-width:140px}
-  button.primary{background:var(--brand); border-color:var(--brand); color:#fff}
-  button.hint-btn{background:#dff5ff; color:#0b3d60; border:1px solid #bfe9ff}
-  button:focus-visible{outline:3px solid var(--brand); outline-offset:2px}
-  .result{padding:8px 10px; border:1px dashed var(--border); border-radius:10px; margin-top:8px; display:none; color:var(--muted)}
-  .correct{background:color-mix(in oklab, var(--ok) 18%, var(--card)); border-color:color-mix(in oklab, var(--ok) 40%, var(--border)); color:#0b4c1d}
-  .incorrect{background:color-mix(in oklab, var(--bad) 14%, var(--card)); border-color:color-mix(in oklab, var(--bad) 40%, var(--border)); color:#5f1111}
-  .mark-correct{outline:2px solid var(--ok); background:color-mix(in oklab, var(--ok) 12%, transparent)}
-  .mark-wrong{outline:2px solid var(--bad); background:color-mix(in oklab, var(--bad) 10%, transparent)}
-  .mark-missed{outline:2px dashed var(--warn); background:color-mix(in oklab, var(--warn) 12%, transparent)}
-  .hint{margin-top:8px; padding:8px 10px; border-left:4px solid var(--brand); background:color-mix(in oklab, var(--brand) 8%, var(--card)); display:none; border-radius:8px}
-  .scorebox{position:sticky; bottom:0; background:var(--card); border-top:1px solid var(--border); padding:10px 14px; display:flex; gap:12px; align-items:center; justify-content:space-between}
-  .score{font-weight:800; color:var(--brand)}
-  .legend{font-size:13px; display:flex; gap:10px; align-items:center; color:var(--muted)}
-  .key{display:inline-block; width:14px; height:14px; border-radius:3px; border:1px solid var(--border); margin-right:4px}
-  .k1{background:color-mix(in oklab, var(--ok) 30%, var(--card))}
-  .k2{background:color-mix(in oklab, var(--bad) 30%, var(--card))}
-  .k3{background:color-mix(in oklab, var(--warn) 40%, var(--card))}
-  @media (max-width:640px){ button{flex:1 1 100%; min-width:auto} .options label{padding:12px} }
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    background:var(--bg);
+    color:var(--text);
+  }
+  .container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  header{
+    text-align:center;
+    margin: 10px 0 16px;
+  }
+  h1{
+    font-size: clamp(20px,4.2vw,34px);
+    margin: 8px 0;
+  }
+  .subtitle{
+    color:var(--muted);
+    font-size: 14px;
+  }
+  .toolbar{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin: 10px 0 18px;
+  }
+  button{
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--text);
+    padding:10px 14px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  button.primary{ background: var(--brand); color:#fff; border-color: transparent;}
+  button.soft{ background: var(--brand-soft); color:#0b3abf; border-color:transparent;}
+  button:active{ transform: translateY(1px); }
+
+  .section-title{
+    margin: 28px 0 10px;
+    font-weight:800;
+    font-size: clamp(18px,3.4vw,26px);
+    text-align:center;
+  }
+  .note{
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:8px;
+  }
+
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:14px;
+    margin:10px 0 16px;
+  }
+  .q-header{
+    font-weight:700;
+    margin-bottom:10px;
+    line-height:1.45;
+  }
+  .q-body{ margin-top:10px; }
+  .q-img{
+    max-width: 320px;
+    max-height: 220px;
+    width: auto;
+    height: auto;
+    display:block;
+    margin:8px 0;
+    border-radius:8px;
+  }
+  .opt{
+    display:flex; align-items:flex-start; gap:10px;
+    padding:10px 8px; border-radius:10px;
+  }
+  .opt:hover{ background:#fafafa; }
+  .opt input{ margin-top:3px; transform:scale(1.12); }
+  .opt label{ flex:1; cursor:pointer; }
+  .hint-wrap{ margin-top:8px; }
+  .hint-btn{
+    background:#e0f2ff; color:#0b4a8f;
+    border:none; padding:8px 12px; border-radius:8px; font-weight:700;
+  }
+  .hint-text{
+    background:var(--hint);
+    border-left: 3px solid var(--brand);
+    padding:10px 12px;
+    border-radius:10px;
+    color:#0b3a79;
+    margin-top:8px;
+    display:none;
+  }
+
+  /* tag math */
+  .math { font-family: "STIX Two Text","Times New Roman",serif; }
+  .math sup { font-size: 0.74em; line-height: 0; vertical-align: baseline; }
+
+  /* score bar */
+  .score{
+    font-size:13px; color:var(--muted); text-align:right;
+  }
+
+  /* multi10 grid */
+  .grid{
+    display:grid; gap:8px;
+  }
+  @media(min-width:700px){
+    .grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+
+  /* footer */
+  footer{ text-align:center; color:var(--muted); font-size:12px; margin:16px 0 40px; }
 </style>
 </head>
 <body>
-<header>
-  <h1>Ôn tập Giữa kì I - Toán 8</h1>
-  <div class="small">Ký hiệu toán học chuẩn (góc, độ, song song, vuông góc); gợi ý chi tiết; LaTeX; hai nút làm lại.</div>
-</header>
+  <div class="container">
+    <header>
+      <h1>Ôn tập Giữa kì I - Toán 8</h1>
+      <div class="subtitle">Hỗ trợ ký hiệu toán đẹp (x², y³, Â, //, ⊥), gợi ý kiến thức, 2 nút làm lại (giữ nguyên / xáo trộn).</div>
+      <div class="toolbar">
+        <button class="soft" id="btnReset">🔄 Làm lại (không xáo)</button>
+        <button class="primary" id="btnShuffle">🎲 Làm lại + xáo trộn</button>
+      </div>
+    </header>
 
-<main>
-  <h2>PHẦN TRẮC NGHIỆM</h2>
-  <div id="mcqContainer"></div>
+    <div class="section-title">PHẦN TRẮC NGHIỆM</div>
+    <div class="note">Chọn 1 phương án đúng cho mỗi câu.</div>
+    <div id="mcqList"></div>
 
-  <h2>PHẦN TỰ LUẬN</h2>
-  <p class="meta">Kiểu A: chọn 10 ý/5 ý đúng (theo SGK Kết nối tri thức).</p>
-  <div id="multiContainer"></div>
-  <div id="shortContainer"></div>
+    <div class="section-title">PHẦN TỰ LUẬN</div>
+    <div class="note">Kiểu A: chọn 10 ý/5 đúng (theo SGK *Kết nối tri thức*). Mỗi bài có nút gợi ý.</div>
+    <div id="multiList"></div>
 
-  <div class="actions">
-    <button class="primary" onclick="grade()">Chấm điểm</button>
-    <button onclick="resetAll(false)">Làm lại (giữ nguyên thứ tự)</button>
-    <button onclick="resetAll(true)">Làm lại + Xáo trộn</button>
+    <footer>© lớp Toán 8 – luyện đề trên GitHub Pages</footer>
   </div>
-
-  <div class="scorebox">
-    <div class="legend">
-      <span class="key k1"></span> Đúng
-      <span class="key k2"></span> Sai
-      <span class="key k3"></span> Bỏ sót
-    </div>
-    <div class="score" id="score">Điểm: 0 câu</div>
-  </div>
-</main>
 
 <script>
-let MCQS=[], MULTI10=[], SHORT=[];
-let currentMcqs=[];
-
-fetch('questions.json')
-  .then(r => r.json())
-  .then(d => {
-    MCQS = d.mcqs || [];
-    MULTI10 = d.multi10 || [];
-    SHORT = d.short || [];
-    currentMcqs = JSON.parse(JSON.stringify(MCQS));
-    renderMcqs(); renderMulti10(); renderShort();
-    if (window.MathJax) MathJax.typesetPromise();
-  })
-  .catch(err => {
-    console.error('Lỗi nạp questions.json:', err);
-    alert('Không tải được bộ câu hỏi. Kiểm tra lại questions.json hoặc đường dẫn ảnh.');
-  });
-
-function shuffle(arr){ for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]];} }
-function shuffleOptions(q){
-  const pairs = q.options.map((opt,i)=>({opt, idx:i}));
-  shuffle(pairs);
-  q.options = pairs.map(p=>p.opt);
-  q.answer = pairs.findIndex(p=>p.idx===q.answer);
+/* ====== Định dạng toán học: ^ → <sup>, A^ → Â, perp → ⊥ ====== */
+const supers = { "-":"⁻","0":"⁰","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","6":"⁶","7":"⁷","8":"⁸","9":"⁹" };
+function toSup(s){ return String(s).split("").map(ch => supers[ch] ?? ch).join(""); }
+function formatMath(text){
+  if(!text) return text;
+  // x^2 / y^-3
+  text = text.replace(/([A-Za-z])\^(-?\d+)/g, (_,v,e) => `${v}<sup>${toSup(e)}</sup>`);
+  // 10^2
+  text = text.replace(/(\d)\^(-?\d+)/g, (_,d,e) => `${d}<sup>${toSup(e)}</sup>`);
+  // (x+y)^3
+  text = text.replace(/(\))\^(-?\d+)/g, (_,p,e) => `${p}<sup>${toSup(e)}</sup>`);
+  // A^BC → ÂBC
+  text = text.replace(/([A-Z])\^/g, (_,L) => `${L}\u0302`);
+  // perp → ⊥
+  text = text.replace(/\bperp\b/gi, "⊥");
+  return text;
+}
+function setMath(el, raw){
+  el.classList.add('math');
+  el.innerHTML = formatMath(raw);
 }
 
+/* ====== Utils ====== */
+const $ = (sel,root=document) => root.querySelector(sel);
+const $$ = (sel,root=document) => [...root.querySelectorAll(sel)];
+const shuffle = arr => arr.sort(()=>Math.random()-0.5);
+
+/* ====== Data ====== */
+let MCQS = [], MULTI10 = [];
+let keepOrder = true; // reset ko xáo
+
+/* ====== Render MCQ ====== */
 function renderMcqs(){
-  const wrap = document.getElementById('mcqContainer'); wrap.innerHTML='';
-  currentMcqs.forEach((q,qi)=>{
-    const card = document.createElement('div'); card.className='question'; card.id = `q${qi+1}`;
-    const head = document.createElement('div'); head.className='qtitle'; head.innerHTML = `Câu ${qi+1}: ${q.stem}`;
+  const wrap = $('#mcqList'); wrap.innerHTML = '';
+  const list = keepOrder ? [...MCQS] : shuffle([...MCQS]);
+
+  list.forEach((q,idx)=>{
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const head = document.createElement('div');
+    head.className = 'q-header';
+    setMath(head, `Câu ${idx+1}: ${q.stem}`);
     card.appendChild(head);
 
     if(q.img){
-      const imgWrap=document.createElement('div'); imgWrap.className='qimg';
-      const img=document.createElement('img'); img.src=q.img; img.alt='minh họa'; imgWrap.appendChild(img);
-      card.appendChild(imgWrap);
+      const img = document.createElement('img');
+      img.src = q.img; img.alt = 'minh hoạ'; img.className='q-img';
+      card.appendChild(img);
     }
 
-    const opts=document.createElement('div'); opts.className='options';
-    const name = `q_${q.id || ('i'+qi)}`;
-    q.options.forEach((text,oi)=>{
-      const lab=document.createElement('label'); const inp=document.createElement('input');
-      inp.type='radio'; inp.name=name; inp.dataset.correct=(oi===q.answer);
-      lab.appendChild(inp); const span=document.createElement('span'); span.innerHTML=' '+ 'ABCD'[oi]+'. '+text; lab.appendChild(span);
-      opts.appendChild(lab);
+    const body = document.createElement('div'); body.className='q-body';
+    const options = keepOrder ? [...q.options] : shuffle([...q.options]);
+
+    options.forEach((opt, i)=>{
+      const optIdx = q.options.indexOf(opt); // index theo bản gốc để so sánh answer
+      const row = document.createElement('div'); row.className='opt';
+      const ip = document.createElement('input');
+      ip.type = 'radio'; ip.name = `mcq-${idx}`; ip.id = `mcq-${idx}-${i}`;
+      const lb = document.createElement('label'); lb.setAttribute('for', ip.id);
+      setMath(lb, String.fromCharCode(65+i)+'. '+opt);
+      ip.addEventListener('change', ()=>{
+        // highlight đúng/sai nhẹ nhàng
+        const all = $$( 'input[name="'+ip.name+'"]', card);
+        all.forEach(x=>x.parentElement.style.background='transparent');
+        row.style.background = '#f8fafc';
+      });
+      row.append(ip, lb);
+      body.appendChild(row);
+
+      // lưu lại để check đáp án khi cần (ở đây chỉ học sinh tự so)
+      row.dataset.correct = (optIdx === q.answer) ? '1':'0';
     });
 
-    const res=document.createElement('div'); res.className='result';
-    const hint=document.createElement('div'); hint.className='hint'; hint.innerHTML=q.hint || '';
-    const hintBtn=document.createElement('button'); hintBtn.className='hint-btn'; hintBtn.textContent='Gợi ý';
-    hintBtn.onclick=()=>{ hint.style.display = hint.style.display==='block' ? 'none' : 'block'; if(window.MathJax) MathJax.typesetPromise(); };
+    // gợi ý
+    const hintWrap = document.createElement('div'); hintWrap.className='hint-wrap';
+    const btn = document.createElement('button'); btn.className='hint-btn'; btn.textContent='Gợi ý';
+    const hint = document.createElement('div'); hint.className='hint-text';
+    setMath(hint, q.hint || 'Ôn lại định nghĩa/tính chất liên quan trong SGK.');
+    btn.addEventListener('click', ()=>{ hint.style.display = (hint.style.display==='block'?'none':'block'); });
+    hintWrap.append(btn, hint);
 
-    card.appendChild(opts); card.appendChild(res); card.appendChild(hintBtn); card.appendChild(hint);
+    // điểm (tùy chọn)
+    // const score = document.createElement('div'); score.className='score'; score.textContent = ' ';
+    card.append(body, hintWrap /*, score*/);
     wrap.appendChild(card);
   });
-  if(window.MathJax) MathJax.typesetPromise();
 }
 
+/* ====== Render Multi10 ====== */
 function renderMulti10(){
-  const wrap=document.getElementById('multiContainer'); wrap.innerHTML='';
-  MULTI10.forEach((q,qi)=>{
-    const card=document.createElement('div'); card.className='question'; card.id=`m${qi+1}`;
-    const head=document.createElement('div'); head.className='qtitle'; head.innerHTML=`Câu ${qi+1}A: ${q.title}`; card.appendChild(head);
+  const wrap = $('#multiList'); wrap.innerHTML='';
+  const list = keepOrder ? [...MULTI10] : shuffle([...MULTI10]);
+
+  list.forEach((q, idx)=>{
+    const card = document.createElement('div'); card.className='card';
+
+    const head = document.createElement('div'); head.className='q-header';
+    setMath(head, `Câu ${idx+1}A: ${q.title}`);
+    card.appendChild(head);
 
     if(q.img){
-      const iw=document.createElement('div'); iw.className='qimg';
-      const im=document.createElement('img'); im.src=q.img; im.alt='minh họa'; iw.appendChild(im); card.appendChild(iw);
+      const img = document.createElement('img');
+      img.src = q.img; img.alt='minh hoạ'; img.className='q-img';
+      card.appendChild(img);
     }
 
-    const opts=document.createElement('div'); opts.className='options';
-    (q.items||[]).forEach(([text,ok])=>{
-      const lab=document.createElement('label'); const inp=document.createElement('input'); inp.type='checkbox'; inp.dataset.correct=!!ok;
-      lab.appendChild(inp); const span=document.createElement('span'); span.innerHTML=' '+text; lab.appendChild(span); opts.appendChild(lab);
+    const grid = document.createElement('div'); grid.className='grid';
+    // giữ thứ tự mặc định để HS luyện theo SGK; nếu đang chế độ xáo thì xáo:
+    const items = keepOrder ? [...q.items] : shuffle([...q.items]);
+
+    items.forEach((it, i)=>{
+      const [text, truth] = it; // truth = 1 đúng, 0 sai
+      const row = document.createElement('div'); row.className='opt';
+      const ip = document.createElement('input');
+      ip.type='checkbox'; ip.id=`m10-${idx}-${i}`;
+      const lb = document.createElement('label'); lb.setAttribute('for', ip.id);
+      setMath(lb, text);
+      row.append(ip, lb);
+      row.dataset.truth = truth ? '1':'0';
+      grid.appendChild(row);
     });
 
-    const res=document.createElement('div'); res.className='result';
-    const hint=document.createElement('div'); hint.className='hint'; hint.innerHTML=q.hint||'';
-    const btn=document.createElement('button'); btn.className='hint-btn'; btn.textContent='Gợi ý';
-    btn.onclick=()=>{ hint.style.display=hint.style.display==='block'?'none':'block'; if(window.MathJax) MathJax.typesetPromise(); };
+    const hintWrap = document.createElement('div'); hintWrap.className='hint-wrap';
+    const btn = document.createElement('button'); btn.className='hint-btn'; btn.textContent='Gợi ý';
+    const hint = document.createElement('div'); hint.className='hint-text';
+    setMath(hint, q.hint || 'Ôn lại định nghĩa/tính chất trong SGK.');
+    btn.addEventListener('click', ()=>{ hint.style.display = (hint.style.display==='block'?'none':'block'); });
+    hintWrap.append(btn, hint);
 
-    card.appendChild(opts); card.appendChild(res); card.appendChild(btn); card.appendChild(hint);
+    card.appendChild(grid);
+    card.appendChild(hintWrap);
     wrap.appendChild(card);
   });
-  if(window.MathJax) MathJax.typesetPromise();
 }
 
-function renderShort(){
-  const wrap=document.getElementById('shortContainer'); wrap.innerHTML='';
-  (SHORT||[]).forEach((q,qi)=>{
-    const card=document.createElement('div'); card.className='question'; card.id=`s${qi+1}`;
-    const head=document.createElement('div'); head.className='qtitle'; head.innerHTML=`Câu ${qi+1}B: ${q.title}`; card.appendChild(head);
-    const input=document.createElement('input'); input.type='text'; input.style.width='100%'; input.style.padding='10px'; input.placeholder='Nhập đáp án...';
-    const tip=document.createElement('p'); tip.className='meta'; tip.textContent='Gợi ý nhập: dùng "/" cho phân số, "^" cho lũy thừa. Ví dụ: (x+y)^2/(2x).';
-    const res=document.createElement('div'); res.className='result';
-    const hint=document.createElement('div'); hint.className='hint'; hint.innerHTML=q.hint||'';
-    const btn=document.createElement('button'); btn.className='hint-btn'; btn.textContent='Gợi ý';
-    btn.onclick=()=>{ hint.style.display=hint.style.display==='block'?'none':'block'; if(window.MathJax) MathJax.typesetPromise(); };
-    card.appendChild(input); card.appendChild(tip); card.appendChild(res); card.appendChild(btn); card.appendChild(hint);
-    wrap.appendChild(card);
-  });
-  if(window.MathJax) MathJax.typesetPromise();
-}
+/* ====== Reset / Shuffle ====== */
+$('#btnReset').addEventListener('click', ()=>{ keepOrder = true; renderMcqs(); renderMulti10(); window.scrollTo({top:0,behavior:'smooth'}); });
+$('#btnShuffle').addEventListener('click', ()=>{ keepOrder = false; renderMcqs(); renderMulti10(); window.scrollTo({top:0,behavior:'smooth'}); });
 
-function normalizeExpr(s){ return (s||'').replace(/\s+/g,'').replace(/·/g,'*').replace(/,/g,'.').toLowerCase(); }
-
-function grade(){
-  let total=0, correct=0;
-
-  currentMcqs.forEach((q,idx)=>{
-    total++;
-    const card=document.getElementById('q'+(idx+1));
-    const chosen=card.querySelector('input[type=radio]:checked');
-    const res=card.querySelector('.result'); res.style.display='block';
-    card.querySelectorAll('label').forEach(l=>l.classList.remove('mark-correct','mark-wrong','mark-missed'));
-    card.querySelectorAll('input[type=radio]').forEach(inp=>{ if(inp.dataset.correct==='true'){ inp.parentElement.classList.add('mark-correct'); }});
-    if(chosen && chosen.dataset.correct==='true'){ correct++; res.className='result correct'; res.textContent='Chính xác!'; }
-    else if(chosen){ chosen.parentElement.classList.add('mark-wrong'); res.className='result incorrect'; res.textContent='Chưa đúng. Đáp án đúng viền xanh.'; }
-    else{ res.className='result incorrect'; res.textContent='Chưa chọn đáp án.'; }
-  });
-
-  MULTI10.forEach((q,idx)=>{
-    total++;
-    const card=document.getElementById('m'+(idx+1)); const res=card.querySelector('.result'); res.style.display='block';
-    let ok=true,picked=false;
-    card.querySelectorAll('input[type=checkbox]').forEach(box=>{
-      const should=box.dataset.correct==='true'; const lab=box.parentElement;
-      lab.classList.remove('mark-correct','mark-wrong','mark-missed');
-      if(box.checked) picked=true;
-      if(box.checked && should){ lab.classList.add('mark-correct'); }
-      else if(box.checked && !should){ lab.classList.add('mark-wrong'); ok=false; }
-      else if(!box.checked && should){ lab.classList.add('mark-missed'); ok=false; }
-    });
-    if(ok && picked){ correct++; res.className='result correct'; res.textContent='Đủ và đúng 5 ý.'; }
-    else{ res.className='result incorrect'; res.textContent='Cần chọn đúng 5 ý. Xanh: đúng; Đỏ: sai; Vàng: bỏ sót.'; }
-  });
-
-  (SHORT||[]).forEach((q,idx)=>{
-    total++;
-    const card=document.getElementById('s'+(idx+1)); const res=card.querySelector('.result'); res.style.display='block';
-    const val=card.querySelector('input').value.trim();
-    if(val===''){ res.className='result incorrect'; res.textContent='Chưa nhập đáp án.'; return; }
-    let ok=false;
-    if(q.expected!==undefined){ ok = normalizeExpr(val)===normalizeExpr(q.expected); }
-    else if(q.expectedNumber!==undefined){
-      const num = parseFloat(val.replace(',','.')); const tol = q.tol??0;
-      ok = !isNaN(num) && Math.abs(num - q.expectedNumber) <= tol;
-    }
-    if(ok){ correct++; res.className='result correct'; res.textContent='Đúng!'; }
-    else{ res.className='result incorrect'; res.textContent='Chưa đúng. Bấm “Gợi ý”.'; }
-  });
-
-  document.getElementById('score').textContent = `Điểm: ${correct}/${total} câu`;
-  window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'});
-}
-
-function clearMarks(){
-  document.querySelectorAll('label').forEach(l=>l.classList.remove('mark-correct','mark-wrong','mark-missed'));
-  document.querySelectorAll('.result').forEach(r=>{ r.style.display='none'; r.textContent=''; r.className='result'; });
-  document.querySelectorAll('.hint').forEach(h=>h.style.display='none');
-  document.getElementById('score').textContent = 'Điểm: 0 câu';
-}
-function resetAll(shuffleAll){
-  document.querySelectorAll('input[type=radio],input[type=checkbox]').forEach(i=>i.checked=false);
-  document.querySelectorAll('#shortContainer input[type=text]').forEach(i=>i.value='');
-  clearMarks();
-  if(shuffleAll){
-    currentMcqs = JSON.parse(JSON.stringify(MCQS));
-    shuffle(currentMcqs); currentMcqs.forEach(shuffleOptions);
-  }else{
-    currentMcqs = JSON.parse(JSON.stringify(MCQS));
+/* ====== Load data ====== */
+(async function init(){
+  try{
+    const res = await fetch('questions.json', {cache:'no-store'});
+    const data = await res.json();
+    MCQS = data.mcqs || [];
+    MULTI10 = data.multi10 || [];
+    renderMcqs();
+    renderMulti10();
+  }catch(e){
+    console.error(e);
+    alert('Không tải được questions.json. Kiểm tra lại repo nhé.');
   }
-  renderMcqs(); renderMulti10(); renderShort();
-  window.scrollTo({top:0, behavior:'smooth'});
-}
+})();
 </script>
 </body>
 </html>
