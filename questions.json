@@ -4,92 +4,67 @@
       "id": "cau9_hinh_vuong",
       "stem": "Trong các hình sau, **hình vuông** là:",
       "img": "img/cau9.png",
-      "options": [
-        "Hình 1",
-        "Hình 2",
-        "Hình 3",
-        "Hình 4"
-      ],
+      "options": ["Hình 1", "Hình 2", "Hình 3", "Hình 4"],
       "answer": 1,
-      "hint": "Hình vuông có bốn cạnh bằng nhau **và** bốn góc vuông."
+      "hint": "Dấu hiệu nhận biết **hình vuông**: bốn góc vuông **và** bốn cạnh bằng nhau. (SGK KNTT Toán 8 – Hình học: tứ giác đặc biệt)"
     },
     {
       "id": "cau10_goc_tugiac",
-      "stem": "Cho tứ giác $ABCD$ trong **hình 1**. Biết $\\angle ABC = 120^\\circ$. Số đo $\\angle ADC$ là:",
+      "stem": "Cho tứ giác $ABCD$ trong **hình 1**. Biết $\\goc{ABC}=120\\do$. Số đo $\\goc{ADC}$ là:",
       "img": "img/cau10.png",
-      "options": [
-        "$360^\\circ$",
-        "$180^\\circ$",
-        "$120^\\circ$",
-        "$60^\\circ$"
-      ],
+      "options": ["$360\\do$", "$180\\do$", "$120\\do$", "$60\\do$"],
       "answer": 3,
-      "hint": "Trong tứ giác, hai góc kề bù nhau trên cùng một cạnh: $\\angle ABC + \\angle ADC = 180^\\circ$."
+      "hint": "Trong **tứ giác**, hai góc kề một cạnh bù nhau: $\\goc{ABC}+\\goc{ADC}=180\\do$. Suy ra $\\goc{ADC}=60\\do$."
     },
     {
       "id": "cau11_hinh_thang",
       "stem": "Biết tứ giác $MNPQ$ là **hình thang** (hình 2). MNPQ là **hình thang cân** khi nào?",
       "img": "img/cau11.png",
-      "options": [
-        "$NQ = MP$",
-        "$NQ = 4\\,\\text{cm}$",
-        "$NQ = 2\\,\\text{cm}$",
-        "$NQ = 5\\,\\text{cm}$"
-      ],
+      "options": ["$NQ=MP$", "$NQ=4\\,\\text{cm}$", "$NQ=2\\,\\text{cm}$", "$NQ=5\\,\\text{cm}$"],
       "answer": 0,
-      "hint": "Hình thang cân có **hai cạnh bên bằng nhau**."
+      "hint": "**Hình thang cân**: hai cạnh bên **bằng nhau**; hai góc ở cùng một đáy **bằng nhau**; hai đáy **song song**."
     },
     {
       "id": "cau12_hbh_dung_sai",
       "stem": "Cho hình bình hành $EFGH$ (hình 3). Chọn **mệnh đề đúng**:",
       "img": "img/cau12.png",
       "options": [
-        "$EF \\parallel HG$ và $EH \\parallel FG$",
+        "$EF\\,\\ss\\,HG$ và $EH\\,\\ss\\,FG$",
         "Hai đường chéo vuông góc",
         "Hai đường chéo bằng nhau",
         "Bốn cạnh bằng nhau"
       ],
       "answer": 0,
-      "hint": "Trong hình bình hành: **các cặp cạnh đối song song** và bằng nhau; đường chéo **không nhất thiết** vuông góc hay bằng nhau."
+      "hint": "Tính chất **hình bình hành**: (1) các cặp cạnh đối **song song** và **bằng nhau**; (2) hai góc đối **bằng nhau**; (3) hai đường chéo **cắt nhau tại trung điểm** mỗi đường. Không nhất thiết vuông góc hay bằng nhau."
     },
     {
       "id": "cau13_tu_giac_loi",
       "stem": "Trong các hình sau, **tứ giác lồi** là:",
       "img": "img/cau13.png",
-      "options": [
-        "Hình a",
-        "Hình b",
-        "Hình c",
-        "Hình d"
-      ],
+      "options": ["Hình a", "Hình b", "Hình c", "Hình d"],
       "answer": 0,
-      "hint": "Tứ giác lồi có bốn góc trong **nhỏ hơn 180^\\circ**."
+      "hint": "Tứ giác **lồi**: bốn góc trong đều nhỏ hơn $180\\do$ và mọi đoạn nối hai điểm bất kỳ của hình đều nằm trong hình."
     },
     {
       "id": "cau14_loai_tu_giac",
       "stem": "Tứ giác $ABCD$ trong hình sau là hình gì?",
       "img": "img/cau14.png",
-      "options": [
-        "Hình vuông",
-        "Hình thoi",
-        "Hình chữ nhật",
-        "Hình tam giác"
-      ],
+      "options": ["Hình vuông", "Hình thoi", "Hình chữ nhật", "Hình tam giác"],
       "answer": 2,
-      "hint": "Có các **góc vuông** và hai cặp cạnh đối song song ⇒ **hình chữ nhật**."
+      "hint": "**Hình chữ nhật** có: (1) bốn góc vuông; (2) các cạnh đối **song song** và **bằng nhau**; **(3) hai đường chéo bằng nhau và cắt nhau tại trung điểm mỗi đường**. Dấu hiệu: hình bình hành có một góc vuông **hoặc** có hai đường chéo bằng nhau."
     },
     {
       "id": "cau17_nhan_dang",
       "stem": "Quan sát hình 2: Chọn **khẳng định đúng**.",
       "img": "img/cau17.png",
       "options": [
-        "Các cặp cạnh đối song song",
-        "Hai đường chéo vuông góc",
-        "Hai cạnh kề bằng nhau",
-        "Bốn cạnh bằng nhau"
+        "Các cặp cạnh đối **song song**",
+        "Hai đường chéo **vuông góc**",
+        "Hai cạnh kề **bằng nhau**",
+        "Bốn cạnh **bằng nhau**"
       ],
       "answer": 0,
-      "hint": "Dấu hiệu nhận biết **hình bình hành**: các cặp cạnh đối **song song**."
+      "hint": "Dấu hiệu nhận biết **hình bình hành**: các cặp cạnh đối **song song** ($AB\\,\\ss\\,CD$, $AD\\,\\ss\\,BC$)."
     }
   ],
   "multi10": [
@@ -98,48 +73,18 @@
       "title": "Quan sát **hình 3** (Bài 11). Hãy chọn **5 ý đúng** để kiểm chứng $MNPQ$ là **hình thang cân**.",
       "img": "img/cau11(TL).png",
       "items": [
-        [
-          "Hai đáy MN và QP song song.",
-          1
-        ],
-        [
-          "Hai cạnh bên MQ và NP bằng nhau.",
-          1
-        ],
-        [
-          "Hai góc kề một đáy (ví dụ $\\angle QMN$ và $\\angle MNP$) bằng nhau.",
-          1
-        ],
-        [
-          "Hai góc kề một đáy bù nhau.",
-          1
-        ],
-        [
-          "Đường trung bình song song với hai đáy.",
-          1
-        ],
-        [
-          "Hai đường chéo bằng nhau.",
-          0
-        ],
-        [
-          "Hai đường chéo vuông góc.",
-          0
-        ],
-        [
-          "Hai đáy bằng nhau.",
-          0
-        ],
-        [
-          "Một cạnh bên vuông góc với đáy.",
-          0
-        ],
-        [
-          "Tổng hai góc ở một đáy khác $180^\\circ$.",
-          0
-        ]
+        ["Hai đáy MN và QP **song song** ($MN\\,\\ss\\,QP$).", 1],
+        ["Hai cạnh bên MQ và NP **bằng nhau**.", 1],
+        ["Hai góc kề một đáy bằng nhau (ví dụ $\\goc{QMN}=\\goc{MNP}$).", 1],
+        ["Hai góc kề một đáy **bù nhau**.", 1],
+        ["Đường trung bình song song với hai đáy.", 1],
+        ["Hai đường chéo **bằng nhau**.", 0],
+        ["Hai đường chéo **vuông góc**.", 0],
+        ["Hai đáy **bằng nhau**.", 0],
+        ["Một cạnh bên **vuông góc** với đáy.", 0],
+        ["Tổng hai góc ở một đáy **khác** $180\\do$.", 0]
       ],
-      "hint": "Hình thang cân: hai đáy **song song**; cạnh bên **bằng nhau**; hai góc ở **cùng một đáy** bằng nhau; đường trung bình **song song** với đáy."
+      "hint": "Theo SGK KNTT Toán 8: **hình thang cân** có hai cạnh bên bằng nhau; hai đáy **song song**; hai góc ở cùng một đáy **bằng nhau**; đường trung bình **song song** với đáy."
     }
   ],
   "short": []
