@@ -5,10 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Ôn tập Giữa kì I - Toán 8</title>
 
-<!-- MathJax -->
+<!-- Font rõ nét -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!-- MathJax + macro ký hiệu toán học chuẩn SGK -->
 <script>
 window.MathJax = {
-  tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']]},
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    macros: {
+      goc: ["\\widehat{\\mathrm{#1}}", 1],  // \goc{ABC}
+      do:  ["^{\\circ}"],                   // \do (độ)
+      ss:  "\\parallel",                    // \ss (song song)
+      vuong: "\\perp"                       // \vuong (vuông góc)
+    }
+  },
   svg: { fontCache: 'global' }
 };
 </script>
@@ -17,16 +29,16 @@ window.MathJax = {
 <style>
   :root{
     --brand:#2563eb; --ok:#16a34a; --bad:#dc2626; --warn:#d97706;
-    --card:#fff; --bg:#f7f8fc; --text:#111827; --muted:#6b7280; --border:#e5e7eb;
+    --card:#fff; --bg:#f7f8fc; --text:#0f1221; --muted:#5b6270; --border:#e5e7eb;
   }
   @media (prefers-color-scheme: dark){
     :root{ --brand:#7aa2ff; --ok:#7bd68c; --bad:#ff7a7a; --warn:#ffcc7a;
            --card:#0f1622; --bg:#0b0f14; --text:#e5e7eb; --muted:#9aa4b2; --border:#202733;}
   }
   *{box-sizing:border-box}
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:var(--bg); color:var(--text); line-height:1.6}
+  body{font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; background:var(--bg); color:var(--text); line-height:1.6}
   header{padding:18px 12px; text-align:center; background:var(--card); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10}
-  h1{margin:0; color:var(--brand); font-size:clamp(20px,3.4vw,30px)}
+  h1{margin:0; color:var(--brand); font-size:clamp(20px,3.4vw,30px); letter-spacing:.2px}
   .small{color:var(--muted); font-size:13px}
   main{max-width:1000px; margin:14px auto 90px; padding:0 14px}
   h2{color:var(--brand); text-align:center; margin:20px 0 12px}
@@ -63,7 +75,7 @@ window.MathJax = {
 <body>
 <header>
   <h1>Ôn tập Giữa kì I - Toán 8</h1>
-  <div class="small">Hỗ trợ LaTeX, hình minh họa, gợi ý kiến thức; hai nút làm lại (giữ nguyên / xáo trộn).</div>
+  <div class="small">Ký hiệu toán học chuẩn (góc, độ, song song, vuông góc); gợi ý chi tiết; LaTeX; hai nút làm lại.</div>
 </header>
 
 <main>
@@ -71,7 +83,7 @@ window.MathJax = {
   <div id="mcqContainer"></div>
 
   <h2>PHẦN TỰ LUẬN</h2>
-  <p class="meta">Kiểu A: chọn 10 ý/5 ý đúng. (Có thể thêm kiểu B: điền đáp án.)</p>
+  <p class="meta">Kiểu A: chọn 10 ý/5 ý đúng (theo SGK Kết nối tri thức).</p>
   <div id="multiContainer"></div>
   <div id="shortContainer"></div>
 
@@ -92,7 +104,6 @@ window.MathJax = {
 </main>
 
 <script>
-/* ===== NẠP DỮ LIỆU TỪ questions.json ===== */
 let MCQS=[], MULTI10=[], SHORT=[];
 let currentMcqs=[];
 
@@ -111,7 +122,6 @@ fetch('questions.json')
     alert('Không tải được bộ câu hỏi. Kiểm tra lại questions.json hoặc đường dẫn ảnh.');
   });
 
-/* ===== HÀM TIỆN ÍCH ===== */
 function shuffle(arr){ for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]];} }
 function shuffleOptions(q){
   const pairs = q.options.map((opt,i)=>({opt, idx:i}));
@@ -120,7 +130,6 @@ function shuffleOptions(q){
   q.answer = pairs.findIndex(p=>p.idx===q.answer);
 }
 
-/* ===== RENDER ===== */
 function renderMcqs(){
   const wrap = document.getElementById('mcqContainer'); wrap.innerHTML='';
   currentMcqs.forEach((q,qi)=>{
@@ -187,8 +196,8 @@ function renderShort(){
   (SHORT||[]).forEach((q,qi)=>{
     const card=document.createElement('div'); card.className='question'; card.id=`s${qi+1}`;
     const head=document.createElement('div'); head.className='qtitle'; head.innerHTML=`Câu ${qi+1}B: ${q.title}`; card.appendChild(head);
-    const input=document.createElement('input'); input.type='text'; input.style.width='100%'; input.style.padding='10px'; input.placeholder='Nhập đáp án...'; input.dataset.index=qi;
-    const tip=document.createElement('p'); tip.className='meta'; tip.textContent='Gợi ý nhập: dùng \"/\" cho phân số, \"^\" cho lũy thừa. Ví dụ: (x+y)^2/2x.';
+    const input=document.createElement('input'); input.type='text'; input.style.width='100%'; input.style.padding='10px'; input.placeholder='Nhập đáp án...';
+    const tip=document.createElement('p'); tip.className='meta'; tip.textContent='Gợi ý nhập: dùng \"/\" cho phân số, \"^\" cho lũy thừa. Ví dụ: (x+y)^2/(2x).';
     const res=document.createElement('div'); res.className='result';
     const hint=document.createElement('div'); hint.className='hint'; hint.innerHTML=q.hint||'';
     const btn=document.createElement('button'); btn.className='hint-btn'; btn.textContent='Gợi ý';
@@ -199,13 +208,11 @@ function renderShort(){
   if(window.MathJax) MathJax.typesetPromise();
 }
 
-/* ===== CHẤM ĐIỂM ===== */
 function normalizeExpr(s){ return (s||'').replace(/\s+/g,'').replace(/·/g,'*').replace(/,/g,'.').toLowerCase(); }
 
 function grade(){
   let total=0, correct=0;
 
-  // MCQ
   currentMcqs.forEach((q,idx)=>{
     total++;
     const card=document.getElementById('q'+(idx+1));
@@ -218,7 +225,6 @@ function grade(){
     else{ res.className='result incorrect'; res.textContent='Chưa chọn đáp án.'; }
   });
 
-  // Multi10
   MULTI10.forEach((q,idx)=>{
     total++;
     const card=document.getElementById('m'+(idx+1)); const res=card.querySelector('.result'); res.style.display='block';
@@ -235,7 +241,6 @@ function grade(){
     else{ res.className='result incorrect'; res.textContent='Cần chọn đúng 5 ý. Xanh: đúng; Đỏ: sai; Vàng: bỏ sót.'; }
   });
 
-  // Short (nếu có)
   (SHORT||[]).forEach((q,idx)=>{
     total++;
     const card=document.getElementById('s'+(idx+1)); const res=card.querySelector('.result'); res.style.display='block';
@@ -248,14 +253,13 @@ function grade(){
       ok = !isNaN(num) && Math.abs(num - q.expectedNumber) <= tol;
     }
     if(ok){ correct++; res.className='result correct'; res.textContent='Đúng!'; }
-    else{ res.className='result incorrect'; res.textContent='Chưa đúng. Bấm “Gợi ý” để xem hướng dẫn.'; }
+    else{ res.className='result incorrect'; res.textContent='Chưa đúng. Bấm “Gợi ý”.'; }
   });
 
   document.getElementById('score').textContent = `Điểm: ${correct}/${total} câu`;
   window.scrollTo({top:document.body.scrollHeight, behavior:'smooth'});
 }
 
-/* ===== RESET ===== */
 function clearMarks(){
   document.querySelectorAll('label').forEach(l=>l.classList.remove('mark-correct','mark-wrong','mark-missed'));
   document.querySelectorAll('.result').forEach(r=>{ r.style.display='none'; r.textContent=''; r.className='result'; });
