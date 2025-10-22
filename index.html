@@ -197,7 +197,7 @@ function renderShort(){
     const card=document.createElement('div'); card.className='question'; card.id=`s${qi+1}`;
     const head=document.createElement('div'); head.className='qtitle'; head.innerHTML=`Câu ${qi+1}B: ${q.title}`; card.appendChild(head);
     const input=document.createElement('input'); input.type='text'; input.style.width='100%'; input.style.padding='10px'; input.placeholder='Nhập đáp án...';
-    const tip=document.createElement('p'); tip.className='meta'; tip.textContent='Gợi ý nhập: dùng \"/\" cho phân số, \"^\" cho lũy thừa. Ví dụ: (x+y)^2/(2x).';
+    const tip=document.createElement('p'); tip.className='meta'; tip.textContent='Gợi ý nhập: dùng "/" cho phân số, "^" cho lũy thừa. Ví dụ: (x+y)^2/(2x).';
     const res=document.createElement('div'); res.className='result';
     const hint=document.createElement('div'); hint.className='hint'; hint.innerHTML=q.hint||'';
     const btn=document.createElement('button'); btn.className='hint-btn'; btn.textContent='Gợi ý';
