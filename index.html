@@ -1,45 +1,113 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ôn tập Giữa kì I – Toán 8</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <style>
+    :root{
+      --bg:#f6f8fc;--card:#fff;--ink:#0f172a;--muted:#64748b;--brand:#2563eb;
+      --ok:#10b981;--bad:#ef4444;--hint:#e0f2fe;--ring:#e5e7eb
+    }
+    html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto}
+    .wrap{max-width:1080px;margin:auto;padding:20px}
+    h1{font-weight:800;letter-spacing:.2px;text-align:center;margin:10px 0 8px}
+    .note{color:var(--muted);text-align:center;margin:0 0 18px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0 18px}
+    button{border:0;border-radius:12px;padding:9px 14px;font-weight:700;cursor:pointer}
+    .btn{background:var(--brand);color:#fff}
+    .btn-ghost{background:#e5e7eb}
+    .card{background:var(--card);border-radius:16px;box-shadow:0 6px 22px rgba(0,0,0,.06);padding:16px 18px;margin:14px 0}
+    .stem{font-weight:700;margin-bottom:10px}
+    .opt{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:12px;transition:box-shadow .15s,background .15s}
+    .opt:hover{box-shadow:0 0 0 2px var(--ring) inset}
+    .opt input{margin-top:4px}
+    .hint{background:var(--hint);border-radius:12px;padding:10px 12px;margin-top:10px;display:none}
+    .figure{max-width:100%;height:auto;border-radius:10px;display:block;margin:6px 0}
+    .sec-title{font-size:22px;font-weight:900;text-align:center;margin:30px 0 8px}
+    .lead{color:var(--muted);text-align:center;margin:0 0 14px}
+    .grid{display:grid;gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  </style>
+  <!-- MathJax 3 -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <h1>Ôn tập Giữa kì I – Toán 8</h1>
+  <p class="note" id="resultbar">Chọn đáp án, sau đó bấm <b>Chấm điểm</b> để xem kết quả.</p>
+
+  <div class="actions">
+    <button class="btn-ghost" id="btnKeep1">Làm lại (giữ thứ tự)</button>
+    <button class="btn-ghost" id="btnShuffle1">Làm lại (xáo trộn)</button>
+    <button class="btn" id="btnGrade">Chấm điểm</button>
+  </div>
+
+  <div class="sec-title">PHẦN TRẮC NGHIỆM</div>
+  <p class="lead">Mỗi câu chọn <b>1</b> đáp án đúng.</p>
+  <div id="mcqs" class="grid"></div>
+
+  <div class="sec-title" id="mdTitle">PHẦN MỆNH ĐỀ (CHỌN ĐÚNG)</div>
+  <p class="lead">Chỉ đánh dấu vào <b>mệnh đề ĐÚNG</b>.</p>
+  <div id="ds"></div>
+
+  <div class="actions">
+    <button class="btn-ghost" id="btnKeep2">Làm lại (giữ thứ tự)</button>
+    <button class="btn" id="btnShuffle2">Làm lại (xáo trộn)</button>
+  </div>
+</div>
+
 <script>
-/* ====== UTIL ====== */
+/* ====== Helpers ====== */
 const $=(s,r=document)=>r.querySelector(s);
 const el=(t,a={})=>{const e=document.createElement(t);Object.assign(e,a);return e};
 const tex=n=>{ if(window.MathJax) MathJax.typesetPromise([n]); };
 const clone=o=>JSON.parse(JSON.stringify(o));
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}}
 
-/* ====== STATE ====== */
-let RAW=null, STATE=null;            // dữ liệu
-let picksMC = new Map();             // lựa chọn MCQ: key=qi, value=oi
-let picksDS = new Map();             // Đ/S: key=`B#-i`, value=0/1
+/* ====== Viết tắt → Viết rõ ====== */
+const REPLACE_MAP = [
+  {re:/\bHTg\b/g, to:"hình thang"},
+  {re:/\bHBH\b/g, to:"hình bình hành"},
+  {re:/\bHCN\b/g, to:"hình chữ nhật"},
+  {re:/\bHV\b/g,  to:"hình vuông"},
+  // Trong bộ đề này, "HT" dùng cho "hình thoi"
+  {re:/\bHT\b/g,  to:"hình thoi"}
+];
+function expandStr(s){ if(typeof s!=="string") return s; let out=s; for(const {re,to} of REPLACE_MAP){ out=out.replace(re,to);} return out; }
+function expandDeep(x){
+  if(Array.isArray(x)) return x.map(expandDeep);
+  if(x && typeof x==="object"){ const y={}; for(const k in x){ y[k]=expandDeep(x[k]); } return y; }
+  return expandStr(x);
+}
 
-/* ====== RENDER ====== */
+/* ====== State ====== */
+let RAW=null, STATE=null;
+let picksMC=new Map(); // qi -> oi
+let picksDS=new Map(); // "B{bi}-i{i}" -> 1 nếu tick (tức là chọn ĐÚNG)
+
+/* ====== Render ====== */
 function renderMC(){
-  const mount=$("#mcqs"); mount.innerHTML="";
-  picksMC.clear();
-
+  const mount=$("#mcqs"); mount.innerHTML=""; picksMC.clear();
   STATE.mcqs.forEach((q,qi)=>{
     const card=el("div",{className:"card"});
     const stem=el("div",{className:"stem"});
     stem.innerHTML=`<span style="color:#64748b">Câu ${qi+1}:</span> ${q.stem}`;
     card.appendChild(stem);
-
-    if(q.img){ card.appendChild(el("img",{className:"figure",src:q.img,alt:"Hình minh họa",loading:"lazy"})); }
-
+    if(q.img){ card.appendChild(el("img",{className:"figure",src:q.img,alt:"minh họa",loading:"lazy"})); }
     q.options.forEach((op,oi)=>{
       const row=el("label",{className:"opt",dataset:{qi,oi,answer:q.answer}});
       const i=el("input",{type:"radio",name:"mc_"+qi});
       const sp=el("span"); sp.innerHTML=op;
-
       i.addEventListener("change",()=>{
-        picksMC.set(qi,oi);                 // lưu lựa chọn
-        // phản hồi tức thì nhẹ
+        picksMC.set(qi,oi);
         row.style.background = (oi==q.answer) ? "#ecfeff" : "#fee2e2";
       });
-
       row.append(i,sp); card.appendChild(row);
     });
-
-    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"});
     const hint=el("div",{className:"hint"}); hint.innerHTML=q.hint||"";
+    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"});
     b.onclick=()=>{ hint.style.display="block"; tex(hint); };
     card.append(b,hint);
     mount.appendChild(card); tex(card);
@@ -47,137 +115,109 @@ function renderMC(){
 }
 
 function renderDS(){
-  const root=$("#multi10"); root.innerHTML="";
-  picksDS.clear();
+  const root=$("#ds"); root.innerHTML=""; picksDS.clear();
+  $("#mdTitle").textContent="PHẦN MỆNH ĐỀ (CHỈ CHỌN ĐÚNG)";
 
-  STATE.multi10.forEach((qs,bi)=>{
+  STATE.ds.forEach((qs,bi)=>{
     const card=el("div",{className:"card"});
-    const stem=el("div",{className:"stem"}); stem.innerHTML=`<b>${qs.title}</b>`;
+    const stem=el("div",{className:"stem"}); stem.innerHTML=`<b>${qs.title.replace(/Đ\/S|Đúng\/Sai/gi,"Mệnh đề (chọn ĐÚNG)")}</b>`;
     card.appendChild(stem);
-
-    if(qs.img){ card.appendChild(el("img",{className:"figure",src:qs.img,alt:"Hình minh họa",loading:"lazy"})); }
+    if(qs.img){ card.appendChild(el("img",{className:"figure",src:qs.img,alt:"minh họa",loading:"lazy"})); }
 
     qs.items.forEach((it,i)=>{
-      const truth = it[1]===1 ? 1 : 0;
-      const row=el("label",{className:"opt",dataset:{truth, key:`B${bi}-i${i}` }});
-      const ck=el("input",{type:"checkbox"});
+      const truth = it[1]===1 ? 1 : 0; // 1 = mệnh đề đúng
+      const row=el("label",{className:"opt",dataset:{truth, key:`B${bi}-i${i}`}});
+      const ck=el("input",{type:"checkbox",title:"Đánh dấu nếu mệnh đề ĐÚNG"});
       const sp=el("span"); sp.innerHTML=it[0];
 
       ck.addEventListener("change",()=>{
-        picksDS.set(row.dataset.key, ck.checked?1:0);
-        if(ck.checked){
-          row.style.background = (truth===1) ? "#ecfeff" : "#fee2e2";
-        }else{
-          row.style.background = "transparent";
-        }
+        const picked = ck.checked ? 1 : 0; // chỉ có “Đúng”
+        picksDS.set(row.dataset.key, picked);
+        if(!ck.checked){ row.style.background="transparent"; return; }
+        row.style.background = (truth===1) ? "#ecfeff" : "#fee2e2"; // đỏ nếu tick nhầm mệnh đề sai
       });
 
       row.append(ck,sp); card.appendChild(row);
     });
 
-    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"});
     const hint=el("div",{className:"hint"}); hint.innerHTML=qs.hint||"";
+    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"});
     b.onclick=()=>{ hint.style.display="block"; tex(hint); };
     card.append(b,hint);
     root.appendChild(card); tex(card);
   });
 }
 
-/* ====== GRADE / SHOW ANSWER ====== */
+/* ====== Chấm điểm ====== */
 function gradeAll(){
-  // chấm MCQ
+  // MCQ
   let mcOK=0, mcTotal=STATE.mcqs.length;
-  $("#mcqs").querySelectorAll(".card").forEach((card, qi)=>{
+  $("#mcqs").querySelectorAll(".card").forEach((card,qi)=>{
     const ans = STATE.mcqs[qi].answer;
-    const picked = picksMC.has(qi) ? picksMC.get(qi) : null;
-
-    // đánh dấu đúng/sai rõ ràng
+    const picked = picksMC.get(qi);
     card.querySelectorAll(".opt").forEach(row=>{
-      const oi = Number(row.dataset.oi);
-      if(oi===ans){ row.style.outline="2px solid #10b981"; }          // đáp án đúng
+      const oi=Number(row.dataset.oi);
+      if(oi===ans){ row.style.outline="2px solid var(--ok)"; } // viền xanh đáp án đúng
       if(picked===oi){
         row.style.background = (oi===ans) ? "#ecfeff" : "#fee2e2";
       }
     });
-
     if(picked===ans) mcOK++;
   });
 
-  // chấm Đ/S (mỗi mệnh đề = 1 điểm nếu tick đúng theo sự thật; bỏ trống hoặc tick sai = 0)
+  // Mệnh đề (chỉ tick ĐÚNG)
   let dsOK=0, dsTotal=0;
-  $("#multi10").querySelectorAll(".card").forEach(card=>{
-    card.querySelectorAll(".opt").forEach(row=>{
-      dsTotal++;
-      const truth = Number(row.dataset.truth);         // 1 = mệnh đề ĐÚNG; 0 = mệnh đề SAI
-      const key   = row.dataset.key;
-      const picked= picksDS.get(key) ?? 0;
-
-      // hiển thị đáp án đúng
-      if(truth===1){ row.style.outline="2px dashed #10b981"; }
-
-      // chấm
-      const correct = (picked===truth);
-      if(correct){
-        row.style.background = "#ecfeff";
-        dsOK++;
-      }else if(picked!==truth && picked===1){
-        row.style.background = "#fee2e2";             // tick sai
-      }else{
-        // bỏ trống mệnh đề đúng → viền xanh đã chỉ ra
-      }
-    });
+  $("#ds").querySelectorAll(".card .opt").forEach(row=>{
+    dsTotal++;
+    const truth = Number(row.dataset.truth);       // 1 = mệnh đề đúng
+    const picked= picksDS.get(row.dataset.key) ?? 0; // 1 nếu tick
+    if(truth===1){ row.style.outline="2px dashed var(--ok)"; } // khoanh các mệnh đề đúng (đáp án)
+    if(picked===truth){
+      dsOK++;
+      if(picked===1) row.style.background="#ecfeff";
+    }else{
+      if(picked===1) row.style.background="#fee2e2"; // tick nhầm mệnh đề sai
+    }
   });
 
   const totalOK = mcOK + dsOK;
   const total   = mcTotal + dsTotal;
-
-  const bar = $("#resultbar") || el("div",{id:"resultbar",className:"note"});
-  bar.innerHTML = `<b>KẾT QUẢ:</b> Trắc nghiệm: <b>${mcOK}/${mcTotal}</b> &nbsp; • &nbsp; Đúng/Sai: <b>${dsOK}/${dsTotal}</b> &nbsp; ⇒ &nbsp; Tổng: <b>${totalOK}/${total}</b>`;
-  $(".wrap").insertBefore(bar, $("#mcqs"));  // đặt thanh kết quả lên trên
+  $("#resultbar").innerHTML = `<b>KẾT QUẢ:</b> Trắc nghiệm: <b>${mcOK}/${mcTotal}</b> • Mệnh đề (chọn ĐÚNG): <b>${dsOK}/${dsTotal}</b> • Tổng: <b>${totalOK}/${total}</b>`;
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
-/* ====== RESET / SHUFFLE ====== */
+/* ====== Reset / Shuffle ====== */
 function resetAll(shuffleAll=false){
   const d=clone(RAW);
   if(shuffleAll){
     shuffle(d.mcqs);
     d.mcqs.forEach(q=>{
-      const idx = q.options.map((_,i)=>i);
-      shuffle(idx);
-      q.options = idx.map(i=>q.options[i]);
-      q.answer  = idx.indexOf(q.answer);
+      const ord=q.options.map((_,i)=>i); shuffle(ord);
+      q.options=ord.map(i=>q.options[i]);
+      q.answer =ord.indexOf(q.answer);
     });
-    shuffle(d.multi10);
+    shuffle(d.ds);
   }
-  STATE=d;
+  STATE=d; picksMC.clear(); picksDS.clear();
   renderMC(); renderDS();
-  // clear result bar nếu có
-  const bar=$("#resultbar"); if(bar) bar.remove();
+  $("#resultbar").textContent="Chọn đáp án, sau đó bấm Chấm điểm để xem kết quả.";
 }
 
-/* ====== BOOT ====== */
+/* ====== Boot ====== */
 async function boot(){
   try{
-    const res=await fetch("./questions.json?ts="+Date.now(), {cache:"no-store"});
-    RAW=await res.json(); STATE=clone(RAW);
+    const res = await fetch("./questions.json?ts="+Date.now(), {cache:"no-store"});
+    let json   = await res.json();
+    RAW   = expandDeep(json); // chuyển viết tắt → viết rõ
+    STATE = clone(RAW);
     renderMC(); renderDS();
 
-    // gắn nút chấm điểm 1 nơi duy nhất (tồn tại trong HTML phần actions đầu trang)
-    const topActions = document.querySelectorAll(".actions")[0];
-    const gradeBtn   = el("button",{className:"btn",textContent:"Chấm điểm"});
-    gradeBtn.onclick = gradeAll;
-    topActions.appendChild(gradeBtn);
-
-    // gán lại 2 nút reset có sẵn
-    const btns = document.querySelectorAll(".actions .btn, .actions .btn-ghost");
-    // nút 0,1 là reset cũ; thêm xử lý:
-    btns[0].onclick = ()=>resetAll(false);
-    btns[1].onclick = ()=>resetAll(true);
-    // dải cuối trang
-    const foot = document.querySelectorAll(".actions")[1];
-    foot.querySelectorAll("button")[0].onclick=()=>resetAll(false);
-    foot.querySelectorAll("button")[1].onclick=()=>resetAll(true);
+    // gắn nút
+    $("#btnGrade").onclick  = gradeAll;
+    $("#btnKeep1").onclick  = ()=>resetAll(false);
+    $("#btnShuffle1").onclick=()=>resetAll(true);
+    $("#btnKeep2").onclick  = ()=>resetAll(false);
+    $("#btnShuffle2").onclick=()=>resetAll(true);
   }catch(e){
     $("#mcqs").innerHTML='<div class="card" style="color:#b91c1c">Không tải được <b>questions.json</b>. Kiểm tra tên file & vị trí.</div>';
     console.error(e);
@@ -185,3 +225,5 @@ async function boot(){
 }
 boot();
 </script>
+</body>
+</html>
