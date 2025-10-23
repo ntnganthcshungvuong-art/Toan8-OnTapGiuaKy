@@ -3,12 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ôn tập Giữa kì I – Toán 8 (bản chuẩn hóa ký hiệu)</title>
+<title>Ôn tập Giữa kì I – Toán 8 (chuẩn hóa)</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 <style>
-  :root{--bg:#f6f8fc;--card:#fff;--ink:#0f172a;--muted:#64748b;--brand:#2563eb;--ok:#10b981;--bad:#ef4444;--hint:#e0f2fe;--ring:#e5e7eb}
+  :root{
+    --bg:#f6f8fc;--card:#fff;--ink:#0f172a;--muted:#64748b;--brand:#2563eb;
+    --ok:#10b981;--bad:#ef4444;--hint:#e0f2fe;--ring:#e5e7eb
+  }
   html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto}
-  .wrap{max-width:980px;margin:auto;padding:20px}
+  .wrap{max-width:1080px;margin:auto;padding:20px}
   h1{font-weight:800;letter-spacing:.2px;text-align:center;margin:10px 0 8px}
   .sub{color:var(--muted);text-align:center;margin:0 0 18px}
   .toolbar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0 18px}
@@ -30,64 +33,139 @@
   .muted{background:#f1f5f9;color:#334155}
   .sec-title{font-size:22px;font-weight:900;text-align:center;margin:30px 0 8px}
   .lead{color:var(--muted);text-align:center;margin:0 0 14px}
+  .grid{display:grid;gap:16px}
+  @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
 </head>
 <body>
 <div class="wrap">
   <h1>Ôn tập Giữa kì I – Toán 8</h1>
-  <p id="progress" class="sub" aria-live="polite">Đang tải dữ liệu…</p>
-
+  <p id="progress" class="sub" aria-live="polite">Trắc nghiệm: 0/0 • Đ/S: tick mệnh đề ĐÚNG sẽ sáng xanh.</p>
   <div class="toolbar">
     <button class="btn-ghost" id="btnResetKeep">Làm lại (giữ thứ tự)</button>
     <button class="btn" id="btnResetShuffle">Làm lại (xáo trộn)</button>
+    <button class="btn-soft" id="btnOnlyWrong">Làm lại (chỉ câu sai)</button>
   </div>
-
   <div class="sec-title">PHẦN TRẮC NGHIỆM</div>
-  <p class="lead">Chọn <b>1</b> đáp án đúng cho mỗi câu. Sau khi chọn, câu sẽ được khóa để đảm bảo chấm khách quan.</p>
-  <div id="mcqs"></div>
-
-  <div class="sec-title">PHẦN ĐÚNG / SAI</div>
-  <p class="lead">Đọc kỹ từng mệnh đề, tick vào những mệnh đề <b>ĐÚNG</b>. Hệ thống sẽ hiển thị màu xác nhận ngay.</p>
+  <p class="lead">Chọn <b>1</b> đáp án đúng cho mỗi câu. Sau khi chọn, câu sẽ được khóa để đảm bảo công bằng khi chấm.</p>
+  <div id="mcqs" class="grid"></div>
+  <div class="sec-title">PHẦN ĐÚNG/SAI</div>
+  <p class="lead">Đọc kĩ từng mệnh đề và <b>tick vào các mệnh đề ĐÚNG</b>. Có thể bật <i>Gợi ý</i> để xem định hướng.</p>
   <div id="ds"></div>
+  <div class="toolbar">
+    <button class="btn-ghost" id="btnResetKeep2">Làm lại (giữ thứ tự)</button>
+    <button class="btn" id="btnResetShuffle2">Làm lại (xáo trộn)</button>
+  </div>
 </div>
-
+<script id="quiz-data" type="application/json">
+{ "mcqs": [
+  {"id":"M1","stem":"Trong các biểu thức sau, <b>đơn thức</b> là:","img":null,
+    "options":["\(2x^{2}+3y\)","\(\dfrac{2}{3xy}\)","\((-5)\,x^{2}y^{3}\)","\(x^{2}-2x\)"],
+    "answer":2,"hint":"Đơn thức là tích của một số với các biến có số mũ nguyên không âm; không có phép cộng/trừ."},
+  {"id":"M2","stem":"Trong các biểu thức sau, <b>đa thức</b> là:","img":null,
+    "options":["\(\dfrac{2}{x^{3}y}-1\)","\(\dfrac{x}{y}+3\)","\(5x-4y+7\)","\(x^{2}y+\dfrac{1}{x}\)"],
+    "answer":2,"hint":"Đa thức là tổng/hợp của các đơn thức có số mũ nguyên không âm (không có biến ở mẫu)."},
+  {"id":"M3","stem":"Đơn thức <b>đồng dạng</b> với \(\tfrac{2}{3}xyz\) là:","img":null,
+    "options":["\(\tfrac{3}{2}xyz\)","\(2x^{2}yz\)","\(2xy^{2}z\)","\(\tfrac{2}{3}x^{2}y^{2}z\)"],
+    "answer":0,"hint":"Đồng dạng ⇔ cùng phần biến và cùng số mũ từng biến; hệ số có thể khác."},
+  {"id":"M4","stem":"Kết quả phép trừ \(\tfrac{5}{2}xy-\tfrac{1}{2}xy\) là:","img":null,
+    "options":["\(2xy\)","\(3xy\)","\(\tfrac{2}{3}xy\)","\(\tfrac{4}{2}xy\)"],
+    "answer":0,"hint":"Cùng đơn thức \((xy)\): \((\tfrac{5}{2}-\tfrac{1}{2})xy=2xy\)."},
+  {"id":"M5","stem":"Kết quả phép chia \(\dfrac{x^{2}y^{3}}{xy}\) là:","img":null,
+    "options":["\(xy^{2}\)","\(x^{3}y^{3}\)","\(x\,y^{2}\)","\(x\,y^{4}\)"],
+    "answer":0,"hint":"Trừ số mũ theo từng biến: \(x^{2}:x=x\), \(y^{3}:y=y^{2}\)."},
+  {"id":"M6","stem":"Biết \(M+5x^{2}-2xy=6x^{2}+10xy-y^{2}\). Khi đó \(M\) bằng:","img":null,
+    "options":["\(x^{2}+12xy-y^{2}\)","\(x^{2}+12xy+y^{2}\)","\(x^{2}+8xy-y^{2}\)","\(x^{2}+7xy-y^{2}\)"],
+    "answer":0,"hint":"\(M=(6x^{2}+10xy-y^{2})-(5x^{2}-2xy)=x^{2}+12xy-y^{2}\)."},
+  {"id":"M7","stem":"Diện tích hình chữ nhật có dài \(x+2\), rộng \(y+3\) là:","img":null,
+    "options":["\(xy+3x+2y+6\)","\(xy-3x+2y+6\)","\(xy+3x-2y+6\)","\(xy-3x+2y-6\)"],
+    "answer":0,"hint":"\(S=(x+2)(y+3)=xy+3x+2y+6\)."},
+  {"id":"M8","stem":"Trong các đơn thức sau, <b>đơn thức đã thu gọn</b> là:","img":null,
+    "options":["\(3\cdot x\cdot x\cdot y\)","\(\tfrac{1}{4}\cdot 4x^{2}y\)","\(2^{3}\cdot 3^{4}\,x y^{2}z\)","\(2^{2}\cdot 3\cdot x\cdot y\cdot x\cdot z\)"],
+    "answer":2,"hint":"Thu gọn = gộp lũy thừa cùng biến & rút gọn hệ số. (A)(D) chưa gộp; (B) hệ số rút về 1; (C) đã gộp đầy đủ."},
+  {"id":"M9","stem":"Trong các hình sau, <b>hình vuông</b> là:","img":"img/cau9.png",
+    "options":["Hình 1","Hình 2","Hình 3","Hình 4"],"answer":1,
+    "hint":"Hình vuông: bốn góc vuông và bốn cạnh bằng nhau."},
+  {"id":"M10","stem":"Cho tứ giác \(ABCD\) trong <b>hình 1</b>. Biết \(\widehat{ABC}=120°\). Số đo \(\widehat{ADC}\) là:","img":"img/cau10.png",
+    "options":["\(360°\)","\(180°\)","\(120°\)","\(60°\)"],"answer":3,
+    "hint":"Hai góc kề một cạnh trong tứ giác bù nhau: \(\widehat{ABC}+\widehat{ADC}=180°\Rightarrow\widehat{ADC}=60°\)."},
+  {"id":"M11","stem":"Biết tứ giác \(MNPQ\) là <b>hình thang</b> (hình 2). Khi nào là <b>hình thang cân</b>?","img":"img/cau11.png",
+    "options":["\(MQ=NP\)","\(NQ=4\,\text{cm}\)","\(NQ=2\,\text{cm}\)","\(NQ=5\,\text{cm}\)"],
+    "answer":0,"hint":"Hình thang cân: hai cạnh bên bằng nhau; (tương đương) hai góc ở cùng một đáy bằng nhau; thường có hai đường chéo bằng nhau."},
+  {"id":"M12","stem":"Cho hình bình hành \(EFGH\) (hình 3). <b>Mệnh đề đúng</b> là:","img":"img/cau12.png",
+    "options":["\(EF\parallel HG\) và \(EH\parallel FG\)","Hai đường chéo vuông góc","Hai đường chéo bằng nhau","Bốn cạnh bằng nhau"],
+    "answer":0,"hint":"HBH: cặp cạnh đối song song và bằng nhau; chéo cắt nhau tại trung điểm. Không nhất thiết chéo bằng nhau/vuông góc."},
+  {"id":"M13","stem":"Trong các hình a–d (hình 4), <b>tứ giác lồi</b> là:","img":"img/cau13.png",
+    "options":["Hình a","Hình b","Hình c","Hình d"],"answer":0,
+    "hint":"Tứ giác lồi: bốn góc <180°; không tự cắt; các đường chéo cắt nhau bên trong tứ giác."},
+  {"id":"M14","stem":"Tứ giác \(ABCD\) trong <b>hình 5</b> là hình gì?","img":"img/cau14.png",
+    "options":["Hình vuông","Hình thoi","Hình chữ nhật","Hình tam giác"],"answer":2,
+    "hint":"Có góc vuông, cạnh đối song song; đường chéo bằng nhau ⇒ hình chữ nhật."},
+  {"id":"M15","stem":"Không phải <b>dấu hiệu nhận biết hình thoi</b> là:","img":null,
+    "options":["HBH có hai cạnh kề bằng nhau ⇒ hình thoi","HBH có hai đường chéo vuông góc ⇒ hình thoi","HBH có hai đường chéo bằng nhau ⇒ hình thoi","HBH có một đường chéo là phân giác một góc ⇒ hình thoi"],
+    "answer":2,"hint":"Hình thoi: 4 cạnh bằng nhau. Dấu hiệu đúng: (1)(2)(4). Chéo bằng nhau là dấu hiệu của hình chữ nhật."},
+  {"id":"M16","stem":"Hình thoi có <b>một góc vuông</b> là:","img":null,
+    "options":["Hình vuông","Hình bình hành","Hình chữ nhật","Hình thang cân"],"answer":0,
+    "hint":"Hình thoi + 1 góc vuông ⇒ 4 cạnh bằng nhau và có góc vuông ⇒ hình vuông."},
+  {"id":"M17","stem":"Tứ giác trong <b>hình 2</b> là:","img":"img/cau17.png",
+    "options":["Hình thoi","Hình vuông","Hình thang cân","Hình chữ nhật"],"answer":3,
+    "hint":"Dấu hiệu HCN: hai đường chéo bằng nhau (theo hình)."}
+],
+"ds":[
+  {"id":"B1","title":"Bài 1: Rút gọn đơn thức – hệ số & bậc (tick các mệnh đề ĐÚNG).","img":null,
+    "items":[
+      ["Đơn thức \(5x^{3}\cdot xy=5x^{4}y\).",1],
+      ["Bậc của \(5x^{4}y\) là 6.",0],
+      ["\((4x^{2})(-4xy)=-16x^{3}y\).",1],
+      ["\(\dfrac{1}{4}xyz\cdot(2xy)=\dfrac{1}{2}x^{2}y^{2}z\).",1],
+      ["Bậc của \(\tfrac{1}{2}x^{2}y^{2}z\) là 5.",0],
+      ["Thu gọn \(x\cdot x\cdot y=x^{2}y\).",1],
+      ["\(5x^{2}y^{-1}\) là đơn thức hợp lệ của đa thức.",0],
+      ["Hệ số của \(-16x^{3}y\) là \(-16\).",1],
+      ["Bậc của \(-16x^{3}y\) là 3.",1],
+      ["Bậc đơn thức là <b>tổng số mũ các biến</b> (không âm).",1]
+    ],
+    "hint":"Bậc = tổng số mũ (không âm); mũ âm → không là đơn thức trong đa thức."},
+  {"id":"B2","title":"Bài 2: Hạng tử của đa thức (tick ĐÚNG).","img":null,
+    "items":[
+      ["Hạng tử là mỗi đơn thức trong đa thức.",1],
+      ["\(A=x^{4}+xy+\tfrac{2}{3}\) là đa thức có 3 hạng tử.",1],
+      ["Trong đa thức, các hạng tử <b>đồng dạng</b> có thể cộng gộp.",1],
+      ["\(x/y\) là một hạng tử hợp lệ trong đa thức.",0],
+      ["Đa thức có thể có hệ số phân số.",1],
+      ["\(5x-3+2x=7x-3\).",1],
+      ["Bậc đa thức là bậc của hạng tử <b>lớn nhất</b>.",1]
+    ],
+    "hint":"Đa thức không có biến ở mẫu; bậc đa thức = bậc hạng tử lớn nhất."}
+]} 
+</script>
 <script>
-const $ = (s,root=document)=>root.querySelector(s);
-const el=(tag,attrs={})=>{const e=document.createElement(tag);Object.assign(e,attrs);return e};
-const tex=(node)=>{if(window.MathJax) MathJax.typesetPromise([node]);};
+const $=(s,r=document)=>r.querySelector(s); const el=(t,a={})=>{const e=document.createElement(t);Object.assign(e,a);return e};
+const tex=n=>{if(window.MathJax) MathJax.typesetPromise([n]);}; const cp=o=>JSON.parse(JSON.stringify(o));
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}}
-let DATA={"mcqs":[
-{"stem":"Kết quả phép chia \\(\\dfrac{x^{2}y^{3}}{xy}\\) là:","options":["\\(xy^{2}\\)","\\(x^{3}y^{3}\\)","\\(x y^{2}\\)","\\(x y^{4}\\)"],"answer":0,"hint":"Trừ số mũ từng biến: \\x^{2}:x=x, \\y^{3}:y=y^{2}."}
-],"ds":[]};
-
-function render(){
-  const mc=$('#mcqs'); mc.innerHTML='';
-  DATA.mcqs.forEach((q,qi)=>{
-    const card=el('div',{className:'card'});
-    const stem=el('div',{className:'stem'});
-    stem.innerHTML=`<span class='muted badge'>Câu ${qi+1}</span> ${q.stem}`;
-    card.appendChild(stem);
-    q.options.forEach((op,oi)=>{
-      const row=el('label',{className:'opt'});
-      const i=el('input',{type:'radio',name:'mc_'+qi});
-      const span=el('span'); span.innerHTML=op;
-      i.addEventListener('change',()=>{
-        document.getElementsByName('mc_'+qi).forEach(r=>r.disabled=true);
-        const correct=(oi===q.answer);
-        row.style.background=correct?'#ecfeff':'#fee2e2';
-        row.insertAdjacentHTML('beforeend',`<span class='badge ${correct?'ok':'bad'}'>${correct?'ĐÚNG':'SAI'}</span>`);
-      });
-      row.append(i,span); card.appendChild(row);
-    });
-    const hint=el('div',{className:'hint'}); hint.innerHTML=q.hint||'';
-    const b=el('button',{className:'btn-ghost',textContent:'Gợi ý'});
-    b.onclick=()=>{hint.style.display=hint.style.display==='block'?'none':'block'; tex(hint);};
-    card.append(b,hint);
-    mc.appendChild(card); tex(card);
-  });
-}
-render();
+let RAW=JSON.parse($('#quiz-data').textContent), STATE=cp(RAW); let score=0;
+function progress(){ $('#progress').textContent=`Trắc nghiệm: đúng ${score}/${STATE.mcqs.length} • Đ/S: tick đúng sẽ sáng xanh.`;}
+function renderMC(){ const m=$('#mcqs'); m.innerHTML=''; score=0; progress();
+  STATE.mcqs.forEach((q,qi)=>{const c=el('div',{className:'card'}); const s=el('div',{className:'stem'});
+    s.innerHTML=`<span class="muted badge">Câu ${qi+1}</span> ${q.stem}`; c.appendChild(s);
+    if(q.img){c.appendChild(el('img',{className:'figure',src:q.img,loading:'lazy'}));}
+    q.options.forEach((op,oi)=>{const row=el('label',{className:'opt'}); const i=el('input',{type:'radio',name:'mc_'+qi}); const sp=el('span'); sp.innerHTML=op;
+      i.addEventListener('change',()=>{document.getElementsByName('mc_'+qi).forEach(r=>r.disabled=true);
+        const ok=(oi===q.answer); row.style.background=ok?'#ecfeff':'#fee2e2'; row.insertAdjacentHTML('beforeend',` <span class="badge ${ok?'ok':'bad'}">${ok?'ĐÚNG':'SAI'}</span>`); if(ok) score++; progress();
+        if(h.style.display!=='block'){h.style.display='block'; tex(h);} }); row.append(i,sp); c.appendChild(row);});
+    const h=el('div',{className:'hint'}); h.innerHTML=q.hint||''; const b=el('button',{className:'btn-ghost',textContent:'Gợi ý'});
+    b.onclick=()=>{h.style.display=h.style.display==='block'?'none':'block'; tex(h);}; c.append(b,h); m.appendChild(c); tex(c); });}
+function renderDS(){ const r=$('#ds'); r.innerHTML=''; STATE.ds.forEach(q=>{const c=el('div',{className:'card'}); const h2=el('h2'); h2.textContent=q.title; c.appendChild(h2);
+  q.items.forEach(it=>{const row=el('label',{className:'opt'}); const ck=el('input',{type:'checkbox'}); const sp=el('span'); sp.innerHTML=it[0];
+    ck.addEventListener('change',()=>{ if(ck.checked){ const ok=it[1]===1; row.style.background=ok?'#ecfeff':'#fee2e2'; row.querySelector('.badge')?.remove(); const tag=el('span',{className:'badge '+(ok?'ok':'bad')}); tag.textContent=ok?'ĐÚNG':'SAI'; row.appendChild(tag);} else {row.style.background='transparent'; row.querySelector('.badge')?.remove();} }); row.append(ck,sp); c.appendChild(row); });
+  const hint=el('div',{className:'hint'}); hint.innerHTML=q.hint||''; const bt=el('button',{className:'btn-ghost',textContent:'Gợi ý'}); bt.onclick=()=>{hint.style.display=hint.style.display==='block'?'none':'block'; tex(hint);}; c.append(bt,hint); r.appendChild(c); tex(c); });}
+function reset(shuf,onlyWrong=false){ const d=cp(RAW); if(onlyWrong){ const bad=[]; document.querySelectorAll('#mcqs .card').forEach((c,i)=>{const isBad=c.querySelector('.badge.bad'); const isOk=c.querySelector('.badge.ok'); if(isBad||!isOk) bad.push(i);}); d.mcqs=bad.map(i=>STATE.mcqs[i]||d.mcqs[i]).filter(Boolean); }
+  if(shuf){ shuffle(d.mcqs); d.mcqs.forEach(q=>{const ord=q.options.map((_,i)=>i); shuffle(ord); q.options=ord.map(i=>q.options[i]); q.answer=ord.indexOf(q.answer);}); shuffle(d.ds); }
+  STATE=d; renderMC(); renderDS(); }
+renderMC(); renderDS(); progress();
+$('#btnResetKeep').onclick=()=>reset(false,false); $('#btnResetShuffle').onclick=()=>reset(true,false); $('#btnOnlyWrong').onclick=()=>reset(true,true);
+$('#btnResetKeep2').onclick=()=>reset(false,false); $('#btnResetShuffle2').onclick=()=>reset(true,false);
 </script>
 </body>
 </html>
