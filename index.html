@@ -1,39 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ôn tập Giữa kì I – Toán 8</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
   <style>
-    :root{
-      --bg:#f6f8fc;--card:#fff;--ink:#0f172a;--muted:#64748b;--brand:#2563eb;
-      --ok:#10b981;--bad:#ef4444;--hint:#e0f2fe;--ring:#e5e7eb
-    }
-    html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto}
-    .wrap{max-width:1080px;margin:auto;padding:20px}
-    h1{font-weight:800;letter-spacing:.2px;text-align:center;margin:10px 0 8px}
-    .note{color:var(--muted);text-align:center;margin:0 0 18px}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0 18px}
-    button{border:0;border-radius:12px;padding:9px 14px;font-weight:700;cursor:pointer}
-    .btn{background:var(--brand);color:#fff}
-    .btn-ghost{background:#e5e7eb}
-    .card{background:var(--card);border-radius:16px;box-shadow:0 6px 22px rgba(0,0,0,.06);padding:16px 18px;margin:14px 0}
-    .stem{font-weight:700;margin-bottom:10px}
-    .opt{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:12px;transition:box-shadow .15s,background .15s}
-    .opt:hover{box-shadow:0 0 0 2px var(--ring) inset}
-    .opt input{margin-top:4px}
-    .hint{background:var(--hint);border-radius:12px;padding:10px 12px;margin-top:10px;display:none}
-    .figure{max-width:100%;height:auto;border-radius:10px;display:block;margin:6px 0}
-    .sec-title{font-size:22px;font-weight:900;text-align:center;margin:30px 0 8px}
-    .lead{color:var(--muted);text-align:center;margin:0 0 14px}
-    .grid{display:grid;gap:16px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    body{font-family:system-ui,Arial,sans-serif;background:#f8fafc;margin:0;color:#0f172a}
+    h1{text-align:center;margin:18px 0 8px}
+    .note{text-align:center;color:#64748b}
+    .actions{text-align:center;margin:10px 0}
+    button{margin:4px;padding:8px 14px;border:0;border-radius:8px;cursor:pointer;font-weight:600}
+    .btn{background:#2563eb;color:#fff}
+    .btn-ghost{background:#e2e8f0}
+    .sec-title{text-align:center;font-size:20px;font-weight:700;margin-top:25px}
+    .lead{text-align:center;color:#475569;margin-top:0}
+    .card{background:#fff;margin:12px auto;padding:16px 18px;max-width:900px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.05)}
+    .stem{font-weight:700;margin-bottom:6px}
+    .opt{display:flex;align-items:flex-start;gap:8px;padding:6px 8px;border-radius:8px}
+    .opt:hover{background:#f1f5f9}
+    .hint{display:none;margin-top:8px;padding:8px;background:#e0f2fe;border-radius:8px}
+    img{max-width:100%;display:block;margin:8px auto;border-radius:8px}
+    #resultbar{text-align:center;margin:10px 0;color:#0f172a}
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
 </head>
 <body>
-<div class="wrap">
   <h1>Ôn tập Giữa kì I – Toán 8</h1>
   <p class="note" id="resultbar">Chọn đáp án, sau đó bấm <b>Chấm điểm</b> để xem kết quả.</p>
 
@@ -44,31 +35,29 @@
   </div>
 
   <div class="sec-title">PHẦN TRẮC NGHIỆM</div>
-  <p class="lead">Mỗi câu chọn <b>1</b> đáp án đúng.</p>
-  <div id="mcqs" class="grid"></div>
+  <p class="lead">Mỗi câu chọn 1 đáp án đúng.</p>
+  <div id="mcqs"></div>
 
-  <div class="sec-title" id="mdTitle">PHẦN MỆNH ĐỀ (CHỈ CHỌN ĐÚNG)</div>
-  <p class="lead">Chỉ đánh dấu vào <b>mệnh đề ĐÚNG</b>.</p>
+  <div class="sec-title">PHẦN MỆNH ĐỀ (CHỌN ĐÚNG)</div>
+  <p class="lead">Chỉ đánh dấu vào mệnh đề <b>ĐÚNG</b>.</p>
   <div id="ds"></div>
 
   <div class="actions">
     <button class="btn-ghost" id="btnKeep2">Làm lại (giữ thứ tự)</button>
     <button class="btn" id="btnShuffle2">Làm lại (xáo trộn)</button>
   </div>
-</div>
 
 <script>
-/* DỮ LIỆU CÂU HỎI NHÚNG SẴN */
-const DATA = {
+const DATA={
   "mcqs":[
-    {"stem":"Trong các biểu thức sau, đơn thức là:","options":["2x^2+3y","2/(3xy)","(-5)x^2y^3","x^2-2x"],"answer":2},
-    {"stem":"Trong các biểu thức sau, đa thức là:","options":["2/(x^3y)-1","x/y+3","5x-4y+7","x^2y+1/x"],"answer":2}
+    {"stem":"Trong các biểu thức sau, \\(\\textbf{đơn thức}\\) là:","options":["\\(2x^{2}+3y\\)","\\(\\frac{2}{3xy}\\)","\\((-5)x^{2}y^{3}\\)","\\(x^{2}-2x\\)"],"answer":2},
+    {"stem":"Trong các biểu thức sau, \\(\\textbf{đa thức}\\) là:","options":["\\(\\frac{2}{x^{3}y}-1\\)","\\(\\frac{x}{y}+3\\)","\\(5x-4y+7\\)","\\(x^{2}y+\\frac{1}{x}\\)"],"answer":2}
   ],
   "multi10":[
-    {"title":"Bài 1: Đơn thức và đa thức","items":[
+    {"title":"Bài 1: Nhận biết mệnh đề đúng","items":[
       ["Đơn thức là tích của một số với các biến có số mũ nguyên không âm.",1],
-      ["Đa thức có thể có hệ số phân số.",1],
-      ["x/y là đa thức.",0]
+      ["Hệ số của đơn thức có thể là phân số.",1],
+      ["Đa thức có thể chứa biến ở mẫu.",0]
     ]}
   ]
 };
@@ -77,15 +66,22 @@ const $=(s,r=document)=>r.querySelector(s);
 const el=(t,a={})=>{const e=document.createElement(t);Object.assign(e,a);return e};
 const clone=o=>JSON.parse(JSON.stringify(o));
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}}
-let RAW=null,STATE=null,picksMC=new Map(),picksDS=new Map();
+let RAW,STATE,picksMC=new Map(),picksDS=new Map();
+
+function tex(n){if(window.MathJax)MathJax.typesetPromise([n]);}
 
 function renderMC(){
   const m=$("#mcqs");m.innerHTML="";picksMC.clear();
   STATE.mcqs.forEach((q,qi)=>{
-    const c=el("div",{className:"card"}),s=el("div",{className:"stem"});s.textContent=`Câu ${qi+1}: ${q.stem}`;c.appendChild(s);
-    q.options.forEach((op,oi)=>{const r=el("label",{className:"opt"}),i=el("input",{type:"radio",name:"mc_"+qi});const sp=el("span");sp.textContent=op;
-      i.addEventListener("change",()=>{picksMC.set(qi,oi);r.style.background=oi==q.answer?"#ecfeff":"#fee2e2"});r.append(i,sp);c.appendChild(r)});
-    m.appendChild(c);
+    const c=el("div",{className:"card"});
+    const s=el("div",{className:"stem"});s.innerHTML=`Câu ${qi+1}: ${q.stem}`;c.appendChild(s);
+    q.options.forEach((op,oi)=>{
+      const r=el("label",{className:"opt"}),i=el("input",{type:"radio",name:"mc_"+qi});
+      const sp=el("span");sp.innerHTML=op;
+      i.addEventListener("change",()=>{picksMC.set(qi,oi);});
+      r.append(i,sp);c.appendChild(r);
+    });
+    m.appendChild(c);tex(c);
   });
 }
 
@@ -93,30 +89,53 @@ function renderDS(){
   const d=$("#ds");d.innerHTML="";picksDS.clear();
   STATE.ds.forEach((qs,bi)=>{
     const c=el("div",{className:"card"}),s=el("div",{className:"stem"});s.textContent=qs.title;c.appendChild(s);
-    qs.items.forEach((it,i)=>{const truth=it[1]===1?1:0,r=el("label",{className:"opt"}),ck=el("input",{type:"checkbox"}),sp=el("span");sp.textContent=it[0];
-      ck.addEventListener("change",()=>{const pick=ck.checked?1:0;picksDS.set(`${bi}-${i}`,pick);r.style.background=ck.checked?(truth?"#ecfeff":"#fee2e2"):""});
-      r.append(ck,sp);c.appendChild(r)});
-    d.appendChild(c);
+    qs.items.forEach((it,i)=>{
+      const truth=it[1]===1?1:0,r=el("label",{className:"opt"});
+      const ck=el("input",{type:"checkbox"});
+      const sp=el("span");sp.innerHTML=it[0];
+      ck.addEventListener("change",()=>{
+        if(!ck.checked)return r.style.background=""; 
+        if(truth===1){r.style.background="#ecfeff";picksDS.set(`${bi}-${i}`,1);}
+        else{r.style.background="#fee2e2";picksDS.set(`${bi}-${i}`,0);}
+      });
+      r.append(ck,sp);c.appendChild(r);
+    });
+    d.appendChild(c);tex(c);
   });
 }
 
 function gradeAll(){
-  let ok1=0,t1=STATE.mcqs.length;$("#mcqs .card").forEach||(Array.from($("#mcqs").children).forEach((c,i)=>{const a=STATE.mcqs[i].answer,p=picksMC.get(i);
-    Array.from(c.querySelectorAll(".opt")).forEach((r,oi)=>{if(oi===a)r.style.outline="2px solid #10b981";if(p===oi)r.style.background=oi===a?"#ecfeff":"#fee2e2"});
-    if(p===a)ok1++}));
-  let ok2=0,t2=0;Array.from($("#ds").children).forEach((c,bi)=>Array.from(c.querySelectorAll(".opt")).forEach((r,i)=>{t2++;const t=STATE.ds[bi].items[i][1],p=picksDS.get(`${bi}-${i}`)||0;
-    if(t===1)r.style.outline="2px dashed #10b981";if(p===t){ok2++;if(p===1)r.style.background="#ecfeff"}else if(p===1)r.style.background="#fee2e2"}));
-  $("#resultbar").innerHTML=`<b>Kết quả:</b> TN ${ok1}/${t1} • Mệnh đề ${ok2}/${t2} • Tổng ${ok1+ok2}/${t1+t2}`;
+  let ok1=0,t1=STATE.mcqs.length;
+  $("#mcqs").querySelectorAll(".card").forEach((c,qi)=>{
+    const ans=STATE.mcqs[qi].answer,p=picksMC.get(qi);
+    c.querySelectorAll(".opt").forEach((r,oi)=>{
+      if(oi===ans)r.style.outline="2px solid #10b981";
+      if(p===oi)r.style.background=oi===ans?"#ecfeff":"#fee2e2";
+    });
+    if(p===ans)ok1++;
+  });
+  let ok2=0,t2=0;
+  $("#ds").querySelectorAll(".card").forEach((c,bi)=>{
+    c.querySelectorAll(".opt").forEach((r,i)=>{
+      t2++;const ck=r.querySelector("input"),truth=STATE.ds[bi].items[i][1],p=picksDS.get(`${bi}-${i}`)||0;
+      if(truth===1)r.style.outline="2px dashed #10b981";
+      if(p===truth)ok2++;
+    });
+  });
+  $("#resultbar").innerHTML=`<b>Kết quả:</b> Trắc nghiệm ${ok1}/${t1} • Mệnh đề ${ok2}/${t2} • Tổng ${ok1+ok2}/${t1+t2}`;
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function resetAll(sh=false){
-  const d=clone(RAW);if(sh){shuffle(d.mcqs);shuffle(d.ds)}STATE=d;picksMC.clear();picksDS.clear();renderMC();renderDS();
+  const d=clone(RAW);
+  if(sh){shuffle(d.mcqs);shuffle(d.ds);}
+  STATE=d;renderMC();renderDS();
   $("#resultbar").textContent="Chọn đáp án, sau đó bấm Chấm điểm để xem kết quả.";
 }
 
 (function(){
-  RAW={mcqs:DATA.mcqs,ds:DATA.multi10};STATE=clone(RAW);
+  RAW={mcqs:DATA.mcqs,ds:DATA.multi10};
+  STATE=clone(RAW);
   renderMC();renderDS();
   $("#btnGrade").onclick=gradeAll;
   $("#btnKeep1").onclick=()=>resetAll(false);
