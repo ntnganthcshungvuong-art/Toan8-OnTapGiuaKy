@@ -48,7 +48,7 @@
   <p class="lead">Mỗi câu chọn <b>1</b> đáp án đúng.</p>
   <div id="mcqs" class="grid"></div>
 
-  <div class="sec-title" id="mdTitle">PHẦN MỆNH ĐỀ (CHỌN ĐÚNG)</div>
+  <div class="sec-title" id="mdTitle">PHẦN MỆNH ĐỀ (CHỈ CHỌN ĐÚNG)</div>
   <p class="lead">Chỉ đánh dấu vào <b>mệnh đề ĐÚNG</b>.</p>
   <div id="ds"></div>
 
@@ -72,7 +72,6 @@ const REPLACE_MAP = [
   {re:/\bHBH\b/g, to:"hình bình hành"},
   {re:/\bHCN\b/g, to:"hình chữ nhật"},
   {re:/\bHV\b/g,  to:"hình vuông"},
-  // Trong bộ đề này, "HT" dùng cho "hình thoi"
   {re:/\bHT\b/g,  to:"hình thoi"}
 ];
 function expandStr(s){ if(typeof s!=="string") return s; let out=s; for(const {re,to} of REPLACE_MAP){ out=out.replace(re,to);} return out; }
@@ -82,10 +81,118 @@ function expandDeep(x){
   return expandStr(x);
 }
 
+/* ====== DATA (nhúng sẵn) ====== */
+const DATA = {
+  "mcqs": [
+    {"id":"M1","stem":"Trong các biểu thức sau, <b>đơn thức</b> là:","img":null,"options":["\\(2x^{2}+3y\\)","\\(\\dfrac{2}{3xy}\\)","\\((-5)\\,x^{2}y^{3}\\)","\\(x^{2}-2x\\)"],"answer":2,"hint":"Đơn thức là tích của một số với các biến có số mũ nguyên không âm; không có phép cộng/trừ."},
+    {"id":"M2","stem":"Trong các biểu thức sau, <b>đa thức</b> là:","img":null,"options":["\\(\\dfrac{2}{x^{3}y}-1\\)","\\(\\dfrac{x}{y}+3\\)","\\(5x-4y+7\\)","\\(x^{2}y+\\dfrac{1}{x}\\)"],"answer":2,"hint":"Đa thức là tổng/hợp của các đơn thức có số mũ nguyên không âm (không có biến ở mẫu)."},
+    {"id":"M3","stem":"Đơn thức <b>đồng dạng</b> với \\(\\tfrac{2}{3}xyz\\) là:","img":null,"options":["\\(\\tfrac{3}{2}xyz\\)","\\(2x^{2}yz\\)","\\(2xy^{2}z\\)","\\(\\tfrac{2}{3}x^{2}y^{2}z\\)"],"answer":0,"hint":"Đồng dạng ⇔ cùng phần biến và cùng số mũ từng biến; hệ số có thể khác."},
+    {"id":"M4","stem":"Kết quả phép trừ \\(\\tfrac{5}{2}xy-\\tfrac{1}{2}xy\\) là:","img":null,"options":["\\(2xy\\)","\\(3xy\\)","\\(\\tfrac{2}{3}xy\\)","\\(\\tfrac{4}{2}xy\\)"],"answer":0,"hint":"Cùng đơn thức \\(xy\\): \\((\\tfrac{5}{2}-\\tfrac{1}{2})xy=2xy\\)."},
+    {"id":"M5","stem":"Kết quả phép chia \\(\\dfrac{x^{2}y^{3}}{xy}\\) là:","img":null,"options":["\\(xy^{2}\\)","\\(x^{3}y^{3}\\)","\\(x\\,y^{2}\\)","\\(x\\,y^{4}\\)"],"answer":0,"hint":"Trừ số mũ theo từng biến: \\(x^{2}:x=x\\), \\(y^{3}:y=y^{2}\\)."},
+    {"id":"M6","stem":"Biết \\(M+5x^{2}-2xy=6x^{2}+10xy-y^{2}\\). Khi đó \\(M\\) bằng:","img":null,"options":["\\(x^{2}+12xy-y^{2}\\)","\\(x^{2}+12xy+y^{2}\\)","\\(x^{2}+8xy-y^{2}\\)","\\(x^{2}+7xy-y^{2}\\)"],"answer":0,"hint":"\\(M=(6x^{2}+10xy-y^{2})-(5x^{2}-2xy)=x^{2}+12xy-y^{2}\\)."},
+    {"id":"M7","stem":"Diện tích hình chữ nhật có dài \\(x+2\\), rộng \\(y+3\\) là:","img":null,"options":["\\(xy+3x+2y+6\\)","\\(xy-3x+2y+6\\)","\\(xy+3x-2y+6\\)","\\(xy-3x+2y-6\\)"],"answer":0,"hint":"\\(S=(x+2)(y+3)=xy+3x+2y+6\\)."},
+    {"id":"M8","stem":"Trong các đơn thức sau, <b>đơn thức đã thu gọn</b> là:","img":null,"options":["\\(3\\cdot x\\cdot x\\cdot y\\)","\\(\\tfrac{1}{4}\\cdot 4x^{2}y\\)","\\(2^{3}\\cdot 3^{4}\\,x y^{2}z\\)","\\(2^{2}\\cdot 3\\cdot x\\cdot y\\cdot x\\cdot z\\)"],"answer":2,"hint":"Thu gọn = gộp lũy thừa cùng biến & rút gọn hệ số. (2) đã tối giản; (1)(4) chưa gộp; (2) với hệ số \\(\\tfrac14\\cdot4=1\\)."},
+    {"id":"M9","stem":"Trong các hình sau, <b>hình vuông</b> là:","img":"img/cau9.png","options":["Hình 1","Hình 2","Hình 3","Hình 4"],"answer":1,"hint":"Hình vuông: bốn góc vuông và bốn cạnh bằng nhau."},
+    {"id":"M10","stem":"Cho tứ giác \\(ABCD\\) trong <b>hình 1</b>. Biết \\(\\widehat{ABC}=120^{\\circ}\\). Số đo \\(\\widehat{ADC}\\) là:","img":"img/cau10.png","options":["\\(360^{\\circ}\\)","\\(180^{\\circ}\\)","\\(120^{\\circ}\\)","\\(60^{\\circ}\\)"],"answer":3,"hint":"Hai góc kề một cạnh trong tứ giác <b>bù nhau</b>: \\(\\widehat{ABC}+\\widehat{ADC}=180^{\\circ}\\Rightarrow\\widehat{ADC}=60^{\\circ}\\)."},
+    {"id":"M11","stem":"Biết tứ giác \\(MNPQ\\) là <b>hình thang</b> (hình 2). Khi nào là <b>hình thang cân</b>?","img":"img/cau11.png","options":["\\(MQ=NP\\)","\\(NQ=4\\,\\text{cm}\\)","\\(NQ=2\\,\\text{cm}\\)","\\(NQ=5\\,\\text{cm}\\)"],"answer":0,"hint":"Hình thang cân: <b>hai cạnh bên bằng nhau</b>; (tương đương) <b>hai góc ở cùng một đáy bằng nhau</b>; thường có <b>hai đường chéo bằng nhau</b>."},
+    {"id":"M12","stem":"Cho hình bình hành \\(EFGH\\) (hình 3). <b>Mệnh đề đúng</b> là:","img":"img/cau12.png","options":["\\(EF\\parallel HG\\) và \\(EH\\parallel FG\\)","Hai đường chéo vuông góc","Hai đường chéo bằng nhau","Bốn cạnh bằng nhau"],"answer":0,"hint":"Hình bình hành: cặp cạnh đối song song và bằng nhau; <b>chéo cắt nhau tại trung điểm</b>. Không nhất thiết chéo bằng nhau/vuông góc."},
+    {"id":"M13","stem":"Trong các hình a–d (hình 4), <b>tứ giác lồi</b> là:","img":"img/cau13.png","options":["Hình a","Hình b","Hình c","Hình d"],"answer":0,"hint":"Tứ giác lồi: bốn góc \\(<180^{\\circ}\\), không tự cắt; các đường chéo cắt nhau <b>bên trong</b> tứ giác."},
+    {"id":"M14","stem":"Tứ giác \\(ABCD\\) trong <b>hình 5</b> là hình gì?","img":"img/cau14.png","options":["Hình vuông","Hình thoi","Hình chữ nhật","Hình tam giác"],"answer":2,"hint":"Có góc vuông, cạnh đối song song; đường chéo bằng nhau ⇒ <b>hình chữ nhật</b>."},
+    {"id":"M15","stem":"Không phải <b>dấu hiệu nhận biết hình thoi</b> là:","img":null,"options":["Hình bình hành có hai cạnh kề bằng nhau ⇒ hình thoi","Hình bình hành có hai đường chéo vuông góc ⇒ hình thoi","Hình bình hành có hai đường chéo bằng nhau ⇒ hình thoi","Hình bình hành có một đường chéo là phân giác một góc ⇒ hình thoi"],"answer":2,"hint":"Hình thoi: 4 cạnh bằng nhau. Dấu hiệu đúng: (1), (2), (4). <b>Chéo bằng nhau</b> là dấu hiệu của hình chữ nhật, không phải hình thoi."},
+    {"id":"M16","stem":"Hình thoi có <b>một góc vuông</b> là:","img":null,"options":["Hình vuông","Hình bình hành","Hình chữ nhật","Hình thang cân"],"answer":0,"hint":"Hình thoi + 1 góc vuông ⇒ 4 cạnh bằng nhau và có góc vuông ⇒ <b>hình vuông</b>."},
+    {"id":"M17","stem":"Tứ giác trong <b>hình 2</b> là:","img":"img/cau17.png","options":["Hình thoi","Hình vuông","Hình thang cân","Hình chữ nhật"],"answer":3,"hint":"Dấu hiệu HCN: <b>đường chéo bằng nhau</b> (theo hình)."}
+  ],
+  "multi10": [
+    {"id":"B1","title":"Bài 1: Rút gọn đơn thức – hệ số & bậc. Chọn Đ/S.","img":null,"items":[
+      ["Đơn thức \\(5x^{3}\\cdot xy=5x^{4}y\\).",1],["Bậc của \\(5x^{4}y\\) là \\(6\\).",0],
+      ["\\((4x^{2})(-4xy)=-16x^{3}y\\).",1],["\\(\\dfrac{1}{4}xyz\\cdot(2xy)=\\dfrac{1}{2}x^{2}y^{2}z\\).",1],
+      ["Bậc của \\(\\dfrac{1}{2}x^{2}y^{2}z\\) là \\(5\\).",0],["Thu gọn \\(x\\cdot x\\cdot y=x^{2}y\\).",1],
+      ["\\(5x^{2}y^{-1}\\) là đơn thức hợp lệ của đa thức.",0],["Hệ số của \\(-16x^{3}y\\) là \\(-16\\).",1],
+      ["Bậc của \\(-16x^{3}y\\) là \\(3\\).",1],["Bậc đơn thức là <b>tổng số mũ các biến</b> (không âm).",1]
+    ],"hint":"Bậc = tổng số mũ của biến (không âm); mũ âm → không là đơn thức hợp lệ trong đa thức."},
+
+    {"id":"B2","title":"Bài 2: Hạng tử của đa thức. Chọn Đ/S.","img":null,"items":[
+      ["Hạng tử là mỗi đơn thức trong đa thức.",1],["\\(A=x^{4}+xy+\\tfrac{2}{3}\\) là đa thức có 3 hạng tử.",1],
+      ["Trong đa thức, các hạng tử <b>đồng dạng</b> có thể cộng gộp.",1],["\\(x/y\\) là một hạng tử hợp lệ trong đa thức.",0],
+      ["Đa thức có thể có hệ số phân số.",1],["\\(5x-3+2x=7x-3\\).",1],
+      ["Bậc đa thức là bậc của hạng tử <b>nhỏ nhất</b>.",0],["Bậc đa thức là bậc của hạng tử <b>lớn nhất</b>.",1],
+      ["\\((-2)x^{2}y\\) và \\(2(-x^{2}y)\\) là hạng tử đồng dạng.",1],["Có thể sắp xếp hạng tử theo lũy thừa giảm dần.",1]
+    ],"hint":"Đa thức không có biến ở mẫu; bậc đa thức = bậc hạng tử lớn nhất."},
+
+    {"id":"B3","title":"Bài 3: Cộng – trừ – nhân – chia (đơn thức/đa thức). Chọn Đ/S.","img":null,"items":[
+      ["\\(4xy-8xy=-4xy\\).",1],["\\(4xy-16xy=-12xy\\).",1],["\\(10xy:5xy=2\\).",1],
+      ["\\((3xy-12xy):3xy=-3\\).",1],["\\(3x^{2}y+4x-2x=3x^{2}y+2x\\).",1],
+      ["\\((4xy-5x^{2})+(2xy-5x^{2})=6xy-10x^{2}\\).",1],["\\(x^{2}y+x^{2}y=2x^{2}y\\).",1],
+      ["\\(\\dfrac{x^{2}y}{xy}=x\\).",1],["\\(\\dfrac{4x^{2}y}{2xy}=2x\\).",1],["\\(\\dfrac{x^{2}y}{x^{2}}=y\\).",1]
+    ],"hint":"Cộng/trừ: gộp hạng tử đồng dạng. Nhân: cộng mũ theo từng biến. Chia: trừ mũ tương ứng."},
+
+    {"id":"B4","title":"Bài 4: Giá trị đa thức – thay số. Chọn Đ/S.","img":null,"items":[
+      ["Với \\(x=1,y=2\\), \\(A(x,y)=3x^{2}+5xy\\Rightarrow A=13\\).",1],
+      ["Với \\(x=2,y=1\\), \\(B=2x^{2}-xy+x^{2}y-3xy+2xy=9\\).",0],
+      ["Thay số tuân thủ thứ tự: lũy thừa → nhân/chia → cộng/trừ.",1],
+      ["Giá trị đa thức không phụ thuộc thứ tự gộp hạng tử <b>đúng quy tắc</b>.",1],
+      ["Rút gọn trước khi thay số để hạn sai.",1],
+      ["Nếu \\(y=0\\) thì mọi hạng tử chứa \\(y\\) đều bằng 0.",1],
+      ["Nếu \\(x=-1\\) thì \\(x^{2}=1\\).",1],
+      ["Lỗi thường gặp: quên bình phương cả biến lẫn hệ số.",1],
+      ["Lỗi thường gặp: sai thứ tự ưu tiên phép tính.",1],
+      ["\\(\\,\\)",1]
+    ],"hint":"Khuyến nghị rút gọn trước, rồi thay số; chú ý bậc & quy tắc ưu tiên."},
+
+    {"id":"B5","title":"Bài 5: Tìm đa thức \\(M\\) (dạng \\(M+P=Q\\)). Chọn Đ/S.","img":null,"items":[
+      ["\\(M=Q-P\\).",1],["Trừ đa thức = cộng với <b>đối</b> của đa thức trừ.",1],
+      ["\\((6x^{2}+10xy-y^{2})-(5x^{2}-2xy)=x^{2}+12xy-y^{2}\\).",1],["Hạng tử không đồng dạng giữ nguyên khi cộng/trừ.",1],
+      ["Có thể sắp xếp theo lũy thừa giảm dần của \\(x\\).",1],["\\((a+b)-(c+d)=a+b-c-d\\).",1],
+      ["\\((a+b)-(c-d)=a+b-c+d\\).",1],["Không cần ngoặc khi trừ đa thức.",0],
+      ["\\(M\\) luôn đồng dạng với \\(P\\).",0],["\\(M\\) luôn đồng dạng với \\(Q\\).",0]
+    ],"hint":"Nguyên tắc: \\(M=Q-P\\). Khi trừ phải <b>đổi dấu</b> hạng tử của đa thức trừ."},
+
+    {"id":"B6","title":"Bài 6: Chia hết đa thức (định lý phần dư). Chọn Đ/S.","img":null,"items":[
+      ["\\(A=8x^{2}-6x+m\\) <b>chia hết</b> cho \\(2x-3\\).",0],
+      ["Điều kiện chia hết: \\(A(x)=(2x-3)\\cdot Q(x)\\).",1],
+      ["Thay \\(x=\\tfrac{3}{2}\\) vào \\(A(x)\\) để kiểm tra \\(A(\\tfrac{3}{2})=0\\).",1],
+      ["Nếu \\(A(\\tfrac{3}{2})=0\\) thì \\(A\\) chia hết cho \\(2x-3\\).",1],
+      ["Có thể tìm \\(m\\) bằng điều kiện \\(A(\\tfrac{3}{2})=0\\).",1],
+      ["Nếu \\(A'=kA\\) thì \\(A'\\) cũng chia hết cho \\(2x-3\\).",1],
+      ["\\(A(0)=0\\Rightarrow A\\) chia hết cho \\(x\\).",1],
+      ["Mọi đa thức đều chia hết cho \\(2x-3\\).",0],
+      ["Nếu không chia hết thì \\(A(\\tfrac{3}{2})\\neq 0\\).",1],
+      ["\\(\\,\\)",1]
+    ],"hint":"Định lý phần dư: \\(A(x)\\) chia hết cho \\(x-a\\) ⇔ \\(A(a)=0\\). Với \\(2x-3\\) thì \\(a=\\tfrac{3}{2}\\)."},
+
+    {"id":"B7","title":"Bài 7: Ứng dụng đại số vào hình học phẳng. Chọn Đ/S.","img":null,"items":[
+      ["Thể tích hình hộp chữ nhật: \\(V=S_{\\text{đáy}}\\cdot h\\).",1],
+      ["\\(S_{\\text{đáy}}=6x+8y^{2},\\,h=x+2\\Rightarrow V=(6x+8y^{2})(x+2)\\).",1],
+      ["Nếu \\(S=6x^{2}-4xy\\), rộng \\(=2xy\\) thì dài \\(=\\dfrac{6x^{2}-4xy}{2xy}\\).",1],
+      ["\\(\\dfrac{6x^{2}-4xy}{2xy}=\\dfrac{3x}{y}-2\\).",1],
+      ["Diện tích <b>luôn</b> là đa thức theo \\(x,y\\).",0],
+      ["Thể tích <b>luôn</b> là đa thức theo \\(x,y\\).",0],
+      ["Có thể xuất hiện <b>phân thức</b> khi chia.",1],
+      ["Quy đồng/rút gọn đúng giúp tránh sai sót.",1],
+      ["Hệ số có thể là phân số.",1],
+      ["\\(x/x\\) có thể rút gọn (với \\(x\\neq 0\\)).",1]
+    ],"hint":"Áp dụng công thức S, V; khi chia có thể ra phân thức và cần rút gọn hợp lệ."},
+
+    {"id":"B8","title":"Bài 8: Hình học – tứ giác, hình bình hành, hình chữ nhật, hình thoi, hình vuông. Chọn Đ/S.","img":"img/cau11(TL).png","items":[
+      ["Tổng góc tứ giác = \\(360^{\\circ}\\).",1],
+      ["Trong hình bình hành: \\(\\widehat{A}+\\widehat{B}=180^{\\circ}\\).",1],
+      ["Hình chữ nhật có 4 góc vuông.",1],
+      ["Hình chữ nhật có hai đường chéo vuông góc.",0],
+      ["Hình chữ nhật có hai đường chéo <b>bằng nhau</b>.",1],
+      ["Trong hình thang cân: hai góc ở <b>cùng một đáy</b> bằng nhau.",1],
+      ["Hình bình hành: các cặp cạnh đối <b>song song</b>.",1],
+      ["Hình thoi: 4 cạnh bằng nhau; chéo <b>vuông góc</b> và là phân giác các góc.",1],
+      ["Hình vuông là giao của hình chữ nhật và hình thoi (vừa 4 góc vuông vừa 4 cạnh bằng).",1],
+      ["Ví dụ hình 2: có hai đường chéo bằng nhau ⇒ nhận dạng <b>hình chữ nhật</b> (chưa đủ để kết luận hình vuông).",1]
+    ],"hint":"Tính chất chuẩn theo SGK; dùng đúng ký hiệu \\(\\parallel, \\perp, \\widehat{\\cdot}\\)."}
+  ],
+  "short":[]
+};
+
 /* ====== State ====== */
 let RAW=null, STATE=null;
 let picksMC=new Map(); // qi -> oi
-let picksDS=new Map(); // "B{bi}-i{i}" -> 1 nếu tick (tức là chọn ĐÚNG)
+let picksDS=new Map(); // "B{bi}-i{i}" -> 1 nếu tick (ĐÚNG)
 
 /* ====== Render ====== */
 function renderMC(){
@@ -120,7 +227,8 @@ function renderDS(){
 
   STATE.ds.forEach((qs,bi)=>{
     const card=el("div",{className:"card"});
-    const stem=el("div",{className:"stem"}); stem.innerHTML=`<b>${qs.title.replace(/Đ\/S|Đúng\/Sai/gi,"Mệnh đề (chọn ĐÚNG)")}</b>`;
+    const stem=el("div",{className:"stem"}); 
+    stem.innerHTML=`<b>${(qs.title||"Mệnh đề").replace(/Đ\/S|Đúng\/Sai/gi,"Mệnh đề (chọn ĐÚNG)")}</b>`;
     card.appendChild(stem);
     if(qs.img){ card.appendChild(el("img",{className:"figure",src:qs.img,alt:"minh họa",loading:"lazy"})); }
 
@@ -204,26 +312,20 @@ function resetAll(shuffleAll=false){
 }
 
 /* ====== Boot ====== */
-async function boot(){
-  try{
-    const res = await fetch("./questions.json?ts="+Date.now(), {cache:"no-store"});
-    let json   = await res.json();
-    RAW   = expandDeep(json); // chuyển viết tắt → viết rõ
-    STATE = clone(RAW);
-    renderMC(); renderDS();
+(function boot(){
+  // chuyển viết tắt → viết rõ, map multi10 -> ds
+  const expanded = expandDeep(DATA);
+  RAW   = { mcqs: expanded.mcqs || [], ds: expanded.multi10 || [] };
+  STATE = clone(RAW);
+  renderMC(); renderDS();
 
-    // gắn nút
-    $("#btnGrade").onclick  = gradeAll;
-    $("#btnKeep1").onclick  = ()=>resetAll(false);
-    $("#btnShuffle1").onclick=()=>resetAll(true);
-    $("#btnKeep2").onclick  = ()=>resetAll(false);
-    $("#btnShuffle2").onclick=()=>resetAll(true);
-  }catch(e){
-    $("#mcqs").innerHTML='<div class="card" style="color:#b91c1c">Không tải được <b>questions.json</b>. Kiểm tra tên file & vị trí.</div>';
-    console.error(e);
-  }
-}
-boot();
+  // gắn nút
+  $("#btnGrade").onclick   = gradeAll;
+  $("#btnKeep1").onclick   = ()=>resetAll(false);
+  $("#btnShuffle1").onclick= ()=>resetAll(true);
+  $("#btnKeep2").onclick   = ()=>resetAll(false);
+  $("#btnShuffle2").onclick= ()=>resetAll(true);
+})();
 </script>
 </body>
 </html>
