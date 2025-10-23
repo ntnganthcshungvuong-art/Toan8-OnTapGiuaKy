@@ -5,104 +5,104 @@
       "stem": "Trong các biểu thức sau, **đơn thức** là:",
       "img": null,
       "options": [
-        "2x^2 + 3y",
-        "2/(3xy)",
-        "(-5)·x^2y^3",
-        "x^2 - 2x"
+        "\\(2x^{2}+3y\\)",
+        "\\(\\dfrac{2}{3xy}\\)",
+        "\\((-5)\\,x^{2}y^{3}\\)",
+        "\\(x^{2}-2x\\)"
       ],
       "answer": 2,
-      "hint": "Đơn thức là tích của một số với các biến có số mũ nguyên không âm (không có phép cộng/ trừ)."
+      "hint": "Đơn thức là **tích** của một số với các biến có số mũ **nguyên không âm** (không chứa phép cộng/trừ)."
     },
     {
       "id": "M2",
       "stem": "Trong các biểu thức sau, **đa thức** là:",
       "img": null,
       "options": [
-        "2/(x^3y) - 1",
-        "x/y + 3",
-        "5x - 4y + 7",
-        "x^2y + 1/(x)"
+        "\\(\\dfrac{2}{x^{3}y}-1\\)",
+        "\\(\\dfrac{x}{y}+3\\)",
+        "\\(5x-4y+7\\)",
+        "\\(x^{2}y+\\dfrac{1}{x}\\)"
       ],
       "answer": 2,
-      "hint": "Đa thức là tổng (hoặc hiệu) hữu hạn các đơn thức có dạng hệ số · biến với số mũ nguyên không âm."
+      "hint": "Đa thức là **tổng/hệu hữu hạn** các đơn thức có dạng hệ số·biến với số mũ **không âm**."
     },
     {
       "id": "M3",
-      "stem": "Đơn thức **đồng dạng** với đơn thức (2/3)·xyz là:",
+      "stem": "Đơn thức **đồng dạng** với \\(\\tfrac{2}{3}\\,xyz\\) là:",
       "img": null,
       "options": [
-        "(3/2)·xyz",
-        "2x^2yz",
-        "2xy^2z",
-        "(2/3)·x^2y^2z"
+        "\\(\\tfrac{3}{2}\\,xyz\\)",
+        "\\(2x^{2}yz\\)",
+        "\\(2xy^{2}z\\)",
+        "\\(\\tfrac{2}{3}\\,x^{2}y^{2}z\\)"
       ],
       "answer": 0,
-      "hint": "Đồng dạng ⇔ cùng phần biến và số mũ của từng biến trùng nhau (khác hệ số)."
+      "hint": "Đồng dạng ⇔ **cùng phần biến** và **cùng số mũ** từng biến (khác hệ số)."
     },
     {
       "id": "M4",
-      "stem": "Kết quả phép trừ **(5/2)xy − (1/2)xy** là:",
+      "stem": "Kết quả phép trừ \\(\\tfrac{5}{2}xy-\\tfrac{1}{2}xy\\) là:",
       "img": null,
       "options": [
-        "2xy",
-        "3xy",
-        "(2/3)xy",
-        "(4/2)xy"
+        "\\(2xy\\)",
+        "\\(3xy\\)",
+        "\\(\\tfrac{2}{3}xy\\)",
+        "\\(\\tfrac{4}{2}xy\\)"
       ],
       "answer": 0,
-      "hint": "Cùng đơn thức xy: (5/2 − 1/2)xy = (4/2)xy = 2xy."
+      "hint": "Cùng đơn thức \\(xy\\): \\((\\tfrac{5}{2}-\\tfrac{1}{2})xy=\\tfrac{4}{2}xy=2xy\\)."
     },
     {
       "id": "M5",
-      "stem": "Kết quả phép chia **(x^2y^3) : (xy)** là:",
+      "stem": "Kết quả \\((x^{2}y^{3}):(xy)\\) là:",
       "img": null,
       "options": [
-        "xy^2",
-        "x^3y^3",
-        "x y^2",
-        "x y^4"
+        "\\(xy^{2}\\)",
+        "\\(x^{3}y^{3}\\)",
+        "\\(x\\,y^{2}\\)",
+        "\\(x\\,y^{4}\\)"
       ],
       "answer": 0,
-      "hint": "Chia lũy thừa: x^2: x = x, y^3: y = y^2 ⇒ xy^2."
+      "hint": "Chia lũy thừa: \\(x^{2}:x=x\\), \\(y^{3}:y=y^{2}\\Rightarrow xy^{2}\\)."
     },
     {
       "id": "M6",
-      "stem": "Biết **M + 5x^2 − 2xy = 6x^2 + 10xy − y^2**. Khi đó đa thức **M** bằng:",
+      "stem": "Biết \\(M+5x^{2}-2xy=6x^{2}+10xy-y^{2}\\). Đa thức \\(M\\) bằng:",
       "img": null,
       "options": [
-        "x^2 + 12xy − y^2",
-        "x^2 + 12xy + y^2",
-        "x^2 + 8xy − y^2",
-        "x^2 + 7xy − y^2"
+        "\\(x^{2}+12xy-y^{2}\\)",
+        "\\(x^{2}+12xy+y^{2}\\)",
+        "\\(x^{2}+8xy-y^{2}\\)",
+        "\\(x^{2}+7xy-y^{2}\\)"
       ],
       "answer": 0,
-      "hint": "M = (6x^2 + 10xy − y^2) − (5x^2 − 2xy) = x^2 + 12xy − y^2."
+      "hint": "\\(M=(6x^{2}+10xy-y^{2})-(5x^{2}-2xy)=x^{2}+12xy-y^{2}\\)."
     },
     {
       "id": "M7",
-      "stem": "Diện tích hình chữ nhật có dài **x+2**, rộng **y+3** là:",
+      "stem": "Diện tích hình chữ nhật có chiều dài \\(x+2\\), chiều rộng \\(y+3\\) là:",
       "img": null,
       "options": [
-        "xy + 3x + 2y + 6",
-        "xy − 3x + 2y + 6",
-        "xy + 3x − 2y + 6",
-        "xy − 3x + 2y − 6"
+        "\\(xy+3x+2y+6\\)",
+        "\\(xy-3x+2y+6\\)",
+        "\\(xy+3x-2y+6\\)",
+        "\\(xy-3x+2y-6\\)"
       ],
       "answer": 0,
-      "hint": "S = (x+2)(y+3) = xy + 3x + 2y + 6."
+      "hint": "\\(S=(x+2)(y+3)=xy+3x+2y+6\\)."
     },
     {
       "id": "M8",
       "stem": "Trong các đơn thức sau, **đơn thức đã thu gọn** là:",
       "img": null,
       "options": [
-        "3·x·x·y",
-        "(1/4)·4x^2y",
-        "(2^3·3^4)xy^2z",
-        "2^2·3·x·y·x·z"
+        "\\(3\\cdot x\\cdot x\\cdot y\\)",
+        "\\(\\tfrac{1}{4}\\cdot 4x^{2}y\\)",
+        "\\((2^{3}\\cdot 3^{4})x y^{2}z\\)",
+        "\\(2^{2}\\cdot 3\\cdot x\\cdot y\\cdot x\\cdot z\\)"
       ],
       "answer": 2,
-      "hint": "Thu gọn: gộp các lũy thừa cùng biến, rút gọn hệ số. Phương án (2) còn thừa nhân 4; (1)(4) chưa gộp biến."
+      "hint": "Thu gọn = gộp lũy thừa cùng biến, rút gọn hệ số. (2) còn thừa nhân 4; (1)(4) chưa gộp biến."
     },
     {
       "id": "M9",
@@ -110,36 +110,36 @@
       "img": "img/cau9.png",
       "options": ["Hình 1", "Hình 2", "Hình 3", "Hình 4"],
       "answer": 1,
-      "hint": "Hình vuông: 4 góc vuông & 4 cạnh bằng nhau."
+      "hint": "Hình vuông: 4 góc vuông **và** 4 cạnh bằng nhau."
     },
     {
       "id": "M10",
-      "stem": "Cho tứ giác ABCD trong hình 1. Biết ÂBC = 120°. Số đo ÂDC là:",
+      "stem": "Cho tứ giác \\(ABCD\\) trong **hình 1**. Biết \\(\\widehat{ABC}=120^{\\circ}\\). Số đo \\(\\widehat{ADC}\\) là:",
       "img": "img/cau10.png",
-      "options": ["360°", "180°", "120°", "60°"],
+      "options": ["\\(360^{\\circ}\\)", "\\(180^{\\circ}\\)", "\\(120^{\\circ}\\)", "\\(60^{\\circ}\\)"],
       "answer": 3,
-      "hint": "Theo hình: hai góc kề một cạnh bù nhau ⇒ ÂBC + ÂDC = 180° ⇒ ÂDC = 60°."
+      "hint": "Hai góc kề một cạnh của **HBH** bù nhau ⇒ \\(\\widehat{ABC}+\\widehat{ADC}=180^{\\circ}\\Rightarrow\\widehat{ADC}=60^{\\circ}\\)."
     },
     {
       "id": "M11",
-      "stem": "Biết tứ giác MNPQ là **hình thang** (hình 2). Khi nào là **hình thang cân**?",
+      "stem": "Biết \\(MNPQ\\) là **hình thang** (hình 2). Khi nào là **hình thang cân**?",
       "img": "img/cau11.png",
-      "options": ["MQ = NP", "NQ = 4 cm", "NQ = 2 cm", "NQ = 5 cm"],
+      "options": ["\\(MQ=NP\\)", "\\(NQ=4\\,\\text{cm}\\)", "\\(NQ=2\\,\\text{cm}\\)", "\\(NQ=5\\,\\text{cm}\\)"],
       "answer": 0,
-      "hint": "Hình thang cân: hai cạnh bên bằng nhau; hai góc ở cùng một đáy bằng nhau; (thường) hai đường chéo bằng nhau."
+      "hint": "Thang cân: **hai cạnh bên bằng nhau**; **hai góc ở cùng một đáy bằng nhau**; thường **hai đường chéo bằng nhau**."
     },
     {
       "id": "M12",
-      "stem": "Cho hình bình hành EFGH (hình 3). **Mệnh đề đúng** là:",
+      "stem": "Cho hình bình hành \\(EFGH\\) (hình 3). **Mệnh đề đúng** là:",
       "img": "img/cau12.png",
       "options": [
-        "EF // HG và EH // FG",
-        "Hai đường chéo vuông góc",
-        "Hai đường chéo bằng nhau",
-        "Bốn cạnh bằng nhau"
+        "\\(EF\\parallel HG\\) và \\(EH\\parallel FG\\) (//).",
+        "Hai đường chéo vuông góc.",
+        "Hai đường chéo bằng nhau.",
+        "Bốn cạnh bằng nhau."
       ],
       "answer": 0,
-      "hint": "HBH: cặp cạnh đối // & bằng nhau; chéo cắt nhau tại trung điểm. Không nhất thiết chéo bằng nhau/vuông góc."
+      "hint": "HBH: cặp cạnh đối **song song & bằng nhau**, đường chéo **cắt nhau tại trung điểm**."
     },
     {
       "id": "M13",
@@ -147,28 +147,28 @@
       "img": "img/cau13.png",
       "options": ["Hình a", "Hình b", "Hình c", "Hình d"],
       "answer": 0,
-      "hint": "Tứ giác lồi: bốn góc < 180°, không tự cắt; chéo cắt nhau trong hình."
+      "hint": "Tứ giác lồi: bốn góc <\\(180^{\\circ}\\), không tự cắt; hai đường chéo cắt nhau **bên trong**."
     },
     {
       "id": "M14",
-      "stem": "Tứ giác ABCD trong hình 5 là hình gì?",
+      "stem": "Tứ giác \\(ABCD\\) trong **hình 5** là hình gì?",
       "img": "img/cau14.png",
       "options": ["Hình vuông", "Hình thoi", "Hình chữ nhật", "Hình tam giác"],
       "answer": 2,
-      "hint": "Có góc vuông, cạnh đối //; chéo bằng nhau ⇒ hình chữ nhật."
+      "hint": "Có góc vuông, cạnh đối //, **hai đường chéo bằng nhau** ⇒ **hình chữ nhật**."
     },
     {
       "id": "M15",
       "stem": "Không phải **dấu hiệu nhận biết hình thoi** là:",
       "img": null,
       "options": [
-        "HBH có hai cạnh kề bằng nhau ⇒ hình thoi",
-        "HBH có hai đường chéo vuông góc ⇒ hình thoi",
-        "HBH có hai đường chéo bằng nhau ⇒ hình thoi",
-        "HBH có một đường chéo là phân giác một góc ⇒ hình thoi"
+        "HBH có hai cạnh kề bằng nhau ⇒ hình thoi.",
+        "HBH có hai đường chéo vuông góc ⇒ hình thoi.",
+        "HBH có hai đường chéo bằng nhau ⇒ hình thoi.",
+        "HBH có một đường chéo là phân giác một góc ⇒ hình thoi."
       ],
       "answer": 2,
-      "hint": "Hình thoi: 4 cạnh bằng nhau. Dấu hiệu: HBH có 2 cạnh kề bằng nhau; hoặc chéo vuông góc; hoặc 1 chéo là phân giác góc. Chéo **bằng nhau** là dấu hiệu của HCN, không phải hình thoi."
+      "hint": "Chéo **bằng nhau** là dấu hiệu của **hình chữ nhật**, không phải hình thoi."
     },
     {
       "id": "M16",
@@ -176,7 +176,7 @@
       "img": null,
       "options": ["Hình vuông", "Hình bình hành", "Hình chữ nhật", "Hình thang cân"],
       "answer": 0,
-      "hint": "Hình thoi + 1 góc vuông ⇒ 4 cạnh bằng nhau và có góc vuông ⇒ hình vuông."
+      "hint": "Hình thoi + 1 góc vuông ⇒ **4 cạnh bằng nhau** & **có góc vuông** ⇒ **hình vuông**."
     },
     {
       "id": "M17",
@@ -184,28 +184,27 @@
       "img": "img/cau17.png",
       "options": ["Hình thoi", "Hình vuông", "Hình thang cân", "Hình chữ nhật"],
       "answer": 3,
-      "hint": "Dấu hiệu HCN: HBH có hai đường chéo bằng nhau (theo hình cho)."
+      "hint": "Dấu hiệu HCN: **hai đường chéo bằng nhau** (và các góc vuông theo hình cho)."
     }
   ],
-
   "multi10": [
     {
       "id": "T1",
       "title": "Rút gọn đơn thức – hệ số & bậc (liên hệ Bài 1). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["Đơn thức 5x^3·xy = 5x^4y.", 1],
-        ["Bậc của 5x^4y là 6.", 0],
-        ["(4x^2)·(−4xy) = −16x^3y.", 1],
-        ["(1/4)xyz·(2xy) = (1/2)x^2y^2z.", 1],
-        ["Bậc của (1/2)x^2y^2z là 5.", 0],
-        ["Thu gọn x·x·y = x^2y.", 1],
-        ["5x^2y^−1 là đơn thức hợp lệ của đa thức.", 0],
-        ["Hệ số của −16x^3y là −16.", 1],
-        ["Bậc của −16x^3y là 3.", 0],
-        ["Bậc đơn thức là tổng số mũ các biến.", 1]
+        ["Đơn thức \\(5x^{3}\\cdot xy=5x^{4}y\\).", 1],
+        ["Bậc của \\(5x^{4}y\\) là \\(6\\).", 0],
+        ["\\((4x^{2})(-4xy)=-16x^{3}y\\).", 1],
+        ["\\(\\tfrac{1}{4}xyz\\cdot (2xy)=\\tfrac{1}{2}x^{2}y^{2}z\\).", 1],
+        ["Bậc của \\(\\tfrac{1}{2}x^{2}y^{2}z\\) là \\(5\\).", 0],
+        ["Thu gọn \\(x\\cdot x\\cdot y=x^{2}y\\).", 1],
+        ["\\(5x^{2}y^{-1}\\) là đơn thức hợp lệ của đa thức.", 0],
+        ["Hệ số của \\(-16x^{3}y\\) là \\(-16\\).", 1],
+        ["Bậc của \\(-16x^{3}y\\) là \\(3\\).", 1],
+        ["Bậc đơn thức là **tổng** số mũ các biến.", 1]
       ],
-      "hint": "Bậc = tổng số mũ biến (không âm); đơn thức hợp lệ không có mũ âm; nhân đơn thức: cộng số mũ từng biến, nhân hệ số."
+      "hint": "Bậc = tổng số mũ **không âm**; không chấp nhận mũ âm trong đơn thức của đa thức."
     },
     {
       "id": "T2",
@@ -213,147 +212,147 @@
       "img": null,
       "items": [
         ["Hạng tử là mỗi đơn thức trong đa thức.", 1],
-        ["A = x^4 + xy + (2/3) là đa thức có 3 hạng tử.", 1],
+        ["\\(A=x^{4}+xy+\\tfrac{2}{3}\\) có 3 hạng tử.", 1],
         ["Trong đa thức, các đơn thức đồng dạng có thể cộng gộp.", 1],
-        ["x/y là một hạng tử hợp lệ trong đa thức.", 0],
+        ["\\(\\dfrac{x}{y}\\) là một hạng tử hợp lệ trong đa thức.", 0],
         ["Đa thức có thể có hệ số phân số.", 1],
-        ["5x − 3 + 2x = 7x − 3.", 1],
-        ["Bậc đa thức là bậc hạng tử bậc thấp nhất.", 0],
-        ["Bậc đa thức là bậc hạng tử bậc cao nhất.", 1],
-        ["(−2)x^2y và 2(−x^2y) là hai hạng tử đồng dạng.", 1],
-        ["Có thể sắp xếp các hạng tử theo lũy thừa giảm dần.", 1]
+        ["\\(5x-3+2x=7x-3\\).", 1],
+        ["Bậc đa thức là bậc hạng tử bậc **thấp nhất**.", 0],
+        ["Bậc đa thức là bậc hạng tử bậc **cao nhất**.", 1],
+        ["\\((-2)x^{2}y\\) và \\(2(-x^{2}y)\\) đồng dạng.", 1],
+        ["Có thể sắp xếp hạng tử theo lũy thừa giảm dần.", 1]
       ],
       "hint": "Đa thức = tổng hữu hạn đơn thức (mũ không âm). Bậc đa thức = bậc lớn nhất trong các hạng tử."
     },
     {
       "id": "T3",
-      "title": "Tính cộng trừ nhân chia đa thức – đơn thức (liên hệ Bài 3). Chọn Đ/S.",
+      "title": "Cộng – trừ – nhân – chia (liên hệ Bài 3). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["4xy − 8xy = −4xy.", 1],
-        ["4xy − 16xy = −12xy.", 1],
-        ["10xy : 5xy = 2.", 1],
-        ["(3xy − 12xy) : 3xy = −3.", 1],
-        ["(3x^2y + 4x − 2x) = 3x^2y + 2x.", 1],
-        ["(4xy − 5x^2) + (2xy − 5x^2) = 6xy − 10x^2.", 1],
-        ["x^2y + x^2y = 2x^2y.", 1],
-        ["(x^2y) : (xy) = x.", 1],
-        ["(4x^2y) : (2xy) = 2x.", 1],
-        ["(x^2y) : (x^2) = y.", 1]
+        ["\\(4xy-8xy=-4xy\\).", 1],
+        ["\\(4xy-16xy=-12xy\\).", 1],
+        ["\\(10xy:5xy=2\\).", 1],
+        ["\\((3xy-12xy):3xy=-3\\).", 1],
+        ["\\(3x^{2}y+4x-2x=3x^{2}y+2x\\).", 1],
+        ["\\((4xy-5x^{2})+(2xy-5x^{2})=6xy-10x^{2}\\).", 1],
+        ["\\(x^{2}y+x^{2}y=2x^{2}y\\).", 1],
+        ["\\((x^{2}y):(xy)=x\\).", 1],
+        ["\\((4x^{2}y):(2xy)=2x\\).", 1],
+        ["\\((x^{2}y):(x^{2})=y\\).", 1]
       ],
-      "hint": "Cộng/Trừ: gộp hạng tử đồng dạng. Nhân: nhân hệ số, cộng mũ. Chia: trừ mũ tương ứng."
+      "hint": "Cộng/Trừ: gộp đồng dạng. Nhân: nhân hệ số, cộng mũ. Chia: trừ mũ tương ứng."
     },
     {
       "id": "T4",
       "title": "Giá trị đa thức (liên hệ Bài 4). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["Thay x=1, y=2 vào A(x,y)=3x^2+5xy: A=3·1^2+5·1·2=13.", 1],
-        ["Nếu B=2x^2−xy+x^2y−3xy+2xy, với x=2,y=1 thì B=2·4−2+2−3+2=9.", 0],
-        ["Thay số phải theo thứ tự ưu tiên lũy thừa, nhân/chia, cộng/trừ.", 1],
-        ["Giá trị đa thức không phụ thuộc thứ tự rút gọn hạng tử đồng dạng.", 1],
-        ["Thay x,y vào từng hạng tử rồi cộng lại là hợp lệ.", 1],
-        ["Có thể rút gọn trước khi thay số để giảm sai sót.", 1],
-        ["Nếu y=0 thì mọi hạng tử chứa y đều bằng 0.", 1],
-        ["Nếu x=−1 thì x^2=1.", 1],
-        ["Lỗi thường gặp: quên bình phương cả biến lẫn hệ số.", 0],
+        ["Với \\(x=1,y=2\\): \\(A=3x^{2}+5xy=13\\).", 1],
+        ["\\(B=2x^{2}-xy+x^{2}y-3xy+2xy\\), \\(x=2,y=1\\Rightarrow B=9\\).", 0],
+        ["Thứ tự ưu tiên: lũy thừa → nhân/chia → cộng/trừ.", 1],
+        ["Giá trị đa thức không phụ thuộc thứ tự gộp đồng dạng.", 1],
+        ["Thay vào từng hạng tử rồi cộng lại là hợp lệ.", 1],
+        ["Rút gọn trước khi thay giúp giảm sai sót.", 1],
+        ["Nếu \\(y=0\\) thì mọi hạng tử chứa \\(y\\) đều bằng 0.", 1],
+        ["Nếu \\(x=-1\\) thì \\(x^{2}=1\\).", 1],
+        ["Lỗi thường gặp: quên bình phương cả biến lẫn hệ số.", 1],
         ["Lỗi thường gặp: sai thứ tự ưu tiên phép tính.", 1]
       ],
-      "hint": "Quy tắc thay số: tuân thủ thứ tự phép tính; nên rút gọn trước; chú ý hạng tử 0 khi biến bằng 0."
+      "hint": "Tuân thủ thứ tự phép tính; nên rút gọn trước; chú ý hạng tử triệt tiêu khi biến bằng 0."
     },
     {
       "id": "T5",
-      "title": "Tìm đa thức M (dạng M + P = Q) (liên hệ Bài 5). Chọn Đ/S.",
+      "title": "Tìm đa thức \\(M\\) (dạng \\(M+P=Q\\)) (liên hệ Bài 5). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["M = Q − P.", 1],
-        ["Khi trừ đa thức, phải đổi dấu đa thức trừ rồi cộng.", 1],
-        ["(6x^2+10xy−y^2) − (5x^2−2xy) = x^2+12xy−y^2.", 1],
-        ["Nếu Q và P có hạng tử không đồng dạng, giữ nguyên.", 1],
-        ["Có thể sắp xếp đa thức theo lũy thừa giảm dần của x.", 1],
-        ["(a+b) − (c+d) = a + b − c − d.", 1],
-        ["(a+b) − (c−d) = a + b − c + d.", 1],
-        ["Không cần ngoặc khi trừ đa thức.", 0],
-        ["M luôn đồng dạng với P.", 0],
-        ["M luôn đồng dạng với Q.", 0]
+        ["\\(M=Q-P\\).", 1],
+        ["Trừ đa thức = cộng với đối của đa thức trừ.", 1],
+        ["\\((6x^{2}+10xy-y^{2})-(5x^{2}-2xy)=x^{2}+12xy-y^{2}\\).", 1],
+        ["Hạng tử không đồng dạng giữ nguyên.", 1],
+        ["Có thể sắp xếp theo lũy thừa giảm dần của \\(x\\).", 1],
+        ["\\((a+b)-(c+d)=a+b-c-d\\).", 1],
+        ["\\((a+b)-(c-d)=a+b-c+d\\).", 1],
+        ["Khi trừ đa thức **không** cần ngoặc.", 0],
+        ["\\(M\\) luôn đồng dạng với \\(P\\).", 0],
+        ["\\(M\\) luôn đồng dạng với \\(Q\\).", 0]
       ],
-      "hint": "Nguyên tắc: M = Q − P; trừ đa thức = cộng với đối của đa thức trừ."
+      "hint": "Nguyên tắc: \\(M=Q-P\\); cẩn thận **đổi dấu** khi bỏ ngoặc."
     },
     {
       "id": "T6",
       "title": "Chia hết đa thức (liên hệ Bài 6). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["A = 8x^2 − 6x + m chia hết cho B = 2x − 3.", 0],
-        ["Điều kiện chia hết: A(x) = (2x−3)·Q(x).", 1],
-        ["Thay x = 3/2 (nghiệm của 2x−3) vào A(x) để kiểm tra A(3/2)=0.", 1],
-        ["Nếu A(3/2)=0 thì A chia hết cho 2x−3.", 1],
-        ["Có thể tìm m bằng điều kiện A(3/2)=0.", 1],
-        ["Nếu A chia hết cho B, thì B là ước của A.", 1],
-        ["Nếu A’ = k·A thì A’ cũng chia hết cho B.", 1],
-        ["Nếu A không chia hết, thì A(3/2) ≠ 0.", 1],
-        ["Mọi đa thức đều chia hết cho 2x−3.", 0],
-        ["A(0)=0 ⇒ A chia hết cho x.", 1]
+        ["\\(A=8x^{2}-6x+m\\) chia hết cho \\(2x-3\\).", 0],
+        ["Điều kiện chia hết: \\(A(x)=(2x-3)\\,Q(x)\\).", 1],
+        ["Thay \\(x=\\tfrac{3}{2}\\) (nghiệm của \\(2x-3\\)) để kiểm tra \\(A(\\tfrac{3}{2})=0\\).", 1],
+        ["Nếu \\(A(\\tfrac{3}{2})=0\\) thì \\(A\\) chia hết cho \\(2x-3\\).", 1],
+        ["Có thể tìm \\(m\\) bằng điều kiện \\(A(\\tfrac{3}{2})=0\\).", 1],
+        ["Nếu \\(A' = kA\\) thì \\(A'\\) cũng chia hết cho \\(2x-3\\).", 1],
+        ["Nếu \\(A\\) không chia hết, thì \\(A(\\tfrac{3}{2})\\neq 0\\).", 1],
+        ["Mọi đa thức đều chia hết cho \\(2x-3\\).", 0],
+        ["\\(A(0)=0\\Rightarrow A\\) chia hết cho \\(x\\).", 1],
+        ["\\(B(x)\\) chia hết cho \\(x-a\\) ⇔ \\(B(a)=0\\).", 1]
       ],
-      "hint": "Định lý phần dư: A chia hết cho (x−a) ⇔ A(a)=0. Với 2x−3, lấy a=3/2."
+      "hint": "Định lý phần dư: \\(A\\) chia hết cho \\(x-a\\) ⇔ \\(A(a)=0\\). Với \\(2x-3\\) ⇒ \\(a=\\tfrac{3}{2}\\)."
     },
     {
       "id": "T7",
-      "title": "Ứng dụng Đại số vào Hình học phẳng (liên hệ Bài 7). Chọn Đ/S.",
+      "title": "Ứng dụng đại số vào hình phẳng (liên hệ Bài 7). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["V hình hộp chữ nhật = S_đáy · h.", 1],
-        ["Nếu S_đáy = 6x + 8y^2, h = x + 2 ⇒ V = (6x + 8y^2)(x+2).", 1],
-        ["Nếu S = 6x^2 − 4xy, rộng = 2xy ⇒ dài = (6x^2 − 4xy)/(2xy).", 1],
-        ["(6x^2 − 4xy)/(2xy) = 3x/y − 2.", 1],
-        ["Diện tích luôn là đa thức theo x,y.", 0],
-        ["Thể tích luôn là đa thức theo x,y.", 0],
-        ["Có thể xuất hiện phân thức khi chia.", 1],
-        ["Quy đồng trước khi rút gọn giúp tránh sai sót.", 1],
+        ["\\(V_{hhcn}=S_{\\text{đáy}}\\cdot h\\).", 1],
+        ["\\(S_{\\text{đáy}}=6x+8y^{2},\\ h=x+2\\Rightarrow V=(6x+8y^{2})(x+2)\\).", 1],
+        ["Nếu \\(S=6x^{2}-4xy\\), rộng \\(=2xy\\) ⇒ dài \\(=\\dfrac{6x^{2}-4xy}{2xy}\\).", 1],
+        ["\\(\\dfrac{6x^{2}-4xy}{2xy}=\\dfrac{3x}{y}-2\\).", 1],
+        ["Diện tích **luôn** là đa thức theo \\(x,y\\).", 0],
+        ["Thể tích **luôn** là đa thức theo \\(x,y\\).", 0],
+        ["Có thể xuất hiện **phân thức** khi chia.", 1],
+        ["Quy đồng/rút gọn hợp lý giúp tránh sai.", 1],
         ["Hệ số có thể là phân số.", 1],
-        ["Không bao giờ được rút gọn x/x.", 0]
+        ["Không bao giờ được rút gọn \\(x/x\\).", 0]
       ],
-      "hint": "Áp dụng công thức S, V; có thể ra phân thức ⇒ rút gọn hợp lệ."
+      "hint": "Áp dụng công thức; khi chia có thể ra phân thức ⇒ rút gọn hợp lệ."
     },
     {
       "id": "T8",
-      "title": "Tổng – bù – đối trong tứ giác (Bài 8–10 Hình). Chọn Đ/S.",
+      "title": "Tổng – bù – đối trong tứ giác (Hình 8–10). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["Tổng góc tứ giác = 360°.", 1],
-        ["Trong HBH: Â + B̂ = 180°.", 1],
+        ["Tổng góc tứ giác = \\(360^{\\circ}\\).", 1],
+        ["Trong HBH: \\(\\widehat{A}+\\widehat{B}=180^{\\circ}\\).", 1],
         ["Nếu HCN ⇒ bốn góc vuông.", 1],
         ["Nếu HCN ⇒ hai đường chéo vuông góc.", 0],
-        ["Hình chữ nhật có chéo bằng nhau.", 1],
-        ["Hai góc kề một cạnh trong tứ giác luôn bù nhau.", 0],
-        ["Hai góc kề một cạnh trong HBH bù nhau.", 1],
-        ["Trong hình thang cân: góc cùng đáy bằng nhau.", 1],
+        ["Hình chữ nhật có hai đường chéo bằng nhau.", 1],
+        ["Hai góc kề một cạnh trong **mọi** tứ giác đều bù.", 0],
+        ["Hai góc kề một cạnh trong **HBH** bù nhau.", 1],
+        ["Trong thang cân: các góc ở cùng một đáy bằng nhau.", 1],
         ["Hai đường chéo của HBH luôn bằng nhau.", 0],
-        ["Hai đường chéo của HT luôn bằng nhau.", 0]
+        ["Hai đường chéo của hình thoi luôn bằng nhau.", 0]
       ],
-      "hint": "Ôn các tính chất chuẩn: HCN chéo bằng nhau; HBH: kề bù; thang cân: góc cùng đáy bằng nhau."
+      "hint": "Ôn chuẩn: HCN chéo bằng nhau; HBH kề bù; thang cân góc cùng đáy bằng nhau."
     },
     {
       "id": "T9",
-      "title": "Nhận dạng hình thang cân (Bài 11 – hình 3). Chọn 5 ý ĐÚNG.",
+      "title": "Nhận dạng hình thang cân (Bài 11 – hình 2). **Chọn 5 ý đúng**.",
       "img": "img/cau11(TL).png",
       "items": [
-        ["MN // QP.", 1],
-        ["MQ = NP.", 1],
+        ["\\(MN\\parallel QP\\).", 1],
+        ["\\(MQ=NP\\).", 1],
         ["Hai góc ở cùng một đáy bằng nhau.", 1],
         ["Hai đường chéo bằng nhau.", 1],
-        ["Tổng hai góc kề một cạnh bên bằng 180°.", 1],
+        ["Tổng hai góc kề một cạnh bên bằng \\(180^{\\circ}\\).", 1],
         ["Hai cạnh bên song song.", 0],
         ["Hai đường chéo vuông góc.", 0],
         ["Hai đáy bằng nhau.", 0],
-        ["Một góc vuông ở đáy.", 0],
+        ["Có một góc vuông ở đáy.", 0],
         ["Góc ở hai đáy bằng nhau từng đôi.", 0]
       ],
-      "hint": "Dấu hiệu/ tính chất thang cân: cạnh bên bằng nhau; góc cùng đáy bằng nhau; (thường) chéo bằng nhau."
+      "hint": "Thang cân: cạnh bên bằng nhau; góc cùng đáy bằng nhau; thường chéo bằng nhau."
     },
     {
       "id": "T10",
-      "title": "Tính chất hình bình hành (Bài 12–14 Hình). Chọn Đ/S.",
+      "title": "Tính chất hình bình hành (Bài 12–14). Chọn Đ/S.",
       "img": null,
       "items": [
         ["Các cặp cạnh đối song song.", 1],
@@ -361,17 +360,17 @@
         ["Hai đường chéo cắt nhau tại trung điểm.", 1],
         ["Hai đường chéo vuông góc.", 0],
         ["Hai đường chéo bằng nhau.", 0],
-        ["Góc kề bù nhau.", 1],
-        ["Góc đối bằng nhau.", 1],
+        ["Hai góc kề bù nhau.", 1],
+        ["Hai góc đối bằng nhau.", 1],
         ["Bốn cạnh bằng nhau.", 0],
-        ["Có 1 góc vuông.", 0],
-        ["Một cạnh kề song song.", 0]
+        ["Có ít nhất một góc vuông.", 0],
+        ["Một cặp cạnh kề song song.", 0]
       ],
       "hint": "Tập hợp đầy đủ tính chất HBH theo SGK."
     },
     {
       "id": "T11",
-      "title": "Xâu chuỗi HCN – HT – HV. Chọn Đ/S.",
+      "title": "Quan hệ HCN – HT – HV. Chọn Đ/S.",
       "img": null,
       "items": [
         ["Hình vuông vừa là HCN vừa là HT.", 1],
@@ -380,34 +379,34 @@
         ["HV có chéo vừa bằng nhau vừa vuông góc.", 1],
         ["HCN có chéo vuông góc.", 0],
         ["HT có chéo bằng nhau.", 0],
-        ["HV = HCN ∩ HT.", 1],
-        ["HBH = HCN ∩ HT.", 0],
+        ["HV = HCN \\(\\cap\\) HT.", 1],
+        ["HBH = HCN \\(\\cap\\) HT.", 0],
         ["HV có 4 cạnh bằng nhau.", 1],
         ["HV có 4 góc vuông.", 1]
       ],
-      "hint": "HV là giao của HCN và HT."
+      "hint": "HV là giao của **HCN** và **HT**."
     },
     {
       "id": "T12",
-      "title": "Góc liên quan đến các đường // (lớp 7–8). Chọn Đ/S.",
+      "title": "Góc liên quan đến các đường // (ôn 7–8). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["Đồng vị bằng nhau.", 1],
-        ["So le trong bằng nhau.", 1],
-        ["So le ngoài bằng nhau.", 1],
-        ["Trong cùng phía bù nhau.", 1],
-        ["Nếu a ⊥ c, b ⊥ c ⇒ a // b.", 1],
+        ["Góc **đồng vị** bằng nhau.", 1],
+        ["Góc **so le trong** bằng nhau.", 1],
+        ["Góc **so le ngoài** bằng nhau.", 1],
+        ["Góc **trong cùng phía** bù nhau.", 1],
+        ["Nếu \\(a\\perp c\\), \\(b\\perp c\\) ⇒ \\(a\\parallel b\\).", 1],
         ["Hai góc kề nhau luôn bù.", 0],
         ["Hai góc so le trong luôn bù.", 0],
         ["Nếu một góc tù thì góc so le trong kia cũng tù.", 0],
         ["Góc bù với góc nhọn có thể là góc nhọn.", 0],
         ["Góc bù với góc tù là góc nhọn.", 1]
       ],
-      "hint": "Quan hệ góc cơ bản khi có hai đường // và cắt bởi đường thẳng."
+      "hint": "Các quan hệ góc cơ bản khi có hai đường **song song**."
     },
     {
       "id": "T13",
-      "title": "Dấu hiệu nhận dạng hình thoi (bổ sung). Chọn Đ/S.",
+      "title": "Dấu hiệu nhận dạng hình thoi (tổng hợp). Chọn Đ/S.",
       "img": null,
       "items": [
         ["HBH có hai cạnh kề bằng nhau.", 1],
@@ -421,25 +420,25 @@
         ["Hai đường chéo là trung trực của nhau.", 1],
         ["Tứ giác có một đường chéo là trung trực của đường chéo kia ⇒ hình thoi.", 1]
       ],
-      "hint": "Các dấu hiệu chuẩn của hình thoi theo SGK; không dùng chéo bằng nhau."
+      "hint": "Đúng dấu hiệu hình thoi theo SGK; **không** dùng chéo bằng nhau."
     },
     {
       "id": "T14",
-      "title": "Nhận dạng/ góc trong HBH (tổng quát). Chọn Đ/S.",
+      "title": "Nhận dạng & góc trong HBH. Chọn Đ/S.",
       "img": null,
       "items": [
-        ["Â + B̂ = 180°.", 1],
-        ["B̂ + Ĉ = 180°.", 1],
-        ["Â = Ĉ.", 1],
-        ["B̂ = D̂.", 1],
-        ["Â + Ĉ = 180°.", 0],
-        ["B̂ + D̂ = 180°.", 0],
-        ["Hai đường chéo là phân giác các góc.", 0],
-        ["Hai đường chéo cắt nhau tại trung điểm.", 1],
+        ["\\(\\widehat{A}+\\widehat{B}=180^{\\circ}\\).", 1],
+        ["\\(\\widehat{B}+\\widehat{C}=180^{\\circ}\\).", 1],
+        ["\\(\\widehat{A}=\\widehat{C}\\).", 1],
+        ["\\(\\widehat{B}=\\widehat{D}\\).", 1],
+        ["\\(\\widehat{A}+\\widehat{C}=180^{\\circ}\\).", 0],
+        ["\\(\\widehat{B}+\\widehat{D}=180^{\\circ}\\).", 0],
+        ["Hai đường chéo là **phân giác** các góc.", 0],
+        ["Hai đường chéo cắt nhau tại **trung điểm**.", 1],
         ["Hai đường chéo vuông góc.", 0],
         ["Có ít nhất một góc vuông.", 0]
       ],
-      "hint": "HBH: góc kề bù, đối bằng; chéo cắt nhau tại trung điểm."
+      "hint": "HBH: góc **kề bù**, góc **đối bằng**; chéo cắt nhau tại **trung điểm**."
     },
     {
       "id": "T15",
@@ -457,45 +456,44 @@
         ["Góc kề bù nhau.", 1],
         ["Góc đối bằng nhau.", 1]
       ],
-      "hint": "Theo hình: nhận dạng HCN (chứ chưa đủ để kết luận HV)."
+      "hint": "Theo hình, nhận dạng **hình chữ nhật** (chưa đủ để kết luận hình vuông)."
     },
     {
       "id": "T16",
-      "title": "Chuẩn hóa phép biến đổi đại số (tự kiểm). Chọn Đ/S.",
+      "title": "Chuẩn hoá phép biến đổi đại số (tự kiểm). Chọn Đ/S.",
       "img": null,
       "items": [
-        ["(ax + b) + (cx + d) = (a+c)x + (b+d).", 1],
-        ["(ax + b) − (cx + d) = (a−c)x + (b−d).", 1],
-        ["(ax)(bx) = abx^2.", 1],
-        ["(x^m)(x^n) = x^{m+n}.", 1],
-        ["x^m : x^n = x^{m−n} (m≥n).", 1],
-        ["(x+y)^2 = x^2 + y^2.", 0],
-        ["(x−y)^2 = x^2 − 2xy + y^2.", 1],
-        ["(x+y)(x−y) = x^2 − y^2.", 1],
-        ["2x + 3y không đồng dạng với 5x.", 1],
-        ["x^0 = 0.", 0]
+        ["\\((ax+b)+(cx+d)=(a+c)x+(b+d)\\).", 1],
+        ["\\((ax+b)-(cx+d)=(a-c)x+(b-d)\\).", 1],
+        ["\\((ax)(bx)=abx^{2}\\).", 1],
+        ["\\(x^{m}\\cdot x^{n}=x^{m+n}\\).", 1],
+        ["\\(x^{m}:x^{n}=x^{m-n}\\) (\\(m\\ge n\\)).", 1],
+        ["\\((x+y)^{2}=x^{2}+y^{2}\\).", 0],
+        ["\\((x-y)^{2}=x^{2}-2xy+y^{2}\\).", 1],
+        ["\\((x+y)(x-y)=x^{2}-y^{2}\\).", 1],
+        ["\\(2x+3y\\) không đồng dạng với \\(5x\\).", 1],
+        ["\\(x^{0}=0\\).", 0]
       ],
       "hint": "Công thức đáng nhớ; quy tắc lũy thừa; đồng dạng hạng tử."
     },
     {
       "id": "T17",
-      "title": "Hình thang cân – tổng hợp (Bài 11). Chọn 5 ý ĐÚNG.",
+      "title": "Hình thang cân – tổng hợp (Bài 11). **Chọn 5 ý đúng**.",
       "img": "img/cau11(TL).png",
       "items": [
-        ["Hai đáy //.", 1],
+        ["Hai đáy song song.", 1],
         ["Hai cạnh bên bằng nhau.", 1],
         ["Hai góc ở cùng một đáy bằng nhau.", 1],
         ["Hai đường chéo bằng nhau.", 1],
-        ["Tổng hai góc kề một cạnh bên bằng 180°.", 1],
-        ["Hai cạnh bên //.", 0],
+        ["Tổng hai góc kề một cạnh bên bằng \\(180^{\\circ}\\).", 1],
+        ["Hai cạnh bên song song.", 0],
         ["Hai đường chéo vuông góc.", 0],
         ["Hai đáy bằng nhau.", 0],
         ["Có một góc vuông ở đáy.", 0],
         ["Góc so le trong luôn bù.", 0]
       ],
-      "hint": "Đúng theo định nghĩa/ tính chất thang cân trong SGK: cạnh bên bằng nhau, góc cùng đáy bằng nhau; (thường) chéo bằng nhau."
+      "hint": "Theo định nghĩa/tính chất hình thang cân trong SGK."
     }
   ],
-
   "short": []
 }
