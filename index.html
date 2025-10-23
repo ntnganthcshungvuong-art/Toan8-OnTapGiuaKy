@@ -1,152 +1,187 @@
-<!doctype html>
-<html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ôn tập Giữa kì I – Toán 8</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <style>
-    :root {
-      --bg: #f6f8fc;
-      --card: #fff;
-      --ink: #1f2937;
-      --muted: #6b7280;
-      --brand: #2563eb;
-      --hint: #e0f2fe;
-    }
-    html, body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto;
-    }
-    .wrap { max-width: 960px; margin: auto; padding: 20px; }
-    h1 { font-weight: 800; text-align: center; margin: 16px 0; }
-    .note { color: var(--muted); text-align: center; margin-bottom: 20px; }
-    .actions { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
-    button {
-      border: 0; border-radius: 10px; padding: 9px 14px; font-weight: 600;
-      cursor: pointer; font-size: 15px;
-    }
-    .btn { background: var(--brand); color: #fff; }
-    .btn-ghost { background: #e5e7eb; color: #111; }
-    .section-title {
-      font-size: 20px; font-weight: 700; text-align: center; margin: 30px 0 10px;
-    }
-    .card {
-      background: var(--card); border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.06);
-      padding: 16px 18px; margin: 16px 0;
-    }
-    .stem { font-weight: 700; margin-bottom: 10px; }
-    .opt {
-      display: flex; gap: 10px; align-items: flex-start;
-      padding: 8px 10px; border-radius: 10px;
-    }
-    .opt input { margin-top: 4px; }
-    .hint {
-      background: var(--hint); border-radius: 10px;
-      padding: 10px 12px; margin-top: 8px; display: none;
-    }
-    img.figure { max-width: 100%; height: auto; border-radius: 8px; margin-top: 8px; }
-  </style>
-
-  <!-- MathJax for công thức -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
-</head>
-<body>
-<div class="wrap">
-  <h1>Ôn tập Giữa kì I – Toán 8</h1>
-  <div class="note">Tích hợp MathJax để hiển thị công thức chuẩn và hình minh họa rõ nét.</div>
-
-  <div class="actions">
-    <button class="btn-ghost" onclick="resetQuiz(false)">Làm lại (giữ thứ tự)</button>
-    <button class="btn" onclick="resetQuiz(true)">Làm lại (xáo trộn)</button>
-  </div>
-
-  <div id="mcqs"></div>
-  <div class="section-title">PHẦN ĐÚNG / SAI</div>
-  <div id="multi10"></div>
-
-  <div class="actions">
-    <button class="btn-ghost" onclick="resetQuiz(false)">Làm lại (giữ thứ tự)</button>
-    <button class="btn" onclick="resetQuiz(true)">Làm lại (xáo trộn)</button>
-  </div>
-</div>
-
 <script>
-let DATA = null;
+/* ====== UTIL ====== */
+const $=(s,r=document)=>r.querySelector(s);
+const el=(t,a={})=>{const e=document.createElement(t);Object.assign(e,a);return e};
+const tex=n=>{ if(window.MathJax) MathJax.typesetPromise([n]); };
+const clone=o=>JSON.parse(JSON.stringify(o));
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}}
 
-function $(sel, root=document){ return root.querySelector(sel); }
-function el(tag, attrs={}){ const e=document.createElement(tag); Object.assign(e, attrs); return e; }
-function tex(node){ if (window.MathJax) MathJax.typesetPromise([node]); }
+/* ====== STATE ====== */
+let RAW=null, STATE=null;            // dữ liệu
+let picksMC = new Map();             // lựa chọn MCQ: key=qi, value=oi
+let picksDS = new Map();             // Đ/S: key=`B#-i`, value=0/1
 
-function render(){
-  const mc = $("#mcqs"), tl = $("#multi10");
-  mc.innerHTML = ""; tl.innerHTML = "";
+/* ====== RENDER ====== */
+function renderMC(){
+  const mount=$("#mcqs"); mount.innerHTML="";
+  picksMC.clear();
 
-  // TRẮC NGHIỆM
-  DATA.mcqs.forEach((q, qi)=>{
-    const card = el("div",{className:"card"});
-    const stem = el("div",{className:"stem"});
-    stem.innerHTML = `<span style="color:#64748b">Câu ${qi+1}:</span> ${q.stem}`;
+  STATE.mcqs.forEach((q,qi)=>{
+    const card=el("div",{className:"card"});
+    const stem=el("div",{className:"stem"});
+    stem.innerHTML=`<span style="color:#64748b">Câu ${qi+1}:</span> ${q.stem}`;
     card.appendChild(stem);
-    if(q.img){ const im = el("img",{className:"figure",src:q.img,alt:"Hình minh họa"}); card.appendChild(im); }
-    q.options.forEach((op, oi)=>{
-      const row = el("label",{className:"opt"});
-      const i = el("input",{type:"radio",name:"mc_"+qi});
+
+    if(q.img){ card.appendChild(el("img",{className:"figure",src:q.img,alt:"Hình minh họa",loading:"lazy"})); }
+
+    q.options.forEach((op,oi)=>{
+      const row=el("label",{className:"opt",dataset:{qi,oi,answer:q.answer}});
+      const i=el("input",{type:"radio",name:"mc_"+qi});
+      const sp=el("span"); sp.innerHTML=op;
+
       i.addEventListener("change",()=>{
-        row.style.background = (oi===q.answer) ? "#ecfeff" : "#fee2e2";
+        picksMC.set(qi,oi);                 // lưu lựa chọn
+        // phản hồi tức thì nhẹ
+        row.style.background = (oi==q.answer) ? "#ecfeff" : "#fee2e2";
       });
-      const span = el("span"); span.innerHTML = op;
-      row.append(i, span); card.appendChild(row);
-    });
-    const b = el("button",{className:"btn-ghost",textContent:"Gợi ý"});
-    const hint = el("div",{className:"hint"}); hint.innerHTML = q.hint || "";
-    b.onclick = ()=>{ hint.style.display="block"; tex(hint); };
-    card.append(b,hint);
-    mc.appendChild(card); tex(card);
-  });
 
-  // ĐÚNG / SAI
-  DATA.multi10.forEach((qs, idx)=>{
-    const card = el("div",{className:"card"});
-    const stem = el("div",{className:"stem"});
-    stem.innerHTML = `<b>${qs.title}</b>`;
+      row.append(i,sp); card.appendChild(row);
+    });
+
+    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"});
+    const hint=el("div",{className:"hint"}); hint.innerHTML=q.hint||"";
+    b.onclick=()=>{ hint.style.display="block"; tex(hint); };
+    card.append(b,hint);
+    mount.appendChild(card); tex(card);
+  });
+}
+
+function renderDS(){
+  const root=$("#multi10"); root.innerHTML="";
+  picksDS.clear();
+
+  STATE.multi10.forEach((qs,bi)=>{
+    const card=el("div",{className:"card"});
+    const stem=el("div",{className:"stem"}); stem.innerHTML=`<b>${qs.title}</b>`;
     card.appendChild(stem);
-    if(qs.img){ const im = el("img",{className:"figure",src:qs.img,alt:"Hình minh họa"}); card.appendChild(im); }
+
+    if(qs.img){ card.appendChild(el("img",{className:"figure",src:qs.img,alt:"Hình minh họa",loading:"lazy"})); }
+
     qs.items.forEach((it,i)=>{
-      const row = el("label",{className:"opt"});
-      const ck = el("input",{type:"checkbox"});
+      const truth = it[1]===1 ? 1 : 0;
+      const row=el("label",{className:"opt",dataset:{truth, key:`B${bi}-i${i}` }});
+      const ck=el("input",{type:"checkbox"});
+      const sp=el("span"); sp.innerHTML=it[0];
+
       ck.addEventListener("change",()=>{
-        row.style.background = (ck.checked ? (it[1]===1 ? "#ecfeff" : "#fee2e2") : "transparent");
+        picksDS.set(row.dataset.key, ck.checked?1:0);
+        if(ck.checked){
+          row.style.background = (truth===1) ? "#ecfeff" : "#fee2e2";
+        }else{
+          row.style.background = "transparent";
+        }
       });
-      const span = el("span"); span.innerHTML = it[0];
-      row.append(ck, span); card.appendChild(row);
+
+      row.append(ck,sp); card.appendChild(row);
     });
-    const b = el("button",{className:"btn-ghost",textContent:"Gợi ý"});
-    const hint = el("div",{className:"hint"}); hint.innerHTML = qs.hint || "";
-    b.onclick = ()=>{ hint.style.display="block"; tex(hint); };
+
+    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"});
+    const hint=el("div",{className:"hint"}); hint.innerHTML=qs.hint||"";
+    b.onclick=()=>{ hint.style.display="block"; tex(hint); };
     card.append(b,hint);
-    tl.appendChild(card); tex(card);
+    root.appendChild(card); tex(card);
   });
 }
 
-function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } }
-function resetQuiz(shuf){
-  if(!DATA) return;
-  const d = JSON.parse(JSON.stringify(DATA));
-  if(shuf){ shuffle(d.mcqs); d.mcqs.forEach(q=>shuffle(q.options)); shuffle(d.multi10); }
-  DATA = d; render();
+/* ====== GRADE / SHOW ANSWER ====== */
+function gradeAll(){
+  // chấm MCQ
+  let mcOK=0, mcTotal=STATE.mcqs.length;
+  $("#mcqs").querySelectorAll(".card").forEach((card, qi)=>{
+    const ans = STATE.mcqs[qi].answer;
+    const picked = picksMC.has(qi) ? picksMC.get(qi) : null;
+
+    // đánh dấu đúng/sai rõ ràng
+    card.querySelectorAll(".opt").forEach(row=>{
+      const oi = Number(row.dataset.oi);
+      if(oi===ans){ row.style.outline="2px solid #10b981"; }          // đáp án đúng
+      if(picked===oi){
+        row.style.background = (oi===ans) ? "#ecfeff" : "#fee2e2";
+      }
+    });
+
+    if(picked===ans) mcOK++;
+  });
+
+  // chấm Đ/S (mỗi mệnh đề = 1 điểm nếu tick đúng theo sự thật; bỏ trống hoặc tick sai = 0)
+  let dsOK=0, dsTotal=0;
+  $("#multi10").querySelectorAll(".card").forEach(card=>{
+    card.querySelectorAll(".opt").forEach(row=>{
+      dsTotal++;
+      const truth = Number(row.dataset.truth);         // 1 = mệnh đề ĐÚNG; 0 = mệnh đề SAI
+      const key   = row.dataset.key;
+      const picked= picksDS.get(key) ?? 0;
+
+      // hiển thị đáp án đúng
+      if(truth===1){ row.style.outline="2px dashed #10b981"; }
+
+      // chấm
+      const correct = (picked===truth);
+      if(correct){
+        row.style.background = "#ecfeff";
+        dsOK++;
+      }else if(picked!==truth && picked===1){
+        row.style.background = "#fee2e2";             // tick sai
+      }else{
+        // bỏ trống mệnh đề đúng → viền xanh đã chỉ ra
+      }
+    });
+  });
+
+  const totalOK = mcOK + dsOK;
+  const total   = mcTotal + dsTotal;
+
+  const bar = $("#resultbar") || el("div",{id:"resultbar",className:"note"});
+  bar.innerHTML = `<b>KẾT QUẢ:</b> Trắc nghiệm: <b>${mcOK}/${mcTotal}</b> &nbsp; • &nbsp; Đúng/Sai: <b>${dsOK}/${dsTotal}</b> &nbsp; ⇒ &nbsp; Tổng: <b>${totalOK}/${total}</b>`;
+  $(".wrap").insertBefore(bar, $("#mcqs"));  // đặt thanh kết quả lên trên
+  window.scrollTo({top:0,behavior:"smooth"});
 }
 
-// ⚡ Load dữ liệu JSON
-fetch("./questions.json")
-  .then(r => r.json())
-  .then(json => { DATA = json; render(); })
-  .catch(err => {
-    document.body.innerHTML = "<h2 style='text-align:center;color:red'>Không tải được dữ liệu (questions.json)</h2><p style='text-align:center'>Vui lòng kiểm tra lại đường dẫn hoặc tên file.</p>";
-    console.error(err);
-  });
+/* ====== RESET / SHUFFLE ====== */
+function resetAll(shuffleAll=false){
+  const d=clone(RAW);
+  if(shuffleAll){
+    shuffle(d.mcqs);
+    d.mcqs.forEach(q=>{
+      const idx = q.options.map((_,i)=>i);
+      shuffle(idx);
+      q.options = idx.map(i=>q.options[i]);
+      q.answer  = idx.indexOf(q.answer);
+    });
+    shuffle(d.multi10);
+  }
+  STATE=d;
+  renderMC(); renderDS();
+  // clear result bar nếu có
+  const bar=$("#resultbar"); if(bar) bar.remove();
+}
+
+/* ====== BOOT ====== */
+async function boot(){
+  try{
+    const res=await fetch("./questions.json?ts="+Date.now(), {cache:"no-store"});
+    RAW=await res.json(); STATE=clone(RAW);
+    renderMC(); renderDS();
+
+    // gắn nút chấm điểm 1 nơi duy nhất (tồn tại trong HTML phần actions đầu trang)
+    const topActions = document.querySelectorAll(".actions")[0];
+    const gradeBtn   = el("button",{className:"btn",textContent:"Chấm điểm"});
+    gradeBtn.onclick = gradeAll;
+    topActions.appendChild(gradeBtn);
+
+    // gán lại 2 nút reset có sẵn
+    const btns = document.querySelectorAll(".actions .btn, .actions .btn-ghost");
+    // nút 0,1 là reset cũ; thêm xử lý:
+    btns[0].onclick = ()=>resetAll(false);
+    btns[1].onclick = ()=>resetAll(true);
+    // dải cuối trang
+    const foot = document.querySelectorAll(".actions")[1];
+    foot.querySelectorAll("button")[0].onclick=()=>resetAll(false);
+    foot.querySelectorAll("button")[1].onclick=()=>resetAll(true);
+  }catch(e){
+    $("#mcqs").innerHTML='<div class="card" style="color:#b91c1c">Không tải được <b>questions.json</b>. Kiểm tra tên file & vị trí.</div>';
+    console.error(e);
+  }
+}
+boot();
 </script>
-</body>
-</html>
