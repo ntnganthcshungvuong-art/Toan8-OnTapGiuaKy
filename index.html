@@ -1,63 +1,3 @@
-<!doctype html>
-<html lang="vi">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ôn tập Giữa kì I – Toán 8</title>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-  <style>
-    :root{
-      --bg:#f6f8fc;--card:#fff;--ink:#0f172a;--muted:#64748b;--brand:#2563eb;
-      --ok:#10b981;--bad:#ef4444;--hint:#e0f2fe;--ring:#e5e7eb
-    }
-    html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto}
-    .wrap{max-width:1080px;margin:auto;padding:20px}
-    h1{font-weight:800;letter-spacing:.2px;text-align:center;margin:10px 0 8px}
-    .note{color:var(--muted);text-align:center;margin:0 0 18px}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:10px 0 18px}
-    button{border:0;border-radius:12px;padding:9px 14px;font-weight:700;cursor:pointer}
-    .btn{background:var(--brand);color:#fff}
-    .btn-ghost{background:#e5e7eb}
-    .card{background:var(--card);border-radius:16px;box-shadow:0 6px 22px rgba(0,0,0,.06);padding:16px 18px;margin:14px 0}
-    .stem{font-weight:700;margin-bottom:10px}
-    .opt{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:12px;transition:box-shadow .15s,background .15s}
-    .opt:hover{box-shadow:0 0 0 2px var(--ring) inset}
-    .opt input{margin-top:4px}
-    .hint{background:var(--hint);border-radius:12px;padding:10px 12px;margin-top:10px;display:none}
-    .figure{max-width:100%;height:auto;border-radius:10px;display:block;margin:6px 0}
-    .sec-title{font-size:22px;font-weight:900;text-align:center;margin:30px 0 8px}
-    .lead{color:var(--muted);text-align:center;margin:0 0 14px}
-    .grid{display:grid;gap:16px}
-    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
-  </style>
-  <!-- MathJax 3 -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" defer></script>
-</head>
-<body>
-<div class="wrap">
-  <h1>Ôn tập Giữa kì I – Toán 8</h1>
-  <p class="note" id="resultbar">Chọn đáp án, sau đó bấm <b>Chấm điểm</b> để xem kết quả.</p>
-
-  <div class="actions">
-    <button class="btn-ghost" id="btnKeep1">Làm lại (giữ thứ tự)</button>
-    <button class="btn-ghost" id="btnShuffle1">Làm lại (xáo trộn)</button>
-    <button class="btn" id="btnGrade">Chấm điểm</button>
-  </div>
-
-  <div class="sec-title">PHẦN TRẮC NGHIỆM</div>
-  <p class="lead">Mỗi câu chọn <b>1</b> đáp án đúng.</p>
-  <div id="mcqs" class="grid"></div>
-
-  <div class="sec-title" id="mdTitle">PHẦN MỆNH ĐỀ (CHỈ CHỌN ĐÚNG)</div>
-  <p class="lead">Chỉ đánh dấu vào <b>mệnh đề ĐÚNG</b>.</p>
-  <div id="ds"></div>
-
-  <div class="actions">
-    <button class="btn-ghost" id="btnKeep2">Làm lại (giữ thứ tự)</button>
-    <button class="btn" id="btnShuffle2">Làm lại (xáo trộn)</button>
-  </div>
-</div>
-
 <script>
 /* ====== Helpers ====== */
 const $=(s,r=document)=>r.querySelector(s);
@@ -67,12 +7,12 @@ const clone=o=>JSON.parse(JSON.stringify(o));
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}}
 
 /* ====== Viết tắt → Viết rõ ====== */
-const REPLACE_MAP = [
-  {re:/\bHTg\b/g, to:"hình thang"},
-  {re:/\bHBH\b/g, to:"hình bình hành"},
-  {re:/\bHCN\b/g, to:"hình chữ nhật"},
-  {re:/\bHV\b/g,  to:"hình vuông"},
-  {re:/\bHT\b/g,  to:"hình thoi"}
+const REPLACE_MAP=[
+  {re:/\bHTg\b/g,to:"hình thang"},
+  {re:/\bHBH\b/g,to:"hình bình hành"},
+  {re:/\bHCN\b/g,to:"hình chữ nhật"},
+  {re:/\bHV\b/g,to:"hình vuông"},
+  {re:/\bHT\b/g,to:"hình thoi"}
 ];
 function expandStr(s){ if(typeof s!=="string") return s; let out=s; for(const {re,to} of REPLACE_MAP){ out=out.replace(re,to);} return out; }
 function expandDeep(x){
@@ -81,9 +21,9 @@ function expandDeep(x){
   return expandStr(x);
 }
 
-/* ====== DATA (nhúng sẵn) ====== */
+/* ====== DATA nhúng sẵn (trích từ questions.json) ====== */
 const DATA = {
-  "mcqs": [
+  "mcqs":[
     {"id":"M1","stem":"Trong các biểu thức sau, <b>đơn thức</b> là:","img":null,"options":["\\(2x^{2}+3y\\)","\\(\\dfrac{2}{3xy}\\)","\\((-5)\\,x^{2}y^{3}\\)","\\(x^{2}-2x\\)"],"answer":2,"hint":"Đơn thức là tích của một số với các biến có số mũ nguyên không âm; không có phép cộng/trừ."},
     {"id":"M2","stem":"Trong các biểu thức sau, <b>đa thức</b> là:","img":null,"options":["\\(\\dfrac{2}{x^{3}y}-1\\)","\\(\\dfrac{x}{y}+3\\)","\\(5x-4y+7\\)","\\(x^{2}y+\\dfrac{1}{x}\\)"],"answer":2,"hint":"Đa thức là tổng/hợp của các đơn thức có số mũ nguyên không âm (không có biến ở mẫu)."},
     {"id":"M3","stem":"Đơn thức <b>đồng dạng</b> với \\(\\tfrac{2}{3}xyz\\) là:","img":null,"options":["\\(\\tfrac{3}{2}xyz\\)","\\(2x^{2}yz\\)","\\(2xy^{2}z\\)","\\(\\tfrac{2}{3}x^{2}y^{2}z\\)"],"answer":0,"hint":"Đồng dạng ⇔ cùng phần biến và cùng số mũ từng biến; hệ số có thể khác."},
@@ -102,13 +42,13 @@ const DATA = {
     {"id":"M16","stem":"Hình thoi có <b>một góc vuông</b> là:","img":null,"options":["Hình vuông","Hình bình hành","Hình chữ nhật","Hình thang cân"],"answer":0,"hint":"Hình thoi + 1 góc vuông ⇒ 4 cạnh bằng nhau và có góc vuông ⇒ <b>hình vuông</b>."},
     {"id":"M17","stem":"Tứ giác trong <b>hình 2</b> là:","img":"img/cau17.png","options":["Hình thoi","Hình vuông","Hình thang cân","Hình chữ nhật"],"answer":3,"hint":"Dấu hiệu HCN: <b>đường chéo bằng nhau</b> (theo hình)."}
   ],
-  "multi10": [
+  "multi10":[
     {"id":"B1","title":"Bài 1: Rút gọn đơn thức – hệ số & bậc. Chọn Đ/S.","img":null,"items":[
-      ["Đơn thức \\(5x^{3}\\cdot xy=5x^{4}y\\).",1],["Bậc của \\(5x^{4}y\\) là \\(6\\).",0],
-      ["\\((4x^{2})(-4xy)=-16x^{3}y\\).",1],["\\(\\dfrac{1}{4}xyz\\cdot(2xy)=\\dfrac{1}{2}x^{2}y^{2}z\\).",1],
-      ["Bậc của \\(\\dfrac{1}{2}x^{2}y^{2}z\\) là \\(5\\).",0],["Thu gọn \\(x\\cdot x\\cdot y=x^{2}y\\).",1],
-      ["\\(5x^{2}y^{-1}\\) là đơn thức hợp lệ của đa thức.",0],["Hệ số của \\(-16x^{3}y\\) là \\(-16\\).",1],
-      ["Bậc của \\(-16x^{3}y\\) là \\(3\\).",1],["Bậc đơn thức là <b>tổng số mũ các biến</b> (không âm).",1]
+      ["Đơn thức \\(5x^{3}\\cdot xy=5x^{4}y\\).",1],["Bậc của \\(5x^{4}y\\) là \\(6\\).",0],["\\((4x^{2})(-4xy)=-16x^{3}y\\).",1],
+      ["\\(\\dfrac{1}{4}xyz\\cdot(2xy)=\\dfrac{1}{2}x^{2}y^{2}z\\).",1],["Bậc của \\(\\dfrac{1}{2}x^{2}y^{2}z\\) là \\(5\\).",0],
+      ["Thu gọn \\(x\\cdot x\\cdot y=x^{2}y\\).",1],["\\(5x^{2}y^{-1}\\) là đơn thức hợp lệ của đa thức.",0],
+      ["Hệ số của \\(-16x^{3}y\\) là \\(-16\\).",1],["Bậc của \\(-16x^{3}y\\) là \\(3\\).",1],
+      ["Bậc đơn thức là <b>tổng số mũ các biến</b> (không âm).",1]
     ],"hint":"Bậc = tổng số mũ của biến (không âm); mũ âm → không là đơn thức hợp lệ trong đa thức."},
 
     {"id":"B2","title":"Bài 2: Hạng tử của đa thức. Chọn Đ/S.","img":null,"items":[
@@ -120,23 +60,17 @@ const DATA = {
     ],"hint":"Đa thức không có biến ở mẫu; bậc đa thức = bậc hạng tử lớn nhất."},
 
     {"id":"B3","title":"Bài 3: Cộng – trừ – nhân – chia (đơn thức/đa thức). Chọn Đ/S.","img":null,"items":[
-      ["\\(4xy-8xy=-4xy\\).",1],["\\(4xy-16xy=-12xy\\).",1],["\\(10xy:5xy=2\\).",1],
-      ["\\((3xy-12xy):3xy=-3\\).",1],["\\(3x^{2}y+4x-2x=3x^{2}y+2x\\).",1],
-      ["\\((4xy-5x^{2})+(2xy-5x^{2})=6xy-10x^{2}\\).",1],["\\(x^{2}y+x^{2}y=2x^{2}y\\).",1],
+      ["\\(4xy-8xy=-4xy\\).",1],["\\(4xy-16xy=-12xy\\).",1],["\\(10xy:5xy=2\\).",1],["\\((3xy-12xy):3xy=-3\\).",1],
+      ["\\(3x^{2}y+4x-2x=3x^{2}y+2x\\).",1],["\\((4xy-5x^{2})+(2xy-5x^{2})=6xy-10x^{2}\\).",1],["\\(x^{2}y+x^{2}y=2x^{2}y\\).",1],
       ["\\(\\dfrac{x^{2}y}{xy}=x\\).",1],["\\(\\dfrac{4x^{2}y}{2xy}=2x\\).",1],["\\(\\dfrac{x^{2}y}{x^{2}}=y\\).",1]
     ],"hint":"Cộng/trừ: gộp hạng tử đồng dạng. Nhân: cộng mũ theo từng biến. Chia: trừ mũ tương ứng."},
 
     {"id":"B4","title":"Bài 4: Giá trị đa thức – thay số. Chọn Đ/S.","img":null,"items":[
-      ["Với \\(x=1,y=2\\), \\(A(x,y)=3x^{2}+5xy\\Rightarrow A=13\\).",1],
-      ["Với \\(x=2,y=1\\), \\(B=2x^{2}-xy+x^{2}y-3xy+2xy=9\\).",0],
-      ["Thay số tuân thủ thứ tự: lũy thừa → nhân/chia → cộng/trừ.",1],
-      ["Giá trị đa thức không phụ thuộc thứ tự gộp hạng tử <b>đúng quy tắc</b>.",1],
-      ["Rút gọn trước khi thay số để hạn sai.",1],
-      ["Nếu \\(y=0\\) thì mọi hạng tử chứa \\(y\\) đều bằng 0.",1],
-      ["Nếu \\(x=-1\\) thì \\(x^{2}=1\\).",1],
-      ["Lỗi thường gặp: quên bình phương cả biến lẫn hệ số.",1],
-      ["Lỗi thường gặp: sai thứ tự ưu tiên phép tính.",1],
-      ["\\(\\,\\)",1]
+      ["Với \\(x=1,y=2\\), \\(A(x,y)=3x^{2}+5xy\\Rightarrow A=13\\).",1],["Với \\(x=2,y=1\\), \\(B=2x^{2}-xy+x^{2}y-3xy+2xy=9\\).",0],
+      ["Thay số tuân thủ thứ tự: lũy thừa → nhân/chia → cộng/trừ.",1],["Giá trị đa thức không phụ thuộc thứ tự gộp hạng tử <b>đúng quy tắc</b>.",1],
+      ["Rút gọn trước khi thay số để hạn sai.",1],["Nếu \\(y=0\\) thì mọi hạng tử chứa \\(y\\) đều bằng 0.",1],
+      ["Nếu \\(x=-1\\) thì \\(x^{2}=1\\).",1],["Lỗi thường gặp: quên bình phương cả biến lẫn hệ số.",1],
+      ["Lỗi thường gặp: sai thứ tự ưu tiên phép tính.",1],["\\(\\,\\)",1]
     ],"hint":"Khuyến nghị rút gọn trước, rồi thay số; chú ý bậc & quy tắc ưu tiên."},
 
     {"id":"B5","title":"Bài 5: Tìm đa thức \\(M\\) (dạng \\(M+P=Q\\)). Chọn Đ/S.","img":null,"items":[
@@ -148,40 +82,26 @@ const DATA = {
     ],"hint":"Nguyên tắc: \\(M=Q-P\\). Khi trừ phải <b>đổi dấu</b> hạng tử của đa thức trừ."},
 
     {"id":"B6","title":"Bài 6: Chia hết đa thức (định lý phần dư). Chọn Đ/S.","img":null,"items":[
-      ["\\(A=8x^{2}-6x+m\\) <b>chia hết</b> cho \\(2x-3\\).",0],
-      ["Điều kiện chia hết: \\(A(x)=(2x-3)\\cdot Q(x)\\).",1],
-      ["Thay \\(x=\\tfrac{3}{2}\\) vào \\(A(x)\\) để kiểm tra \\(A(\\tfrac{3}{2})=0\\).",1],
-      ["Nếu \\(A(\\tfrac{3}{2})=0\\) thì \\(A\\) chia hết cho \\(2x-3\\).",1],
-      ["Có thể tìm \\(m\\) bằng điều kiện \\(A(\\tfrac{3}{2})=0\\).",1],
-      ["Nếu \\(A'=kA\\) thì \\(A'\\) cũng chia hết cho \\(2x-3\\).",1],
-      ["\\(A(0)=0\\Rightarrow A\\) chia hết cho \\(x\\).",1],
-      ["Mọi đa thức đều chia hết cho \\(2x-3\\).",0],
-      ["Nếu không chia hết thì \\(A(\\tfrac{3}{2})\\neq 0\\).",1],
+      ["\\(A=8x^{2}-6x+m\\) <b>chia hết</b> cho \\(2x-3\\).",0],["Điều kiện chia hết: \\(A(x)=(2x-3)\\cdot Q(x)\\).",1],
+      ["Thay \\(x=\\tfrac{3}{2}\\) vào \\(A(x)\\) để kiểm tra \\(A(\\tfrac{3}{2})=0\\).",1],["Nếu \\(A(\\tfrac{3}{2})=0\\) thì \\(A\\) chia hết cho \\(2x-3\\).",1],
+      ["Có thể tìm \\(m\\) bằng điều kiện \\(A(\\tfrac{3}{2})=0\\).",1],["Nếu \\(A'=kA\\) thì \\(A'\\) cũng chia hết cho \\(2x-3\\).",1],
+      ["\\(A(0)=0\\Rightarrow A\\) chia hết cho \\(x\\).",1],["Mọi đa thức đều chia hết cho \\(2x-3\\).",0],["Nếu không chia hết thì \\(A(\\tfrac{3}{2})\\neq 0\\).",1],
       ["\\(\\,\\)",1]
     ],"hint":"Định lý phần dư: \\(A(x)\\) chia hết cho \\(x-a\\) ⇔ \\(A(a)=0\\). Với \\(2x-3\\) thì \\(a=\\tfrac{3}{2}\\)."},
 
     {"id":"B7","title":"Bài 7: Ứng dụng đại số vào hình học phẳng. Chọn Đ/S.","img":null,"items":[
-      ["Thể tích hình hộp chữ nhật: \\(V=S_{\\text{đáy}}\\cdot h\\).",1],
-      ["\\(S_{\\text{đáy}}=6x+8y^{2},\\,h=x+2\\Rightarrow V=(6x+8y^{2})(x+2)\\).",1],
-      ["Nếu \\(S=6x^{2}-4xy\\), rộng \\(=2xy\\) thì dài \\(=\\dfrac{6x^{2}-4xy}{2xy}\\).",1],
-      ["\\(\\dfrac{6x^{2}-4xy}{2xy}=\\dfrac{3x}{y}-2\\).",1],
-      ["Diện tích <b>luôn</b> là đa thức theo \\(x,y\\).",0],
-      ["Thể tích <b>luôn</b> là đa thức theo \\(x,y\\).",0],
-      ["Có thể xuất hiện <b>phân thức</b> khi chia.",1],
-      ["Quy đồng/rút gọn đúng giúp tránh sai sót.",1],
-      ["Hệ số có thể là phân số.",1],
-      ["\\(x/x\\) có thể rút gọn (với \\(x\\neq 0\\)).",1]
+      ["Thể tích hình hộp chữ nhật: \\(V=S_{\\text{đáy}}\\cdot h\\).",1],["\\(S_{\\text{đáy}}=6x+8y^{2},\\,h=x+2\\Rightarrow V=(6x+8y^{2})(x+2)\\).",1],
+      ["Nếu \\(S=6x^{2}-4xy\\), rộng \\(=2xy\\) thì dài \\(=\\dfrac{6x^{2}-4xy}{2xy}\\).",1],["\\(\\dfrac{6x^{2}-4xy}{2xy}=\\dfrac{3x}{y}-2\\).",1],
+      ["Diện tích <b>luôn</b> là đa thức theo \\(x,y\\).",0],["Thể tích <b>luôn</b> là đa thức theo \\(x,y\\).",0],
+      ["Có thể xuất hiện <b>phân thức</b> khi chia.",1],["Quy đồng/rút gọn đúng giúp tránh sai sót.",1],
+      ["Hệ số có thể là phân số.",1],["\\(x/x\\) có thể rút gọn (với \\(x\\neq 0\\)).",1]
     ],"hint":"Áp dụng công thức S, V; khi chia có thể ra phân thức và cần rút gọn hợp lệ."},
 
     {"id":"B8","title":"Bài 8: Hình học – tứ giác, hình bình hành, hình chữ nhật, hình thoi, hình vuông. Chọn Đ/S.","img":"img/cau11(TL).png","items":[
-      ["Tổng góc tứ giác = \\(360^{\\circ}\\).",1],
-      ["Trong hình bình hành: \\(\\widehat{A}+\\widehat{B}=180^{\\circ}\\).",1],
-      ["Hình chữ nhật có 4 góc vuông.",1],
-      ["Hình chữ nhật có hai đường chéo vuông góc.",0],
-      ["Hình chữ nhật có hai đường chéo <b>bằng nhau</b>.",1],
-      ["Trong hình thang cân: hai góc ở <b>cùng một đáy</b> bằng nhau.",1],
-      ["Hình bình hành: các cặp cạnh đối <b>song song</b>.",1],
-      ["Hình thoi: 4 cạnh bằng nhau; chéo <b>vuông góc</b> và là phân giác các góc.",1],
+      ["Tổng góc tứ giác = \\(360^{\\circ}\\).",1],["Trong hình bình hành: \\(\\widehat{A}+\\widehat{B}=180^{\\circ}\\).",1],
+      ["Hình chữ nhật có 4 góc vuông.",1],["Hình chữ nhật có hai đường chéo vuông góc.",0],
+      ["Hình chữ nhật có hai đường chéo <b>bằng nhau</b>.",1],["Trong hình thang cân: hai góc ở <b>cùng một đáy</b> bằng nhau.",1],
+      ["Hình bình hành: các cặp cạnh đối <b>song song</b>.",1],["Hình thoi: 4 cạnh bằng nhau; chéo <b>vuông góc</b> và là phân giác các góc.",1],
       ["Hình vuông là giao của hình chữ nhật và hình thoi (vừa 4 góc vuông vừa 4 cạnh bằng).",1],
       ["Ví dụ hình 2: có hai đường chéo bằng nhau ⇒ nhận dạng <b>hình chữ nhật</b> (chưa đủ để kết luận hình vuông).",1]
     ],"hint":"Tính chất chuẩn theo SGK; dùng đúng ký hiệu \\(\\parallel, \\perp, \\widehat{\\cdot}\\)."}
@@ -192,7 +112,7 @@ const DATA = {
 /* ====== State ====== */
 let RAW=null, STATE=null;
 let picksMC=new Map(); // qi -> oi
-let picksDS=new Map(); // "B{bi}-i{i}" -> 1 nếu tick (ĐÚNG)
+let picksDS=new Map(); // key -> 1 nếu tick (ĐÚNG)
 
 /* ====== Render ====== */
 function renderMC(){
@@ -220,77 +140,56 @@ function renderMC(){
     mount.appendChild(card); tex(card);
   });
 }
-
 function renderDS(){
   const root=$("#ds"); root.innerHTML=""; picksDS.clear();
-  $("#mdTitle").textContent="PHẦN MỆNH ĐỀ (CHỈ CHỌN ĐÚNG)";
-
   STATE.ds.forEach((qs,bi)=>{
     const card=el("div",{className:"card"});
-    const stem=el("div",{className:"stem"}); 
-    stem.innerHTML=`<b>${(qs.title||"Mệnh đề").replace(/Đ\/S|Đúng\/Sai/gi,"Mệnh đề (chọn ĐÚNG)")}</b>`;
+    const stem=el("div",{className:"stem"}); stem.innerHTML=`<b>${(qs.title||"Mệnh đề").replace(/Đ\/S|Đúng\/Sai/gi,"Mệnh đề (chọn ĐÚNG)")}</b>`;
     card.appendChild(stem);
     if(qs.img){ card.appendChild(el("img",{className:"figure",src:qs.img,alt:"minh họa",loading:"lazy"})); }
-
     qs.items.forEach((it,i)=>{
-      const truth = it[1]===1 ? 1 : 0; // 1 = mệnh đề đúng
-      const row=el("label",{className:"opt",dataset:{truth, key:`B${bi}-i${i}`}});
+      const truth = it[1]===1?1:0;
+      const row=el("label",{className:"opt",dataset:{truth,key:`B${bi}-i${i}`}});
       const ck=el("input",{type:"checkbox",title:"Đánh dấu nếu mệnh đề ĐÚNG"});
       const sp=el("span"); sp.innerHTML=it[0];
-
       ck.addEventListener("change",()=>{
-        const picked = ck.checked ? 1 : 0; // chỉ có “Đúng”
-        picksDS.set(row.dataset.key, picked);
-        if(!ck.checked){ row.style.background="transparent"; return; }
-        row.style.background = (truth===1) ? "#ecfeff" : "#fee2e2"; // đỏ nếu tick nhầm mệnh đề sai
+        const picked = ck.checked?1:0;
+        picksDS.set(row.dataset.key,picked);
+        row.style.background = ck.checked ? (truth? "#ecfeff":"#fee2e2") : "transparent";
       });
-
       row.append(ck,sp); card.appendChild(row);
     });
-
     const hint=el("div",{className:"hint"}); hint.innerHTML=qs.hint||"";
-    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"});
-    b.onclick=()=>{ hint.style.display="block"; tex(hint); };
-    card.append(b,hint);
-    root.appendChild(card); tex(card);
+    const b=el("button",{className:"btn-ghost",textContent:"Gợi ý"}); b.onclick=()=>{hint.style.display="block"; tex(hint);};
+    card.append(b,hint); root.appendChild(card); tex(card);
   });
 }
 
-/* ====== Chấm điểm ====== */
+/* ====== Grade ====== */
 function gradeAll(){
-  // MCQ
   let mcOK=0, mcTotal=STATE.mcqs.length;
   $("#mcqs").querySelectorAll(".card").forEach((card,qi)=>{
-    const ans = STATE.mcqs[qi].answer;
-    const picked = picksMC.get(qi);
+    const ans=STATE.mcqs[qi].answer, picked=picksMC.get(qi);
     card.querySelectorAll(".opt").forEach(row=>{
       const oi=Number(row.dataset.oi);
-      if(oi===ans){ row.style.outline="2px solid var(--ok)"; } // viền xanh đáp án đúng
-      if(picked===oi){
-        row.style.background = (oi===ans) ? "#ecfeff" : "#fee2e2";
-      }
+      if(oi===ans) row.style.outline="2px solid #10b981";
+      if(picked===oi) row.style.background=(oi===ans)?"#ecfeff":"#fee2e2";
     });
     if(picked===ans) mcOK++;
   });
 
-  // Mệnh đề (chỉ tick ĐÚNG)
   let dsOK=0, dsTotal=0;
   $("#ds").querySelectorAll(".card .opt").forEach(row=>{
     dsTotal++;
-    const truth = Number(row.dataset.truth);       // 1 = mệnh đề đúng
-    const picked= picksDS.get(row.dataset.key) ?? 0; // 1 nếu tick
-    if(truth===1){ row.style.outline="2px dashed var(--ok)"; } // khoanh các mệnh đề đúng (đáp án)
-    if(picked===truth){
-      dsOK++;
-      if(picked===1) row.style.background="#ecfeff";
-    }else{
-      if(picked===1) row.style.background="#fee2e2"; // tick nhầm mệnh đề sai
-    }
+    const truth=Number(row.dataset.truth);
+    const picked=picksDS.get(row.dataset.key)??0;
+    if(truth===1) row.style.outline="2px dashed #10b981";
+    if(picked===truth){ dsOK++; if(picked===1) row.style.background="#ecfeff"; }
+    else{ if(picked===1) row.style.background="#fee2e2"; }
   });
 
-  const totalOK = mcOK + dsOK;
-  const total   = mcTotal + dsTotal;
-  $("#resultbar").innerHTML = `<b>KẾT QUẢ:</b> Trắc nghiệm: <b>${mcOK}/${mcTotal}</b> • Mệnh đề (chọn ĐÚNG): <b>${dsOK}/${dsTotal}</b> • Tổng: <b>${totalOK}/${total}</b>`;
+  const totalOK=mcOK+dsOK, total=mcTotal+dsTotal;
+  $("#resultbar").innerHTML=`<b>KẾT QUẢ:</b> Trắc nghiệm: <b>${mcOK}/${mcTotal}</b> • Mệnh đề (chọn ĐÚNG): <b>${dsOK}/${dsTotal}</b> • Tổng: <b>${totalOK}/${total}</b>`;
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -299,11 +198,7 @@ function resetAll(shuffleAll=false){
   const d=clone(RAW);
   if(shuffleAll){
     shuffle(d.mcqs);
-    d.mcqs.forEach(q=>{
-      const ord=q.options.map((_,i)=>i); shuffle(ord);
-      q.options=ord.map(i=>q.options[i]);
-      q.answer =ord.indexOf(q.answer);
-    });
+    d.mcqs.forEach(q=>{ const ord=q.options.map((_,i)=>i); shuffle(ord); q.options=ord.map(i=>q.options[i]); q.answer=ord.indexOf(q.answer); });
     shuffle(d.ds);
   }
   STATE=d; picksMC.clear(); picksDS.clear();
@@ -311,21 +206,16 @@ function resetAll(shuffleAll=false){
   $("#resultbar").textContent="Chọn đáp án, sau đó bấm Chấm điểm để xem kết quả.";
 }
 
-/* ====== Boot ====== */
-(function boot(){
-  // chuyển viết tắt → viết rõ, map multi10 -> ds
-  const expanded = expandDeep(DATA);
-  RAW   = { mcqs: expanded.mcqs || [], ds: expanded.multi10 || [] };
-  STATE = clone(RAW);
+/* ====== Boot (không fetch) ====== */
+(function(){
+  const expanded=expandDeep(DATA);
+  RAW={ mcqs: expanded.mcqs||[], ds: expanded.multi10||[] };
+  STATE=clone(RAW);
   renderMC(); renderDS();
-
-  // gắn nút
-  $("#btnGrade").onclick   = gradeAll;
-  $("#btnKeep1").onclick   = ()=>resetAll(false);
-  $("#btnShuffle1").onclick= ()=>resetAll(true);
-  $("#btnKeep2").onclick   = ()=>resetAll(false);
-  $("#btnShuffle2").onclick= ()=>resetAll(true);
+  $("#btnGrade").onclick=gradeAll;
+  $("#btnKeep1").onclick=()=>resetAll(false);
+  $("#btnShuffle1").onclick=()=>resetAll(true);
+  $("#btnKeep2").onclick=()=>resetAll(false);
+  $("#btnShuffle2").onclick=()=>resetAll(true);
 })();
 </script>
-</body>
-</html>
