@@ -49,17 +49,33 @@
 
 <script>
 const DATA={
-  "mcqs":[
-    {"stem":"Trong các biểu thức sau, \\(\\textbf{đơn thức}\\) là:","options":["\\(2x^{2}+3y\\)","\\(\\frac{2}{3xy}\\)","\\((-5)x^{2}y^{3}\\)","\\(x^{2}-2x\\)"],"answer":2},
-    {"stem":"Trong các biểu thức sau, \\(\\textbf{đa thức}\\) là:","options":["\\(\\frac{2}{x^{3}y}-1\\)","\\(\\frac{x}{y}+3\\)","\\(5x-4y+7\\)","\\(x^{2}y+\\frac{1}{x}\\)"],"answer":2}
-  ],
-  "multi10":[
-    {"title":"Bài 1: Nhận biết mệnh đề đúng","items":[
-      ["Đơn thức là tích của một số với các biến có số mũ nguyên không âm.",1],
-      ["Hệ số của đơn thức có thể là phân số.",1],
-      ["Đa thức có thể chứa biến ở mẫu.",0]
-    ]}
-  ]
+"mcqs":[
+{"stem":"Kết quả của phép chia \\(\\dfrac{x^{2}y^{3}}{xy}\\) là:","options":["\\(x^{3}y^{3}\\)","\\(x y^{2}\\)","\\(x^{2}y\\)","\\(x y^{4}\\)"],"answer":1},
+{"stem":"Trong các biểu thức sau, \\(\\textbf{đơn thức}\\) là:","options":["\\(2x^{2}+3y\\)","\\(\\dfrac{2}{3xy}\\)","\\((-5)x^{2}y^{3}\\)","\\(x^{2}-2x\\)"],"answer":2},
+{"stem":"Trong các biểu thức sau, \\(\\textbf{đa thức}\\) là:","options":["\\(\\dfrac{2}{x^{3}y}-1\\)","\\(\\dfrac{x}{y}+3\\)","\\(5x-4y+7\\)","\\(x^{2}y+\\dfrac{1}{x}\\)"],"answer":2},
+{"stem":"Cho hình bình hành \\(ABCD\\) có \\(\\widehat{ABC}=120^{\\circ}\\). Khi đó \\(\\widehat{ADC}\\) bằng:","options":["\\(120^{\\circ}\\)","\\(60^{\\circ}\\)","\\(180^{\\circ}\\)","\\(360^{\\circ}\\)"],"answer":1},
+{"stem":"Tứ giác \\(ABCD\\) là hình thoi khi:","options":["Hai cạnh đối song song","Hai cạnh đối bằng nhau","Hai đường chéo bằng nhau","Hai đường chéo vuông góc"],"answer":3},
+{"stem":"Trong hình bình hành, hai cạnh đối:","options":["Bằng nhau","Vuông góc","Không song song","Không bằng nhau"],"answer":0},
+{"stem":"Hình thoi là hình bình hành có:","options":["Bốn góc vuông","Bốn cạnh bằng nhau","Hai cạnh đối song song","Hai đường chéo bằng nhau"],"answer":1},
+{"stem":"Trong các hình sau, hình vuông là:","options":["Hình chữ nhật","Hình thoi","Hình chữ nhật có 2 cạnh kề bằng nhau","Hình chữ nhật có 2 đường chéo vuông góc"],"answer":3},
+{"stem":"Trong hình chữ nhật, các đường chéo:","options":["Không bằng nhau","Vuông góc với nhau","Bằng nhau","Không cắt nhau"],"answer":2},
+{"stem":"Hình chữ nhật có 1 góc vuông là:","options":["Hình vuông","Hình bình hành","Hình thang cân","Tứ giác"],"answer":3},
+{"stem":"Diện tích hình chữ nhật có chiều dài \\(x+2\\), chiều rộng \\(y+3\\) là:","options":["\\(xy+3x+2y+6\\)","\\(xy-3x+2y+6\\)","\\(xy+3x-2y+6\\)","\\(xy-3x+2y-6\\)"],"answer":0},
+{"stem":"Cho \\(M+5x^{2}-2xy=6x^{2}+10xy-y^{2}\\). Khi đó \\(M\\) bằng:","options":["\\(x^{2}+12xy-y^{2}\\)","\\(x^{2}+12xy+y^{2}\\)","\\(x^{2}+8xy-y^{2}\\)","\\(x^{2}+7xy-y^{2}\\)"],"answer":0},
+{"stem":"Trong các đơn thức sau, đơn thức đã thu gọn là:","options":["\\(3xxy\\)","\\(\\tfrac14 4x^{2}y\\)","\\(2^{3}.3^{4}xy^{2}z\\)","\\(2^{2}.3x.y.x.z\\)"],"answer":2}
+],
+"multi10":[
+{"title":"Bài 1: Nhận biết mệnh đề đúng","items":[
+["Đơn thức là tích của một số với các biến có số mũ nguyên không âm.",1],
+["Hệ số của đơn thức có thể là phân số.",1],
+["Đa thức có thể chứa biến ở mẫu.",0]
+]},
+{"title":"Bài 2: Tính chất hình học","items":[
+["Trong hình bình hành, các cạnh đối bằng nhau.",1],
+["Trong hình bình hành, các góc đối bằng nhau.",1],
+["Hai đường chéo của hình bình hành vuông góc.",0]
+]}
+]
 };
 
 const $=(s,r=document)=>r.querySelector(s);
@@ -94,7 +110,7 @@ function renderDS(){
       const ck=el("input",{type:"checkbox"});
       const sp=el("span");sp.innerHTML=it[0];
       ck.addEventListener("change",()=>{
-        if(!ck.checked)return r.style.background=""; 
+        if(!ck.checked)return r.style.background="";
         if(truth===1){r.style.background="#ecfeff";picksDS.set(`${bi}-${i}`,1);}
         else{r.style.background="#fee2e2";picksDS.set(`${bi}-${i}`,0);}
       });
@@ -117,7 +133,7 @@ function gradeAll(){
   let ok2=0,t2=0;
   $("#ds").querySelectorAll(".card").forEach((c,bi)=>{
     c.querySelectorAll(".opt").forEach((r,i)=>{
-      t2++;const ck=r.querySelector("input"),truth=STATE.ds[bi].items[i][1],p=picksDS.get(`${bi}-${i}`)||0;
+      t2++;const truth=STATE.ds[bi].items[i][1],p=picksDS.get(`${bi}-${i}`)||0;
       if(truth===1)r.style.outline="2px dashed #10b981";
       if(p===truth)ok2++;
     });
