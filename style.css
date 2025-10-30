@@ -1,47 +1,37 @@
-:root { --gap: 14px; }
-* { box-sizing: border-box; }
-body {
-  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
-  margin: 0 auto;
-  padding: 24px 16px 64px;
-  max-width: 980px;
-  line-height: 1.45;
-  color: #111;
-  background: #fafafa;
+:root{
+  --bg:#f6f7fb; --card:#fff; --ink:#222; --muted:#666; --brand:#3b82f6;
+  --ok:#059669; --warn:#b91c1c; --line:#e5e7eb;
 }
-h1 {
-  text-align: center;
-  color: #2a2a7a;
-  letter-spacing: .3px;
-  margin: 0 0 20px;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+.container{max-width:980px;margin:32px auto;padding:0 16px}
+h1{margin:0 0 16px;text-align:center;color:#1e293b;letter-spacing:.3px}
+
+.section-title{
+  margin:24px 0 8px;font-weight:700;color:#1f2937
 }
-#quiz {
-  display: grid;
-  gap: var(--gap);
+
+.question{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:14px 16px;margin:12px 0;box-shadow:0 1px 0 rgba(0,0,0,.04);
 }
-.question {
-  background: #fff;
-  border: 1px solid #e6e6ef;
-  border-radius: 10px;
-  padding: 16px 16px 14px;
-  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+.question p{margin:0 0 10px}
+.option-line{display:flex;align-items:center;margin:6px 0}
+.option-line input{margin-right:8px}
+.option-line label{cursor:pointer}
+
+.question img{max-width:100%;height:auto;display:block;margin:6px 0 8px;border-radius:8px;border:1px solid var(--line)}
+
+.actions{text-align:center;margin:18px 0}
+button#submit{
+  background:var(--brand);color:#fff;border:0;border-radius:10px;
+  padding:10px 18px;font-weight:700;cursor:pointer
 }
-.question p { margin: 0 0 8px; }
-.option-line {
-  display: flex; align-items: flex-start;
-  gap: 8px; margin: 6px 0;
+button#submit:hover{filter:brightness(.95)}
+
+.result{
+  text-align:center;margin:6px auto 0;max-width:780px;color:#111;background:#e6f7ef;
+  border:1px solid #bbf7d0;padding:10px 14px;border-radius:8px;display:none
 }
-.option-line input { margin-top: 3px; }
-#submit {
-  margin: 18px auto 8px;
-  display: block;
-  padding: 10px 18px;
-  border-radius: 10px;
-  border: 1px solid #3758f9;
-  background: #3b82f6;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-}
-#submit:hover { filter: brightness(.98); }
-#result { text-align: center; margin-top: 10px; font-weight: 600; color: #0b7; }
+
+.muted{color:var(--muted);font-size:.9rem}
