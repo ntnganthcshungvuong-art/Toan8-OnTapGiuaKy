@@ -2,18 +2,32 @@
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- MathJax cho LaTeX -->
+  <link rel="stylesheet" href="style.css?v=20251030" />
+
+  <!-- MathJax (không dùng polyfill) -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-  <h1>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</h1>
-  <div id="quiz"></div>
-  <button id="submit">Nộp bài</button>
-  <div id="result"></div>
+  <div class="container">
+    <h1>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</h1>
 
-  <script src="quiz.js?v=1"></script>
+    <!-- Khu vực render câu hỏi -->
+    <div id="quiz"></div>
+
+    <div class="actions">
+      <button id="submit">Nộp bài</button>
+    </div>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="quiz.js?v=20251030"></script>
 </body>
 </html>
