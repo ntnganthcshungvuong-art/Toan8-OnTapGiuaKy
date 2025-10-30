@@ -1,4 +1,3 @@
-<script>
 async function loadQuiz() {
   const res = await fetch('questions.json');
   const questions = await res.json();
@@ -12,13 +11,11 @@ async function loadQuiz() {
     const div = document.createElement('div');
     div.classList.add('question');
 
-    // Tiêu đề + nhắc chọn nhiều
     let title = `<p><b>Câu ${i + 1}.</b> ${q.question}`;
     if (q.multi) title += ` <em style="color:#b35;">(Chọn tất cả ý đúng)</em>`;
     title += `</p>`;
     div.innerHTML = title;
 
-    // Hình minh hoạ (nếu có)
     if (q.image) {
       const img = document.createElement('img');
       img.src = q.image;
@@ -28,7 +25,6 @@ async function loadQuiz() {
       div.appendChild(img);
     }
 
-    // Radio (1 đáp án) hoặc Checkbox (nhiều đáp án)
     q.options.forEach((opt, j) => {
       const id = `q${i}_${j}`;
       const input = document.createElement('input');
@@ -51,16 +47,13 @@ async function loadQuiz() {
     quizDiv.appendChild(div);
   });
 
-  // Nộp bài
   document.getElementById('submit').onclick = () => grade(questions, totalPoints);
 
-  // Gọi MathJax render sau khi DOM đã được inject
   if (window.MathJax && window.MathJax.typesetPromise) {
     MathJax.typesetPromise();
   }
 }
 
-// Chấm điểm theo points; câu multi phải khớp chính xác tập đáp án
 function grade(questions, totalPoints) {
   let gained = 0;
 
@@ -74,22 +67,17 @@ function grade(questions, totalPoints) {
       if (correct) gained += q.points;
     } else {
       const chosen = document.querySelector(`input[name="q${i}"]:checked`);
-      if (chosen && parseInt(chosen.value) === q.answer) {
-        gained += q.points;
-      }
+      if (chosen && parseInt(chosen.value) === q.answer) gained += q.points;
     }
   });
 
-  // Quy đổi về thang 10 (điểm đã đặt trong dữ liệu là 0.15 và 0.5 nên tổng mặc định = 10)
   const score10 = Math.round((gained + Number.EPSILON) * 100) / 100;
   const result = document.getElementById('result');
   result.innerHTML = `Bạn đạt <b>${score10} / 10</b>. (Điểm thành phần: được ${gained} trên tổng ${totalPoints})`;
 
-  // Cuối cùng render MathJax cho phần kết quả nếu có công thức
   if (window.MathJax && window.MathJax.typesetPromise) {
     MathJax.typesetPromise();
   }
 }
 
 loadQuiz();
-</script>
