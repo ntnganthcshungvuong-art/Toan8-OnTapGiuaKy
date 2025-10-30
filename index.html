@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ĐỀ ÔN TẬP TOÁN 8 – GIỮA KỲ I</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</title>
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- MathJax để hiển thị công thức Toán -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <!-- MathJax render LaTeX -->
   <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
-
 <body>
-  <h1>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</h1>
-  <div id="quiz"></div>
+  <main class="container">
+    <h1>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</h1>
 
-  <button id="submit">Nộp bài</button>
-  <div id="result"></div>
+    <!-- nơi JS sinh câu hỏi -->
+    <div id="quiz"></div>
 
-  <script src="quiz.js"></script>
+    <div class="actions">
+      <button id="submit">Nộp bài</button>
+      <div id="result"></div>
+    </div>
+  </main>
+
+  <!-- nạp JS (kèm cache-bust tránh lưu đệm) -->
+  <script>
+    const v = Date.now().toString(36);
+    const s = document.createElement('script');
+    s.src = 'quiz.js?v=' + v;
+    document.body.appendChild(s);
+  </script>
 </body>
 </html>
