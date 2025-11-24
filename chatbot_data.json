@@ -1,1 +1,17 @@
+[
+  {
+    "question": "phuong trinh bac nhat mot an la gi",
+    "keywords": ["phuong trinh bac nhat", "mot an"],
+    "answer": "Phương trình bậc nhất một ẩn có dạng ax + b = 0 (a ≠ 0).",
+    "topic": "Dai so",
+    "link": "#quiz"
+  },
+  {
+    "question": "quy dong mau thuc la gi",
+    "keywords": ["quy dong", "mau thuc"],
+    "answer": "Quy đồng mẫu thức là đưa các phân thức về cùng một mẫu chung để cộng trừ dễ hơn.",
+    "topic": "Phan thuc",
+    "link": "#quiz"
+  }
+]
 
