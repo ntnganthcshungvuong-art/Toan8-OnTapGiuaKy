@@ -1,17 +1,248 @@
 [
+  /* ================= CHƯƠNG I. ĐA THỨC ================= */
+
   {
-    "question": "phuong trinh bac nhat mot an la gi",
-    "keywords": ["phuong trinh bac nhat", "mot an"],
-    "answer": "Phương trình bậc nhất một ẩn có dạng ax + b = 0 (a ≠ 0).",
-    "topic": "Dai so",
+    "question": "don thuc la gi",
+    "keywords": ["don thuc", "la gi"],
+    "answer": "Đơn thức là biểu thức đại số chỉ gồm một số, một biến hoặc tích của một số với các biến có số mũ nguyên không âm. Ví dụ: \\(3x^2y\\), \\(-5a^3b\\).",
+    "topic": "Chuong I - Bai 1 Don thuc",
     "link": "#quiz"
   },
   {
-    "question": "quy dong mau thuc la gi",
-    "keywords": ["quy dong", "mau thuc"],
-    "answer": "Quy đồng mẫu thức là đưa các phân thức về cùng một mẫu chung để cộng trừ dễ hơn.",
-    "topic": "Phan thuc",
+    "question": "bac cua don thuc la gi",
+    "keywords": ["bac don thuc", "bac cua don thuc"],
+    "answer": "Bậc của đơn thức là tổng các số mũ của các biến trong đơn thức. Ví dụ: \\(-2x^3y\\) có bậc \\(3+1=4\\).",
+    "topic": "Chuong I - Bai 1 Don thuc",
+    "link": "#quiz"
+  },
+  {
+    "question": "da thuc la gi",
+    "keywords": ["da thuc", "la gi"],
+    "answer": "Đa thức là tổng của các đơn thức. Ví dụ: \\(2x^2 - 3x + 1\\).",
+    "topic": "Chuong I - Bai 2 Da thuc",
+    "link": "#quiz"
+  },
+  {
+    "question": "bac cua da thuc la gi",
+    "keywords": ["bac da thuc", "bac cua da thuc"],
+    "answer": "Bậc của đa thức là bậc lớn nhất trong các đơn thức của nó. Ví dụ: \\(x^3 - 2x^2y + xy^2 + 1\\) có bậc \\(3\\).",
+    "topic": "Chuong I - Bai 2 Da thuc",
+    "link": "#quiz"
+  },
+  {
+    "question": "hang tu dong dang la gi",
+    "keywords": ["hang tu dong dang", "dong dang"],
+    "answer": "Hạng tử đồng dạng là các đơn thức có cùng phần biến (cùng biến và cùng số mũ). Ví dụ: \\(3x^2y\\) và \\(-5x^2y\\) là đồng dạng.",
+    "topic": "Chuong I - Bai 3 Cong tru da thuc",
+    "link": "#quiz"
+  },
+  {
+    "question": "cong tru da thuc nhu the nao",
+    "keywords": ["cong da thuc", "tru da thuc"],
+    "answer": "Cộng/trừ đa thức: nhóm các hạng tử đồng dạng rồi cộng/trừ hệ số. Ví dụ: \\((2x^2+3x) + (x^2-5x)=3x^2-2x\\).",
+    "topic": "Chuong I - Bai 3 Cong tru da thuc",
+    "link": "#quiz"
+  },
+  {
+    "question": "nhan da thuc voi don thuc nhu the nao",
+    "keywords": ["nhan da thuc", "don thuc"],
+    "answer": "Nhân đa thức với đơn thức: nhân đơn thức đó với từng hạng tử của đa thức rồi cộng lại. Ví dụ: \\(3x(2x^2-x+1)=6x^3-3x^2+3x\\).",
+    "topic": "Chuong I - Bai 4 Nhan da thuc",
+    "link": "#quiz"
+  },
+  {
+    "question": "nhan hai da thuc nhu the nao",
+    "keywords": ["nhan hai da thuc", "nhan da thuc"],
+    "answer": "Nhân hai đa thức: lấy mỗi hạng tử của đa thức thứ nhất nhân với từng hạng tử của đa thức thứ hai rồi cộng. Ví dụ: \\((x+2)(x-3)=x^2-x-6\\).",
+    "topic": "Chuong I - Bai 4 Nhan da thuc",
+    "link": "#quiz"
+  },
+  {
+    "question": "chia da thuc cho don thuc nhu the nao",
+    "keywords": ["chia da thuc", "don thuc"],
+    "answer": "Chia đa thức cho đơn thức: chia từng hạng tử của đa thức cho đơn thức rồi cộng. Ví dụ: \\((6x^3-3x^2+9x):3x=2x^2-x+3\\).",
+    "topic": "Chuong I - Bai 5 Chia da thuc",
+    "link": "#quiz"
+  },
+
+  /* ======== CHƯƠNG II. HẰNG ĐẲNG THỨC ĐÁNG NHỚ & ỨNG DỤNG ======== */
+
+  {
+    "question": "hang dang thuc dang nho la gi",
+    "keywords": ["hang dang thuc", "dang nho"],
+    "answer": "Hằng đẳng thức đáng nhớ là các công thức khai triển thường gặp giúp rút gọn và tính nhanh biểu thức.",
+    "topic": "Chuong II - Bai 6",
+    "link": "#quiz"
+  },
+  {
+    "question": "binh phuong cua mot tong",
+    "keywords": ["binh phuong tong", "(a+b)^2"],
+    "answer": "Công thức: \\((a+b)^2=a^2+2ab+b^2\\).",
+    "topic": "Chuong II - Bai 6",
+    "link": "#quiz"
+  },
+  {
+    "question": "binh phuong cua mot hieu",
+    "keywords": ["binh phuong hieu", "(a-b)^2"],
+    "answer": "Công thức: \\((a-b)^2=a^2-2ab+b^2\\).",
+    "topic": "Chuong II - Bai 6",
+    "link": "#quiz"
+  },
+  {
+    "question": "hieu hai binh phuong",
+    "keywords": ["hieu hai binh phuong", "a^2-b^2"],
+    "answer": "Công thức: \\(a^2-b^2=(a-b)(a+b)\\).",
+    "topic": "Chuong II - Bai 6",
+    "link": "#quiz"
+  },
+  {
+    "question": "lap phuong cua mot tong",
+    "keywords": ["lap phuong tong", "(a+b)^3"],
+    "answer": "Công thức: \\((a+b)^3=a^3+3a^2b+3ab^2+b^3\\).",
+    "topic": "Chuong II - Bai 7",
+    "link": "#quiz"
+  },
+  {
+    "question": "lap phuong cua mot hieu",
+    "keywords": ["lap phuong hieu", "(a-b)^3"],
+    "answer": "Công thức: \\((a-b)^3=a^3-3a^2b+3ab^2-b^3\\).",
+    "topic": "Chuong II - Bai 7",
+    "link": "#quiz"
+  },
+  {
+    "question": "tong hai lap phuong",
+    "keywords": ["tong hai lap phuong", "a^3+b^3"],
+    "answer": "Công thức: \\(a^3+b^3=(a+b)(a^2-ab+b^2)\\).",
+    "topic": "Chuong II - Bai 8",
+    "link": "#quiz"
+  },
+  {
+    "question": "hieu hai lap phuong",
+    "keywords": ["hieu hai lap phuong", "a^3-b^3"],
+    "answer": "Công thức: \\(a^3-b^3=(a-b)(a^2+ab+b^2)\\).",
+    "topic": "Chuong II - Bai 8",
+    "link": "#quiz"
+  },
+  {
+    "question": "phan tich da thuc thanh nhan tu la gi",
+    "keywords": ["phan tich", "nhan tu"],
+    "answer": "Phân tích đa thức thành nhân tử là biến đổi một đa thức thành tích của các đa thức/đơn thức.",
+    "topic": "Chuong II - Bai 9",
+    "link": "#quiz"
+  },
+  {
+    "question": "dat nhan tu chung la gi",
+    "keywords": ["dat nhan tu chung"],
+    "answer": "Đặt nhân tử chung: đưa nhân tử chung ra ngoài ngoặc. Ví dụ: \\(ax+ay=a(x+y)\\).",
+    "topic": "Chuong II - Bai 9",
+    "link": "#quiz"
+  },
+  {
+    "question": "phan tich bang hang dang thuc",
+    "keywords": ["phan tich", "hang dang thuc"],
+    "answer": "Dùng hằng đẳng thức để phân tích. Ví dụ: \\(x^2-9=(x-3)(x+3)\\) vì là hiệu hai bình phương.",
+    "topic": "Chuong II - Bai 9",
+    "link": "#quiz"
+  },
+
+  /* ================= CHƯƠNG III. TỨ GIÁC ================= */
+
+  {
+    "question": "tu giac la gi",
+    "keywords": ["tu giac", "la gi"],
+    "answer": "Tứ giác là hình gồm 4 đoạn thẳng nối tiếp tạo thành một đa giác có 4 cạnh.",
+    "topic": "Chuong III - Bai 10 Tu giac",
+    "link": "#quiz"
+  },
+  {
+    "question": "tong cac goc trong tu giac bang bao nhieu",
+    "keywords": ["tong goc tu giac", "bang bao nhieu"],
+    "answer": "Tổng các góc trong một tứ giác bằng \\(360^\\circ\\).",
+    "topic": "Chuong III - Bai 10 Tu giac",
+    "link": "#quiz"
+  },
+  {
+    "question": "hinh thang can la gi",
+    "keywords": ["hinh thang can", "la gi"],
+    "answer": "Hình thang cân là hình thang có hai cạnh bên bằng nhau.",
+    "topic": "Chuong III - Bai 11 Hinh thang can",
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh thang can",
+    "keywords": ["tinh chat", "hinh thang can"],
+    "answer": "Hình thang cân có hai góc kề một đáy bằng nhau và hai đường chéo bằng nhau.",
+    "topic": "Chuong III - Bai 11 Hinh thang can",
+    "link": "#quiz"
+  },
+  {
+    "question": "hinh binh hanh la gi",
+    "keywords": ["hinh binh hanh", "la gi"],
+    "answer": "Hình bình hành là tứ giác có các cặp cạnh đối song song.",
+    "topic": "Chuong III - Bai 12 Hinh binh hanh",
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh binh hanh",
+    "keywords": ["tinh chat", "hinh binh hanh"],
+    "answer": "Hình bình hành có: \\(AB \\parallel CD\\), \\(AD \\parallel BC\\); \\(AB=CD\\), \\(AD=BC\\); hai đường chéo cắt nhau tại trung điểm mỗi đường.",
+    "topic": "Chuong III - Bai 12 Hinh binh hanh",
+    "link": "#quiz"
+  },
+  {
+    "question": "dau hieu nhan biet hinh binh hanh",
+    "keywords": ["dau hieu", "hinh binh hanh"],
+    "answer": "Một tứ giác là hình bình hành nếu có 1 trong các dấu hiệu: (1) Hai cặp cạnh đối song song; (2) Hai cặp cạnh đối bằng nhau; (3) Một cặp cạnh đối vừa song song vừa bằng nhau; (4) Hai đường chéo cắt nhau tại trung điểm.",
+    "topic": "Chuong III - Bai 12 Hinh binh hanh",
+    "link": "#quiz"
+  },
+  {
+    "question": "hinh chu nhat la gi",
+    "keywords": ["hinh chu nhat", "la gi"],
+    "answer": "Hình chữ nhật là hình bình hành có một góc vuông.",
+    "topic": "Chuong III - Bai 13 Hinh chu nhat",
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh chu nhat",
+    "keywords": ["tinh chat", "hinh chu nhat"],
+    "answer": "Hình chữ nhật có các cạnh đối song song và bằng nhau; hai đường chéo bằng nhau và cắt nhau tại trung điểm.",
+    "topic": "Chuong III - Bai 13 Hinh chu nhat",
+    "link": "#quiz"
+  },
+  {
+    "question": "dau hieu nhan biet hinh chu nhat",
+    "keywords": ["dau hieu", "hinh chu nhat"],
+    "answer": "Một hình bình hành là hình chữ nhật nếu có một góc vuông hoặc hai đường chéo bằng nhau.",
+    "topic": "Chuong III - Bai 13 Hinh chu nhat",
+    "link": "#quiz"
+  },
+  {
+    "question": "hinh thoi la gi",
+    "keywords": ["hinh thoi", "la gi"],
+    "answer": "Hình thoi là hình bình hành có bốn cạnh bằng nhau.",
+    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh thoi",
+    "keywords": ["tinh chat", "hinh thoi"],
+    "answer": "Hình thoi có bốn cạnh bằng nhau; hai đường chéo vuông góc và là đường phân giác của các góc.",
+    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
+    "link": "#quiz"
+  },
+  {
+    "question": "hinh vuong la gi",
+    "keywords": ["hinh vuong", "la gi"],
+    "answer": "Hình vuông là hình chữ nhật có bốn cạnh bằng nhau (hoặc hình thoi có một góc vuông).",
+    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh vuong",
+    "keywords": ["tinh chat", "hinh vuong"],
+    "answer": "Hình vuông có bốn cạnh bằng nhau, bốn góc vuông; hai đường chéo bằng nhau, vuông góc và cắt nhau tại trung điểm.",
+    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
     "link": "#quiz"
   }
 ]
-
