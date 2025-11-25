@@ -2,176 +2,623 @@
   {
     "question": "don thuc la gi",
     "keywords": ["don thuc", "la gi"],
+    "synonyms": ["đơn thức là gì", "khai niem don thuc", "don thuc la bieu thuc nhu the nao"],
     "answer": "Đơn thức là biểu thức đại số chỉ gồm một số, một biến hoặc tích của một số với các biến có số mũ nguyên không âm. Ví dụ: \\(3x^2y\\), \\(-5a^3b\\).",
+    "steps": [
+      "Đơn thức chỉ có **một hạng tử**.",
+      "Hạng tử là tích giữa hệ số và biến có số mũ không âm.",
+      "Ví dụ: \\(3x^2y\\) là đơn thức vì chỉ là một tích."
+    ],
+    "note": "Đa thức có từ 2 hạng tử trở lên nên không phải đơn thức.",
     "topic": "Chuong I - Bai 1 Don thuc",
+    "related_topics": ["Bac don thuc", "Da thuc"],
+    "link": "#quiz"
+  },
+  {
+    "question": "don thuc thu gon la gi",
+    "keywords": ["don thuc thu gon", "thu gon don thuc"],
+    "synonyms": ["đơn thức thu gọn", "thu gon don thuc nhu the nao"],
+    "answer": "Đơn thức thu gọn là đơn thức trong đó chỉ còn một hệ số và mỗi biến chỉ xuất hiện một lần.",
+    "steps": [
+      "Nhân các hệ số lại với nhau.",
+      "Cộng các số mũ của cùng một biến.",
+      "Viết lại thành một tích duy nhất."
+    ],
+    "note": "Nếu hệ số là 1 hoặc -1 thì có thể không cần viết hệ số.",
+    "topic": "Chuong I - Bai 1 Don thuc",
+    "related_topics": ["He so phan bien", "Bac don thuc"],
+    "link": "#quiz"
+  },
+  {
+    "question": "he so phan bien cua don thuc la gi",
+    "keywords": ["he so", "phan bien", "don thuc"],
+    "synonyms": ["hệ số là gì", "phần biến là gì", "he so phan bien don thuc"],
+    "answer": "Hệ số là phần số đứng trước, phần biến là tích các biến. Ví dụ: \\(-2x^3y\\) có hệ số \\(-2\\), phần biến \\(x^3y\\).",
+    "steps": [
+      "Tách phần số và phần chữ trong đơn thức.",
+      "Phần số là hệ số, phần chữ là phần biến."
+    ],
+    "note": "Hệ số có thể là phân số hoặc số âm.",
+    "topic": "Chuong I - Bai 1 Don thuc",
+    "related_topics": ["Don thuc", "Bac don thuc"],
     "link": "#quiz"
   },
   {
     "question": "bac cua don thuc la gi",
     "keywords": ["bac don thuc", "bac cua don thuc"],
-    "answer": "Bậc của đơn thức là tổng các số mũ của các biến trong đơn thức. Ví dụ: \\(-2x^3y\\) có bậc \\(3+1=4\\).",
+    "synonyms": ["bậc đơn thức", "tinh bac don thuc"],
+    "answer": "Bậc của đơn thức là tổng các số mũ của các biến. Ví dụ: \\(-2x^3y\\) có bậc \\(3+1=4\\).",
+    "steps": [
+      "Xác định số mũ của từng biến.",
+      "Cộng tất cả các số mũ.",
+      "Nếu là hằng số khác 0 thì bậc bằng 0."
+    ],
+    "note": "Đơn thức bằng 0 không xác định bậc.",
     "topic": "Chuong I - Bai 1 Don thuc",
+    "related_topics": ["Don thuc", "Bac da thuc"],
+    "link": "#quiz"
+  },
+  {
+    "question": "don thuc dong dang la gi",
+    "keywords": ["don thuc dong dang", "dong dang"],
+    "synonyms": ["đơn thức đồng dạng", "the nao la dong dang"],
+    "answer": "Hai đơn thức đồng dạng là hai đơn thức có cùng phần biến. Ví dụ: \\(3x^2y\\) và \\(-5x^2y\\).",
+    "steps": [
+      "So sánh phần biến của hai đơn thức.",
+      "Nếu giống hệt (cùng biến và số mũ) thì đồng dạng."
+    ],
+    "note": "Các đơn thức đồng dạng luôn có cùng bậc.",
+    "topic": "Chuong I - Bai 1 Don thuc",
+    "related_topics": ["Hang tu dong dang", "Cong tru da thuc"],
     "link": "#quiz"
   },
   {
     "question": "da thuc la gi",
-    "keywords": ["da thuc", "la gi", "khac gi don thuc"],
-    "answer": "Đa thức là tổng của các đơn thức. Ví dụ: \\(2x^2 - 3x + 1\\). Đơn thức chỉ có 1 hạng tử, còn đa thức có từ 2 hạng tử trở lên.",
+    "keywords": ["da thuc", "la gi"],
+    "synonyms": ["đa thức là gì", "khai niem da thuc", "da thuc khac don thuc"],
+    "answer": "Đa thức là tổng của các đơn thức. Ví dụ: \\(2x^2 - 3x + 1\\).",
+    "steps": [
+      "Đa thức gồm **nhiều hạng tử** là các đơn thức.",
+      "Các hạng tử được cộng hoặc trừ.",
+      "Ví dụ: \\(2x^2\\), \\(-3x\\), \\(1\\) tạo đa thức."
+    ],
+    "note": "Đơn thức chỉ có 1 hạng tử, đa thức có ≥2 hạng tử.",
     "topic": "Chuong I - Bai 2 Da thuc",
+    "related_topics": ["Bac da thuc", "Cong tru da thuc"],
+    "link": "#quiz"
+  },
+  {
+    "question": "hang tu cua da thuc la gi",
+    "keywords": ["hang tu", "da thuc"],
+    "synonyms": ["hạng tử đa thức", "hang tu cua da thuc"],
+    "answer": "Mỗi đơn thức trong tổng tạo nên đa thức được gọi là một hạng tử của đa thức.",
+    "steps": [
+      "Tách đa thức thành các đơn thức cộng/trừ.",
+      "Mỗi đơn thức là một hạng tử."
+    ],
+    "note": "Khi đổi dấu ngoặc phải đổi dấu từng hạng tử.",
+    "topic": "Chuong I - Bai 2 Da thuc",
+    "related_topics": ["Da thuc", "Cong tru da thuc"],
+    "link": "#quiz"
+  },
+  {
+    "question": "da thuc thu gon la gi",
+    "keywords": ["da thuc thu gon", "thu gon da thuc"],
+    "synonyms": ["đa thức thu gọn", "thu gon da thuc nhu the nao"],
+    "answer": "Đa thức thu gọn là đa thức không còn hạng tử đồng dạng (đã gộp lại).",
+    "steps": [
+      "Nhóm các hạng tử đồng dạng.",
+      "Cộng/trừ hệ số của chúng.",
+      "Giữ phần biến."
+    ],
+    "note": "Nếu không yêu cầu, thường viết đa thức ở dạng thu gọn.",
+    "topic": "Chuong I - Bai 2 Da thuc",
+    "related_topics": ["Hang tu dong dang", "Cong tru da thuc"],
     "link": "#quiz"
   },
   {
     "question": "bac cua da thuc la gi",
     "keywords": ["bac da thuc", "bac cua da thuc"],
-    "answer": "Bậc của đa thức là bậc lớn nhất trong các đơn thức của nó. Ví dụ: \\(x^3 - 2x^2y + xy^2 + 1\\) có bậc \\(3\\).",
+    "synonyms": ["bậc đa thức", "tinh bac cua da thuc"],
+    "answer": "Bậc của đa thức là bậc lớn nhất trong các hạng tử của nó.",
+    "steps": [
+      "Tính bậc từng hạng tử (đơn thức).",
+      "Chọn bậc lớn nhất."
+    ],
+    "note": "Đa thức không phụ thuộc biến (hằng số khác 0) có bậc 0.",
     "topic": "Chuong I - Bai 2 Da thuc",
+    "related_topics": ["Bac don thuc", "Da thuc"],
+    "link": "#quiz"
+  },
+  {
+    "question": "gia tri cua da thuc la gi",
+    "keywords": ["gia tri", "da thuc"],
+    "synonyms": ["tính giá trị đa thức", "thay so vao da thuc"],
+    "answer": "Giá trị của đa thức là kết quả khi thay giá trị cụ thể của biến vào đa thức.",
+    "steps": [
+      "Thay giá trị biến vào đúng vị trí.",
+      "Tính theo thứ tự phép toán.",
+      "Kết quả là giá trị đa thức."
+    ],
+    "note": "Nhớ thay đầy đủ mọi biến trong đa thức.",
+    "topic": "Chuong I - Bai 2 Da thuc",
+    "related_topics": ["Da thuc", "Thu gon da thuc"],
     "link": "#quiz"
   },
   {
     "question": "hang tu dong dang la gi",
     "keywords": ["hang tu dong dang", "dong dang"],
-    "answer": "Hạng tử đồng dạng là các đơn thức có cùng phần biến (cùng biến và cùng số mũ). Ví dụ: \\(3x^2y\\) và \\(-5x^2y\\) là đồng dạng.",
-    "topic": "Chuong I - Bai 3 Cong tru da thuc",
+    "synonyms": ["hạng tử đồng dạng là gì", "the nao la hang tu dong dang"],
+    "answer": "Hạng tử đồng dạng là các đơn thức có cùng phần biến. Ví dụ: \\(3x^2y\\) và \\(-5x^2y\\).",
+    "steps": [
+      "So sánh phần biến của các hạng tử.",
+      "Nếu giống hệt nhau thì đồng dạng.",
+      "Gộp hệ số khi cộng/trừ."
+    ],
+    "note": "Chỉ khác hệ số vẫn là đồng dạng.",
+    "topic": "Chuong I - Bai 3 Phep cong va phep tru da thuc",
+    "related_topics": ["Cong tru da thuc", "Da thuc thu gon"],
     "link": "#quiz"
   },
   {
-    "question": "cong tru da thuc nhu the nao",
-    "keywords": ["cong da thuc", "tru da thuc"],
-    "answer": "Cộng/trừ đa thức: nhóm các hạng tử đồng dạng rồi cộng/trừ hệ số. Ví dụ: \\((2x^2+3x) + (x^2-5x)=3x^2-2x\\).",
-    "topic": "Chuong I - Bai 3 Cong tru da thuc",
+    "question": "cong da thuc nhu the nao",
+    "keywords": ["cong da thuc", "phep cong da thuc"],
+    "synonyms": ["cộng hai đa thức", "cong da thuc"],
+    "answer": "Cộng hai đa thức bằng cách cộng các hạng tử đồng dạng.",
+    "steps": [
+      "Xếp hai đa thức theo hạng tử đồng dạng.",
+      "Cộng các hệ số của hạng tử đồng dạng.",
+      "Giữ nguyên phần biến."
+    ],
+    "note": "Nếu không có hạng tử đồng dạng thì giữ nguyên.",
+    "topic": "Chuong I - Bai 3 Phep cong va phep tru da thuc",
+    "related_topics": ["Hang tu dong dang", "Tru da thuc"],
+    "link": "#quiz"
+  },
+  {
+    "question": "tru da thuc nhu the nao",
+    "keywords": ["tru da thuc", "phep tru da thuc"],
+    "synonyms": ["trừ hai đa thức", "tru da thuc"],
+    "answer": "Trừ hai đa thức bằng cách đổi dấu đa thức bị trừ rồi cộng.",
+    "steps": [
+      "Đổi dấu từng hạng tử của đa thức bị trừ.",
+      "Cộng hai đa thức như phép cộng.",
+      "Thu gọn nếu cần."
+    ],
+    "note": "Sai hay gặp: quên đổi dấu một hạng tử trong ngoặc.",
+    "topic": "Chuong I - Bai 3 Phep cong va phep tru da thuc",
+    "related_topics": ["Cong da thuc", "Da thuc thu gon"],
+    "link": "#quiz"
+  },
+  {
+    "question": "nhan don thuc voi don thuc nhu the nao",
+    "keywords": ["nhan don thuc", "don thuc"],
+    "synonyms": ["nhân hai đơn thức", "nhan don thuc"],
+    "answer": "Nhân hai đơn thức: nhân hệ số với nhau và cộng các số mũ của cùng biến.",
+    "steps": [
+      "Nhân các hệ số.",
+      "Nhân các phần biến, cộng số mũ nếu cùng biến.",
+      "Viết lại thành đơn thức thu gọn."
+    ],
+    "note": "Chú ý dấu (+)(-) khi nhân hệ số.",
+    "topic": "Chuong I - Bai 4 Phep nhan da thuc",
+    "related_topics": ["Nhan da thuc voi don thuc", "Don thuc thu gon"],
     "link": "#quiz"
   },
   {
     "question": "nhan da thuc voi don thuc nhu the nao",
     "keywords": ["nhan da thuc", "don thuc"],
-    "answer": "Nhân đa thức với đơn thức: nhân đơn thức đó với từng hạng tử của đa thức rồi cộng lại. Ví dụ: \\(3x(2x^2-x+1)=6x^3-3x^2+3x\\).",
-    "topic": "Chuong I - Bai 4 Nhan da thuc",
+    "synonyms": ["nhân đa thức với đơn thức", "nhan da thuc voi don thuc"],
+    "answer": "Nhân đa thức với đơn thức: nhân đơn thức đó với từng hạng tử của đa thức rồi cộng lại.",
+    "steps": [
+      "Lần lượt nhân đơn thức với từng hạng tử.",
+      "Viết các tích lại thành tổng.",
+      "Thu gọn nếu có hạng tử đồng dạng."
+    ],
+    "note": "Sai hay gặp: quên nhân vào một hạng tử trong ngoặc.",
+    "topic": "Chuong I - Bai 4 Phep nhan da thuc",
+    "related_topics": ["Nhan hai da thuc", "Hang tu dong dang"],
     "link": "#quiz"
   },
   {
     "question": "nhan hai da thuc nhu the nao",
     "keywords": ["nhan hai da thuc", "nhan da thuc"],
-    "answer": "Nhân hai đa thức: lấy mỗi hạng tử của đa thức thứ nhất nhân với từng hạng tử của đa thức thứ hai rồi cộng. Ví dụ: \\((x+2)(x-3)=x^2-x-6\\).",
-    "topic": "Chuong I - Bai 4 Nhan da thuc",
+    "synonyms": ["nhân hai đa thức", "nhan da thuc voi da thuc"],
+    "answer": "Nhân hai đa thức: lấy mỗi hạng tử đa thức thứ nhất nhân với từng hạng tử đa thức thứ hai rồi cộng các kết quả.",
+    "steps": [
+      "Nhân từng hạng tử của đa thức A với đa thức B.",
+      "Cộng các tích thu được.",
+      "Thu gọn."
+    ],
+    "note": "Nếu cả hai là nhị thức có thể dùng hằng đẳng thức để nhanh hơn.",
+    "topic": "Chuong I - Bai 4 Phep nhan da thuc",
+    "related_topics": ["Binh phuong tong", "Binh phuong hieu"],
+    "link": "#quiz"
+  },
+  {
+    "question": "chia don thuc cho don thuc nhu the nao",
+    "keywords": ["chia don thuc", "don thuc"],
+    "synonyms": ["chia hai đơn thức", "chia don thuc"],
+    "answer": "Chia hai đơn thức: chia hệ số và trừ số mũ của cùng biến.",
+    "steps": [
+      "Chia hệ số của tử cho hệ số của mẫu.",
+      "Trừ số mũ của cùng biến: \\(x^m:x^n=x^{m-n}\\).",
+      "Viết lại đơn thức."
+    ],
+    "note": "Chỉ chia được khi số mũ ở tử ≥ số mũ ở mẫu với từng biến.",
+    "topic": "Chuong I - Bai 5 Phep chia da thuc cho don thuc",
+    "related_topics": ["Chia da thuc cho don thuc", "Don thuc thu gon"],
     "link": "#quiz"
   },
   {
     "question": "chia da thuc cho don thuc nhu the nao",
     "keywords": ["chia da thuc", "don thuc"],
-    "answer": "Chia đa thức cho đơn thức: chia từng hạng tử của đa thức cho đơn thức rồi cộng. Ví dụ: \\((6x^3-3x^2+9x):3x=2x^2-x+3\\).",
-    "topic": "Chuong I - Bai 5 Chia da thuc",
+    "synonyms": ["chia đa thức cho đơn thức", "phep chia da thuc"],
+    "answer": "Chia đa thức cho đơn thức: chia từng hạng tử của đa thức cho đơn thức rồi cộng kết quả.",
+    "steps": [
+      "Kiểm tra mỗi hạng tử có chia hết cho đơn thức không.",
+      "Chia từng hạng tử.",
+      "Cộng các kết quả."
+    ],
+    "note": "Nếu có hạng tử không chia hết thì không chia được theo cách này.",
+    "topic": "Chuong I - Bai 5 Phep chia da thuc cho don thuc",
+    "related_topics": ["Chia don thuc", "Da thuc"],
+    "link": "#quiz"
+  },
+
+  {
+    "question": "hang dang thuc dang nho la gi",
+    "keywords": ["hang dang thuc", "dang nho"],
+    "synonyms": ["hằng đẳng thức đáng nhớ", "hang dang thuc la gi"],
+    "answer": "Hằng đẳng thức đáng nhớ là các công thức khai triển thường gặp giúp rút gọn và tính nhanh biểu thức.",
+    "steps": [
+      "Nhận dạng biểu thức theo mẫu.",
+      "Áp dụng công thức phù hợp.",
+      "Rút gọn nếu cần."
+    ],
+    "note": "Cần nhớ đúng dấu và thứ tự hạng tử.",
+    "topic": "Chuong II - Bai 6 Hieu hai binh phuong va binh phuong tong hieu",
+    "related_topics": ["Binh phuong tong", "Binh phuong hieu"],
     "link": "#quiz"
   },
   {
     "question": "binh phuong cua mot tong",
-    "keywords": ["binh phuong cua mot tong", "binh phuong tong", "(a+b)^2"],
-    "answer": "Công thức: \\((a+b)^2=a^2+2ab+b^2\\).",
-    "topic": "Chuong II - Bai 6",
+    "keywords": ["binh phuong tong", "(a+b)^2", "binh phuong cua mot tong"],
+    "synonyms": ["bình phương của một tổng", "cong thuc (a+b)^2"],
+    "answer": "Công thức: \\((a+b)^2 = a^2 + 2ab + b^2\\).",
+    "steps": [
+      "Bình phương tổng = bình phương số thứ nhất + 2 tích + bình phương số thứ hai.",
+      "Áp dụng: \\((a+b)^2=a^2+2ab+b^2\\)."
+    ],
+    "note": "Hay quên hạng tử \\(2ab\\).",
+    "topic": "Chuong II - Bai 6 Hieu hai binh phuong va binh phuong tong hieu",
+    "related_topics": ["Binh phuong hieu", "Hieu hai binh phuong"],
     "link": "#quiz"
   },
   {
     "question": "binh phuong cua mot hieu",
-    "keywords": ["binh phuong cua mot hieu", "binh phuong hieu", "(a-b)^2"],
-    "answer": "Công thức: \\((a-b)^2=a^2-2ab+b^2\\).",
-    "topic": "Chuong II - Bai 6",
+    "keywords": ["binh phuong hieu", "(a-b)^2"],
+    "synonyms": ["bình phương của một hiệu", "cong thuc (a-b)^2"],
+    "answer": "Công thức: \\((a-b)^2 = a^2 - 2ab + b^2\\).",
+    "steps": [
+      "Bình phương hiệu = bình phương số thứ nhất - 2 tích + bình phương số thứ hai.",
+      "Áp dụng đúng dấu trừ của \\(-2ab\\)."
+    ],
+    "note": "Sai hay gặp: viết nhầm thành \\(+2ab\\).",
+    "topic": "Chuong II - Bai 6 Hieu hai binh phuong va binh phuong tong hieu",
+    "related_topics": ["Binh phuong tong", "Hieu hai binh phuong"],
     "link": "#quiz"
   },
   {
     "question": "hieu hai binh phuong",
     "keywords": ["hieu hai binh phuong", "a^2-b^2"],
-    "answer": "Công thức: \\(a^2-b^2=(a-b)(a+b)\\).",
-    "topic": "Chuong II - Bai 6",
+    "synonyms": ["hiệu hai bình phương", "a2 tru b2"],
+    "answer": "Công thức: \\(a^2 - b^2 = (a-b)(a+b)\\).",
+    "steps": [
+      "Nhận dạng \\(a^2-b^2\\).",
+      "Tách thành tích \\((a-b)(a+b)\\)."
+    ],
+    "note": "Chỉ dùng khi cả hai vế đều là bình phương.",
+    "topic": "Chuong II - Bai 6 Hieu hai binh phuong va binh phuong tong hieu",
+    "related_topics": ["Binh phuong tong", "Phan tich nhan tu"],
     "link": "#quiz"
   },
   {
     "question": "lap phuong cua mot tong",
-    "keywords": ["lap phuong cua mot tong", "(a+b)^3"],
-    "answer": "Công thức: \\((a+b)^3=a^3+3a^2b+3ab^2+b^3\\).",
-    "topic": "Chuong II - Bai 7",
+    "keywords": ["lap phuong tong", "(a+b)^3"],
+    "synonyms": ["lập phương của một tổng", "cong thuc (a+b)^3"],
+    "answer": "Công thức: \\((a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3\\).",
+    "steps": [
+      "Nhớ thứ tự: \\(a^3\\), \\(3a^2b\\), \\(3ab^2\\), \\(b^3\\).",
+      "Dùng để khai triển và rút gọn."
+    ],
+    "note": "Đây là mở rộng của bình phương tổng.",
+    "topic": "Chuong II - Bai 7 Lap phuong tong hieu",
+    "related_topics": ["Lap phuong hieu", "Binh phuong tong"],
     "link": "#quiz"
   },
   {
     "question": "lap phuong cua mot hieu",
-    "keywords": ["lap phuong cua mot hieu", "(a-b)^3"],
-    "answer": "Công thức: \\((a-b)^3=a^3-3a^2b+3ab^2-b^3\\).",
-    "topic": "Chuong II - Bai 7",
+    "keywords": ["lap phuong hieu", "(a-b)^3"],
+    "synonyms": ["lập phương của một hiệu", "cong thuc (a-b)^3"],
+    "answer": "Công thức: \\((a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3\\).",
+    "steps": [
+      "Nhớ dấu xen kẽ: \\(a^3\\), \\(-3a^2b\\), \\(+3ab^2\\), \\(-b^3\\)."
+    ],
+    "note": "Sai hay gặp: nhầm dấu của \\(3ab^2\\).",
+    "topic": "Chuong II - Bai 7 Lap phuong tong hieu",
+    "related_topics": ["Lap phuong tong", "Hieu hai lap phuong"],
     "link": "#quiz"
   },
   {
     "question": "tong hai lap phuong",
     "keywords": ["tong hai lap phuong", "a^3+b^3"],
+    "synonyms": ["tổng hai lập phương", "a3 cong b3"],
     "answer": "Công thức: \\(a^3+b^3=(a+b)(a^2-ab+b^2)\\).",
-    "topic": "Chuong II - Bai 8",
+    "steps": [
+      "Nhận dạng \\(a^3+b^3\\).",
+      "Viết thành \\((a+b)(a^2-ab+b^2)\\)."
+    ],
+    "note": "Trong ngoặc thứ hai là ‘trừ rồi cộng’.",
+    "topic": "Chuong II - Bai 8 Tong hieu hai lap phuong",
+    "related_topics": ["Hieu hai lap phuong", "Phan tich nhan tu"],
     "link": "#quiz"
   },
   {
     "question": "hieu hai lap phuong",
     "keywords": ["hieu hai lap phuong", "a^3-b^3"],
+    "synonyms": ["hiệu hai lập phương", "a3 tru b3"],
     "answer": "Công thức: \\(a^3-b^3=(a-b)(a^2+ab+b^2)\\).",
-    "topic": "Chuong II - Bai 8",
+    "steps": [
+      "Nhận dạng \\(a^3-b^3\\).",
+      "Viết thành \\((a-b)(a^2+ab+b^2)\\)."
+    ],
+    "note": "Ngoặc thứ hai là ‘cộng rồi cộng’.",
+    "topic": "Chuong II - Bai 8 Tong hieu hai lap phuong",
+    "related_topics": ["Tong hai lap phuong", "Phan tich nhan tu"],
+    "link": "#quiz"
+  },
+  {
+    "question": "phan tich da thuc thanh nhan tu la gi",
+    "keywords": ["phan tich", "nhan tu"],
+    "synonyms": ["phân tích nhân tử", "tach nhan tu"],
+    "answer": "Phân tích đa thức thành nhân tử là biến đổi đa thức thành tích các đa thức/đơn thức.",
+    "steps": [
+      "Tìm dạng thích hợp (đặt nhân tử chung, dùng hằng đẳng thức...).",
+      "Biến đổi về dạng tích."
+    ],
+    "note": "Kiểm tra lại bằng cách nhân ngược ra.",
+    "topic": "Chuong II - Bai 9 Phan tich da thuc thanh nhan tu",
+    "related_topics": ["Dat nhan tu chung", "Hieu hai binh phuong"],
     "link": "#quiz"
   },
   {
     "question": "dat nhan tu chung la gi",
     "keywords": ["dat nhan tu chung"],
-    "answer": "Đặt nhân tử chung: đưa nhân tử chung ra ngoài ngoặc. Ví dụ: \\(ax+ay=a(x+y)\\).",
-    "topic": "Chuong II - Bai 9",
+    "synonyms": ["đặt nhân tử chung", "phuong phap dat nhan tu chung"],
+    "answer": "Đặt nhân tử chung là đưa nhân tử chung ra ngoài ngoặc. Ví dụ: \\(ax+ay=a(x+y)\\).",
+    "steps": [
+      "Tìm nhân tử chung của các hạng tử.",
+      "Đưa ra ngoài ngoặc.",
+      "Trong ngoặc là phần còn lại."
+    ],
+    "note": "Nhân tử chung có thể là số, biến hoặc cả hai.",
+    "topic": "Chuong II - Bai 9 Phan tich da thuc thanh nhan tu",
+    "related_topics": ["Phan tich nhan tu", "Hang dang thuc"],
     "link": "#quiz"
   },
   {
+    "question": "phan tich bang hang dang thuc",
+    "keywords": ["phan tich", "hang dang thuc"],
+    "synonyms": ["phân tích bằng hằng đẳng thức", "dung hang dang thuc"],
+    "answer": "Dùng hằng đẳng thức để biến đa thức thành tích. Ví dụ: \\(x^2-9=(x-3)(x+3)\\).",
+    "steps": [
+      "Nhận dạng đa thức giống hằng đẳng thức.",
+      "Áp dụng công thức tương ứng."
+    ],
+    "note": "Phải nhận đúng dạng: tổng, hiệu, hiệu hai bình phương...",
+    "topic": "Chuong II - Bai 9 Phan tich da thuc thanh nhan tu",
+    "related_topics": ["Hieu hai binh phuong", "Binh phuong tong"],
+    "link": "#quiz"
+  },
+
+  {
     "question": "tu giac la gi",
     "keywords": ["tu giac", "la gi"],
+    "synonyms": ["tứ giác là gì", "khai niem tu giac"],
     "answer": "Tứ giác là hình gồm 4 đoạn thẳng nối tiếp tạo thành một đa giác có 4 cạnh.",
+    "steps": [
+      "Có 4 đỉnh, 4 cạnh.",
+      "Các cạnh nối tiếp nhau không cùng nằm trên một đường thẳng."
+    ],
+    "note": "Tên tứ giác thường theo thứ tự các đỉnh: \\(ABCD\\).",
     "topic": "Chuong III - Bai 10 Tu giac",
+    "related_topics": ["Tong goc tu giac", "Hinh thang can"],
     "link": "#quiz"
   },
   {
     "question": "tong cac goc trong tu giac bang bao nhieu",
     "keywords": ["tong goc tu giac", "360"],
+    "synonyms": ["tổng góc tứ giác", "tong goc trong tu giac"],
     "answer": "Tổng các góc trong một tứ giác bằng \\(360^\\circ\\).",
+    "steps": [
+      "Chia tứ giác thành 2 tam giác.",
+      "Mỗi tam giác có tổng góc \\(180^\\circ\\).",
+      "Suy ra tổng là \\(360^\\circ\\)."
+    ],
+    "note": "Kết quả đúng cho mọi tứ giác lồi.",
     "topic": "Chuong III - Bai 10 Tu giac",
+    "related_topics": ["Tu giac", "Hinh binh hanh"],
+    "link": "#quiz"
+  },
+  {
+    "question": "hinh thang can la gi",
+    "keywords": ["hinh thang can", "la gi"],
+    "synonyms": ["hình thang cân", "khai niem hinh thang can"],
+    "answer": "Hình thang cân là hình thang có hai cạnh bên bằng nhau.",
+    "steps": [
+      "Hình thang có một cặp cạnh đối song song.",
+      "Nếu hai cạnh bên (không song song) bằng nhau thì là hình thang cân."
+    ],
+    "note": "Hình thang cân có trục đối xứng.",
+    "topic": "Chuong III - Bai 11 Hinh thang can",
+    "related_topics": ["Tinh chat hinh thang can", "Tu giac"],
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh thang can",
+    "keywords": ["tinh chat", "hinh thang can"],
+    "synonyms": ["tính chất hình thang cân", "hinh thang can co tinh chat gi"],
+    "answer": "Hình thang cân có hai góc kề một đáy bằng nhau và hai đường chéo bằng nhau.",
+    "steps": [
+      "Từ hai cạnh bên bằng nhau suy ra hai góc kề đáy bằng nhau.",
+      "Hai đường chéo bằng nhau."
+    ],
+    "note": "Nếu một hình thang có hai đường chéo bằng nhau thì đó là hình thang cân.",
+    "topic": "Chuong III - Bai 11 Hinh thang can",
+    "related_topics": ["Dau hieu hinh thang can", "Tu giac"],
     "link": "#quiz"
   },
   {
     "question": "hinh binh hanh la gi",
     "keywords": ["hinh binh hanh", "la gi"],
+    "synonyms": ["hình bình hành là gì", "khai niem hinh binh hanh"],
     "answer": "Hình bình hành là tứ giác có các cặp cạnh đối song song.",
+    "steps": [
+      "Nếu \\(AB \\parallel CD\\) và \\(AD \\parallel BC\\) thì là hình bình hành."
+    ],
+    "note": "Có nhiều dấu hiệu nhận biết khác nữa.",
     "topic": "Chuong III - Bai 12 Hinh binh hanh",
+    "related_topics": ["Tinh chat hinh binh hanh", "Dau hieu hinh binh hanh"],
     "link": "#quiz"
   },
   {
     "question": "tinh chat hinh binh hanh",
     "keywords": ["tinh chat", "hinh binh hanh"],
-    "answer": "Hình bình hành có: \\(AB \\parallel CD\\), \\(AD \\parallel BC\\); \\(AB=CD\\), \\(AD=BC\\); hai đường chéo cắt nhau tại trung điểm mỗi đường.",
+    "synonyms": ["tính chất hình bình hành", "hinh binh hanh co tinh chat gi"],
+    "answer": "Hình bình hành có các cặp cạnh đối song song và bằng nhau; hai đường chéo cắt nhau tại trung điểm mỗi đường.",
+    "steps": [
+      "Từ định nghĩa suy ra hai cặp cạnh đối song song.",
+      "Suy ra hai cặp cạnh đối bằng nhau.",
+      "Hai đường chéo cắt nhau tại trung điểm."
+    ],
+    "note": "Hai đường chéo **không nhất thiết bằng nhau**.",
     "topic": "Chuong III - Bai 12 Hinh binh hanh",
+    "related_topics": ["Hinh binh hanh", "Hinh chu nhat", "Hinh thoi"],
+    "link": "#quiz"
+  },
+  {
+    "question": "dau hieu nhan biet hinh binh hanh",
+    "keywords": ["dau hieu", "hinh binh hanh"],
+    "synonyms": ["nhận biết hình bình hành", "dau hieu hinh binh hanh"],
+    "answer": "Một tứ giác là hình bình hành nếu thỏa 1 trong các dấu hiệu: (1) Hai cặp cạnh đối song song; (2) Hai cặp cạnh đối bằng nhau; (3) Một cặp cạnh đối vừa song song vừa bằng nhau; (4) Hai đường chéo cắt nhau tại trung điểm.",
+    "steps": [
+      "Kiểm tra từng dấu hiệu theo đề bài.",
+      "Chỉ cần đúng 1 dấu hiệu là kết luận được."
+    ],
+    "note": "Dấu hiệu (4) hay dùng trong chứng minh.",
+    "topic": "Chuong III - Bai 12 Hinh binh hanh",
+    "related_topics": ["Tinh chat hinh binh hanh", "Hinh chu nhat"],
     "link": "#quiz"
   },
   {
     "question": "hinh chu nhat la gi",
     "keywords": ["hinh chu nhat", "la gi"],
+    "synonyms": ["hình chữ nhật là gì", "khai niem hinh chu nhat"],
     "answer": "Hình chữ nhật là hình bình hành có một góc vuông.",
+    "steps": [
+      "Bắt đầu từ hình bình hành.",
+      "Nếu có một góc \\(90^\\circ\\) thì là hình chữ nhật."
+    ],
+    "note": "Hình chữ nhật có 4 góc vuông.",
     "topic": "Chuong III - Bai 13 Hinh chu nhat",
+    "related_topics": ["Tinh chat hinh chu nhat", "Hinh binh hanh"],
     "link": "#quiz"
   },
   {
     "question": "tinh chat hinh chu nhat",
     "keywords": ["tinh chat", "hinh chu nhat"],
+    "synonyms": ["tính chất hình chữ nhật", "hinh chu nhat co tinh chat gi"],
     "answer": "Hình chữ nhật có các cạnh đối song song và bằng nhau; hai đường chéo bằng nhau và cắt nhau tại trung điểm.",
+    "steps": [
+      "Vì là hình bình hành nên có cạnh đối song song và bằng nhau.",
+      "Đặc biệt: hai đường chéo bằng nhau."
+    ],
+    "note": "Đường chéo bằng nhau là tính chất riêng của hình chữ nhật.",
     "topic": "Chuong III - Bai 13 Hinh chu nhat",
+    "related_topics": ["Dau hieu hinh chu nhat", "Hinh vuong"],
+    "link": "#quiz"
+  },
+  {
+    "question": "dau hieu nhan biet hinh chu nhat",
+    "keywords": ["dau hieu", "hinh chu nhat"],
+    "synonyms": ["nhận biết hình chữ nhật", "dau hieu hinh chu nhat"],
+    "answer": "Một hình bình hành là hình chữ nhật nếu có một góc vuông hoặc hai đường chéo bằng nhau.",
+    "steps": [
+      "Kiểm tra xem có góc vuông không.",
+      "Hoặc kiểm tra hai đường chéo có bằng nhau không."
+    ],
+    "note": "Chỉ cần 1 trong 2 dấu hiệu.",
+    "topic": "Chuong III - Bai 13 Hinh chu nhat",
+    "related_topics": ["Tinh chat hinh chu nhat", "Hinh binh hanh"],
     "link": "#quiz"
   },
   {
     "question": "hinh thoi la gi",
     "keywords": ["hinh thoi", "la gi"],
+    "synonyms": ["hình thoi là gì", "khai niem hinh thoi"],
     "answer": "Hình thoi là hình bình hành có bốn cạnh bằng nhau.",
+    "steps": [
+      "Là hình bình hành (2 cặp cạnh đối song song).",
+      "Nếu 4 cạnh bằng nhau thì là hình thoi."
+    ],
+    "note": "Hình thoi không bắt buộc có góc vuông.",
     "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
+    "related_topics": ["Tinh chat hinh thoi", "Hinh binh hanh"],
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh thoi",
+    "keywords": ["tinh chat", "hinh thoi"],
+    "synonyms": ["tính chất hình thoi", "hinh thoi co tinh chat gi"],
+    "answer": "Hình thoi có bốn cạnh bằng nhau; hai đường chéo vuông góc và là đường phân giác các góc.",
+    "steps": [
+      "Vì là hình bình hành nên hai đường chéo cắt nhau tại trung điểm.",
+      "Đặc biệt: hai đường chéo vuông góc.",
+      "Mỗi đường chéo là phân giác của một cặp góc."
+    ],
+    "note": "Hai đường chéo hình thoi không nhất thiết bằng nhau.",
+    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
+    "related_topics": ["Dau hieu hinh thoi", "Hinh vuong"],
     "link": "#quiz"
   },
   {
     "question": "hinh vuong la gi",
     "keywords": ["hinh vuong", "la gi"],
+    "synonyms": ["hình vuông là gì", "khai niem hinh vuong"],
     "answer": "Hình vuông là hình chữ nhật có bốn cạnh bằng nhau (hoặc hình thoi có một góc vuông).",
+    "steps": [
+      "Nếu là hình chữ nhật và thêm điều kiện 4 cạnh bằng nhau → hình vuông.",
+      "Hoặc nếu là hình thoi và có một góc vuông → hình vuông."
+    ],
+    "note": "Hình vuông vừa là hình chữ nhật vừa là hình thoi.",
     "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
+    "related_topics": ["Tinh chat hinh vuong", "Hinh chu nhat", "Hinh thoi"],
+    "link": "#quiz"
+  },
+  {
+    "question": "tinh chat hinh vuong",
+    "keywords": ["tinh chat", "hinh vuong"],
+    "synonyms": ["tính chất hình vuông", "hinh vuong co tinh chat gi"],
+    "answer": "Hình vuông có 4 cạnh bằng nhau, 4 góc vuông; hai đường chéo bằng nhau, vuông góc và cắt nhau tại trung điểm.",
+    "steps": [
+      "Kế thừa tính chất hình chữ nhật: đường chéo bằng nhau.",
+      "Kế thừa tính chất hình thoi: đường chéo vuông góc, phân giác góc.",
+      "Vì thế hình vuông có đủ các tính chất trên."
+    ],
+    "note": "Đây là tứ giác đặc biệt nhất trong chương III.",
+    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
+    "related_topics": ["Hinh vuong", "Hinh chu nhat", "Hinh thoi"],
     "link": "#quiz"
   }
 ]
