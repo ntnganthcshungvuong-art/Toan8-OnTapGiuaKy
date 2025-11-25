@@ -1,6 +1,6 @@
-/* ===== APP v5: Quiz chẩn đoán + liệt kê câu sai + hỏi chatbot ngay ===== */
+/* ===== APP v6: dùng q.topic + chẩn đoán câu sai + hỏi trợ lý ===== */
 
-console.log("✅ app.js v5 loaded");
+console.log("✅ app.js v6 loaded");
 
 let allQuestions = [];
 let quizQuestions = [];
@@ -20,23 +20,13 @@ function switchTab(name){
   }
 }
 
-/* ===== Click handler tổng ===== */
+/* ===== Click handler ===== */
 document.addEventListener("click",(e)=>{
   const tabBtn = e.target.closest(".tab-btn");
-  if(tabBtn){
-    switchTab(tabBtn.dataset.tab);
-    return;
-  }
+  if(tabBtn){ switchTab(tabBtn.dataset.tab); return; }
 
-  if(e.target.id==="go-quiz"){
-    switchTab("quiz");
-    if(allQuestions.length>0) newQuiz10();
-    return;
-  }
-  if(e.target.id==="go-theory"){
-    switchTab("theory");
-    return;
-  }
+  if(e.target.id==="go-quiz"){ switchTab("quiz"); if(allQuestions.length>0) newQuiz10(); return; }
+  if(e.target.id==="go-theory"){ switchTab("theory"); return; }
 
   if(e.target.id==="quiz-new"){ newQuiz10(); return; }
   if(e.target.id==="quiz-submit"){ gradeQuiz(); return; }
@@ -44,15 +34,8 @@ document.addEventListener("click",(e)=>{
   const theoryBtn = e.target.closest(".theory-btn");
   if(theoryBtn){ showTheory(theoryBtn.dataset.chapter); return; }
 
-  // mở/đóng chatbot nổi
-  if(e.target.id==="chat-close"){
-    hideChatFloat();
-    return;
-  }
-  if(e.target.id==="chat-open-btn" || e.target.id==="open-chat"){
-    showChatFloat();
-    return;
-  }
+  if(e.target.id==="chat-close"){ hideChatFloat(); return; }
+  if(e.target.id==="chat-open-btn" || e.target.id==="open-chat"){ showChatFloat(); return; }
 });
 
 /* ===== Chat float toggle ===== */
@@ -121,9 +104,9 @@ function renderQuiz(){
     card.className="question-card";
     card.dataset.index=i;
 
-    const theo = detectTheory(q.question);
-    card.dataset.part = theo.part; // Đại số / Hình học
-    card.dataset.theoryLabel = theo.label;
+    const label = q.topic || detectTheory(q.question).label;
+    card.dataset.theoryLabel = label;
+    card.dataset.part = label.includes("Chương III") ? "Hình học" : "Đại số";
 
     const title = document.createElement("div");
     title.className="question-title";
@@ -174,7 +157,7 @@ function updateProgress(){
     (total===0?0:Math.round(done*100/total))+"%";
 }
 
-/* ===== Grade (gợi ý cụ thể + liệt kê câu sai) ===== */
+/* ===== Grade ===== */
 function gradeQuiz(){
   if(quizSubmitted) return;
   quizSubmitted=true;
@@ -182,7 +165,7 @@ function gradeQuiz(){
   let right=0;
   let stats = { "Đại số":{r:0,t:0}, "Hình học":{r:0,t:0} };
   let weakTheory = new Map();
-  let wrongDetails = []; // lưu chi tiết câu sai
+  let wrongDetails = [];
 
   quizQuestions.forEach((q,i)=>{
     const card = document.querySelector(`.question-card[data-index="${i}"]`);
@@ -218,15 +201,12 @@ function gradeQuiz(){
     }
   });
 
-  // xếp hạng phần sai nhiều nhất
   const weakList = [...weakTheory.entries()]
     .sort((a,b)=>b[1]-a[1])
     .slice(0,4)
-    .map(([label,count])=>{
-      return `• <b>${label}</b> (sai ${count} câu)`;
-    }).join("<br>");
+    .map(([label,count])=>`• <b>${label}</b> (sai ${count} câu)`)
+    .join("<br>");
 
-  // render danh sách câu sai
   const wrongHTML = wrongDetails.length === 0
     ? `<p>🎉 Bạn làm đúng hết nên không có câu sai.</p>`
     : wrongDetails.map(w=>{
@@ -235,7 +215,6 @@ function gradeQuiz(){
           : w.options[w.userPick] ?? "(không rõ)";
         const correctAns = w.options[w.correctPick] ?? "(không rõ)";
 
-        // prompt gợi ý để hỏi chatbot
         const prompt = encodeURIComponent(
           `Mình sai câu: ${w.question}. Đáp án đúng là gì và giải thích giúp mình theo ${w.theory}?`
         );
@@ -252,7 +231,7 @@ function gradeQuiz(){
             </div>
             <div style="margin-top:6px;">
               <button class="big" onclick="sendToChatbot('${prompt}')">
-                🤖 Hỏi chatbot câu này
+                🤖 Hỏi trợ lý câu này
               </button>
             </div>
           </div>
@@ -301,8 +280,7 @@ function showTheory(ch){
         <li>Bài 4: Nhân đơn thức với đa thức.</li>
         <li>Bài 5: Nhân hai đa thức.</li>
         <li>Bài 6: Chia đa thức cho đơn thức.</li>
-      </ul>
-    `,
+      </ul>`,
     "2": `
       <h3>Chương II. Hằng đẳng thức đáng nhớ</h3>
       <ul>
@@ -311,8 +289,7 @@ function showTheory(ch){
         <li>Bài 9: Lập phương một tổng, một hiệu.</li>
         <li>Bài 10: Tổng / hiệu hai lập phương.</li>
         <li>Bài 11: Phân tích đa thức thành nhân tử.</li>
-      </ul>
-    `,
+      </ul>`,
     "3": `
       <h3>Chương III. Tứ giác</h3>
       <ul>
@@ -321,135 +298,48 @@ function showTheory(ch){
         <li>Bài 14: Hình chữ nhật.</li>
         <li>Bài 15: Hình thoi.</li>
         <li>Bài 16: Hình vuông.</li>
-      </ul>
-    `,
+      </ul>`,
     "4": `
       <h3>Chương IV. Định lí Thales (đang học)</h3>
       <ul>
         <li>Tỉ số đoạn thẳng.</li>
         <li>Đường thẳng song song trong tam giác.</li>
         <li>Định lí Thales và hệ quả.</li>
-      </ul>
-    `
+      </ul>`
   };
 
   box.innerHTML = data[ch] || "<p>Chưa có nội dung.</p>";
-
   if(window.MathJax?.typesetPromise){
     MathJax.typesetPromise([box]);
   }
 }
 
-/* ===========================================
-   ĐOÁN BÀI HỌC CỤ THỂ (Chương/Bài)
-   =========================================== */
+/* fallback đoán topic nếu thiếu */
 function detectTheory(text){
-  const t = (text||"").toLowerCase();
-
-  // --- Chương III: Hình học ---
-  if(hasAny(t, ["hình thang", "thang cân"])) {
-    return mk("Hình học", "Chương III – Bài 12: Hình thang, hình thang cân");
-  }
-  if(hasAny(t, ["bình hành"])) {
-    return mk("Hình học", "Chương III – Bài 13: Hình bình hành");
-  }
-  if(hasAny(t, ["chữ nhật"])) {
-    return mk("Hình học", "Chương III – Bài 14: Hình chữ nhật");
-  }
-  if(hasAny(t, ["hình thoi"])) {
-    return mk("Hình học", "Chương III – Bài 15: Hình thoi");
-  }
-  if(hasAny(t, ["hình vuông"])) {
-    return mk("Hình học", "Chương III – Bài 16: Hình vuông");
-  }
-
-  // --- Chương II: Hằng đẳng thức ---
-  if(hasAny(t, ["bình phương một tổng", "(a+b)^2", "a^2+2ab+b^2"])) {
-    return mk("Đại số", "Chương II – Bài 7: Bình phương một tổng");
-  }
-  if(hasAny(t, ["bình phương một hiệu", "(a-b)^2", "a^2-2ab+b^2"])) {
-    return mk("Đại số", "Chương II – Bài 7: Bình phương một hiệu");
-  }
-  if(hasAny(t, ["hiệu hai bình phương", "a^2-b^2"])) {
-    return mk("Đại số", "Chương II – Bài 8: Hiệu hai bình phương");
-  }
-  if(hasAny(t, ["lập phương một tổng", "(a+b)^3"])) {
-    return mk("Đại số", "Chương II – Bài 9: Lập phương một tổng");
-  }
-  if(hasAny(t, ["lập phương một hiệu", "(a-b)^3"])) {
-    return mk("Đại số", "Chương II – Bài 9: Lập phương một hiệu");
-  }
-  if(hasAny(t, ["tổng hai lập phương", "a^3+b^3"])) {
-    return mk("Đại số", "Chương II – Bài 10: Tổng hai lập phương");
-  }
-  if(hasAny(t, ["hiệu hai lập phương", "a^3-b^3"])) {
-    return mk("Đại số", "Chương II – Bài 10: Hiệu hai lập phương");
-  }
-  if(hasAny(t, ["phân tích nhân tử", "đưa về nhân tử"])) {
-    return mk("Đại số", "Chương II – Bài 11: Phân tích đa thức thành nhân tử");
-  }
-
-  // --- Chương I: Đơn thức / Đa thức ---
-  if(hasAny(t, ["đơn thức"])) {
-    return mk("Đại số", "Chương I – Bài 1: Đơn thức");
-  }
-  if(hasAny(t, ["đa thức", "bậc của đa thức"])) {
-    return mk("Đại số", "Chương I – Bài 2: Đa thức & bậc");
-  }
-  if(hasAny(t, ["cộng đa thức", "trừ đa thức", "thu gọn"])) {
-    return mk("Đại số", "Chương I – Bài 3: Cộng – trừ đa thức");
-  }
-  if(hasAny(t, ["nhân đơn thức với đa thức"])) {
-    return mk("Đại số", "Chương I – Bài 4: Nhân đơn thức với đa thức");
-  }
-  if(hasAny(t, ["nhân hai đa thức", "tích các đa thức"])) {
-    return mk("Đại số", "Chương I – Bài 5: Nhân hai đa thức");
-  }
-  if(hasAny(t, ["chia đa thức", "đơn thức chia"])) {
-    return mk("Đại số", "Chương I – Bài 6: Chia đa thức cho đơn thức");
-  }
-
-  // fallback
-  if(isGeometry(t)) return mk("Hình học", "Chương III – Tứ giác (tổng quát)");
-  return mk("Đại số", "Chương I–II (tổng quát)");
+  const t=(text||"").toLowerCase();
+  if(t.includes("hình")) return {label:"Chương III – Tứ giác (tổng quát)"};
+  return {label:"Chương I–II (tổng quát)"};
 }
 
-function mk(part, label){
-  return { part, label };
-}
-function hasAny(text, arr){
-  return arr.some(k=>text.includes(k));
-}
-
-/* ===== Utils ===== */
+/* Utils */
 function shuffle(arr){
   for(let i=arr.length-1;i>0;i--){
     const j=Math.floor(Math.random()*(i+1));
     [arr[i],arr[j]]=[arr[j],arr[i]];
   }
 }
-function isGeometry(text){
-  return (
-    text.includes("tam giác")||text.includes("tứ giác")||text.includes("hình thang")||
-    text.includes("hình bình hành")||text.includes("hình chữ nhật")||
-    text.includes("hình thoi")||text.includes("hình vuông")||
-    text.includes("góc")||text.includes("đường chéo")||text.includes("song song")
-  );
-}
 
-/* ===== Gửi câu hỏi sang chatbot nổi ===== */
+/* Gửi câu hỏi sang trợ lý */
 function sendToChatbot(encodedPrompt){
   const input = document.getElementById("user-input");
   const sendBtn = document.getElementById("send-btn");
-
   if(!input || !sendBtn) return;
 
   input.value = decodeURIComponent(encodedPrompt);
-  showChatFloat();      // mở chatbot nếu đang thu nhỏ
-  sendBtn.click();      // giả lập bấm gửi
+  showChatFloat();
+  sendBtn.click();
 }
 
 /* auto load */
 loadQuestions();
-/* mặc định chatbot mở */
 showChatFloat();
