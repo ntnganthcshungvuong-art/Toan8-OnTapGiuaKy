@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</title>
-  <link rel="stylesheet" href="style.css?v=20251030" />
+  <link rel="stylesheet" href="style.css?v=20251125" />
 
-  <!-- MathJax (không dùng polyfill) -->
+  <!-- MathJax -->
   <script>
     window.MathJax = {
       tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
@@ -15,36 +15,34 @@
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
   <div class="container">
     <h1>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</h1>
 
-    <!-- Khu vực render câu hỏi -->
+    <!-- ====== Thanh tiến độ ====== -->
+    <div class="progress-wrap">
+      <div class="progress-text">
+        Đã làm: <b id="done-count">0</b>/<b id="total-count">0</b> câu
+      </div>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- ====== Khu vực render câu hỏi ====== -->
     <div id="quiz"></div>
 
-    <div class="actions">
-      <button id="submit">Nộp bài</button>
+    <!-- ====== Thanh nút sticky ====== -->
+    <div class="actions sticky-actions">
+      <button id="reset">Làm lại</button>
+      <button id="submit" class="primary">Nộp bài</button>
     </div>
-    <div id="result" class="result"></div>
-        <!-- ===== CHATBOT HỖ TRỢ ÔN TẬP ===== -->
-    <div id="chatbox">
-      <h2>🤖 Chatbot Toán 8</h2>
-      <div id="chat-log"></div>
 
-      <div class="chat-input">
-        <input id="user-input" placeholder="Nhập câu hỏi Toán 8 ở đây..." />
-        <button id="send-btn">Gửi</button>
-      </div>
-      <div class="chat-hint">
-        Gợi ý: hỏi theo chủ đề như “Đa thức”, “Đơn thức”, “Tứ giác: Hình thang,hình bình hành, Hình chữ nhật, Hình thoi, Hình vuông”...
-      </div>
-    </div>
-    <!-- ===== HẾT CHATBOT ===== -->
-
+    <!-- ====== Kết quả ====== -->
+    <div id="result" class="result" style="display:none;"></div>
   </div>
 
-  <script src="quiz.js?v=20251030"></script>
-  <script src="chatbot.js?v=20251030"></script>
-
+  <script src="quiz.js?v=20251125"></script>
 </body>
 </html>
