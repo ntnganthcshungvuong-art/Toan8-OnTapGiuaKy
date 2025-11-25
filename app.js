@@ -1,6 +1,6 @@
-/* ===== APP v4: Quiz gợi ý lý thuyết CỤ THỂ hơn ===== */
+/* ===== APP v5: Quiz chẩn đoán + liệt kê câu sai + hỏi chatbot ngay ===== */
 
-console.log("✅ app.js v4 loaded");
+console.log("✅ app.js v5 loaded");
 
 let allQuestions = [];
 let quizQuestions = [];
@@ -174,16 +174,15 @@ function updateProgress(){
     (total===0?0:Math.round(done*100/total))+"%";
 }
 
-/* ===== Grade (gợi ý cụ thể) ===== */
+/* ===== Grade (gợi ý cụ thể + liệt kê câu sai) ===== */
 function gradeQuiz(){
   if(quizSubmitted) return;
   quizSubmitted=true;
 
   let right=0;
   let stats = { "Đại số":{r:0,t:0}, "Hình học":{r:0,t:0} };
-
-  // đếm theo bài cụ thể
   let weakTheory = new Map();
+  let wrongDetails = []; // lưu chi tiết câu sai
 
   quizQuestions.forEach((q,i)=>{
     const card = document.querySelector(`.question-card[data-index="${i}"]`);
@@ -195,7 +194,10 @@ function gradeQuiz(){
     stats[part].t++;
 
     const tick = document.querySelector(`input[name="q${i}"]:checked`);
-    const ok = tick && (+tick.value===Number(q.answer));
+    const userPickIndex = tick ? Number(tick.value) : null;
+    const correctIndex = Number(q.answer);
+
+    const ok = (userPickIndex !== null) && (userPickIndex === correctIndex);
 
     if(ok){
       right++;
@@ -204,6 +206,15 @@ function gradeQuiz(){
     }else{
       card.classList.add("wrong");
       weakTheory.set(label, (weakTheory.get(label)||0)+1);
+
+      wrongDetails.push({
+        index: i+1,
+        question: q.question || "",
+        userPick: userPickIndex,
+        correctPick: correctIndex,
+        options: q.options || [],
+        theory: label
+      });
     }
   });
 
@@ -214,6 +225,39 @@ function gradeQuiz(){
     .map(([label,count])=>{
       return `• <b>${label}</b> (sai ${count} câu)`;
     }).join("<br>");
+
+  // render danh sách câu sai
+  const wrongHTML = wrongDetails.length === 0
+    ? `<p>🎉 Bạn làm đúng hết nên không có câu sai.</p>`
+    : wrongDetails.map(w=>{
+        const userAns = (w.userPick===null)
+          ? "<i>Chưa chọn</i>"
+          : w.options[w.userPick] ?? "(không rõ)";
+        const correctAns = w.options[w.correctPick] ?? "(không rõ)";
+
+        // prompt gợi ý để hỏi chatbot
+        const prompt = encodeURIComponent(
+          `Mình sai câu: ${w.question}. Đáp án đúng là gì và giải thích giúp mình theo ${w.theory}?`
+        );
+
+        return `
+          <div class="question-card wrong" style="margin-top:8px;">
+            <div class="question-title">
+              <b>Câu ${w.index} (Sai)</b>: ${w.question}
+            </div>
+            <div style="font-size:14px; margin-top:4px;">
+              👉 Bạn chọn: <b>${userAns}</b><br>
+              ✅ Đáp án đúng: <b>${correctAns}</b><br>
+              📌 Lý thuyết liên quan: <b>${w.theory}</b>
+            </div>
+            <div style="margin-top:6px;">
+              <button class="big" onclick="sendToChatbot('${prompt}')">
+                🤖 Hỏi chatbot câu này
+              </button>
+            </div>
+          </div>
+        `;
+      }).join("");
 
   const resBox = document.getElementById("quiz-result");
   if(!resBox) return;
@@ -236,16 +280,14 @@ function gradeQuiz(){
     <h3>Gợi ý ôn lý thuyết cụ thể</h3>
     <div>${weakList || "Bạn làm rất tốt, chưa thấy phần yếu rõ ràng!"}</div>
 
-    <div style="margin-top:10px; padding:8px; background:#f8fafc; border-radius:8px;">
-      👉 Hãy bấm sang tab <b>Lý thuyết</b> để xem đúng các bài trên, 
-      hoặc hỏi chatbot (góc phải dưới) để được giải thích chi tiết.
-    </div>
+    <h3 style="margin-top:12px;">Các câu bạn làm sai</h3>
+    ${wrongHTML}
   `;
 
   resBox.scrollIntoView({behavior:"smooth"});
 }
 
-/* ===== Theory placeholder ===== */
+/* ===== Theory panel ===== */
 function showTheory(ch){
   const box = document.getElementById("theory-content");
   if(!box) return;
@@ -299,12 +341,12 @@ function showTheory(ch){
 }
 
 /* ===========================================
-   PHẦN QUAN TRỌNG: ĐOÁN BÀI HỌC CỤ THỂ
+   ĐOÁN BÀI HỌC CỤ THỂ (Chương/Bài)
    =========================================== */
 function detectTheory(text){
   const t = (text||"").toLowerCase();
 
-  // --- Chương III: Hình học (tứ giác) ---
+  // --- Chương III: Hình học ---
   if(hasAny(t, ["hình thang", "thang cân"])) {
     return mk("Hình học", "Chương III – Bài 12: Hình thang, hình thang cân");
   }
@@ -393,6 +435,18 @@ function isGeometry(text){
     text.includes("hình thoi")||text.includes("hình vuông")||
     text.includes("góc")||text.includes("đường chéo")||text.includes("song song")
   );
+}
+
+/* ===== Gửi câu hỏi sang chatbot nổi ===== */
+function sendToChatbot(encodedPrompt){
+  const input = document.getElementById("user-input");
+  const sendBtn = document.getElementById("send-btn");
+
+  if(!input || !sendBtn) return;
+
+  input.value = decodeURIComponent(encodedPrompt);
+  showChatFloat();      // mở chatbot nếu đang thu nhỏ
+  sendBtn.click();      // giả lập bấm gửi
 }
 
 /* auto load */
