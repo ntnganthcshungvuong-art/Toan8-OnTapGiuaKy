@@ -1,4 +1,4 @@
-/* ====== CHATBOT TOÁN 8 - BẢN CUỐI (CHỐNG NHẦM + TỰ BÁO LỖI DATA) ====== */
+/* ====== CHATBOT TOÁN 8 - BẢN CUỐI (RULE PRIORITY + FUZZY MATCH) ====== */
 
 let knowledgeBase = [];
 let dataLoadedOk = false;
@@ -26,27 +26,106 @@ loadChatbotData();
 /* 2) CHUẨN HÓA CÂU HỎI */
 function normalizeText(text) {
   return text.toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")  // bỏ dấu
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-/* 3) STOPWORDS: từ rất chung -> KHÔNG tính điểm */
+function tokenize(text){
+  return normalizeText(text).split(" ").filter(Boolean);
+}
+
+/* ===== STOPWORDS: từ chung không tính điểm ===== */
 const STOP_WORDS = [
   "la","gi","the","nao","nhu","mot","hai","ba","bon","nam",
   "co","va","cua","cho","ve","trong","bang","tai","khi","em","ban",
   "khai","niem","dinh","nghia","cong","thuc","tinh","chat","dau","hieu"
 ];
 
-function tokenize(text){
-  return normalizeText(text).split(" ").filter(Boolean);
-}
 function filterImportantTokens(tokens){
   return tokens.filter(t => !STOP_WORDS.includes(t));
 }
 
-/* 4) TẠO TẬP TỪ KHÓA CỦA 1 MỤC */
+/* 3) LUẬT ƯU TIÊN (HẰNG ĐẲNG THỨC, KIẾN THỨC TRỌNG TÂM) */
+function quickRules(q){
+  const has = (w) => q.includes(w);
+
+  // --- Chương II: Hằng đẳng thức đáng nhớ ---
+  if (has("binh phuong") && has("tong")) {
+    return {
+      answer: "Công thức: \\((a+b)^2 = a^2 + 2ab + b^2\\).",
+      steps: [
+        "Nhớ dạng: bình phương tổng = bình phương số thứ nhất + 2 tích + bình phương số thứ hai.",
+        "Áp dụng: \\((a+b)^2=a^2+2ab+b^2\\)."
+      ],
+      note: "Lỗi hay gặp: quên hạng tử \\(2ab\\).",
+      related_topics: ["Bình phương của một hiệu", "Hiệu hai bình phương"],
+      link: "#quiz",
+      topic: "Chuong II - Hang dang thuc"
+    };
+  }
+
+  if (has("binh phuong") && has("hieu")) {
+    return {
+      answer: "Công thức: \\((a-b)^2 = a^2 - 2ab + b^2\\).",
+      steps: [
+        "Nhớ dạng: bình phương hiệu = bình phương số thứ nhất - 2 tích + bình phương số thứ hai.",
+        "Chú ý dấu của \\(-2ab\\)."
+      ],
+      note: "Sai hay gặp: viết nhầm thành \\(+2ab\\).",
+      related_topics: ["Bình phương của một tổng", "Hiệu hai bình phương"],
+      link: "#quiz",
+      topic: "Chuong II - Hang dang thuc"
+    };
+  }
+
+  if (has("hieu") && has("hai") && has("binh phuong")) {
+    return {
+      answer: "Công thức: \\(a^2 - b^2 = (a-b)(a+b)\\).",
+      steps: [
+        "Nhận dạng biểu thức có dạng \\(a^2-b^2\\).",
+        "Tách thành tích \\((a-b)(a+b)\\)."
+      ],
+      note: "Chỉ dùng khi cả hai vế đều là bình phương.",
+      related_topics: ["Bình phương của một tổng", "Phân tích nhân tử"],
+      link: "#quiz",
+      topic: "Chuong II - Hang dang thuc"
+    };
+  }
+
+  if (has("tong") && has("hai") && has("lap phuong")) {
+    return {
+      answer: "Công thức: \\(a^3+b^3=(a+b)(a^2-ab+b^2)\\).",
+      steps: [
+        "Nhận dạng \\(a^3+b^3\\).",
+        "Viết thành \\((a+b)(a^2-ab+b^2)\\)."
+      ],
+      note: "Trong ngoặc thứ hai là ‘trừ rồi cộng’.",
+      related_topics: ["Hiệu hai lập phương", "Phân tích nhân tử"],
+      link: "#quiz",
+      topic: "Chuong II - Hang dang thuc"
+    };
+  }
+
+  if (has("hieu") && has("hai") && has("lap phuong")) {
+    return {
+      answer: "Công thức: \\(a^3-b^3=(a-b)(a^2+ab+b^2)\\).",
+      steps: [
+        "Nhận dạng \\(a^3-b^3\\).",
+        "Viết thành \\((a-b)(a^2+ab+b^2)\\)."
+      ],
+      note: "Ngoặc thứ hai là ‘cộng rồi cộng’.",
+      related_topics: ["Tổng hai lập phương", "Phân tích nhân tử"],
+      link: "#quiz",
+      topic: "Chuong II - Hang dang thuc"
+    };
+  }
+
+  return null;
+}
+
+/* 4) TẠO TẬP TỪ CỦA 1 MỤC */
 function buildItemTokens(item){
   let text = (item.question || "") + " ";
   text += (item.keywords || []).join(" ") + " ";
@@ -54,21 +133,19 @@ function buildItemTokens(item){
   return filterImportantTokens(tokenize(text));
 }
 
-/* 5) CHẤM ĐIỂM KHỚP (ƯU TIÊN GIAO NHAU TỪ QUAN TRỌNG) */
+/* 5) CHẤM ĐIỂM FUZZY MATCH */
 function scoreMatch(userQ, item){
   const userTokens = filterImportantTokens(tokenize(userQ));
   const itemTokens = buildItemTokens(item);
 
   let score = 0;
 
-  // 5.1) điểm theo số từ quan trọng trùng nhau
   let overlap = 0;
   userTokens.forEach(t => {
     if (itemTokens.includes(t)) overlap += 1;
   });
-  score += overlap * 3;  // mỗi từ trùng = +3 điểm
+  score += overlap * 3;
 
-  // 5.2) cộng thêm nếu khớp đúng cả cụm keyword/synonym
   (item.keywords || []).forEach(kw => {
     const kwn = normalizeText(kw);
     if (kwn && kwn.includes(" ") && userQ.includes(kwn)) score += 4;
@@ -79,17 +156,20 @@ function scoreMatch(userQ, item){
     if (synn && synn.includes(" ") && userQ.includes(synn)) score += 3;
   });
 
-  // 5.3) khớp mạnh với câu mẫu
   if (item.question && userQ.includes(item.question)) score += 6;
 
   return score;
 }
 
-/* 6) TÌM CÂU TRẢ LỜI */
+/* 6) TÌM TRẢ LỜI (ƯU TIÊN RULE → SAU ĐÓ FUZZY) */
 function findBestAnswer(userInput){
   const q = normalizeText(userInput);
 
-  // nếu data chưa tải được -> báo thẳng
+  // 6.1 ưu tiên luật cho kiến thức trọng tâm
+  const ruleHit = quickRules(q);
+  if (ruleHit) return ruleHit;
+
+  // 6.2 nếu data chưa tải được
   if (!dataLoadedOk || knowledgeBase.length === 0) {
     return {
       answer: "⚠️ Mình chưa tải được dữ liệu kiến thức (chatbot_data.json). Bạn kiểm tra lại file JSON giúp mình nhé.",
@@ -101,6 +181,7 @@ function findBestAnswer(userInput){
     };
   }
 
+  // 6.3 fuzzy match
   let best = null;
   let bestScore = 0;
 
