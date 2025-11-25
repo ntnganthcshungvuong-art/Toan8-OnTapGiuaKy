@@ -371,3 +371,103 @@ body{
   .chat-float{ width: 94vw; right: 3vw; bottom: 3vw; }
   .chat-log{ height:200px; }
 }
+/* ===== OVERRIDE MÀU SẮC ĐIỂM NHẤN (dán cuối style.css) ===== */
+
+:root{
+  --blue:#2563eb;          /* xanh đậm hơn */
+  --blue-soft:#e0ecff;     /* nền xanh nhạt sư phạm */
+  --blue-verysoft:#f3f7ff; /* nền cực nhạt */
+  --accent:#06b6d4;        /* điểm nhấn cyan */
+}
+
+/* tiêu đề + nền trang sang hơn */
+body{
+  background:
+    radial-gradient(1100px 480px at 50% -60%, #dbeafe 0, transparent 60%),
+    linear-gradient(180deg, #f9fbff, #f4f7fb);
+}
+
+/* tabs nổi bật hơn, rõ vai trò */
+.tabs{
+  border:1px solid #e6eefc;
+}
+.tab-btn{
+  color:#334155;
+}
+.tab-btn.active{
+  background:linear-gradient(90deg, var(--blue), #60a5fa);
+}
+.tab-btn:not(.active):hover{
+  background:var(--blue-verysoft);
+}
+
+/* card có viền xanh nhạt nhẹ */
+.card{
+  border:1px solid #e6eefc;
+}
+
+/* card chatbot trung tâm có nền nhấn */
+.chatbot-card{
+  background: linear-gradient(180deg, #ffffff, var(--blue-verysoft));
+  border: 1.5px solid #dbeafe;
+}
+
+/* mini card bên phải rõ hơn */
+.mini-card{
+  background:#fff;
+}
+.mini-card h3{
+  color:#0f172a;
+}
+.mini-card p{
+  color:#475569;
+}
+
+/* nút chính nhìn “app học tập” */
+.primary{
+  background: linear-gradient(90deg, var(--blue), #3b82f6);
+  box-shadow:0 10px 20px rgba(37,99,235,.28);
+}
+.primary:hover{
+  filter:brightness(1.03);
+}
+
+/* nút thường cũng đẹp hơn */
+.big{
+  background: var(--blue-verysoft);
+  border:1px solid #dbeafe;
+}
+.big:hover{
+  background: var(--blue-soft);
+}
+
+/* quiz: thanh tiến độ rõ hơn */
+.progress-bar{
+  background:#e2e8f0;
+}
+#progress-fill{
+  background: linear-gradient(90deg, var(--blue), var(--accent));
+}
+
+/* theory buttons nhìn “sách giáo khoa số” hơn */
+.theory-btn{
+  border:1.5px solid #cfe0ff;
+  background: linear-gradient(180deg, #f8fbff, #eef5ff);
+}
+.theory-title{
+  color:#0f172a;
+}
+.theory-sub{
+  color:#475569;
+}
+
+/* chatbot floating header nổi hơn */
+.chat-float-header{
+  background: linear-gradient(90deg, var(--blue), var(--accent));
+}
+
+/* bubble bot mềm hơn */
+.msg.bot{
+  background:#ffffff;
+  border:1px solid #e2e8f0;
+}
