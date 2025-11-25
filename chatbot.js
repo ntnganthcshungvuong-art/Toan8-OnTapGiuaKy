@@ -1,29 +1,21 @@
-/* ====== CHATBOT TOÁN 8 - BẢN CUỐI (RULE PRIORITY + FUZZY MATCH) ====== */
+/* ===== CHATBOT TOÁN 8 - FULL ===== */
 
 let knowledgeBase = [];
-let dataLoadedOk = false;
 
-/* 1) TẢI DỮ LIỆU CHATBOT */
+/* Load data */
 async function loadChatbotData() {
   try {
     const res = await fetch(`chatbot_data.json?ts=${Date.now()}`);
-    if (!res.ok) throw new Error("HTTP " + res.status);
-
-    const json = await res.json();
-    if (!Array.isArray(json)) throw new Error("JSON không phải mảng []");
-
-    knowledgeBase = json;
-    dataLoadedOk = true;
-    console.log("Chatbot data loaded:", knowledgeBase.length, "items");
+    knowledgeBase = await res.json();
+    console.log("Chatbot loaded:", knowledgeBase.length);
   } catch (e) {
     console.error("Không tải được chatbot_data.json", e);
     knowledgeBase = [];
-    dataLoadedOk = false;
   }
 }
 loadChatbotData();
 
-/* 2) CHUẨN HÓA CÂU HỎI */
+/* Normalize */
 function normalizeText(text) {
   return text.toLowerCase()
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
@@ -32,100 +24,21 @@ function normalizeText(text) {
     .trim();
 }
 
-function tokenize(text){
-  return normalizeText(text).split(" ").filter(Boolean);
-}
-
-/* ===== STOPWORDS: từ chung không tính điểm ===== */
+/* Stop words */
 const STOP_WORDS = [
   "la","gi","the","nao","nhu","mot","hai","ba","bon","nam",
   "co","va","cua","cho","ve","trong","bang","tai","khi","em","ban",
   "khai","niem","dinh","nghia","cong","thuc","tinh","chat","dau","hieu"
 ];
 
+function tokenize(text){
+  return normalizeText(text).split(" ").filter(Boolean);
+}
 function filterImportantTokens(tokens){
   return tokens.filter(t => !STOP_WORDS.includes(t));
 }
 
-/* 3) LUẬT ƯU TIÊN (HẰNG ĐẲNG THỨC, KIẾN THỨC TRỌNG TÂM) */
-function quickRules(q){
-  const has = (w) => q.includes(w);
-
-  // --- Chương II: Hằng đẳng thức đáng nhớ ---
-  if (has("binh phuong") && has("tong")) {
-    return {
-      answer: "Công thức: \\((a+b)^2 = a^2 + 2ab + b^2\\).",
-      steps: [
-        "Nhớ dạng: bình phương tổng = bình phương số thứ nhất + 2 tích + bình phương số thứ hai.",
-        "Áp dụng: \\((a+b)^2=a^2+2ab+b^2\\)."
-      ],
-      note: "Lỗi hay gặp: quên hạng tử \\(2ab\\).",
-      related_topics: ["Bình phương của một hiệu", "Hiệu hai bình phương"],
-      link: "#quiz",
-      topic: "Chuong II - Hang dang thuc"
-    };
-  }
-
-  if (has("binh phuong") && has("hieu")) {
-    return {
-      answer: "Công thức: \\((a-b)^2 = a^2 - 2ab + b^2\\).",
-      steps: [
-        "Nhớ dạng: bình phương hiệu = bình phương số thứ nhất - 2 tích + bình phương số thứ hai.",
-        "Chú ý dấu của \\(-2ab\\)."
-      ],
-      note: "Sai hay gặp: viết nhầm thành \\(+2ab\\).",
-      related_topics: ["Bình phương của một tổng", "Hiệu hai bình phương"],
-      link: "#quiz",
-      topic: "Chuong II - Hang dang thuc"
-    };
-  }
-
-  if (has("hieu") && has("hai") && has("binh phuong")) {
-    return {
-      answer: "Công thức: \\(a^2 - b^2 = (a-b)(a+b)\\).",
-      steps: [
-        "Nhận dạng biểu thức có dạng \\(a^2-b^2\\).",
-        "Tách thành tích \\((a-b)(a+b)\\)."
-      ],
-      note: "Chỉ dùng khi cả hai vế đều là bình phương.",
-      related_topics: ["Bình phương của một tổng", "Phân tích nhân tử"],
-      link: "#quiz",
-      topic: "Chuong II - Hang dang thuc"
-    };
-  }
-
-  if (has("tong") && has("hai") && has("lap phuong")) {
-    return {
-      answer: "Công thức: \\(a^3+b^3=(a+b)(a^2-ab+b^2)\\).",
-      steps: [
-        "Nhận dạng \\(a^3+b^3\\).",
-        "Viết thành \\((a+b)(a^2-ab+b^2)\\)."
-      ],
-      note: "Trong ngoặc thứ hai là ‘trừ rồi cộng’.",
-      related_topics: ["Hiệu hai lập phương", "Phân tích nhân tử"],
-      link: "#quiz",
-      topic: "Chuong II - Hang dang thuc"
-    };
-  }
-
-  if (has("hieu") && has("hai") && has("lap phuong")) {
-    return {
-      answer: "Công thức: \\(a^3-b^3=(a-b)(a^2+ab+b^2)\\).",
-      steps: [
-        "Nhận dạng \\(a^3-b^3\\).",
-        "Viết thành \\((a-b)(a^2+ab+b^2)\\)."
-      ],
-      note: "Ngoặc thứ hai là ‘cộng rồi cộng’.",
-      related_topics: ["Tổng hai lập phương", "Phân tích nhân tử"],
-      link: "#quiz",
-      topic: "Chuong II - Hang dang thuc"
-    };
-  }
-
-  return null;
-}
-
-/* 4) TẠO TẬP TỪ CỦA 1 MỤC */
+/* Build item tokens */
 function buildItemTokens(item){
   let text = (item.question || "") + " ";
   text += (item.keywords || []).join(" ") + " ";
@@ -133,14 +46,14 @@ function buildItemTokens(item){
   return filterImportantTokens(tokenize(text));
 }
 
-/* 5) CHẤM ĐIỂM FUZZY MATCH */
+/* Score match */
 function scoreMatch(userQ, item){
   const userTokens = filterImportantTokens(tokenize(userQ));
   const itemTokens = buildItemTokens(item);
 
   let score = 0;
-
   let overlap = 0;
+
   userTokens.forEach(t => {
     if (itemTokens.includes(t)) overlap += 1;
   });
@@ -161,18 +74,13 @@ function scoreMatch(userQ, item){
   return score;
 }
 
-/* 6) TÌM TRẢ LỜI (ƯU TIÊN RULE → SAU ĐÓ FUZZY) */
+/* Find best answer */
 function findBestAnswer(userInput){
   const q = normalizeText(userInput);
 
-  // 6.1 ưu tiên luật cho kiến thức trọng tâm
-  const ruleHit = quickRules(q);
-  if (ruleHit) return ruleHit;
-
-  // 6.2 nếu data chưa tải được
-  if (!dataLoadedOk || knowledgeBase.length === 0) {
+  if (!knowledgeBase || knowledgeBase.length === 0) {
     return {
-      answer: "⚠️ Mình chưa tải được dữ liệu kiến thức (chatbot_data.json). Bạn kiểm tra lại file JSON giúp mình nhé.",
+      answer: "⚠️ Mình chưa tải được dữ liệu kiến thức. Bạn kiểm tra chatbot_data.json nhé.",
       steps: [],
       note: null,
       related_topics: [],
@@ -181,7 +89,6 @@ function findBestAnswer(userInput){
     };
   }
 
-  // 6.3 fuzzy match
   let best = null;
   let bestScore = 0;
 
@@ -207,7 +114,7 @@ function findBestAnswer(userInput){
   return best;
 }
 
-/* 7) HIỂN THỊ TIN NHẮN */
+/* UI add msg */
 function addMessage(text, who="bot"){
   const log = document.getElementById("chat-log");
   const div = document.createElement("div");
@@ -221,29 +128,14 @@ function addMessage(text, who="bot"){
   }
 }
 
-/* 8) LƯU LỊCH SỬ HỎI */
-function saveHistory(userQ, topic){
-  const key="chat_history";
-  const old=JSON.parse(localStorage.getItem(key)||"[]");
-  old.push({ q:userQ, topic:topic||"unknown", t:Date.now() });
-  localStorage.setItem(key, JSON.stringify(old.slice(-50)));
-}
-
-function getTopTopics(){
-  const key="chat_history";
-  const old=JSON.parse(localStorage.getItem(key)||"[]");
-  const freq={};
-  old.forEach(it=>freq[it.topic]=(freq[it.topic]||0)+1);
-  return Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,2).map(x=>x[0]);
-}
-
-/* 9) BẤM NÚT CHỦ ĐỀ HỎI NHANH */
+/* Quick ask button */
 function quickAsk(text){
   document.getElementById("user-input").value=text;
   sendMessage();
 }
+window.quickAsk = quickAsk;
 
-/* 10) GỬI TIN NHẮN */
+/* Send */
 function sendMessage(){
   const input=document.getElementById("user-input");
   const userText=input.value.trim();
@@ -253,7 +145,6 @@ function sendMessage(){
   input.value="";
 
   const result=findBestAnswer(userText);
-
   let botText=result.answer||"";
 
   if(result.steps && result.steps.length>0){
@@ -278,10 +169,9 @@ function sendMessage(){
   }
 
   addMessage(botText,"bot");
-  saveHistory(userText,result.topic);
 }
 
-/* 11) GÁN SỰ KIỆN + LỜI CHÀO */
+/* Bind events */
 document.addEventListener("DOMContentLoaded",()=>{
   const btn=document.getElementById("send-btn");
   const input=document.getElementById("user-input");
@@ -293,10 +183,5 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
   }
 
-  const tops=getTopTopics();
-  if(tops.length>0 && tops[0]!=="unknown"){
-    addMessage(`Chào bạn! Mình thấy bạn hay hỏi về: <b>${tops.join(", ")}</b>. Bạn muốn ôn phần nào tiếp?`);
-  }else{
-    addMessage("Chào bạn! Mình là chatbot hỗ trợ ôn Toán 8 (Chương I–III). Bạn muốn hỏi phần nào?");
-  }
+  addMessage("Chào bạn! Mình là chatbot hỗ trợ ôn Toán 8 (Chương I–III). Bạn muốn hỏi phần nào?");
 });
