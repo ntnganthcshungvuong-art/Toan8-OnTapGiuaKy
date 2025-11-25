@@ -183,5 +183,5 @@ document.addEventListener("DOMContentLoaded",()=>{
     });
   }
 
-  addMessage("Chào bạn! Mình là chatbot hỗ trợ ôn Toán 8 (Chương I–III). Bạn muốn hỏi phần nào?");
+  addMessage("Chào bạn! Mình là chatbot hỗ trợ ôn Toán 8 . Bạn muốn hỏi phần nào?");
 });
