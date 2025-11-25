@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ĐỀ ÔN TẬP TOÁN 8 – HỌC KỲ I</title>
+  <title>ĐỀ ÔN TẬP TOÁN 8 – GIỮA HỌC KỲ I</title>
   <link rel="stylesheet" href="style.css?v=20251125" />
 
   <!-- MathJax -->
@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <!-- ====== Khu vực render câu hỏi ====== -->
+    <!-- ====== QUIZ ====== -->
     <div id="quiz"></div>
 
     <!-- ====== Thanh nút sticky ====== -->
@@ -41,8 +41,32 @@
 
     <!-- ====== Kết quả ====== -->
     <div id="result" class="result" style="display:none;"></div>
+
+    <!-- ================================================= -->
+    <!-- ============ CHATBOT HỖ TRỢ ÔN TẬP ============== -->
+    <!-- ================================================= -->
+    <div id="chatbox" class="chatbox-wrap">
+      <h2>🤖 Chatbot Toán 8</h2>
+      <div id="chat-log" class="chat-log"></div>
+
+      <div class="chat-input">
+        <input id="user-input" placeholder="Nhập câu hỏi Toán 8 ở đây..." />
+        <button id="send-btn">Gửi</button>
+      </div>
+
+      <div class="chat-hint">
+        Gợi ý: hỏi theo chủ đề như “Đa thức”, “Đơn thức”, “Hằng đẳng thức”, 
+        “Hình bình hành”, “Hình thang cân”, “Hình chữ nhật”, “Hình thoi”, “Hình vuông”...
+      </div>
+    </div>
+    <!-- ============ HẾT CHATBOT ======================= -->
+
   </div>
 
+  <!-- Quiz -->
   <script src="quiz.js?v=20251125"></script>
+
+  <!-- Chatbot -->
+  <script src="chatbot.js?v=20251125"></script>
 </body>
 </html>
