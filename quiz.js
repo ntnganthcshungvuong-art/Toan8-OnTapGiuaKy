@@ -1,4 +1,4 @@
-/* ===== QUIZ TOÁN 8 - BẢN AN TOÀN (TỰ HIỆN LỖI + KHÔNG XUNG ĐỘT CSS) ===== */
+/* ===== QUIZ TOÁN 8 - FULL (SƯ PHẠM + KHKT) ===== */
 
 async function loadQuiz() {
   const wrap = document.getElementById('quiz');
@@ -15,23 +15,21 @@ async function loadQuiz() {
       <div class="error-box">
         <b>Lỗi tải dữ liệu!</b><br>
         ${err.message}<br><br>
-        👉 Kiểm tra lại file <code>questions.json</code> có nằm cùng thư mục với index.html không.
+        👉 Kiểm tra file <code>questions.json</code> có cùng thư mục với index.html không.
       </div>
     `;
-    document.getElementById("done-count").textContent = 0;
-    document.getElementById("total-count").textContent = 0;
-    document.getElementById("progress-fill").style.width = "0%";
+    updateProgress();
     return;
   }
 
-  // OK -> render
   wrap.innerHTML = '';
   document.getElementById("total-count").textContent = items.length;
 
   let totalPoints = 0;
 
+  // tách hình học/đại số theo từ khóa
   const isGeometry = (text) => {
-    const t = text.toLowerCase();
+    const t = (text || "").toLowerCase();
     return (
       t.includes("tam giác") || t.includes("tứ giác") || t.includes("hình thang") ||
       t.includes("hình bình hành") || t.includes("hình chữ nhật") ||
@@ -64,7 +62,7 @@ async function loadQuiz() {
 
     const title = document.createElement('div');
     title.className = 'question-title';
-    title.innerHTML = `<b>Câu ${i + 1}.</b> ${q.question}`;
+    title.innerHTML = `<b>Câu ${i + 1}.</b> ${q.question || ""}`;
     card.appendChild(title);
 
     (q.options || []).forEach((opt, j) => {
@@ -135,8 +133,10 @@ function grade(items, totalPoints) {
 
   items.forEach((q, i) => {
     const card = document.querySelector(`.question-card[data-index="${i}"]`);
-    const part = card.dataset.part;
+    if (!card) return;
 
+    const part = card.dataset.part;
+    if (!stats[part]) stats[part] = { right: 0, total: 0 };
     stats[part].total += 1;
 
     const tick = document.querySelector(`input[name="q${i}"]:checked`);
