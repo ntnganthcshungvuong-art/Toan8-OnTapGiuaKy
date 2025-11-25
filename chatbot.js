@@ -1,16 +1,24 @@
-/* ====== CHATBOT TOÁN 8 - BẢN CHỐNG NHẦM TẬN GỐC ====== */
+/* ====== CHATBOT TOÁN 8 - BẢN CUỐI (CHỐNG NHẦM + TỰ BÁO LỖI DATA) ====== */
 
 let knowledgeBase = [];
+let dataLoadedOk = false;
 
 /* 1) TẢI DỮ LIỆU CHATBOT */
 async function loadChatbotData() {
   try {
     const res = await fetch(`chatbot_data.json?ts=${Date.now()}`);
-    knowledgeBase = await res.json();
+    if (!res.ok) throw new Error("HTTP " + res.status);
+
+    const json = await res.json();
+    if (!Array.isArray(json)) throw new Error("JSON không phải mảng []");
+
+    knowledgeBase = json;
+    dataLoadedOk = true;
     console.log("Chatbot data loaded:", knowledgeBase.length, "items");
   } catch (e) {
     console.error("Không tải được chatbot_data.json", e);
     knowledgeBase = [];
+    dataLoadedOk = false;
   }
 }
 loadChatbotData();
@@ -18,7 +26,7 @@ loadChatbotData();
 /* 2) CHUẨN HÓA CÂU HỎI */
 function normalizeText(text) {
   return text.toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")  // bỏ dấu
     .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
@@ -34,12 +42,11 @@ const STOP_WORDS = [
 function tokenize(text){
   return normalizeText(text).split(" ").filter(Boolean);
 }
-
 function filterImportantTokens(tokens){
   return tokens.filter(t => !STOP_WORDS.includes(t));
 }
 
-/* 4) TẠO TẬP TỪ KHÓA CỦA 1 MỤC KIẾN THỨC */
+/* 4) TẠO TẬP TỪ KHÓA CỦA 1 MỤC */
 function buildItemTokens(item){
   let text = (item.question || "") + " ";
   text += (item.keywords || []).join(" ") + " ";
@@ -61,7 +68,7 @@ function scoreMatch(userQ, item){
   });
   score += overlap * 3;  // mỗi từ trùng = +3 điểm
 
-  // 5.2) cộng thêm nếu khớp đúng cả CỤM keyword/synonym
+  // 5.2) cộng thêm nếu khớp đúng cả cụm keyword/synonym
   (item.keywords || []).forEach(kw => {
     const kwn = normalizeText(kw);
     if (kwn && kwn.includes(" ") && userQ.includes(kwn)) score += 4;
@@ -78,9 +85,21 @@ function scoreMatch(userQ, item){
   return score;
 }
 
-/* 6) TÌM CÂU TRẢ LỜI TỐT NHẤT */
+/* 6) TÌM CÂU TRẢ LỜI */
 function findBestAnswer(userInput){
   const q = normalizeText(userInput);
+
+  // nếu data chưa tải được -> báo thẳng
+  if (!dataLoadedOk || knowledgeBase.length === 0) {
+    return {
+      answer: "⚠️ Mình chưa tải được dữ liệu kiến thức (chatbot_data.json). Bạn kiểm tra lại file JSON giúp mình nhé.",
+      steps: [],
+      note: null,
+      related_topics: [],
+      link: null,
+      topic: "unknown"
+    };
+  }
 
   let best = null;
   let bestScore = 0;
