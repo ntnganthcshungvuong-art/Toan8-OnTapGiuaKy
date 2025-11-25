@@ -1,5 +1,4 @@
-/* ====== CHATBOT TOÁN 8 - NÂNG CẤP CHIỀU SÂU ====== */
-/* Tác giả: bản nâng cấp cho THCS, dùng kho tri thức giới hạn Chương I–III */
+/* ====== CHATBOT TOÁN 8 - NÂNG CẤP CHIỀU SÂU + UI ====== */
 
 let knowledgeBase = [];
 
@@ -16,37 +15,34 @@ async function loadChatbotData() {
 }
 loadChatbotData();
 
-/* 2) CHUẨN HÓA CÂU HỎI (BỎ DẤU, CHỮ THƯỜNG, BỎ KÝ TỰ LẠ) */
+/* 2) CHUẨN HÓA CÂU HỎI */
 function normalizeText(text) {
   return text.toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // bỏ dấu tiếng Việt
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-/* 3) CHẤM ĐIỂM KHỚP: KEYWORDS + SYNONYMS + CÂU MẪU */
+/* 3) CHẤM ĐIỂM KHỚP */
 function scoreMatch(userQ, item) {
   let score = 0;
 
-  // keywords (cụm từ chính)
   (item.keywords || []).forEach(kw => {
     if (userQ.includes(kw)) score += 3;
   });
 
-  // synonyms (nhiều cách học sinh hỏi)
   (item.synonyms || []).forEach(syn => {
     const s = normalizeText(syn);
     if (userQ.includes(s)) score += 2;
   });
 
-  // trùng mạnh với câu mẫu
   if (userQ.includes(item.question)) score += 6;
 
   return score;
 }
 
-/* 4) TÌM CÂU TRẢ LỜI PHÙ HỢP NHẤT */
+/* 4) TÌM CÂU TRẢ LỜI */
 function findBestAnswer(userInput) {
   const q = normalizeText(userInput);
 
@@ -84,13 +80,12 @@ function addMessage(text, who = "bot") {
   log.appendChild(div);
   log.scrollTop = log.scrollHeight;
 
-  // render LaTeX nếu có MathJax
   if (window.MathJax?.typesetPromise) {
     MathJax.typesetPromise([div]);
   }
 }
 
-/* 6) LƯU LỊCH SỬ HỎI ĐỂ CÁ NHÂN HÓA (LOCALSTORAGE) */
+/* 6) LƯU LỊCH SỬ HỎI */
 function saveHistory(userQ, topic) {
   const key = "chat_history";
   const old = JSON.parse(localStorage.getItem(key) || "[]");
@@ -99,7 +94,7 @@ function saveHistory(userQ, topic) {
     topic: topic || "unknown",
     t: Date.now()
   });
-  localStorage.setItem(key, JSON.stringify(old.slice(-50))); // giữ 50 câu gần nhất
+  localStorage.setItem(key, JSON.stringify(old.slice(-50)));
 }
 
 function getTopTopics() {
@@ -115,7 +110,13 @@ function getTopTopics() {
     .map(x => x[0]);
 }
 
-/* 7) GỬI TIN NHẮN + TRẢ LỜI THEO CHIỀU SÂU */
+/* 7) CHO PHÉP BẤM NÚT CHỦ ĐỀ ĐỂ HỎI NHANH */
+function quickAsk(text){
+  document.getElementById("user-input").value = text;
+  sendMessage();
+}
+
+/* 8) GỬI TIN NHẮN */
 function sendMessage() {
   const input = document.getElementById("user-input");
   const userText = input.value.trim();
@@ -128,7 +129,6 @@ function sendMessage() {
 
   let botText = result.answer || "";
 
-  // steps theo từng bước
   if (result.steps && result.steps.length > 0) {
     botText += "<br><b>Cách hiểu / cách làm:</b><ol>";
     result.steps.forEach(st => {
@@ -137,18 +137,18 @@ function sendMessage() {
     botText += "</ol>";
   }
 
-  // note lỗi hay gặp
   if (result.note) {
     botText += `<br><b>Lưu ý:</b> ${result.note}`;
   }
 
-  // gợi ý ôn theo related_topics
+  /* --- Gợi ý ôn thêm dạng NÚT --- */
   if (result.related_topics && result.related_topics.length > 0) {
     botText += "<br><b>Gợi ý ôn thêm:</b> ";
-    botText += result.related_topics.map(t => `#${t}`).join(", ");
+    botText += result.related_topics
+      .map(t => `<button class="topic-btn" onclick="quickAsk('${t}')">${t}</button>`)
+      .join(" ");
   }
 
-  // link về quiz
   if (result.link) {
     botText += `<br><small>👉 Ôn thêm: <a href="${result.link}">mở phần ôn tập</a></small>`;
   }
@@ -157,7 +157,7 @@ function sendMessage() {
   saveHistory(userText, result.topic);
 }
 
-/* 8) GÁN SỰ KIỆN & LỜI CHÀO */
+/* 9) GÁN SỰ KIỆN + LỜI CHÀO */
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("send-btn");
   const input = document.getElementById("user-input");
