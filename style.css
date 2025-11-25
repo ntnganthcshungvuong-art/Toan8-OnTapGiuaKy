@@ -99,4 +99,28 @@ button#submit:hover{filter:brightness(.95)}
   color: #666;
   margin-top: 6px;
 }
+/* ===== UI nâng cấp cho chatbot ===== */
+
+/* Nút gợi ý chủ đề */
+.topic-btn{
+  margin: 2px 4px 2px 0;
+  padding: 4px 8px;
+  border: 1px solid #cfe3ff;
+  background: #eef5ff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.topic-btn:hover{
+  background: #dbeaff;
+}
+
+/* List "Cách hiểu/cách làm" gọn hơn */
+.msg.bot ol{
+  margin: 6px 0 6px 18px;
+}
+.msg.bot li{
+  margin: 2px 0;
+}
+
 /* ===== HẾT CHATBOT ===== */
