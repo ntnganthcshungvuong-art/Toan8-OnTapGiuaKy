@@ -1,181 +1,75 @@
-/* ===== STYLE SẠCH CHO QUIZ TOÁN 8 (SƯ PHẠM + KHKT) ===== */
-
-body{
-  font-family: "Times New Roman", serif;
-  background: #f5f7fb;
-  margin: 0;
-  padding: 0;
-}
-
-.container{
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 18px;
-}
-
-h1{
-  text-align: center;
-  font-size: 26px;
-  margin: 10px 0 18px;
-}
-
-/* progress */
-.progress-wrap{
-  margin: 10px 0 16px;
-  padding: 10px 12px;
+/* ====== CHATBOX đồng bộ giao diện ====== */
+.chatbox-wrap{
+  margin-top: 18px;
+  padding: 12px 14px;
   background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+.chatbox-wrap h2{
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.chat-log{
+  height: 260px;
+  overflow-y: auto;
+  background: #f8fafc;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-}
-.progress-text{
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-.progress-bar{
-  width: 100%;
-  height: 10px;
-  background: #e5e7eb;
-  border-radius: 999px;
-  overflow: hidden;
-}
-#progress-fill{
-  height: 100%;
-  width: 0%;
-  background: #60a5fa;
-  transition: width .25s ease;
-}
-
-/* title section */
-.section-title{
-  font-weight: 700;
-  font-size: 16px;
-  margin: 18px 0 8px;
-  padding: 8px 10px;
-  background: #eef5ff;
-  border-left: 4px solid #3b82f6;
-  border-radius: 6px;
-}
-
-/* question card */
-.question-card{
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin-bottom: 12px;
-}
-.question-title{
+  padding: 8px;
   margin-bottom: 8px;
+}
+.msg{
+  max-width: 85%;
+  padding: 8px 10px;
+  margin: 6px 0;
+  border-radius: 10px;
+  line-height: 1.4;
   font-size: 15px;
 }
-.option-line{
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  padding: 6px 0;
-  cursor: pointer;
+.msg.user{
+  margin-left: auto;
+  background: #dcfce7;
 }
-.option-line input{
-  transform: translateY(2px);
-}
-
-/* correct / wrong */
-.question-card.correct{
-  border-color: #22c55e;
-  background: #f0fdf4;
-}
-.question-card.wrong{
-  border-color: #ef4444;
-  background: #fef2f2;
+.msg.bot{
+  margin-right: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
 }
 
-/* actions sticky */
-.sticky-actions{
-  position: sticky;
-  bottom: 0;
-  background: #f5f7fb;
-  padding: 10px 0;
-  border-top: 1px solid #e5e7eb;
+.chat-input{
   display: flex;
-  gap: 8px;
-  justify-content: center;
-  z-index: 5;
+  gap: 6px;
 }
-.actions button{
+.chat-input input{
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+.chat-input button{
   padding: 8px 14px;
   border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  background: #fff;
-  cursor: pointer;
-  font-size: 14px;
-}
-.actions button.primary{
+  border: 1px solid #3b82f6;
   background: #3b82f6;
   color: white;
-  border-color: #3b82f6;
+  cursor: pointer;
 }
-.actions button:hover{
-  opacity: .9;
-}
-
-/* result */
-.result{
-  margin-top: 16px;
-  padding: 12px 14px;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-}
-.result-score{
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-.result-note{
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-.stat-table{
-  width: 100%;
-  border-collapse: collapse;
-  margin: 8px 0 10px;
-  font-size: 14px;
-}
-.stat-table th, .stat-table td{
-  border: 1px solid #e5e7eb;
-  padding: 6px 8px;
-  text-align: left;
-}
-.stat-table th{ background: #eef2ff; }
-
-.result-guide{ font-size: 14px; }
-.badge-wrong{
-  padding: 1px 6px;
-  border-radius: 4px;
-  background: #ef4444;
-  color: white;
+.chat-hint{
+  margin-top: 6px;
+  font-size: 13px;
+  color: #475569;
 }
 
-/* loading / error */
-.loading-box{
-  background:#fff;
-  border:1px dashed #cbd5e1;
-  padding:14px;
-  border-radius:8px;
-  text-align:center;
-  font-size:15px;
+/* nút gợi ý trong chatbot (nếu bạn đang dùng) */
+.topic-btn{
+  margin: 2px 4px 2px 0;
+  padding: 4px 8px;
+  border: 1px solid #cfe3ff;
+  background: #eef5ff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
 }
-.error-box{
-  background:#fff5f5;
-  border:1px solid #ef4444;
-  padding:14px;
-  border-radius:8px;
-  font-size:15px;
-  color:#b91c1c;
-}
-
-/* responsive */
-@media (max-width: 640px){
-  h1{ font-size: 22px; }
-  .question-title{ font-size: 14px; }
-  .actions button{ width: 48%; }
-}
+.topic-btn:hover{ background: #dbeaff; }
