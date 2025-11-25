@@ -1,35 +1,374 @@
 [
-  { "question": "Kết quả của phép tính \\(5x^2y-2x^2y\\) là:", "options": ["\\(7x^2y\\)","\\(3x^2y\\)","\\(x^2y\\)","\\(5x^2+2y\\)"], "answer": 1, "points": 0.15 },
-  { "question": "Phân tích đa thức \\(x^2+5x+6\\) là:", "options": ["\\((x+2)(x+3)\\)","\\((x-2)(x+3)\\)","\\((x+1)(x+6)\\)","\\((x+5)(x+1)\\)"], "answer": 0, "points": 0.15 },
-  { "question": "Hệ số của \\(x^3y^2\\) trong \\(2x^3y^2-5xy^2+3\\) là:", "options": ["\\(-5\\)","\\(2\\)","\\(3\\)","\\(0\\)"], "answer": 1, "points": 0.15 },
-  { "question": "Bậc của đơn thức \\(-7x^2y^3\\) là:", "options": ["2","3","5","6"], "answer": 2, "points": 0.15 },
-  { "question": "Tam giác \\(\\triangle ABC\\) cân tại \\(A\\). Khẳng định đúng:", "options": ["\\(AB=BC\\)","\\(AB=AC\\)","\\(\\widehat{B}=\\widehat{C}\\)","Cả B và C"], "answer": 3, "points": 0.15 },
-  { "question": "Rút gọn \\((x+2)(x-2)\\) là:", "options": ["\\(x^2-4\\)","\\(x^2+4\\)","\\(x^2-2x+4\\)","\\(x^2+2x-4\\)"], "answer": 0, "points": 0.15 },
-  { "question": "Giá trị của \\(\\tfrac{3}{5}x - \\tfrac{1}{5}x\\) là:", "options": ["\\(\\tfrac{2}{5}x\\)","\\(\\tfrac{4}{5}x\\)","\\(\\tfrac{3}{10}x\\)","\\(\\tfrac{1}{5}x\\)"], "answer": 0, "points": 0.15 },
-  { "question": "Phân tích \\(9x^2-25\\) là:", "options": ["\\((3x-5)^2\\)","\\((3x-5)(3x+5)\\)","\\((x-5)(9x+5)\\)","Không phân tích được"], "answer": 1, "points": 0.15 },
-  { "question": "Giải phương trình \\(2x-5=9\\):", "options": ["\\(x=2\\)","\\(x=7\\)","\\(x=\\tfrac{7}{2}\\)","\\(x=\\tfrac{14}{2}\\)"], "answer": 1, "points": 0.15 },
-  { "question": "Tứ giác \\(ABCD\\) là hình bình hành. Khẳng định đúng:", "options": ["\\(AB\\perp CD\\)","\\(AB\\parallel CD\\)","\\(AB=BC\\)","\\(\\widehat{A}=\\widehat{B}\\)"], "answer": 1, "points": 0.15 },
-  { "question": "Rút gọn \\((x-y)^2\\) là:", "options": ["\\(x^2+y^2\\)","\\(x^2-2xy+y^2\\)","\\(x^2- y^2\\)","\\(x^2-2y+y^2\\)"], "answer": 1, "points": 0.15 },
-  { "question": "Với \\(x\\ne0\\), rút gọn \\(\\dfrac{3x^2y}{x}\\) là:", "options": ["\\(3xy\\)","\\(\\dfrac{3xy}{x}\\)","\\(3x^2\\)","\\(3y\\)"], "answer": 0, "points": 0.15 },
-  { "question": "Tính giá trị tại \\(x=2\\): \\(x^3-2x\\) bằng:", "options": ["\\(4\\)","\\(6\\)","\\(8\\)","\\(12\\)"], "answer": 1, "points": 0.15 },
-  { "question": "Cho \\(\\triangle ABC\\) vuông tại \\(A\\). Hệ thức Pitago đúng là:", "options": ["\\(AB^2+BC^2=AC^2\\)","\\(AB^2+AC^2=BC^2\\)","\\(AC^2+BC^2=AB^2\\)","\\(AB+AC=BC\\)"], "answer": 1, "points": 0.15 },
-  { "question": "Đa thức \\(2x^2y-3xy+5\\) có bậc là:", "options": ["2","3","1","0"], "answer": 1, "points": 0.15 },
-  { "question": "Rút gọn \\((2x+3)^2\\) là:", "options": ["\\(4x^2+12x+9\\)","\\(4x^2+6x+9\\)","\\(2x^2+9\\)","\\(4x^2+9\\)"], "answer": 0, "points": 0.15 },
-  { "question": "Giải bất phương trình \\(x+4>7\\):", "options": ["\\(x>3\\)","\\(x\\ge3\\)","\\(x<3\\)","\\(x\\le3\\)"], "answer": 0, "points": 0.15 },
-  { "question": "Hình chữ nhật có tính chất đúng là:", "options": ["Hai đường chéo vuông góc","Hai đường chéo bằng nhau và cắt nhau tại trung điểm","Bốn cạnh bằng nhau","Có đúng một cặp cạnh đối song song"], "answer": 1, "points": 0.15 },
-  { "question": "Rút gọn \\(\\dfrac{2x}{x+1}+\\dfrac{x}{x+1}\\) là:", "options": ["\\(\\dfrac{3x}{x+1}\\)","\\(\\dfrac{2x+x+1}{x+1}\\)","\\(\\dfrac{x}{x+1}\\)","\\(3x\\)"], "answer": 0, "points": 0.15 },
-  { "question": "Giải hệ \\(\\begin{cases}x+y=7\\\\ x-y=1\\end{cases}\\):", "options": ["\\((x,y)=(4,3)\\)","\\((x,y)=(3,4)\\)","\\((x,y)=(7,1)\\)","\\((x,y)=(1,7)\\)"], "answer": 0, "points": 0.15 },
-
-  { "question": "Thu gọn: \\((3x^2y)-(x^2y)+(4xy)\\) bằng:", "options": ["\\(2x^2y+4xy\\)","\\(4x^2y-4xy\\)","\\(2x^2y-4xy\\)","\\(x^2y+4xy\\)"], "answer": 0, "points": 0.5 },
-  { "question": "Hệ số của \\(x^2y\\) trong \\((x^2y)-(5x^2y)+7\\) là:", "options": ["\\(-4\\)","\\(1\\)","\\(5\\)","\\(4\\)"], "answer": 0, "points": 0.5 },
-  { "question": "Bậc của đa thức \\(x^3-2x^2y+xy^2+1\\) là:", "options": ["2","3","4","5"], "answer": 1, "points": 0.5 },
-  { "question": "Phân tích đa thức \\(x^2-7x+10\\):", "options": ["\\((x-5)(x-2)\\)","\\((x-5)(x+2)\\)","\\((x+5)(x-2)\\)","\\((x+5)(x+2)\\)"], "answer": 0, "points": 0.5 },
-  { "question": "Giải phương trình \\(3(x-2)=2(x+5)\\):", "options": ["\\(x=16\\)","\\(x=1\\)","\\(x=-1\\)","\\(x=\\tfrac{16}{5}\\)"], "answer": 1, "points": 0.5 },
-  { "question": "Tính nhanh: \\((a-b)^2+(a+b)^2\\) bằng:", "options": ["\\(2a^2+2b^2\\)","\\(a^2+b^2\\)","\\(2a^2\\)","\\(2b^2\\)"], "answer": 0, "points": 0.5 },
-  { "question": "Trong hình bình hành, phát biểu nào đúng?", "options": ["Hai đường chéo bằng nhau","Hai đường chéo cắt nhau tại trung điểm mỗi đường","Bốn góc bằng nhau","Có đúng một góc vuông"], "answer": 1, "points": 0.5 },
-  { "question": "Rút gọn biểu thức: \\(\\dfrac{x}{x+1}-\\dfrac{1}{x+1}\\) bằng:", "options": ["\\(\\dfrac{x-1}{x+1}\\)","\\(\\dfrac{1}{x}\\)","\\(\\dfrac{x}{x+1}\\)","\\(\\dfrac{1}{x+1}\\)"], "answer": 0, "points": 0.5 },
-  { "question": "Giá trị của \\(\\dfrac{2}{x-1}-\\dfrac{1}{x+1}\\) tại \\(x=2\\) là:", "options": ["\\(1\\)","\\(\\tfrac{3}{2}\\)","\\(\\tfrac{1}{2}\\)","\\(\\tfrac{2}{3}\\)"], "answer": 2, "points": 0.5 },
-  { "question": "Rút gọn \\((2x+3)^2\\) là:", "options": ["\\(4x^2+12x+9\\)","\\(4x^2+6x+9\\)","\\(2x^2+9\\)","\\(4x^2+9\\)"], "answer": 0, "points": 0.5 },
-  { "question": "Tính tại \\(x=2\\): \\(x^3-2x\\) bằng:", "options": ["\\(4\\)","\\(6\\)","\\(8\\)","\\(12\\)"], "answer": 1, "points": 0.5 },
-  { "question": "Rút gọn \\(\\dfrac{2x}{x+1}+\\dfrac{x}{x+1}\\) là:", "options": ["\\(\\dfrac{3x}{x+1}\\)","\\(\\dfrac{2x+x+1}{x+1}\\)","\\(\\dfrac{x}{x+1}\\)","\\(3x\\)"], "answer": 0, "points": 0.5 }
+  {
+    "question": "Kết quả của phép tính \\(5x^2y-2x^2y\\) là:",
+    "options": [
+      "\\(7x^2y\\)",
+      "\\(3x^2y\\)",
+      "\\(x^2y\\)",
+      "\\(5x^2+2y\\)"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Phân tích đa thức \\(x^2+5x+6\\) là:",
+    "options": [
+      "\\((x+2)(x+3)\\)",
+      "\\((x-2)(x+3)\\)",
+      "\\((x+1)(x+6)\\)",
+      "\\((x+5)(x+1)\\)"
+    ],
+    "answer": 0,
+    "points": 0.15,
+    "topic": "Chương I – Bài 2: Đa thức & bậc"
+  },
+  {
+    "question": "Hệ số của \\(x^3y^2\\) trong \\(2x^3y^2-5xy^2+3\\) là:",
+    "options": [
+      "\\(-5\\)",
+      "\\(2\\)",
+      "\\(3\\)",
+      "\\(0\\)"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Bậc của đơn thức \\(-7x^2y^3\\) là:",
+    "options": [
+      "2",
+      "3",
+      "5",
+      "6"
+    ],
+    "answer": 2,
+    "points": 0.15,
+    "topic": "Chương I – Bài 1: Đơn thức"
+  },
+  {
+    "question": "Tam giác \\(\\triangle ABC\\) cân tại \\(A\\). Khẳng định đúng:",
+    "options": [
+      "\\(AB=BC\\)",
+      "\\(AB=AC\\)",
+      "\\(\\widehat{B}=\\widehat{C}\\)",
+      "Cả B và C"
+    ],
+    "answer": 3,
+    "points": 0.15,
+    "topic": "Chương III – Tứ giác (tổng quát)"
+  },
+  {
+    "question": "Rút gọn \\((x+2)(x-2)\\) là:",
+    "options": [
+      "\\(x^2-4\\)",
+      "\\(x^2+4\\)",
+      "\\(x^2-2x+4\\)",
+      "\\(x^2+2x-4\\)"
+    ],
+    "answer": 0,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Giá trị của \\(\\tfrac{3}{5}x - \\tfrac{1}{5}x\\) là:",
+    "options": [
+      "\\(\\tfrac{2}{5}x\\)",
+      "\\(\\tfrac{4}{5}x\\)",
+      "\\(\\tfrac{3}{10}x\\)",
+      "\\(\\tfrac{1}{5}x\\)"
+    ],
+    "answer": 0,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Phân tích \\(9x^2-25\\) là:",
+    "options": [
+      "\\((3x-5)^2\\)",
+      "\\((3x-5)(3x+5)\\)",
+      "\\((x-5)(9x+5)\\)",
+      "Không phân tích được"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Giải phương trình \\(2x-5=9\\):",
+    "options": [
+      "\\(x=2\\)",
+      "\\(x=7\\)",
+      "\\(x=\\tfrac{7}{2}\\)",
+      "\\(x=\\tfrac{14}{2}\\)"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Tứ giác \\(ABCD\\) là hình bình hành. Khẳng định đúng:",
+    "options": [
+      "\\(AB\\perp CD\\)",
+      "\\(AB\\parallel CD\\)",
+      "\\(AB=BC\\)",
+      "\\(\\widehat{A}=\\widehat{B}\\)"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương III – Bài 13: Hình bình hành"
+  },
+  {
+    "question": "Rút gọn \\((x-y)^2\\) là:",
+    "options": [
+      "\\(x^2+y^2\\)",
+      "\\(x^2-2xy+y^2\\)",
+      "\\(x^2- y^2\\)",
+      "\\(x^2-2y+y^2\\)"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Với \\(x\\ne0\\), rút gọn \\(\\dfrac{3x^2y}{x}\\) là:",
+    "options": [
+      "\\(3xy\\)",
+      "\\(\\dfrac{3xy}{x}\\)",
+      "\\(3x^2\\)",
+      "\\(3y\\)"
+    ],
+    "answer": 0,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Tính giá trị tại \\(x=2\\): \\(x^3-2x\\) bằng:",
+    "options": [
+      "\\(4\\)",
+      "\\(6\\)",
+      "\\(8\\)",
+      "\\(12\\)"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Cho \\(\\triangle ABC\\) vuông tại \\(A\\). Hệ thức Pitago đúng là:",
+    "options": [
+      "\\(AB^2+BC^2=AC^2\\)",
+      "\\(AB^2+AC^2=BC^2\\)",
+      "\\(AC^2+BC^2=AB^2\\)",
+      "\\(AB+AC=BC\\)"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Đa thức \\(2x^2y-3xy+5\\) có bậc là:",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "0"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương I – Bài 2: Đa thức & bậc"
+  },
+  {
+    "question": "Rút gọn \\((2x+3)^2\\) là:",
+    "options": [
+      "\\(4x^2+12x+9\\)",
+      "\\(4x^2+6x+9\\)",
+      "\\(2x^2+9\\)",
+      "\\(4x^2+9\\)"
+    ],
+    "answer": 0,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Giải bất phương trình \\(x+4>7\\):",
+    "options": [
+      "\\(x>3\\)",
+      "\\(x\\ge3\\)",
+      "\\(x<3\\)",
+      "\\(x\\le3\\)"
+    ],
+    "answer": 0,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Hình chữ nhật có tính chất đúng là:",
+    "options": [
+      "Hai đường chéo vuông góc",
+      "Hai đường chéo bằng nhau và cắt nhau tại trung điểm",
+      "Bốn cạnh bằng nhau",
+      "Có đúng một cặp cạnh đối song song"
+    ],
+    "answer": 1,
+    "points": 0.15,
+    "topic": "Chương III – Bài 14: Hình chữ nhật"
+  },
+  {
+    "question": "Rút gọn \\(\\dfrac{2x}{x+1}+\\dfrac{x}{x+1}\\) là:",
+    "options": [
+      "\\(\\dfrac{3x}{x+1}\\)",
+      "\\(\\dfrac{2x+x+1}{x+1}\\)",
+      "\\(\\dfrac{x}{x+1}\\)",
+      "\\(3x\\)"
+    ],
+    "answer": 0,
+    "points": 0.15,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Thu gọn: \\((3x^2y)-(x^2y)+(4xy)\\) bằng:",
+    "options": [
+      "\\(2x^2y+4xy\\)",
+      "\\(4x^2y-4xy\\)",
+      "\\(2x^2y-4xy\\)",
+      "\\(x^2y+4xy\\)"
+    ],
+    "answer": 0,
+    "points": 0.5,
+    "topic": "Chương I – Bài 3: Cộng – trừ đa thức"
+  },
+  {
+    "question": "Hệ số của \\(x^2y\\) trong \\((x^2y)-(5x^2y)+7\\) là:",
+    "options": [
+      "\\(-4\\)",
+      "\\(1\\)",
+      "\\(5\\)",
+      "\\(4\\)"
+    ],
+    "answer": 0,
+    "points": 0.5,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Bậc của đa thức \\(x^3-2x^2y+xy^2+1\\) là:",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1,
+    "points": 0.5,
+    "topic": "Chương I – Bài 2: Đa thức & bậc"
+  },
+  {
+    "question": "Phân tích đa thức \\(x^2-7x+10\\):",
+    "options": [
+      "\\((x-5)(x-2)\\)",
+      "\\((x-5)(x+2)\\)",
+      "\\((x+5)(x-2)\\)",
+      "\\((x+5)(x+2)\\)"
+    ],
+    "answer": 0,
+    "points": 0.5,
+    "topic": "Chương I – Bài 2: Đa thức & bậc"
+  },
+  {
+    "question": "Giải phương trình \\(3(x-2)=2(x+5)\\):",
+    "options": [
+      "\\(x=16\\)",
+      "\\(x=1\\)",
+      "\\(x=-1\\)",
+      "\\(x=\\tfrac{16}{5}\\)"
+    ],
+    "answer": 1,
+    "points": 0.5,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Tính nhanh: \\((a-b)^2+(a+b)^2\\) bằng:",
+    "options": [
+      "\\(2a^2+2b^2\\)",
+      "\\(a^2+b^2\\)",
+      "\\(2a^2\\)",
+      "\\(2b^2\\)"
+    ],
+    "answer": 0,
+    "points": 0.5,
+    "topic": "Chương II – Bài 7: Bình phương một tổng"
+  },
+  {
+    "question": "Trong hình bình hành, phát biểu nào đúng?",
+    "options": [
+      "Hai đường chéo bằng nhau",
+      "Hai đường chéo cắt nhau tại trung điểm mỗi đường",
+      "Bốn góc bằng nhau",
+      "Có đúng một góc vuông"
+    ],
+    "answer": 1,
+    "points": 0.5,
+    "topic": "Chương III – Bài 13: Hình bình hành"
+  },
+  {
+    "question": "Rút gọn biểu thức: \\(\\dfrac{x}{x+1}-\\dfrac{1}{x+1}\\) bằng:",
+    "options": [
+      "\\(\\dfrac{x-1}{x+1}\\)",
+      "\\(\\dfrac{1}{x}\\)",
+      "\\(\\dfrac{x}{x+1}\\)",
+      "\\(\\dfrac{1}{x+1}\\)"
+    ],
+    "answer": 0,
+    "points": 0.5,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Giá trị của \\(\\dfrac{2}{x-1}-\\dfrac{1}{x+1}\\) tại \\(x=2\\) là:",
+    "options": [
+      "\\(1\\)",
+      "\\(\\tfrac{3}{2}\\)",
+      "\\(\\tfrac{1}{2}\\)",
+      "\\(\\tfrac{2}{3}\\)"
+    ],
+    "answer": 2,
+    "points": 0.5,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Rút gọn \\((2x+3)^2\\) là:",
+    "options": [
+      "\\(4x^2+12x+9\\)",
+      "\\(4x^2+6x+9\\)",
+      "\\(2x^2+9\\)",
+      "\\(4x^2+9\\)"
+    ],
+    "answer": 0,
+    "points": 0.5,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Tính tại \\(x=2\\): \\(x^3-2x\\) bằng:",
+    "options": [
+      "\\(4\\)",
+      "\\(6\\)",
+      "\\(8\\)",
+      "\\(12\\)"
+    ],
+    "answer": 1,
+    "points": 0.5,
+    "topic": "Chương I–II (tổng quát)"
+  },
+  {
+    "question": "Rút gọn \\(\\dfrac{2x}{x+1}+\\dfrac{x}{x+1}\\) là:",
+    "options": [
+      "\\(\\dfrac{3x}{x+1}\\)",
+      "\\(\\dfrac{2x+x+1}{x+1}\\)",
+      "\\(\\dfrac{x}{x+1}\\)",
+      "\\(3x\\)"
+    ],
+    "answer": 0,
+    "points": 0.5,
+    "topic": "Chương I–II (tổng quát)"
+  }
 ]
