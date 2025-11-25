@@ -19,59 +19,140 @@
 
 <body>
   <div class="container">
-    <h1>ÔN TẬP TOÁN 8 – HỌC KỲ I</h1>
 
-    <!-- ====== PROGRESS ====== -->
-    <div class="progress-wrap">
-      <div class="progress-text">
-        Đã làm: <b id="done-count">0</b>/<b id="total-count">0</b> câu
+    <!-- ===== HEADER ===== -->
+    <header class="topbar">
+      <h1>ÔN TẬP TOÁN 8 – HỌC KỲ I</h1>
+      <p class="subtitle">Chương I–III đã học • Chatbot là trợ giảng • Quiz 10 câu chẩn đoán nhanh</p>
+    </header>
+
+    <!-- ===== NAV TABS ===== -->
+    <nav class="tabs">
+      <button class="tab-btn active" data-tab="home">🏠 Trang chủ</button>
+      <button class="tab-btn" data-tab="quiz">📝 Ôn tập (Quiz)</button>
+      <button class="tab-btn" data-tab="theory">📘 Lý thuyết</button>
+    </nav>
+
+    <!-- ========================= -->
+    <!-- ====== HOME TAB ========= -->
+    <!-- ========================= -->
+    <section id="tab-home" class="tab-panel active">
+
+      <div class="home-grid">
+
+        <!-- Chatbot center -->
+        <div class="card chatbot-card">
+          <div id="chatbox" class="chatbox-wrap">
+            <div class="chatbox-header">
+              <div class="chatbox-icon">🤖</div>
+              <div>
+                <h2 class="chatbox-title">Chatbot Toán 8</h2>
+                <div class="chatbox-sub">Hỏi nhanh kiến thức Chương I–III</div>
+              </div>
+            </div>
+
+            <div id="chat-log" class="chat-log"></div>
+
+            <div class="chat-input">
+              <input id="user-input" placeholder="Nhập câu hỏi Toán 8 ở đây..." />
+              <button id="send-btn">Gửi</button>
+            </div>
+
+            <div class="chat-hint">
+              Gợi ý: “Đa thức”, “Đơn thức”, “Hằng đẳng thức”, “Hình bình hành”, “Hình chữ nhật”, “Hình thoi”, “Hình vuông”...
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 cards side -->
+        <div class="card mini-card">
+          <h3>📝 Ôn tập nhanh</h3>
+          <p>Làm 10 câu trắc nghiệm ngẫu nhiên để kiểm tra bạn yếu phần nào.</p>
+          <button class="primary big" id="go-quiz">Bắt đầu Quiz 10 câu</button>
+        </div>
+
+        <div class="card mini-card">
+          <h3>📘 Lý thuyết theo chương</h3>
+          <p>Xem tóm tắt kiến thức Chương I–IV, kèm nút hỏi nhanh chatbot.</p>
+          <button class="big" id="go-theory">Mở Lý thuyết</button>
+        </div>
+
       </div>
-      <div class="progress-bar">
-        <div id="progress-fill"></div>
-      </div>
-    </div>
+    </section>
 
-    <!-- ====== QUIZ ====== -->
-    <div id="quiz"></div>
+    <!-- ========================= -->
+    <!-- ====== QUIZ TAB ========= -->
+    <!-- ========================= -->
+    <section id="tab-quiz" class="tab-panel">
 
-    <!-- ====== ACTIONS ====== -->
-    <div class="actions sticky-actions">
-      <button id="reset">Làm lại</button>
-      <button id="submit" class="primary">Nộp bài</button>
-    </div>
-
-    <!-- ====== RESULT ====== -->
-    <div id="result" class="result" style="display:none;"></div>
-
-    <!-- ================================================= -->
-    <!-- ============ CHATBOT HỖ TRỢ ÔN TẬP ============== -->
-    <!-- ================================================= -->
-    <div id="chatbox" class="chatbox-wrap">
-      <div class="chatbox-header">
-        <div class="chatbox-icon">🤖</div>
+      <div class="quiz-header card">
         <div>
-          <h2 class="chatbox-title">Chatbot Toán 8</h2>
-          <div class="chatbox-sub">Hỏi nhanh kiến thức Chương I–III</div>
+          <h2>Quiz 10 câu chẩn đoán</h2>
+          <p>Hệ thống chọn ngẫu nhiên 10 câu từ ngân hàng. Làm xong sẽ gợi ý bạn cần ôn phần nào.</p>
+        </div>
+        <div class="quiz-actions">
+          <button id="quiz-new">🔄 Đề mới</button>
+          <button id="quiz-submit" class="primary">Nộp bài</button>
         </div>
       </div>
 
-      <div id="chat-log" class="chat-log"></div>
-
-      <div class="chat-input">
-        <input id="user-input" placeholder="Nhập câu hỏi Toán 8 ở đây..." />
-        <button id="send-btn">Gửi</button>
+      <div class="progress-wrap">
+        <div class="progress-text">
+          Đã làm: <b id="done-count">0</b>/<b id="total-count">10</b> câu
+        </div>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
       </div>
 
-      <div class="chat-hint">
-        Gợi ý: hỏi theo chủ đề như “Đa thức”, “Đơn thức”, “Hằng đẳng thức”,
-        “Hình bình hành”, “Hình thang cân”, “Hình chữ nhật”, “Hình thoi”, “Hình vuông”...
+      <div id="quiz-area"></div>
+
+      <div id="quiz-result" class="result" style="display:none;"></div>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- ===== THEORY TAB ======== -->
+    <!-- ========================= -->
+    <section id="tab-theory" class="tab-panel">
+
+      <div class="card theory-header">
+        <h2>Lý thuyết Toán 8 – Học kỳ I</h2>
+        <p>Chọn chương để xem tóm tắt. (Bạn sẽ bổ sung nội dung dần theo SGK KNTT)</p>
       </div>
-    </div>
-    <!-- ============ HẾT CHATBOT ======================= -->
+
+      <div class="theory-grid">
+        <button class="theory-btn" data-chapter="1">
+          <div class="theory-title">Chương I. ĐA THỨC</div>
+          <div class="theory-sub">Đơn thức – Đa thức – Cộng, trừ, nhân, chia</div>
+        </button>
+
+        <button class="theory-btn" data-chapter="2">
+          <div class="theory-title">Chương II. HẰNG ĐẲNG THỨC</div>
+          <div class="theory-sub">Các hằng đẳng thức đáng nhớ – phân tích nhân tử</div>
+        </button>
+
+        <button class="theory-btn" data-chapter="3">
+          <div class="theory-title">Chương III. TỨ GIÁC</div>
+          <div class="theory-sub">Hình thang – bình hành – chữ nhật – thoi – vuông</div>
+        </button>
+
+        <button class="theory-btn" data-chapter="4">
+          <div class="theory-title">Chương IV. ĐỊNH LÍ THALES</div>
+          <div class="theory-sub">Đang học – chỉ xem phần cơ bản</div>
+        </button>
+      </div>
+
+      <div id="theory-content" class="card theory-content">
+        <p>👉 Chọn một chương ở trên để xem nội dung.</p>
+      </div>
+
+    </section>
 
   </div>
 
-  <script src="quiz.js?v=20251125"></script>
+  <!-- App + Chatbot -->
+  <script src="app.js?v=20251125"></script>
   <script src="chatbot.js?v=20251125"></script>
 </body>
 </html>
