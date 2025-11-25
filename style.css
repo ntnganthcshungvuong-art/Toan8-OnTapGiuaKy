@@ -291,3 +291,139 @@ body{
   .home-grid{ grid-template-columns:1fr; }
   .theory-grid{ grid-template-columns:1fr; }
 }
+/* ================================
+   UI POLISH (dán cuối style.css)
+   ================================ */
+
+/* nền mịn hơn */
+body{
+  background: radial-gradient(1200px 500px at 50% -50%, #e8f1ff 0, transparent 60%),
+              linear-gradient(180deg, #f7faff, #f5f7fb);
+}
+
+/* header đẹp hơn */
+.topbar h1{
+  letter-spacing: .5px;
+  font-weight: 800;
+}
+.subtitle{
+  font-style: italic;
+  opacity: .9;
+}
+
+/* tabs kiểu pill xịn */
+.tabs{
+  background:#fff;
+  padding:6px;
+  border-radius:999px;
+  width:fit-content;
+  margin:12px auto 18px;
+  box-shadow:0 6px 18px rgba(15,23,42,.06);
+  border:1px solid #eef2f7;
+}
+.tab-btn{
+  border:none;
+  background:transparent;
+  padding:8px 16px;
+  border-radius:999px;
+  font-weight:600;
+}
+.tab-btn.active{
+  background:linear-gradient(90deg, #3b82f6, #60a5fa);
+  box-shadow:0 6px 14px rgba(59,130,246,.25);
+}
+
+/* card mềm + bo hơn */
+.card{
+  border-radius:16px;
+  border:1px solid #edf0f5;
+  box-shadow:0 10px 22px rgba(15,23,42,.05);
+}
+
+/* home layout cân hơn */
+.home-grid{
+  grid-template-columns: 1.5fr .8fr;
+  align-items: start;
+}
+
+/* chatbot nổi bật trung tâm */
+.chatbot-card{
+  padding: 6px;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+}
+.chatbox-header{
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+.chatbox-title{
+  font-size:19px;
+}
+.chat-log{
+  height:340px;
+  background: linear-gradient(180deg, #f8fbff, #f1f5fb);
+  border:1px solid #e6ebf2;
+}
+
+/* mini card bên phải */
+.mini-card{
+  padding:16px;
+}
+.mini-card h3{
+  font-size:17px;
+  margin:0 0 6px 0;
+}
+.mini-card p{
+  margin:0 0 10px 0;
+  font-size:14px;
+  color:#334155;
+}
+
+/* nút đẹp hơn */
+.big{
+  border: none;
+  background: #f1f5f9;
+  font-weight:700;
+}
+.primary{
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border:none;
+  box-shadow:0 8px 18px rgba(59,130,246,.25);
+}
+.primary:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+/* quiz card spacing đẹp */
+.question-card{
+  border:1px solid #eef2f7;
+  background:#fff;
+}
+.question-title{ font-weight:600; }
+
+/* theory buttons nổi + nhấn nhá */
+.theory-btn{
+  background: linear-gradient(180deg, #eef5ff, #f7fbff);
+  border:1px solid #dbeafe;
+}
+.theory-btn:hover{
+  background: linear-gradient(180deg, #dbeafe, #eef5ff);
+}
+
+/* input chatbot tinh tế hơn */
+.chat-input input{
+  background:#fff;
+  border:1px solid #dbe3ee;
+}
+.chat-input button{
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border:none;
+  box-shadow:0 6px 14px rgba(59,130,246,.22);
+}
+
+/* mobile: tab không tràn */
+@media(max-width:900px){
+  .home-grid{ grid-template-columns:1fr; }
+  .chat-log{ height:280px; }
+  .tabs{ width:100%; justify-content:center; }
+}
