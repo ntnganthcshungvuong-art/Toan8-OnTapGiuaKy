@@ -40,27 +40,12 @@
 
       <div class="home-grid">
 
-        <!-- Chatbot center -->
+        <!-- Chatbot center block (chỉ là bản xem lớn ở trang chủ) -->
         <div class="card chatbot-card">
-          <div id="chatbox" class="chatbox-wrap">
-            <div class="chatbox-header">
-              <div class="chatbox-icon">🤖</div>
-              <div>
-                <h2 class="chatbox-title">Chatbot Toán 8</h2>
-                <div class="chatbox-sub">Hỏi nhanh kiến thức Chương I–III</div>
-              </div>
-            </div>
-
-            <div id="chat-log" class="chat-log"></div>
-
-            <div class="chat-input">
-              <input id="user-input" placeholder="Nhập câu hỏi Toán 8 ở đây..." />
-              <button id="send-btn">Gửi</button>
-            </div>
-
-            <div class="chat-hint">
-              Gợi ý: “Đa thức”, “Đơn thức”, “Hằng đẳng thức”, “Hình bình hành”, “Hình chữ nhật”, “Hình thoi”, “Hình vuông”...
-            </div>
+          <div class="home-chat-preview">
+            <h3>🤖 Chatbot Toán 8 (trợ giảng chính)</h3>
+            <p>Chatbot luôn hiển thị ở góc phải dưới để bạn hỏi bất kỳ lúc nào.</p>
+            <button class="primary big" id="open-chat">Mở Chatbot</button>
           </div>
         </div>
 
@@ -148,10 +133,35 @@
       </div>
 
     </section>
-
   </div>
 
-  <!-- App + Chatbot -->
+
+  <!-- ========================================= -->
+  <!-- CHATBOT FLOATING (luôn tồn tại mọi nơi)   -->
+  <!-- ========================================= -->
+  <div id="chat-float" class="chat-float">
+    <div class="chat-float-header">
+      <div class="chat-float-title">Chatbot Toán 8</div>
+      <button id="chat-close" class="chat-close">—</button>
+    </div>
+
+    <div id="chatbox" class="chatbox-wrap">
+      <div id="chat-log" class="chat-log"></div>
+      <div class="chat-input">
+        <input id="user-input" placeholder="Nhập câu hỏi Toán 8 ở đây..." />
+        <button id="send-btn">Gửi</button>
+      </div>
+      <div class="chat-hint">
+        Gợi ý: “Đa thức”, “Đơn thức”, “Hằng đẳng thức”, “Hình bình hành”, “Hình chữ nhật”, “Hình thoi”, “Hình vuông”...
+      </div>
+    </div>
+  </div>
+
+  <!-- Nút mở chatbot khi đang thu nhỏ -->
+  <button id="chat-open-btn" class="chat-open-btn">🤖 Hỏi Chatbot</button>
+
+
+  <!-- App + Chatbot logic -->
   <script src="app.js?v=20251125"></script>
   <script src="chatbot.js?v=20251125"></script>
 </body>
