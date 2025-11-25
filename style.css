@@ -1,4 +1,4 @@
-/* ===== STYLE FULL: HOME + QUIZ + THEORY + CHATBOT ===== */
+/* ===== STYLE FULL: HOME + QUIZ + THEORY + CHATBOT FLOAT ===== */
 
 :root{
   --blue:#3b82f6;
@@ -10,7 +10,8 @@
 
 body{
   font-family:"Times New Roman", serif;
-  background:#f5f7fb;
+  background: radial-gradient(1200px 500px at 50% -50%, #e8f1ff 0, transparent 60%),
+              linear-gradient(180deg, #f7faff, #f5f7fb);
   margin:0; padding:0;
   color:var(--text);
 }
@@ -28,11 +29,15 @@ body{
 .topbar h1{
   font-size:28px;
   margin:6px 0;
+  letter-spacing:.5px;
+  font-weight:800;
 }
 .subtitle{
   margin:0;
   font-size:14px;
   color:#475569;
+  font-style:italic;
+  opacity:.9;
 }
 
 /* Tabs */
@@ -40,22 +45,30 @@ body{
   display:flex;
   gap:8px;
   justify-content:center;
-  margin:12px 0 16px;
+  margin:12px auto 18px;
   flex-wrap:wrap;
+
+  background:#fff;
+  padding:6px;
+  border-radius:999px;
+  width:fit-content;
+  box-shadow:0 6px 18px rgba(15,23,42,.06);
+  border:1px solid #eef2f7;
 }
 .tab-btn{
-  padding:8px 14px;
+  border:none;
+  background:transparent;
+  padding:8px 16px;
   border-radius:999px;
-  border:1px solid var(--gray);
-  background:#fff;
   cursor:pointer;
   font-size:15px;
+  font-weight:600;
   transition:.15s ease;
 }
 .tab-btn.active{
-  background:var(--blue);
+  background:linear-gradient(90deg, #3b82f6, #60a5fa);
   color:#fff;
-  border-color:var(--blue);
+  box-shadow:0 6px 14px rgba(59,130,246,.25);
 }
 .tab-btn:hover{ transform:translateY(-1px); }
 
@@ -65,35 +78,60 @@ body{
 
 .card{
   background:#fff;
-  border:1px solid var(--gray);
-  border-radius:14px;
+  border:1px solid #edf0f5;
+  border-radius:16px;
   padding:14px;
-  box-shadow:0 6px 18px rgba(15,23,42,0.04);
+  box-shadow:0 10px 22px rgba(15,23,42,.05);
 }
 
 /* HOME */
 .home-grid{
   display:grid;
-  grid-template-columns: 1.3fr .7fr;
+  grid-template-columns: 1.5fr .8fr;
   gap:12px;
+  align-items:start;
 }
-.chatbot-card{ grid-row: span 2; }
-.mini-card h3{ margin-top:0; }
+.chatbot-card{
+  padding:18px;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+}
+
+.home-chat-preview h3{ margin-top:0; }
+.home-chat-preview p{ color:#334155; }
+
+.mini-card{
+  padding:16px;
+}
+.mini-card h3{
+  font-size:17px;
+  margin:0 0 6px 0;
+}
+.mini-card p{
+  margin:0 0 10px 0;
+  font-size:14px;
+  color:#334155;
+}
+
 .big{
   width:100%;
   padding:10px 14px;
   border-radius:10px;
   font-size:16px;
   cursor:pointer;
-  border:1px solid var(--gray);
-  background:#fff;
+  border:none;
+  background:#f1f5f9;
+  font-weight:700;
+  transition:.15s ease;
 }
 .primary{
-  background:var(--blue);
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
   color:#fff;
-  border-color:var(--blue);
+  border:none;
+  box-shadow:0 8px 18px rgba(59,130,246,.25);
 }
-.primary.big:hover, .big:hover{ opacity:.95; transform:translateY(-1px); }
+.primary.big:hover, .big:hover{
+  opacity:.95; transform:translateY(-1px);
+}
 
 /* QUIZ */
 .quiz-header{
@@ -135,12 +173,16 @@ body{
 /* question card */
 .question-card{
   background:#fff;
-  border:1px solid var(--gray);
+  border:1px solid #eef2f7;
   border-radius:12px;
   padding:12px 14px;
   margin-bottom:10px;
 }
-.question-title{ margin-bottom:6px; font-size:15px; }
+.question-title{
+  margin-bottom:6px;
+  font-size:15px;
+  font-weight:600;
+}
 .option-line{
   display:flex; gap:8px; align-items:flex-start;
   padding:5px 0; cursor:pointer;
@@ -179,8 +221,8 @@ body{
   gap:10px;
 }
 .theory-btn{
-  background:var(--blue-100);
-  border:1px solid #cfe3ff;
+  background: linear-gradient(180deg, #eef5ff, #f7fbff);
+  border:1px solid #dbeafe;
   border-radius:12px;
   padding:12px;
   text-align:left;
@@ -188,7 +230,7 @@ body{
   transition:.15s ease;
 }
 .theory-btn:hover{
-  background:#dbeaff;
+  background: linear-gradient(180deg, #dbeafe, #eef5ff);
   transform:translateY(-1px);
 }
 .theory-title{
@@ -204,31 +246,58 @@ body{
   line-height:1.5;
 }
 
-/* CHATBOT (đẹp, đồng bộ) */
-.chatbox-wrap{ padding:0; border:none; box-shadow:none; }
-.chatbox-header{
-  display:flex; align-items:center; gap:10px;
-  padding:14px 14px 8px;
-  border-bottom:1px dashed var(--gray);
-  margin-bottom:8px;
+/* =====================================
+   CHATBOT FLOATING (luôn hiện)
+   ===================================== */
+.chat-float{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 360px;
+  max-width: calc(100vw - 36px);
+  background: #fff;
+  border:1px solid #e6ebf2;
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(15,23,42,.18);
+  z-index: 999;
+  overflow:hidden;
 }
-.chatbox-icon{
-  width:36px; height:36px; border-radius:10px;
-  background:var(--blue-100);
-  display:grid; place-items:center; font-size:20px;
+
+.chat-float.hidden{
+  display:none;
 }
-.chatbox-title{ font-size:18px; font-weight:700; margin:0; }
-.chatbox-sub{ font-size:13px; color:#64748b; margin-top:2px; }
+
+.chat-float-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 12px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  color:#fff;
+  font-weight:700;
+}
+
+.chat-close{
+  background:rgba(255,255,255,.2);
+  border:none;
+  color:#fff;
+  font-size:18px;
+  border-radius:8px;
+  cursor:pointer;
+  padding:2px 8px;
+}
+
+.chatbox-wrap{ padding:10px 12px; }
 
 .chat-log{
-  height:300px; overflow-y:auto;
-  background:linear-gradient(180deg, #f8fafc, #f1f5f9);
-  border:1px solid var(--gray);
+  height:240px; overflow-y:auto;
+  background: linear-gradient(180deg, #f8fbff, #f1f5fb);
+  border:1px solid #e6ebf2;
   border-radius:12px;
   padding:10px;
-  margin:0 14px;
 }
 
+/* bubble */
 .msg{
   max-width:82%;
   padding:9px 11px;
@@ -251,179 +320,54 @@ body{
 }
 
 .chat-input{
-  display:flex; gap:8px; margin:10px 14px 0;
+  display:flex; gap:8px; margin-top:8px;
 }
 .chat-input input{
-  flex:1; padding:10px 12px; border:1px solid #cbd5e1;
+  flex:1; padding:9px 10px; border:1px solid #dbe3ee;
   border-radius:10px; font-size:15px; outline:none; background:#fff;
 }
-.chat-input input:focus{
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px rgba(59,130,246,0.15);
-}
 .chat-input button{
-  padding:10px 14px; border-radius:10px;
-  border:1px solid var(--blue);
-  background:var(--blue); color:#fff;
+  padding:9px 12px; border-radius:10px;
+  border:none;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  color:#fff;
   cursor:pointer; font-size:15px; font-weight:600;
-  transition:.15s ease; white-space:nowrap;
+  box-shadow:0 6px 14px rgba(59,130,246,.22);
 }
-.chat-input button:hover{ transform:translateY(-1px); opacity:.95; }
 
+/* hint */
 .chat-hint{
-  margin:8px 14px 12px;
-  font-size:13px; color:#475569;
+  margin-top:6px;
+  font-size:12.5px; color:#475569;
   background:#f8fafc;
   border:1px dashed var(--gray);
-  padding:8px 10px; border-radius:10px;
+  padding:6px 8px; border-radius:10px;
 }
 
-/* topic buttons */
-.topic-btn{
-  margin:2px 4px 2px 0; padding:4px 8px;
-  border:1px solid #cfe3ff; background:var(--blue-100);
-  border-radius:8px; cursor:pointer; font-size:13px;
+/* nút mở khi thu nhỏ */
+.chat-open-btn{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 998;
+  display:none;
+
+  padding:10px 14px;
+  border-radius:999px;
+  border:none;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 10px 18px rgba(59,130,246,.35);
 }
-.topic-btn:hover{ background:#dbeaff; }
 
 /* Responsive */
 @media(max-width:900px){
   .home-grid{ grid-template-columns:1fr; }
   .theory-grid{ grid-template-columns:1fr; }
 }
-/* ================================
-   UI POLISH (dán cuối style.css)
-   ================================ */
-
-/* nền mịn hơn */
-body{
-  background: radial-gradient(1200px 500px at 50% -50%, #e8f1ff 0, transparent 60%),
-              linear-gradient(180deg, #f7faff, #f5f7fb);
-}
-
-/* header đẹp hơn */
-.topbar h1{
-  letter-spacing: .5px;
-  font-weight: 800;
-}
-.subtitle{
-  font-style: italic;
-  opacity: .9;
-}
-
-/* tabs kiểu pill xịn */
-.tabs{
-  background:#fff;
-  padding:6px;
-  border-radius:999px;
-  width:fit-content;
-  margin:12px auto 18px;
-  box-shadow:0 6px 18px rgba(15,23,42,.06);
-  border:1px solid #eef2f7;
-}
-.tab-btn{
-  border:none;
-  background:transparent;
-  padding:8px 16px;
-  border-radius:999px;
-  font-weight:600;
-}
-.tab-btn.active{
-  background:linear-gradient(90deg, #3b82f6, #60a5fa);
-  box-shadow:0 6px 14px rgba(59,130,246,.25);
-}
-
-/* card mềm + bo hơn */
-.card{
-  border-radius:16px;
-  border:1px solid #edf0f5;
-  box-shadow:0 10px 22px rgba(15,23,42,.05);
-}
-
-/* home layout cân hơn */
-.home-grid{
-  grid-template-columns: 1.5fr .8fr;
-  align-items: start;
-}
-
-/* chatbot nổi bật trung tâm */
-.chatbot-card{
-  padding: 6px;
-  background: linear-gradient(180deg, #ffffff, #fbfdff);
-}
-.chatbox-header{
-  border-bottom: none;
-  margin-bottom: 2px;
-}
-.chatbox-title{
-  font-size:19px;
-}
-.chat-log{
-  height:340px;
-  background: linear-gradient(180deg, #f8fbff, #f1f5fb);
-  border:1px solid #e6ebf2;
-}
-
-/* mini card bên phải */
-.mini-card{
-  padding:16px;
-}
-.mini-card h3{
-  font-size:17px;
-  margin:0 0 6px 0;
-}
-.mini-card p{
-  margin:0 0 10px 0;
-  font-size:14px;
-  color:#334155;
-}
-
-/* nút đẹp hơn */
-.big{
-  border: none;
-  background: #f1f5f9;
-  font-weight:700;
-}
-.primary{
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
-  border:none;
-  box-shadow:0 8px 18px rgba(59,130,246,.25);
-}
-.primary:hover{
-  transform: translateY(-1px);
-  filter: brightness(1.02);
-}
-
-/* quiz card spacing đẹp */
-.question-card{
-  border:1px solid #eef2f7;
-  background:#fff;
-}
-.question-title{ font-weight:600; }
-
-/* theory buttons nổi + nhấn nhá */
-.theory-btn{
-  background: linear-gradient(180deg, #eef5ff, #f7fbff);
-  border:1px solid #dbeafe;
-}
-.theory-btn:hover{
-  background: linear-gradient(180deg, #dbeafe, #eef5ff);
-}
-
-/* input chatbot tinh tế hơn */
-.chat-input input{
-  background:#fff;
-  border:1px solid #dbe3ee;
-}
-.chat-input button{
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
-  border:none;
-  box-shadow:0 6px 14px rgba(59,130,246,.22);
-}
-
-/* mobile: tab không tràn */
-@media(max-width:900px){
-  .home-grid{ grid-template-columns:1fr; }
-  .chat-log{ height:280px; }
-  .tabs{ width:100%; justify-content:center; }
+@media(max-width:480px){
+  .chat-float{ width: 94vw; right: 3vw; bottom: 3vw; }
+  .chat-log{ height:200px; }
 }
