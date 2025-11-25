@@ -1,4 +1,6 @@
-/* ===== APP: Tabs + Quiz 10 câu + Theory ===== */
+/* ===== APP v3: Tabs + Quiz 10 câu + Theory + Chat Float ===== */
+
+console.log("✅ app.js v3 loaded");
 
 let allQuestions = [];
 let quizQuestions = [];
@@ -13,38 +15,59 @@ function switchTab(name){
     p.classList.toggle("active", p.id===("tab-"+name));
   });
 
-  // nếu vào quiz mà chưa load -> load
   if(name==="quiz" && allQuestions.length===0){
     loadQuestions().then(()=> newQuiz10());
   }
 }
 
-/* bind tab clicks */
+/* ===== Click handler tổng ===== */
 document.addEventListener("click",(e)=>{
-  const btn = e.target.closest(".tab-btn");
-  if(btn){
-    switchTab(btn.dataset.tab);
+  const tabBtn = e.target.closest(".tab-btn");
+  if(tabBtn){
+    switchTab(tabBtn.dataset.tab);
+    return;
+  }
+
+  if(e.target.id==="go-quiz"){
+    switchTab("quiz");
+    if(allQuestions.length>0) newQuiz10();
+    return;
+  }
+  if(e.target.id==="go-theory"){
+    switchTab("theory");
+    return;
+  }
+
+  if(e.target.id==="quiz-new"){ newQuiz10(); return; }
+  if(e.target.id==="quiz-submit"){ gradeQuiz(); return; }
+
+  const theoryBtn = e.target.closest(".theory-btn");
+  if(theoryBtn){ showTheory(theoryBtn.dataset.chapter); return; }
+
+  // mở/đóng chatbot nổi
+  if(e.target.id==="chat-close"){
+    hideChatFloat();
+    return;
+  }
+  if(e.target.id==="chat-open-btn" || e.target.id==="open-chat"){
+    showChatFloat();
+    return;
   }
 });
 
-/* home shortcuts */
-document.addEventListener("DOMContentLoaded",()=>{
-  document.getElementById("go-quiz").onclick = ()=>{
-    switchTab("quiz");
-    if(allQuestions.length>0) newQuiz10();
-  };
-  document.getElementById("go-theory").onclick = ()=> switchTab("theory");
-
-  document.getElementById("quiz-new").onclick = ()=> newQuiz10();
-  document.getElementById("quiz-submit").onclick = ()=> gradeQuiz();
-
-  // theory click
-  document.querySelectorAll(".theory-btn").forEach(btn=>{
-    btn.onclick = ()=> showTheory(btn.dataset.chapter);
-  });
-
-  loadQuestions();
-});
+/* ===== Chat float toggle ===== */
+function hideChatFloat(){
+  const floatBox = document.getElementById("chat-float");
+  const openBtn  = document.getElementById("chat-open-btn");
+  if(floatBox) floatBox.classList.add("hidden");
+  if(openBtn) openBtn.style.display="block";
+}
+function showChatFloat(){
+  const floatBox = document.getElementById("chat-float");
+  const openBtn  = document.getElementById("chat-open-btn");
+  if(floatBox) floatBox.classList.remove("hidden");
+  if(openBtn) openBtn.style.display="none";
+}
 
 /* ===== Load questions.json ===== */
 async function loadQuestions(){
@@ -52,40 +75,51 @@ async function loadQuestions(){
     const res = await fetch(`questions.json?ts=${Date.now()}`);
     allQuestions = await res.json();
     if(!Array.isArray(allQuestions)) allQuestions=[];
+    console.log("Loaded questions:", allQuestions.length);
   }catch(e){
+    console.error("Không tải được questions.json", e);
     allQuestions=[];
-    document.getElementById("quiz-area").innerHTML =
-      `<div class="card" style="color:#b91c1c">
-        Lỗi: không tải được questions.json
-      </div>`;
+    const area = document.getElementById("quiz-area");
+    if(area){
+      area.innerHTML = `
+        <div class="card" style="color:#b91c1c">
+          Lỗi: không tải được questions.json
+        </div>`;
+    }
   }
 }
 
 /* ===== Pick 10 random ===== */
 function newQuiz10(){
   quizSubmitted = false;
+  if(allQuestions.length===0) return;
+
   const pool = [...allQuestions];
   shuffle(pool);
   quizQuestions = pool.slice(0,10);
 
   renderQuiz();
   updateProgress();
-  document.getElementById("quiz-result").style.display="none";
-  document.getElementById("quiz-result").innerHTML="";
+
+  const resBox = document.getElementById("quiz-result");
+  if(resBox){
+    resBox.style.display="none";
+    resBox.innerHTML="";
+  }
   window.scrollTo({top:0, behavior:"smooth"});
 }
 
 /* ===== Render Quiz ===== */
 function renderQuiz(){
   const area = document.getElementById("quiz-area");
+  if(!area) return;
+
   area.innerHTML = "";
 
   quizQuestions.forEach((q, i)=>{
     const card = document.createElement("div");
     card.className="question-card";
     card.dataset.index=i;
-
-    // gán part theo từ khóa để thống kê
     card.dataset.part = isGeometry(q.question) ? "Hình học" : "Đại số";
 
     const title = document.createElement("div");
@@ -114,7 +148,8 @@ function renderQuiz(){
     area.appendChild(card);
   });
 
-  document.getElementById("total-count").textContent = quizQuestions.length;
+  const totalEl = document.getElementById("total-count");
+  if(totalEl) totalEl.textContent = quizQuestions.length;
 
   if(window.MathJax?.typesetPromise){
     MathJax.typesetPromise([area]);
@@ -125,9 +160,14 @@ function renderQuiz(){
 function updateProgress(){
   const total = quizQuestions.length;
   const done = document.querySelectorAll(`#quiz-area input[type=radio]:checked`).length;
-  document.getElementById("done-count").textContent=done;
-  document.getElementById("total-count").textContent=total;
-  document.getElementById("progress-fill").style.width =
+
+  const doneEl = document.getElementById("done-count");
+  const totalEl = document.getElementById("total-count");
+  const fillEl = document.getElementById("progress-fill");
+
+  if(doneEl) doneEl.textContent=done;
+  if(totalEl) totalEl.textContent=total;
+  if(fillEl) fillEl.style.width =
     (total===0?0:Math.round(done*100/total))+"%";
 }
 
@@ -138,10 +178,11 @@ function gradeQuiz(){
 
   let right=0;
   let stats = { "Đại số":{r:0,t:0}, "Hình học":{r:0,t:0} };
-  let weakTopics = new Map(); // topic -> count wrong
+  let weakTopics = new Map();
 
   quizQuestions.forEach((q,i)=>{
     const card = document.querySelector(`.question-card[data-index="${i}"]`);
+    if(!card) return;
     const part = card.dataset.part;
 
     stats[part].t++;
@@ -160,7 +201,6 @@ function gradeQuiz(){
     }
   });
 
-  // gợi ý phần yếu
   const weakList = [...weakTopics.entries()]
     .sort((a,b)=>b[1]-a[1])
     .slice(0,3)
@@ -168,14 +208,12 @@ function gradeQuiz(){
     .join("<br>");
 
   const resBox = document.getElementById("quiz-result");
+  if(!resBox) return;
+
   resBox.style.display="block";
   resBox.innerHTML=`
     <div class="result-score">
       Bạn đúng <b>${right}</b> / <b>${quizQuestions.length}</b> câu
-    </div>
-    <div class="result-note">
-      ✅ Điểm mạnh: phần tỉ lệ đúng cao.<br>
-      ⚠️ Cần ôn thêm: phần tỉ lệ thấp.
     </div>
 
     <h3>Thống kê theo mảng</h3>
@@ -191,19 +229,18 @@ function gradeQuiz(){
     <div>${weakList || "Bạn làm rất tốt, chưa thấy phần yếu rõ ràng!"}</div>
 
     <div style="margin-top:8px">
-      👉 Bạn có thể bấm sang tab <b>Lý thuyết</b> để xem lại,
-      hoặc hỏi ngay <b>Chatbot</b> trên Trang chủ.
+      👉 Hỏi ngay chatbot (góc phải dưới) để được giải thích chi tiết.
     </div>
   `;
 
   resBox.scrollIntoView({behavior:"smooth"});
 }
 
-/* ===== Theory content placeholder ===== */
+/* ===== Theory placeholder ===== */
 function showTheory(ch){
   const box = document.getElementById("theory-content");
+  if(!box) return;
 
-  // bản khung sườn: sau này bạn thay nội dung theo SGK
   const data = {
     "1": `
       <h3>Chương I. Đa thức</h3>
@@ -213,30 +250,26 @@ function showTheory(ch){
         <li>Nhân đơn thức với đa thức, nhân hai đa thức.</li>
         <li>Chia đa thức cho đơn thức.</li>
       </ul>
-      <p><b>Hỏi nhanh chatbot:</b> gõ “đơn thức là gì”, “cộng trừ đa thức”...</p>
+      <p><b>Hỏi chatbot:</b> gõ “đơn thức là gì”, “cộng trừ đa thức”…</p>
     `,
     "2": `
-      <h3>Chương II. Hằng đẳng thức đáng nhớ</h3>
+      <h3>Chương II. Hằng đẳng thức</h3>
       <ul>
-        <li>Bình phương của một tổng, một hiệu.</li>
+        <li>Bình phương một tổng, một hiệu.</li>
         <li>Hiệu hai bình phương.</li>
-        <li>Lập phương của một tổng, một hiệu.</li>
+        <li>Lập phương một tổng, một hiệu.</li>
         <li>Tổng/hiệu hai lập phương.</li>
-        <li>Phân tích đa thức thành nhân tử.</li>
       </ul>
-      <p><b>Hỏi nhanh chatbot:</b> “bình phương một tổng”, “hiệu hai bình phương”...</p>
+      <p><b>Hỏi chatbot:</b> “bình phương một tổng”, “hiệu hai bình phương”…</p>
     `,
     "3": `
       <h3>Chương III. Tứ giác</h3>
       <ul>
         <li>Hình thang – hình thang cân.</li>
-        <li>Hình bình hành.</li>
-        <li>Hình chữ nhật.</li>
-        <li>Hình thoi.</li>
-        <li>Hình vuông.</li>
+        <li>Hình bình hành, chữ nhật, thoi, vuông.</li>
         <li>Dấu hiệu nhận biết và tính chất.</li>
       </ul>
-      <p><b>Hỏi nhanh chatbot:</b> “tính chất hình bình hành”, “dấu hiệu hình thoi”...</p>
+      <p><b>Hỏi chatbot:</b> “tính chất hình bình hành”, “dấu hiệu hình thoi”…</p>
     `,
     "4": `
       <h3>Chương IV. Định lí Thales (đang học)</h3>
@@ -245,7 +278,6 @@ function showTheory(ch){
         <li>Đường thẳng song song trong tam giác.</li>
         <li>Định lí Thales và hệ quả.</li>
       </ul>
-      <p>Hiện tại bạn chỉ cần tóm tắt cơ bản, không mở rộng quá sâu.</p>
     `
   };
 
@@ -272,3 +304,9 @@ function isGeometry(text){
     t.includes("góc")||t.includes("đường chéo")||t.includes("song song")
   );
 }
+
+/* auto load */
+loadQuestions();
+
+/* mặc định chatbot mở */
+showChatFloat();
