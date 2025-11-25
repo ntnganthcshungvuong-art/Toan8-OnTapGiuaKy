@@ -1,6 +1,6 @@
-/* ===== APP v3: Tabs + Quiz 10 câu + Theory + Chat Float ===== */
+/* ===== APP v4: Quiz gợi ý lý thuyết CỤ THỂ hơn ===== */
 
-console.log("✅ app.js v3 loaded");
+console.log("✅ app.js v4 loaded");
 
 let allQuestions = [];
 let quizQuestions = [];
@@ -120,7 +120,10 @@ function renderQuiz(){
     const card = document.createElement("div");
     card.className="question-card";
     card.dataset.index=i;
-    card.dataset.part = isGeometry(q.question) ? "Hình học" : "Đại số";
+
+    const theo = detectTheory(q.question);
+    card.dataset.part = theo.part; // Đại số / Hình học
+    card.dataset.theoryLabel = theo.label;
 
     const title = document.createElement("div");
     title.className="question-title";
@@ -171,19 +174,23 @@ function updateProgress(){
     (total===0?0:Math.round(done*100/total))+"%";
 }
 
-/* ===== Grade ===== */
+/* ===== Grade (gợi ý cụ thể) ===== */
 function gradeQuiz(){
   if(quizSubmitted) return;
   quizSubmitted=true;
 
   let right=0;
   let stats = { "Đại số":{r:0,t:0}, "Hình học":{r:0,t:0} };
-  let weakTopics = new Map();
+
+  // đếm theo bài cụ thể
+  let weakTheory = new Map();
 
   quizQuestions.forEach((q,i)=>{
     const card = document.querySelector(`.question-card[data-index="${i}"]`);
     if(!card) return;
+
     const part = card.dataset.part;
+    const label = card.dataset.theoryLabel;
 
     stats[part].t++;
 
@@ -196,16 +203,17 @@ function gradeQuiz(){
       card.classList.add("correct");
     }else{
       card.classList.add("wrong");
-      const top = q.topic || part;
-      weakTopics.set(top, (weakTopics.get(top)||0)+1);
+      weakTheory.set(label, (weakTheory.get(label)||0)+1);
     }
   });
 
-  const weakList = [...weakTopics.entries()]
+  // xếp hạng phần sai nhiều nhất
+  const weakList = [...weakTheory.entries()]
     .sort((a,b)=>b[1]-a[1])
-    .slice(0,3)
-    .map(x=>`• ${x[0]} (sai ${x[1]} câu)`)
-    .join("<br>");
+    .slice(0,4)
+    .map(([label,count])=>{
+      return `• <b>${label}</b> (sai ${count} câu)`;
+    }).join("<br>");
 
   const resBox = document.getElementById("quiz-result");
   if(!resBox) return;
@@ -225,11 +233,12 @@ function gradeQuiz(){
       }).join("")}
     </table>
 
-    <h3>Gợi ý ôn phần yếu</h3>
+    <h3>Gợi ý ôn lý thuyết cụ thể</h3>
     <div>${weakList || "Bạn làm rất tốt, chưa thấy phần yếu rõ ràng!"}</div>
 
-    <div style="margin-top:8px">
-      👉 Hỏi ngay chatbot (góc phải dưới) để được giải thích chi tiết.
+    <div style="margin-top:10px; padding:8px; background:#f8fafc; border-radius:8px;">
+      👉 Hãy bấm sang tab <b>Lý thuyết</b> để xem đúng các bài trên, 
+      hoặc hỏi chatbot (góc phải dưới) để được giải thích chi tiết.
     </div>
   `;
 
@@ -245,31 +254,32 @@ function showTheory(ch){
     "1": `
       <h3>Chương I. Đa thức</h3>
       <ul>
-        <li>Đơn thức, đa thức, bậc của đa thức.</li>
-        <li>Cộng – trừ đa thức.</li>
-        <li>Nhân đơn thức với đa thức, nhân hai đa thức.</li>
-        <li>Chia đa thức cho đơn thức.</li>
+        <li>Bài 1–2: Đơn thức, đa thức, bậc.</li>
+        <li>Bài 3: Cộng – trừ đa thức.</li>
+        <li>Bài 4: Nhân đơn thức với đa thức.</li>
+        <li>Bài 5: Nhân hai đa thức.</li>
+        <li>Bài 6: Chia đa thức cho đơn thức.</li>
       </ul>
-      <p><b>Hỏi chatbot:</b> gõ “đơn thức là gì”, “cộng trừ đa thức”…</p>
     `,
     "2": `
-      <h3>Chương II. Hằng đẳng thức</h3>
+      <h3>Chương II. Hằng đẳng thức đáng nhớ</h3>
       <ul>
-        <li>Bình phương một tổng, một hiệu.</li>
-        <li>Hiệu hai bình phương.</li>
-        <li>Lập phương một tổng, một hiệu.</li>
-        <li>Tổng/hiệu hai lập phương.</li>
+        <li>Bài 7: Bình phương một tổng, một hiệu.</li>
+        <li>Bài 8: Hiệu hai bình phương.</li>
+        <li>Bài 9: Lập phương một tổng, một hiệu.</li>
+        <li>Bài 10: Tổng / hiệu hai lập phương.</li>
+        <li>Bài 11: Phân tích đa thức thành nhân tử.</li>
       </ul>
-      <p><b>Hỏi chatbot:</b> “bình phương một tổng”, “hiệu hai bình phương”…</p>
     `,
     "3": `
       <h3>Chương III. Tứ giác</h3>
       <ul>
-        <li>Hình thang – hình thang cân.</li>
-        <li>Hình bình hành, chữ nhật, thoi, vuông.</li>
-        <li>Dấu hiệu nhận biết và tính chất.</li>
+        <li>Bài 12: Hình thang – hình thang cân.</li>
+        <li>Bài 13: Hình bình hành.</li>
+        <li>Bài 14: Hình chữ nhật.</li>
+        <li>Bài 15: Hình thoi.</li>
+        <li>Bài 16: Hình vuông.</li>
       </ul>
-      <p><b>Hỏi chatbot:</b> “tính chất hình bình hành”, “dấu hiệu hình thoi”…</p>
     `,
     "4": `
       <h3>Chương IV. Định lí Thales (đang học)</h3>
@@ -288,6 +298,87 @@ function showTheory(ch){
   }
 }
 
+/* ===========================================
+   PHẦN QUAN TRỌNG: ĐOÁN BÀI HỌC CỤ THỂ
+   =========================================== */
+function detectTheory(text){
+  const t = (text||"").toLowerCase();
+
+  // --- Chương III: Hình học (tứ giác) ---
+  if(hasAny(t, ["hình thang", "thang cân"])) {
+    return mk("Hình học", "Chương III – Bài 12: Hình thang, hình thang cân");
+  }
+  if(hasAny(t, ["bình hành"])) {
+    return mk("Hình học", "Chương III – Bài 13: Hình bình hành");
+  }
+  if(hasAny(t, ["chữ nhật"])) {
+    return mk("Hình học", "Chương III – Bài 14: Hình chữ nhật");
+  }
+  if(hasAny(t, ["hình thoi"])) {
+    return mk("Hình học", "Chương III – Bài 15: Hình thoi");
+  }
+  if(hasAny(t, ["hình vuông"])) {
+    return mk("Hình học", "Chương III – Bài 16: Hình vuông");
+  }
+
+  // --- Chương II: Hằng đẳng thức ---
+  if(hasAny(t, ["bình phương một tổng", "(a+b)^2", "a^2+2ab+b^2"])) {
+    return mk("Đại số", "Chương II – Bài 7: Bình phương một tổng");
+  }
+  if(hasAny(t, ["bình phương một hiệu", "(a-b)^2", "a^2-2ab+b^2"])) {
+    return mk("Đại số", "Chương II – Bài 7: Bình phương một hiệu");
+  }
+  if(hasAny(t, ["hiệu hai bình phương", "a^2-b^2"])) {
+    return mk("Đại số", "Chương II – Bài 8: Hiệu hai bình phương");
+  }
+  if(hasAny(t, ["lập phương một tổng", "(a+b)^3"])) {
+    return mk("Đại số", "Chương II – Bài 9: Lập phương một tổng");
+  }
+  if(hasAny(t, ["lập phương một hiệu", "(a-b)^3"])) {
+    return mk("Đại số", "Chương II – Bài 9: Lập phương một hiệu");
+  }
+  if(hasAny(t, ["tổng hai lập phương", "a^3+b^3"])) {
+    return mk("Đại số", "Chương II – Bài 10: Tổng hai lập phương");
+  }
+  if(hasAny(t, ["hiệu hai lập phương", "a^3-b^3"])) {
+    return mk("Đại số", "Chương II – Bài 10: Hiệu hai lập phương");
+  }
+  if(hasAny(t, ["phân tích nhân tử", "đưa về nhân tử"])) {
+    return mk("Đại số", "Chương II – Bài 11: Phân tích đa thức thành nhân tử");
+  }
+
+  // --- Chương I: Đơn thức / Đa thức ---
+  if(hasAny(t, ["đơn thức"])) {
+    return mk("Đại số", "Chương I – Bài 1: Đơn thức");
+  }
+  if(hasAny(t, ["đa thức", "bậc của đa thức"])) {
+    return mk("Đại số", "Chương I – Bài 2: Đa thức & bậc");
+  }
+  if(hasAny(t, ["cộng đa thức", "trừ đa thức", "thu gọn"])) {
+    return mk("Đại số", "Chương I – Bài 3: Cộng – trừ đa thức");
+  }
+  if(hasAny(t, ["nhân đơn thức với đa thức"])) {
+    return mk("Đại số", "Chương I – Bài 4: Nhân đơn thức với đa thức");
+  }
+  if(hasAny(t, ["nhân hai đa thức", "tích các đa thức"])) {
+    return mk("Đại số", "Chương I – Bài 5: Nhân hai đa thức");
+  }
+  if(hasAny(t, ["chia đa thức", "đơn thức chia"])) {
+    return mk("Đại số", "Chương I – Bài 6: Chia đa thức cho đơn thức");
+  }
+
+  // fallback
+  if(isGeometry(t)) return mk("Hình học", "Chương III – Tứ giác (tổng quát)");
+  return mk("Đại số", "Chương I–II (tổng quát)");
+}
+
+function mk(part, label){
+  return { part, label };
+}
+function hasAny(text, arr){
+  return arr.some(k=>text.includes(k));
+}
+
 /* ===== Utils ===== */
 function shuffle(arr){
   for(let i=arr.length-1;i>0;i--){
@@ -296,17 +387,15 @@ function shuffle(arr){
   }
 }
 function isGeometry(text){
-  const t=(text||"").toLowerCase();
   return (
-    t.includes("tam giác")||t.includes("tứ giác")||t.includes("hình thang")||
-    t.includes("hình bình hành")||t.includes("hình chữ nhật")||
-    t.includes("hình thoi")||t.includes("hình vuông")||
-    t.includes("góc")||t.includes("đường chéo")||t.includes("song song")
+    text.includes("tam giác")||text.includes("tứ giác")||text.includes("hình thang")||
+    text.includes("hình bình hành")||text.includes("hình chữ nhật")||
+    text.includes("hình thoi")||text.includes("hình vuông")||
+    text.includes("góc")||text.includes("đường chéo")||text.includes("song song")
   );
 }
 
 /* auto load */
 loadQuestions();
-
 /* mặc định chatbot mở */
 showChatFloat();
