@@ -1,6 +1,4 @@
 [
-  /* ================= CHƯƠNG I. ĐA THỨC ================= */
-
   {
     "question": "don thuc la gi",
     "keywords": ["don thuc", "la gi"],
@@ -17,8 +15,8 @@
   },
   {
     "question": "da thuc la gi",
-    "keywords": ["da thuc", "la gi"],
-    "answer": "Đa thức là tổng của các đơn thức. Ví dụ: \\(2x^2 - 3x + 1\\).",
+    "keywords": ["da thuc", "la gi", "khac gi don thuc"],
+    "answer": "Đa thức là tổng của các đơn thức. Ví dụ: \\(2x^2 - 3x + 1\\). Đơn thức chỉ có 1 hạng tử, còn đa thức có từ 2 hạng tử trở lên.",
     "topic": "Chuong I - Bai 2 Da thuc",
     "link": "#quiz"
   },
@@ -64,26 +62,16 @@
     "topic": "Chuong I - Bai 5 Chia da thuc",
     "link": "#quiz"
   },
-
-  /* ======== CHƯƠNG II. HẰNG ĐẲNG THỨC ĐÁNG NHỚ & ỨNG DỤNG ======== */
-
-  {
-    "question": "hang dang thuc dang nho la gi",
-    "keywords": ["hang dang thuc", "dang nho"],
-    "answer": "Hằng đẳng thức đáng nhớ là các công thức khai triển thường gặp giúp rút gọn và tính nhanh biểu thức.",
-    "topic": "Chuong II - Bai 6",
-    "link": "#quiz"
-  },
   {
     "question": "binh phuong cua mot tong",
-    "keywords": ["binh phuong tong", "(a+b)^2"],
+    "keywords": ["binh phuong cua mot tong", "binh phuong tong", "(a+b)^2"],
     "answer": "Công thức: \\((a+b)^2=a^2+2ab+b^2\\).",
     "topic": "Chuong II - Bai 6",
     "link": "#quiz"
   },
   {
     "question": "binh phuong cua mot hieu",
-    "keywords": ["binh phuong hieu", "(a-b)^2"],
+    "keywords": ["binh phuong cua mot hieu", "binh phuong hieu", "(a-b)^2"],
     "answer": "Công thức: \\((a-b)^2=a^2-2ab+b^2\\).",
     "topic": "Chuong II - Bai 6",
     "link": "#quiz"
@@ -97,14 +85,14 @@
   },
   {
     "question": "lap phuong cua mot tong",
-    "keywords": ["lap phuong tong", "(a+b)^3"],
+    "keywords": ["lap phuong cua mot tong", "(a+b)^3"],
     "answer": "Công thức: \\((a+b)^3=a^3+3a^2b+3ab^2+b^3\\).",
     "topic": "Chuong II - Bai 7",
     "link": "#quiz"
   },
   {
     "question": "lap phuong cua mot hieu",
-    "keywords": ["lap phuong hieu", "(a-b)^3"],
+    "keywords": ["lap phuong cua mot hieu", "(a-b)^3"],
     "answer": "Công thức: \\((a-b)^3=a^3-3a^2b+3ab^2-b^3\\).",
     "topic": "Chuong II - Bai 7",
     "link": "#quiz"
@@ -124,29 +112,12 @@
     "link": "#quiz"
   },
   {
-    "question": "phan tich da thuc thanh nhan tu la gi",
-    "keywords": ["phan tich", "nhan tu"],
-    "answer": "Phân tích đa thức thành nhân tử là biến đổi một đa thức thành tích của các đa thức/đơn thức.",
-    "topic": "Chuong II - Bai 9",
-    "link": "#quiz"
-  },
-  {
     "question": "dat nhan tu chung la gi",
     "keywords": ["dat nhan tu chung"],
     "answer": "Đặt nhân tử chung: đưa nhân tử chung ra ngoài ngoặc. Ví dụ: \\(ax+ay=a(x+y)\\).",
     "topic": "Chuong II - Bai 9",
     "link": "#quiz"
   },
-  {
-    "question": "phan tich bang hang dang thuc",
-    "keywords": ["phan tich", "hang dang thuc"],
-    "answer": "Dùng hằng đẳng thức để phân tích. Ví dụ: \\(x^2-9=(x-3)(x+3)\\) vì là hiệu hai bình phương.",
-    "topic": "Chuong II - Bai 9",
-    "link": "#quiz"
-  },
-
-  /* ================= CHƯƠNG III. TỨ GIÁC ================= */
-
   {
     "question": "tu giac la gi",
     "keywords": ["tu giac", "la gi"],
@@ -156,23 +127,9 @@
   },
   {
     "question": "tong cac goc trong tu giac bang bao nhieu",
-    "keywords": ["tong goc tu giac", "bang bao nhieu"],
+    "keywords": ["tong goc tu giac", "360"],
     "answer": "Tổng các góc trong một tứ giác bằng \\(360^\\circ\\).",
     "topic": "Chuong III - Bai 10 Tu giac",
-    "link": "#quiz"
-  },
-  {
-    "question": "hinh thang can la gi",
-    "keywords": ["hinh thang can", "la gi"],
-    "answer": "Hình thang cân là hình thang có hai cạnh bên bằng nhau.",
-    "topic": "Chuong III - Bai 11 Hinh thang can",
-    "link": "#quiz"
-  },
-  {
-    "question": "tinh chat hinh thang can",
-    "keywords": ["tinh chat", "hinh thang can"],
-    "answer": "Hình thang cân có hai góc kề một đáy bằng nhau và hai đường chéo bằng nhau.",
-    "topic": "Chuong III - Bai 11 Hinh thang can",
     "link": "#quiz"
   },
   {
@@ -186,13 +143,6 @@
     "question": "tinh chat hinh binh hanh",
     "keywords": ["tinh chat", "hinh binh hanh"],
     "answer": "Hình bình hành có: \\(AB \\parallel CD\\), \\(AD \\parallel BC\\); \\(AB=CD\\), \\(AD=BC\\); hai đường chéo cắt nhau tại trung điểm mỗi đường.",
-    "topic": "Chuong III - Bai 12 Hinh binh hanh",
-    "link": "#quiz"
-  },
-  {
-    "question": "dau hieu nhan biet hinh binh hanh",
-    "keywords": ["dau hieu", "hinh binh hanh"],
-    "answer": "Một tứ giác là hình bình hành nếu có 1 trong các dấu hiệu: (1) Hai cặp cạnh đối song song; (2) Hai cặp cạnh đối bằng nhau; (3) Một cặp cạnh đối vừa song song vừa bằng nhau; (4) Hai đường chéo cắt nhau tại trung điểm.",
     "topic": "Chuong III - Bai 12 Hinh binh hanh",
     "link": "#quiz"
   },
@@ -211,13 +161,6 @@
     "link": "#quiz"
   },
   {
-    "question": "dau hieu nhan biet hinh chu nhat",
-    "keywords": ["dau hieu", "hinh chu nhat"],
-    "answer": "Một hình bình hành là hình chữ nhật nếu có một góc vuông hoặc hai đường chéo bằng nhau.",
-    "topic": "Chuong III - Bai 13 Hinh chu nhat",
-    "link": "#quiz"
-  },
-  {
     "question": "hinh thoi la gi",
     "keywords": ["hinh thoi", "la gi"],
     "answer": "Hình thoi là hình bình hành có bốn cạnh bằng nhau.",
@@ -225,23 +168,9 @@
     "link": "#quiz"
   },
   {
-    "question": "tinh chat hinh thoi",
-    "keywords": ["tinh chat", "hinh thoi"],
-    "answer": "Hình thoi có bốn cạnh bằng nhau; hai đường chéo vuông góc và là đường phân giác của các góc.",
-    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
-    "link": "#quiz"
-  },
-  {
     "question": "hinh vuong la gi",
     "keywords": ["hinh vuong", "la gi"],
     "answer": "Hình vuông là hình chữ nhật có bốn cạnh bằng nhau (hoặc hình thoi có một góc vuông).",
-    "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
-    "link": "#quiz"
-  },
-  {
-    "question": "tinh chat hinh vuong",
-    "keywords": ["tinh chat", "hinh vuong"],
-    "answer": "Hình vuông có bốn cạnh bằng nhau, bốn góc vuông; hai đường chéo bằng nhau, vuông góc và cắt nhau tại trung điểm.",
     "topic": "Chuong III - Bai 14 Hinh thoi va hinh vuong",
     "link": "#quiz"
   }
