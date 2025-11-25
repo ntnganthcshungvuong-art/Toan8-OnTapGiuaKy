@@ -1,23 +1,35 @@
-/* ===== QUIZ TOÁN 8 - BẢN SƯ PHẠM + KHKT ===== */
+/* ===== QUIZ TOÁN 8 - BẢN AN TOÀN (TỰ HIỆN LỖI + KHÔNG XUNG ĐỘT CSS) ===== */
 
 async function loadQuiz() {
-  const res = await fetch(`questions.json?ts=${Date.now()}`);
-  if (!res.ok) {
-    document.getElementById('quiz').innerHTML =
-      `<div class="question"><b>Lỗi:</b> Không tải được questions.json.</div>`;
+  const wrap = document.getElementById('quiz');
+  wrap.innerHTML = `<div class="loading-box">Đang tải câu hỏi...</div>`;
+
+  let items = [];
+  try {
+    const res = await fetch(`questions.json?ts=${Date.now()}`);
+    if (!res.ok) throw new Error("Không tìm thấy questions.json (HTTP " + res.status + ")");
+    items = await res.json();
+    if (!Array.isArray(items)) throw new Error("questions.json không phải dạng mảng []");
+  } catch (err) {
+    wrap.innerHTML = `
+      <div class="error-box">
+        <b>Lỗi tải dữ liệu!</b><br>
+        ${err.message}<br><br>
+        👉 Kiểm tra lại file <code>questions.json</code> có nằm cùng thư mục với index.html không.
+      </div>
+    `;
+    document.getElementById("done-count").textContent = 0;
+    document.getElementById("total-count").textContent = 0;
+    document.getElementById("progress-fill").style.width = "0%";
     return;
   }
-  const items = await res.json();
 
-  const wrap = document.getElementById('quiz');
+  // OK -> render
   wrap.innerHTML = '';
+  document.getElementById("total-count").textContent = items.length;
 
   let totalPoints = 0;
 
-  // đếm tổng câu
-  document.getElementById("total-count").textContent = items.length;
-
-  // ===== Tách phần theo chủ đề (heuristic) =====
   const isGeometry = (text) => {
     const t = text.toLowerCase();
     return (
@@ -37,7 +49,6 @@ async function loadQuiz() {
       ? q.topic
       : (isGeometry(q.question) ? "PHẦN B. HÌNH HỌC (Chương III)" : "PHẦN A. ĐẠI SỐ (Chương I–II)");
 
-    // tạo tiêu đề phần nếu đổi part
     if (part !== lastPart) {
       const h = document.createElement("div");
       h.className = "section-title";
@@ -51,14 +62,12 @@ async function loadQuiz() {
     card.dataset.index = i;
     card.dataset.part = part;
 
-    // Câu hỏi
     const title = document.createElement('div');
     title.className = 'question-title';
     title.innerHTML = `<b>Câu ${i + 1}.</b> ${q.question}`;
     card.appendChild(title);
 
-    // Options
-    q.options.forEach((opt, j) => {
+    (q.options || []).forEach((opt, j) => {
       const line = document.createElement('label');
       line.className = 'option-line';
 
@@ -66,7 +75,6 @@ async function loadQuiz() {
       input.type = 'radio';
       input.name = `q${i}`;
       input.value = j;
-
       input.addEventListener("change", updateProgress);
 
       const span = document.createElement('span');
@@ -81,19 +89,17 @@ async function loadQuiz() {
     wrap.appendChild(card);
   });
 
-  // Nút nộp bài
   document.getElementById('submit').onclick = () => grade(items, totalPoints);
-
-  // Nút reset
   document.getElementById("reset").onclick = resetQuiz;
 
-  // render MathJax
+  updateProgress();
+
   if (window.MathJax?.typesetPromise) {
     MathJax.typesetPromise([wrap]);
   }
 }
 
-/* ====== PROGRESS ====== */
+/* ===== PROGRESS ===== */
 function updateProgress() {
   const total = document.querySelectorAll(".question-card").length;
   const done = document.querySelectorAll(".question-card input[type=radio]:checked").length;
@@ -105,7 +111,7 @@ function updateProgress() {
   document.getElementById("progress-fill").style.width = percent + "%";
 }
 
-/* ====== RESET ====== */
+/* ===== RESET ===== */
 function resetQuiz() {
   document.querySelectorAll("input[type=radio]").forEach(inp => inp.checked = false);
   document.querySelectorAll(".question-card").forEach(card => {
@@ -118,15 +124,74 @@ function resetQuiz() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-/* ====== CHẤM ĐIỂM + PHÂN TÍCH SƯ PHẠM ====== */
+/* ===== CHẤM ĐIỂM + THỐNG KÊ ===== */
 function grade(items, totalPoints) {
   let gained = 0;
 
-  // thống kê theo phần
   const stats = {
     "PHẦN A. ĐẠI SỐ (Chương I–II)": { right: 0, total: 0 },
     "PHẦN B. HÌNH HỌC (Chương III)": { right: 0, total: 0 }
   };
 
   items.forEach((q, i) => {
-    const card = do
+    const card = document.querySelector(`.question-card[data-index="${i}"]`);
+    const part = card.dataset.part;
+
+    stats[part].total += 1;
+
+    const tick = document.querySelector(`input[name="q${i}"]:checked`);
+    const ok = tick && (+tick.value === Number(q.answer));
+
+    if (ok) {
+      gained += Number(q.points || 0);
+      stats[part].right += 1;
+      card.classList.add("correct");
+      card.classList.remove("wrong");
+    } else {
+      card.classList.add("wrong");
+      card.classList.remove("correct");
+    }
+  });
+
+  const out = document.getElementById('result');
+  out.style.display = 'block';
+
+  const statTable = `
+    <table class="stat-table">
+      <tr><th>Chủ đề</th><th>Đúng / Tổng</th><th>Tỉ lệ</th></tr>
+      ${Object.entries(stats).map(([k,v]) => {
+        const rate = v.total === 0 ? 0 : Math.round(v.right*100/v.total);
+        return `<tr>
+          <td>${k}</td>
+          <td>${v.right}/${v.total}</td>
+          <td>${rate}%</td>
+        </tr>`;
+      }).join("")}
+    </table>
+  `;
+
+  out.innerHTML = `
+    <div class="result-score">
+      Bạn đạt <b>${round2(gained)}</b> / <b>${round2(totalPoints)}</b> điểm
+    </div>
+    <div class="result-note">
+      ✅ Điểm mạnh: phần có tỉ lệ cao. <br/>
+      ⚠️ Cần ôn thêm: phần có tỉ lệ thấp.
+    </div>
+    <h3>Thống kê theo chủ đề</h3>
+    ${statTable}
+    <div class="result-guide">
+      Gợi ý: hãy xem lại các câu tô <span class="badge-wrong">đỏ</span> để củng cố kiến thức.
+    </div>
+  `;
+
+  out.scrollIntoView({ behavior: "smooth" });
+
+  if (window.MathJax?.typesetPromise) {
+    MathJax.typesetPromise([out]);
+  }
+}
+
+function round2(x){ return Math.round((+x + Number.EPSILON)*100)/100 }
+
+loadQuiz();
